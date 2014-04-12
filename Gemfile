@@ -16,3 +16,4 @@ end
 
 gem 'rails_admin'
 gem 'bootstrap_form'
+gem "twitter-bootstrap-rails"
