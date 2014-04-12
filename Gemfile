@@ -15,3 +15,4 @@ group :doc do
 end
 
 gem 'rails_admin'
+gem 'bootstrap_form'
