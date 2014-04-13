@@ -1,4 +1,5 @@
 <h3>Patient Details</h3>
+<%= f.association :doctor, prompt: 'Select a Doctor'  %>
 <%= f.fields_for :patient, Patient.new do |patient_fields| %>
   <%=  patient_fields.input :name %>
   <%=  patient_fields.input :age %>
