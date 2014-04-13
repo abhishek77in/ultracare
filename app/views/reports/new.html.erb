@@ -1,6 +1,6 @@
 <h2>New Whole Abdomen Report</h2>
 
-<%= bootstrap_form_for(@report) do |f| %>
+<%= simple_form_for(@report) do |f| %>
   <%= f.collection_select :doctor_id, Doctor.all, :id, :name  %>
   <%= render 'patient', f: f %>
   <%= render 'whole_abdomen', f: f %>

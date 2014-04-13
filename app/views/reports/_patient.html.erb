@@ -1,6 +1,6 @@
 <h3>Patient Details</h3>
 <%= f.fields_for :patient, Patient.new do |patient_fields| %>
-  <%=  patient_fields.text_field :name %>
-  <%=  patient_fields.text_field :age %>
-  <%=  patient_fields.text_field :sex %>
+  <%=  patient_fields.input :name %>
+  <%=  patient_fields.input :age %>
+  <%=  patient_fields.input :sex %>
 <% end %>
