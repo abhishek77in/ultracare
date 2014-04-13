@@ -1,7 +1,9 @@
-<h2>New Whole Abdomen Report</h2>
-
+<h2>Whole Abdomen Report</h2>
+<hr/>
 <%= simple_form_for(@report) do |f| %>
-  <%= render 'patient', f: f %>
-  <%= render 'whole_abdomen', f: f %>
-  <%= f.submit %>
+  <div class="form-container">
+    <%= render 'patient', f: f %>
+    <%= render 'whole_abdomen', f: f %>
+    <%= f.submit %>
+  </div>
 <% end %>

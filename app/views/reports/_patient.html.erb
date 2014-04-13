@@ -1,7 +1,27 @@
-<h3>Patient Details</h3>
-<%= f.association :doctor, prompt: 'Select a Doctor'  %>
 <%= f.fields_for :patient, Patient.new do |patient_fields| %>
-  <%=  patient_fields.input :name %>
-  <%=  patient_fields.input :age %>
-  <%=  patient_fields.input :sex %>
+  <div class="row">
+    <div class="small-6 columns">
+      <%=  patient_fields.input :name, label: 'Patient Name' %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.association :doctor, label: 'Refered By Doctor', prompt: 'Select a Doctor'  %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 columns">
+      <label for="age-years">Age</label>
+      <div class="row collapse">
+        <div class="small-6 columns">
+          <%=  patient_fields.input :age, label: false %>
+        </div>
+        <div class="small-6 columns">
+          <span class="postfix">years</span>
+        </div>
+      </div>
+    </div>
+    <div class="small-6 columns">
+      <%= patient_fields.label :sex, 'Gender' %>
+      <%= patient_fields.select :sex, [['Male', 'Male'], ['Female', 'Female']], {}, {:class => "custom-dropdown"} %>
+    </div>
+  </div>
 <% end %>
