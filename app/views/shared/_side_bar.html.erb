@@ -3,16 +3,21 @@
     <div class="sidebar">
       <nav>
       <ul class="side-nav">
-        <li class="heading">New report</li>
+        <li class="heading">New report male</li>
 
+        <li><%= link_to "Testis", new_reports_path(type: 'whole_abdomen') %></li>
         <li><%= link_to "Whole Abdomen", new_reports_path(type: 'whole_abdomen') %></li>
+        <li><%= link_to "Upper abdomen", new_reports_path(type: 'lower_abdomen') %></li>
         <li><%= link_to "Lower Abdomen", new_reports_path(type: 'lower_abdomen') %></li>
 
         <li class="divider"></li>
-        <li class="heading">Support</li>
+        <li class="heading">New report female</li>
 
-        <li><a href="../changelog.html" data-search="">Changelog</a></li>
-        <li><a href="../compatibility.html" data-search="">Compatibility</a></li>
+        <li><%= link_to "Fetus", new_reports_path(type: 'whole_abdomen') %></li>
+        <li><%= link_to "Breast", new_reports_path(type: 'whole_abdomen') %></li>
+        <li><%= link_to "Whole Abdomen", new_reports_path(type: 'whole_abdomen') %></li>
+        <li><%= link_to "Upper abdomen", new_reports_path(type: 'lower_abdomen') %></li>
+        <li><%= link_to "Lower Abdomen", new_reports_path(type: 'lower_abdomen') %></li>
       </ul>
       </nav>
     </div>
