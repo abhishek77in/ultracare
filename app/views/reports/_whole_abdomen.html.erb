@@ -1,4 +1,7 @@
-<p>Whole abdomen form</p>
+<h3>Whole abdomen form</h3>
 <%= f.fields_for :report_type, WholeAbdomen.new do |report_type_fields| %>
   <%=  report_type_fields.text_field :liver %>
+  <%=  report_type_fields.text_field :gall_bladder %>
+  <%=  report_type_fields.text_field :pancreas %>
+  <%=  report_type_fields.text_field :spleen %>
 <% end %>
