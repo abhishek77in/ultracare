@@ -16,6 +16,7 @@ end
 
 gem 'rails_admin'
 gem 'simple_form'
+gem 'foundation-rails'
 
 gem 'better_errors'
 gem 'binding_of_caller'
