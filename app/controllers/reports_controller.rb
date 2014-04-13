@@ -1,6 +1,7 @@
 class ReportsController < ApplicationController
   def new
     @report = Report.new
+    @report.build_patient
     @report.report_type = ReportType.new(reportable: WholeAbdomen.new(WholeAbdomen.params))
   end
 
