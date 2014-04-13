@@ -1,5 +1,6 @@
 <p>Patient Details</p>
 <%= f.fields_for :patient, Patient.new do |patient_fields| %>
+  <%=  patient_fields.text_field :title %>
   <%=  patient_fields.text_field :first_name %>
   <%=  patient_fields.text_field :last_name %>
   <%=  patient_fields.text_field :age %>

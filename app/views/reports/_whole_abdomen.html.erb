@@ -1,0 +1,4 @@
+<p>Whole abdomen form</p>
+<%= f.fields_for :report_type, WholeAbdomen.new do |report_type_fields| %>
+  <%=  report_type_fields.text_field :liver %>
+<% end %>
