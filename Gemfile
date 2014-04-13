@@ -15,9 +15,7 @@ group :doc do
 end
 
 gem 'rails_admin'
-gem 'bootstrap_form'
-gem "twitter-bootstrap-rails"
+gem 'simple_form'
 
 gem 'better_errors'
 gem 'binding_of_caller'
-gem 'simple_form'
