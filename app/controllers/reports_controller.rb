@@ -11,7 +11,7 @@ class ReportsController < ApplicationController
     if @report.save && @report.report_type.save
       redirect_to root_path, notice: 'Report Created'
     else
-      flash[:alert] = "Sorry! Report could not be created, please fix the errors and try again."
+      flash.now[:alert] = "Sorry! Report could not be created, please fix the errors and try again."
       render 'new'
     end
   end
