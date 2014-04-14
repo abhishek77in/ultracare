@@ -1,6 +1,6 @@
 <h2>Reports</h2>
 <ul>
   <% @reports.each do |report| %>
-    <li><%= link_to "#{report.patient.name} - #{report.report_type.reportable.class.name}" %></li>
+    <li><%= link_to "#{report.patient.name} - #{report.report_type.reportable.class.name}", print_reports_path(report)  %></li>
   <% end %>
 </ul>

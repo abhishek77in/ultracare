@@ -16,6 +16,11 @@ class ReportsController < ApplicationController
     end
   end
 
+  def print
+    @report = Report.find(params[:id])
+    render pdf: 'print', layout: 'pdf.html.haml'
+  end
+
   private
   def report_params
     params.require(:report).permit(:doctor_id, patient_attributes: [:name, :age, :sex])
