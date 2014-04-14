@@ -1,0 +1,6 @@
+- @report.report_type.report_type_fields.each do |field|
+  %p
+    %label
+      %b
+        = "#{field.humanize.upcase} -"
+    = @reportable.attributes[field]

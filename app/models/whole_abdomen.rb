@@ -7,4 +7,8 @@ class WholeAbdomen < ActiveRecord::Base
       pancreas: 'Appears NORMAL in size and echotexture.Pancreatic duct is not dilated. No calcifications seen.',
       spleen: 'Appears NORMAL in size, Shape & echotexture.No focal lesion or mass seen.' }
   end
+
+  def fields
+    self.attributes.keys - %w(id created_at updated_at)
+  end
 end
