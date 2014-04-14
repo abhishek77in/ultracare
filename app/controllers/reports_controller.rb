@@ -17,7 +17,7 @@ class ReportsController < ApplicationController
   end
 
   def print
-    @report = Report.find(params[:id])
+    @report = Report.find(params[:format])
     render pdf: 'print', layout: 'pdf.html.haml'
   end
 
