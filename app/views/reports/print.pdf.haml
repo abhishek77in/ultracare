@@ -1,18 +1,3 @@
-%div{style: 'width: 70%; float: left;'}
-  %p
-    Patient Name:
-    = @report.patient.name
-%div{style: 'width: 30%; float: right;'}
-  %p
-    Age / Sex:
-    = "#{@report.patient.age} / #{@report.patient.sex}"
-%div{style: 'width: 70%; float: left;'}
-  %p
-    Doctor Name:
-    = "#{@report.doctor.name} (#{@report.doctor.degree})"
-%div{style: 'width: 30%; float: right;'}
-  %p
-    Date:
-    = @report.created_at.strftime("%d / %m / %Y")
+= render 'shared/pdf/patient'
 %hr
 = render 'shared/pdf/reportable'
