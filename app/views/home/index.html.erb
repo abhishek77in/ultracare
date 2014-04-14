@@ -1,4 +1,6 @@
-<h1>Welcome!</h1>
+<h2>Reports</h2>
 <ul>
-  <li><%= link_to "New Whole Abdomen", new_reports_path(type: 'whole_abdomen') %></li>
+  <% @reports.each do |report| %>
+    <li><%= link_to "#{report.patient.name} - #{report.report_type.reportable.class.name}" %></li>
+  <% end %>
 </ul>
