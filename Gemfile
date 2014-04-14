@@ -17,6 +17,7 @@ end
 gem 'rails_admin'
 gem 'simple_form'
 gem 'foundation-rails'
+gem 'foundation_rails_helper'
 gem 'wicked_pdf'
 gem 'haml'
 
