@@ -1,8 +1,8 @@
 %div{style: 'text-align: center;'}
   %h3= "#{@reportable.class.name.underscore.titleize} U.S.G. Report"
-- @report.report_type.report_type_fields.each do |field|
-  %p
-    %label
-      %b
-        = "#{field.humanize.upcase} -"
-    = @reportable.attributes[field]
+%table
+  %tbody
+    - @report.report_type.report_type_fields.each do |field|
+      %tr
+        %td= field.humanize.upcase
+        %td= @reportable.attributes[field]
