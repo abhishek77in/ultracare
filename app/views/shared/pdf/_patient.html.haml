@@ -1,16 +1,16 @@
 %div{style: 'width: 70%; float: left;'}
   %p
-    Patient Name:
+    %label Patient Name:
     = @report.patient.name
 %div{style: 'width: 30%; float: right;'}
   %p
-    Age / Sex:
+    %label Age / Sex:
     = "#{@report.patient.age} / #{@report.patient.sex}"
 %div{style: 'width: 70%; float: left;'}
   %p
-    Refered By Doctor:
+    %label Refered By Doctor:
     = "#{@report.doctor.name} (#{@report.doctor.degree})"
 %div{style: 'width: 30%; float: right;'}
   %p
-    Date:
+    %label Date:
     = @report.created_at.strftime("%d / %m / %Y")
