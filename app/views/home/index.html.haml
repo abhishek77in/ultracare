@@ -1,6 +1,16 @@
-<h2>Reports</h2>
-<ul>
-  <% @reports.each do |report| %>
-    <li><%= link_to "#{report.patient.name} - #{report.report_type.reportable.class.name}", print_reports_path(report), target: '_blank'  %></li>
-  <% end %>
-</ul>
+%h2 Reports
+
+%table
+  %thead
+    %tr
+      %th Patient Name
+      %th Refered By Doctor
+      %th Report Type
+      %th Print
+  %tbody
+    - @reports.each do |report|
+      %tr
+        %td= report.patient.name
+        %td= report.doctor.name
+        %td= report.report_type.reportable.class.name.underscore.titleize
+        %td= link_to "Print Report", print_reports_path(report), target: '_blank'
