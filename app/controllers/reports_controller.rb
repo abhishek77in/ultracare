@@ -19,7 +19,10 @@ class ReportsController < ApplicationController
   def print
     @report = Report.find(params[:format])
     @reportable = @report.report_type.reportable
-    render pdf: 'print', layout: 'pdf.html.haml'
+    render pdf: "#{@report.patient.name} - #{@report.created_at.strftime("%d %b %y")}",
+           layout: 'pdf.html.haml',
+           margin: { bottom: 40 },
+           footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
   end
 
   private
