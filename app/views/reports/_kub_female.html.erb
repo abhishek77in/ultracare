@@ -1,0 +1,10 @@
+<h3>Findings</h3>
+<hr/>
+<%= f.fields_for :report_type, @report.report_type.reportable do |report_type_fields| %>
+  <%=  report_type_fields.input :right_kidney, type: :text %>
+  <%=  report_type_fields.input :left_kidney, type: :text %>
+  <%=  report_type_fields.input :urinary_bladder, type: :text %>
+  <%=  report_type_fields.input :other, type: :text %>
+  <%=  report_type_fields.input :impression, type: :text %>
+  <%=  report_type_fields.input :advise, type: :text %>
+<% end %>
