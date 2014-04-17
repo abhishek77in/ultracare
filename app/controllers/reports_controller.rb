@@ -2,7 +2,7 @@ class ReportsController < ApplicationController
   def new
     @report = Report.new
     @report.build_patient
-    @report.report_type = ReportType.new(reportable: WholeAbdomen.new(WholeAbdomen.params))
+    @report.report_type = ReportType.new(reportable: new_reportable)
   end
 
   def create
@@ -26,9 +26,15 @@ class ReportsController < ApplicationController
   end
 
   private
+  def new_reportable
+    model_name = params['type'].titlecase.delete(' ')
+    model = Object.const_get model_name
+    model.new(model.params)
+  end
+
   def reportable
     model_name = params['reportable_type'].titlecase.delete(' ')
-    model  = Object.const_get model_name
+    model = Object.const_get model_name
     model.new(report_type_attributes)
   end
 
