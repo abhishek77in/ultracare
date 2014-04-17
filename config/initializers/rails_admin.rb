@@ -1,6 +1,6 @@
 RailsAdmin.config do |config|
 
-  config.excluded_models = [Patient, Report, ReportType, WholeAbdomen]
+  config.excluded_models = [Patient, Report, ReportType, WholeAbdomen, Breast]
 
   ### Popular gems integration
 
