@@ -32,7 +32,7 @@ class ReportsController < ApplicationController
   end
 
   def print
-    @report = Report.find(params[:format])
+    @report = Report.find(params[:id])
     @reportable = @report.report_type.reportable
     render pdf: "#{@report.patient.name} - #{@report.created_at.strftime("%d %b %y")}",
            layout: 'pdf.html.haml',
