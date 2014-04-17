@@ -5,4 +5,5 @@
     - @report.report_type.report_type_fields.each do |field|
       %tr
         %td= field.humanize.upcase
-        %td= @reportable.attributes[field]
+        - if @reportable.attributes[field].present?
+          %td= convert_to_line_break(@reportable.attributes[field]).html_safe
