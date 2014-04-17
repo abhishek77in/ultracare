@@ -1,6 +1,6 @@
 Ultrasound::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resource "reports" do
+  resources "reports" do
     get 'print', on: :member
   end
   root 'home#index'

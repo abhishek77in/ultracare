@@ -13,4 +13,4 @@
         %td= report.patient.name
         %td= report.doctor.name
         %td= report.report_type.reportable.class.name.underscore.titleize
-        %td= link_to "Print Report", print_reports_path(report), target: '_blank'
+        %td= link_to "Print Report", print_report_path(report), target: '_blank'
