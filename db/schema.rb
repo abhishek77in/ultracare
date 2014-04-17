@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417201202) do
+ActiveRecord::Schema.define(version: 20140417201814) do
 
   create_table "breasts", force: true do |t|
     t.text     "left_breast"
@@ -65,6 +65,21 @@ ActiveRecord::Schema.define(version: 20140417201202) do
     t.text     "right_lobe"
     t.text     "i_j_v_and_c_a"
     t.text     "isthmus"
+    t.text     "other"
+    t.text     "impression"
+    t.text     "advise"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "upper_abdomen", force: true do |t|
+    t.text     "liver"
+    t.text     "gall_bladder"
+    t.text     "pancreas"
+    t.text     "spleen"
+    t.text     "left_kidney"
+    t.text     "right_kidney"
+    t.text     "ureter"
     t.text     "other"
     t.text     "impression"
     t.text     "advise"
