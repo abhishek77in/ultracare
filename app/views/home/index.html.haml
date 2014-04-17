@@ -6,6 +6,7 @@
       %th Patient Name
       %th Refered By Doctor
       %th Report Type
+      %th Date
       %th Edit Report
       %th Print Report
   %tbody
@@ -14,5 +15,6 @@
         %td= report.patient.name
         %td= report.doctor.name
         %td= report.report_type.reportable.class.name.underscore.titleize
+        %td= report.created_at.strftime("%d / %m / %Y")
         %td= link_to "Edit", edit_report_path(report, type: report.report_type.reportable.class.name.underscore)
         %td= link_to "Print", print_report_path(report), target: '_blank'
