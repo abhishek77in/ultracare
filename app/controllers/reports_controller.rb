@@ -33,7 +33,7 @@ class ReportsController < ApplicationController
   end
 
   def reportable
-    model_name = params['reportable_type'].titlecase.delete(' ')
+    model_name = params['type'].titlecase.delete(' ')
     model = Object.const_get model_name
     model.new(report_type_attributes)
   end
