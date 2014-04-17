@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
   def index
-    @reports = Report.last(50)
+    @reports = Report.order('created_at DESC').last(50)
   end
 end
