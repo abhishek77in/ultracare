@@ -3,11 +3,15 @@
     <div class="sidebar">
       <nav>
       <ul class="side-nav">
+        <li class="heading">New report</li>
+
+        <li><%= link_to "Thyroid Gland", new_report_path(type: 'thyroid_gland') %></li>
+        <li><%= link_to "Upper Abdomen", new_report_path(type: 'testis') %></li>
+
         <li class="heading">New report male</li>
 
         <li><%= link_to "Testis", new_report_path(type: 'testis') %></li>
         <li><%= link_to "Whole Abdomen", new_report_path(type: 'whole_abdomen') %></li>
-        <li><%= link_to "Upper abdomen", new_report_path(type: 'lower_abdomen') %></li>
         <li><%= link_to "Lower Abdomen", new_report_path(type: 'lower_abdomen') %></li>
 
         <li class="divider"></li>
@@ -16,7 +20,6 @@
         <li><%= link_to "Fetus", new_report_path(type: 'whole_abdomen') %></li>
         <li><%= link_to "Breast", new_report_path(type: 'breast') %></li>
         <li><%= link_to "Whole Abdomen", new_report_path(type: 'whole_abdomen') %></li>
-        <li><%= link_to "Upper abdomen", new_report_path(type: 'lower_abdomen') %></li>
         <li><%= link_to "Lower Abdomen", new_report_path(type: 'lower_abdomen') %></li>
       </ul>
       </nav>
