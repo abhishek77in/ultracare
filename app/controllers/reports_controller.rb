@@ -7,7 +7,7 @@ class ReportsController < ApplicationController
 
   def create
     @report = Report.new(report_params)
-    @report.report_type = ReportType.new(reportable: WholeAbdomen.new(report_type_attributes))
+    @report.report_type = ReportType.new(reportable: reportable)
     if @report.save && @report.report_type.save
       redirect_to root_path, notice: 'Report Created'
     else
@@ -26,6 +26,12 @@ class ReportsController < ApplicationController
   end
 
   private
+  def reportable
+    model_name = params['reportable_type'].titlecase.delete(' ')
+    model  = Object.const_get model_name
+    model.new(report_type_attributes)
+  end
+
   def report_params
     params.require(:report).permit(:doctor_id, patient_attributes: [:name, :age, :sex])
   end

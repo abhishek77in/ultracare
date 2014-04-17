@@ -4,6 +4,7 @@
   <div class="form-container">
     <%= render 'patient', f: f %>
     <%= render 'whole_abdomen', f: f %>
+    <%= hidden_field_tag 'reportable_type', 'whole_abdomen' %>
     <%= f.submit %>
   </div>
 <% end %>
