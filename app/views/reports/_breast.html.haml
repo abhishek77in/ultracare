@@ -1,0 +1,7 @@
+%h3 Findings
+%hr
+= f.fields_for :report_type, @report.report_type.reportable do |report_type_fields|
+  =  report_type_fields.input :left_breast, type: :text
+  =  report_type_fields.input :right_breast, type: :text
+  =  report_type_fields.input :impression, type: :text
+  =  report_type_fields.input :advise, type: :text

@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140417155214) do
+ActiveRecord::Schema.define(version: 20140417181735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "breasts", force: true do |t|
+    t.text     "left_breast"
+    t.text     "right_breast"
+    t.text     "impression"
+    t.text     "advise"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "doctors", force: true do |t|
     t.string   "name"
