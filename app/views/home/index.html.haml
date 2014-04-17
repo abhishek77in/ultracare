@@ -6,11 +6,13 @@
       %th Patient Name
       %th Refered By Doctor
       %th Report Type
-      %th Print
+      %th Edit Report
+      %th Print Report
   %tbody
     - @reports.each do |report|
       %tr
         %td= report.patient.name
         %td= report.doctor.name
         %td= report.report_type.reportable.class.name.underscore.titleize
-        %td= link_to "Print Report", print_report_path(report), target: '_blank'
+        %td= link_to "Edit", edit_report_path(report, type: report.report_type.reportable.class.name.underscore)
+        %td= link_to "Print", print_report_path(report), target: '_blank'
