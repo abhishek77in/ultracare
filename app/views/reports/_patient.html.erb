@@ -4,7 +4,7 @@
       <%=  patient_fields.input :name, label: 'Patient Name' %>
     </div>
     <div class="small-6 columns">
-      <%= f.association :doctor, label: 'Refered By Doctor', prompt: 'Select a Doctor', input_html: { class: 'chosen-select' }  %>
+      <%= f.association :doctor, label: 'Refered By Doctor', include_blank: true, input_html: { class: 'chosen-select' }  %>
     </div>
   </div>
   <div class="row">
