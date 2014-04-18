@@ -1,5 +1,5 @@
 class DoctorsController < ApplicationController
-  before_action :set_doctor, only: [:show, :edit, :update]
+  before_action :set_doctor, only: [:show]
 
   # GET /doctors
   # GET /doctors.json
@@ -17,10 +17,6 @@ class DoctorsController < ApplicationController
     @doctor = Doctor.new
   end
 
-  # GET /doctors/1/edit
-  def edit
-  end
-
   # POST /doctors
   # POST /doctors.json
   def create
@@ -30,17 +26,6 @@ class DoctorsController < ApplicationController
     else
       flash.now[:alert] = "Sorry! Doctor could not be created, please fix the errors and try again."
       render action: 'new'
-    end
-  end
-
-  # PATCH/PUT /doctors/1
-  # PATCH/PUT /doctors/1.json
-  def update
-    if @doctor.update(doctor_params)
-      redirect_to @doctor, notice: 'Doctor was successfully updated.'
-    else
-      flash.now[:alert] = "Sorry! Doctor could not be updated, please fix the errors and try again."
-      render action: 'edit'
     end
   end
 
