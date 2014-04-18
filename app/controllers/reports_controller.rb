@@ -36,7 +36,7 @@ class ReportsController < ApplicationController
     @reportable = @report.report_type.reportable
     render pdf: "#{@report.patient.name} - #{@report.created_at.strftime("%d %b %y")}",
            layout: 'pdf.html.haml',
-           margin: { bottom: 30 },
+           margin: { bottom: 20, top: 1 },
            footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
   end
 
