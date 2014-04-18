@@ -21,6 +21,7 @@ gem 'foundation-icons-sass-rails'
 gem 'foundation_rails_helper'
 gem 'wicked_pdf'
 gem 'haml'
+gem 'chosen-rails'
 
 gem 'better_errors'
 gem 'binding_of_caller'
