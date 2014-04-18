@@ -25,29 +25,22 @@ class DoctorsController < ApplicationController
   # POST /doctors.json
   def create
     @doctor = Doctor.new(doctor_params)
-
-    respond_to do |format|
-      if @doctor.save
-        format.html { redirect_to @doctor, notice: 'Doctor was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @doctor }
-      else
-        format.html { render action: 'new' }
-        format.json { render json: @doctor.errors, status: :unprocessable_entity }
-      end
+    if @doctor.save
+      redirect_to @doctor, notice: 'Doctor was successfully created.'
+    else
+      flash.now[:alert] = "Sorry! Doctor could not be created, please fix the errors and try again."
+      render action: 'new'
     end
   end
 
   # PATCH/PUT /doctors/1
   # PATCH/PUT /doctors/1.json
   def update
-    respond_to do |format|
-      if @doctor.update(doctor_params)
-        format.html { redirect_to @doctor, notice: 'Doctor was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: 'edit' }
-        format.json { render json: @doctor.errors, status: :unprocessable_entity }
-      end
+    if @doctor.update(doctor_params)
+      redirect_to @doctor, notice: 'Doctor was successfully updated.'
+    else
+      flash.now[:alert] = "Sorry! Doctor could not be updated, please fix the errors and try again."
+      render action: 'edit'
     end
   end
 
