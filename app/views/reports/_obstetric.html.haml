@@ -1,0 +1,21 @@
+%h3 Findings
+%hr
+= f.fields_for :report_type, @report.report_type.reportable do |report_type_fields|
+  =  report_type_fields.input :pregnancy
+  =  report_type_fields.input :bpd
+  =  report_type_fields.input :fl
+  =  report_type_fields.input :ac
+  =  report_type_fields.input :average_g_a
+  =  report_type_fields.input :presentation_and_lie
+  =  report_type_fields.input :liquor_volume
+  =  report_type_fields.input :cervix_and_o_s
+  =  report_type_fields.input :fetal_heart
+  =  report_type_fields.input :head_movement
+  =  report_type_fields.input :limbs_movement
+  =  report_type_fields.input :breathing_movement
+  =  report_type_fields.input :placenta
+  =  report_type_fields.input :grade
+  =  report_type_fields.input :e_d_d
+  =  report_type_fields.input :e_f_w
+  =  report_type_fields.input :remarks, type: :text
+  =  report_type_fields.input :advise, type: :text
