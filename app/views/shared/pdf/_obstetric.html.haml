@@ -2,8 +2,80 @@
   %h3= "Obstetrics U.S.G. Report".upcase
 %table
   %tbody
-    - @report.report_type.report_type_fields.each do |field|
-      %tr
-        %td= field.humanize.upcase
-        - if @reportable.attributes[field].present?
-          %td= convert_to_line_break(@reportable.attributes[field]).html_safe
+    %tr
+      %td= 'Pregnancy'.upcase
+      %td= @reportable.pregnancy
+    %tr
+      %td
+      %td
+        %table
+          %thead
+            %tr
+              %td CRL
+              %td mm
+              %td weeks
+              %td days
+          %tbody
+            %tr
+              %td BPD
+              %td= @reportable.bpd.split(',')[0]
+              %td= @reportable.bpd.split(',')[1]
+              %td= @reportable.bpd.split(',')[2]
+            %tr
+              %td FL
+              %td= @reportable.fl.split(',')[0]
+              %td= @reportable.fl.split(',')[1]
+              %td= @reportable.fl.split(',')[2]
+            %tr
+              %td AC
+              %td= @reportable.ac.split(',')[0]
+              %td= @reportable.ac.split(',')[1]
+              %td= @reportable.ac.split(',')[2]
+    %tr
+      %td= 'Average G.A.'.upcase
+      %td= @reportable.average_g_a
+    %tr
+      %td= 'Presentation and Lie'.upcase
+      %td= @reportable.presentation_and_lie
+    %tr
+      %td= 'Liquor Volume'.upcase
+      %td= @reportable.liquor_volume
+    %tr
+      %td= 'Cervix and OS'.upcase
+      %td= @reportable.cervix_and_o_s
+    %tr
+      %td= 'Fetal heart'.upcase
+      - if @reportable.fetal_heart.present?
+        %td= convert_to_line_break(@reportable.fetal_heart).html_safe
+    %tr
+      %td= 'Fetal Movements'.upcase
+      %td
+        %table
+          %thead
+            %tr
+              %td Head
+              %td Limbs
+              %td Breathing
+          %tbody
+            %tr
+              %td= @reportable.fetal_head_movement
+              %td= @reportable.fetal_limbs_movement
+              %td= @reportable.fetal_breathing_movement
+    %tr
+      %td= 'Placenta'.upcase
+      %td= @reportable.placenta
+    %tr
+      %td= 'grade'.upcase
+      %td= @reportable.grade
+    %tr
+      %td= 'e_d_d'.upcase
+      %td= @reportable.e_d_d
+    %tr
+      %td= 'e_f_w'.upcase
+      %td= @reportable.e_f_w
+    %tr
+      %td= 'remarks'.upcase
+      %td= @reportable.remarks
+    %tr
+      %td= 'advise'.upcase
+      %td= @reportable.advise
