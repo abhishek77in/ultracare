@@ -5,6 +5,8 @@
     %tr
       %td= 'Pregnancy'.upcase
       %td= @reportable.pregnancy
+      %td
+      %td
     %tr
       %td
       %td
@@ -31,16 +33,16 @@
               %td= @reportable.ac.split(',')[0]
               %td= @reportable.ac.split(',')[1]
               %td= @reportable.ac.split(',')[2]
+      %td
+      %td
     %tr
       %td= 'Average G.A.'.upcase
       %td= @reportable.average_g_a
-    %tr
       %td= 'Presentation and Lie'.upcase
       %td= @reportable.presentation_and_lie
     %tr
       %td= 'Liquor Volume'.upcase
       %td= @reportable.liquor_volume
-    %tr
       %td= 'Cervix and OS'.upcase
       %td= @reportable.cervix_and_o_s
     %tr
@@ -61,21 +63,30 @@
               %td= @reportable.fetal_head_movement
               %td= @reportable.fetal_limbs_movement
               %td= @reportable.fetal_breathing_movement
+      %td
+      %td
     %tr
       %td= 'Placenta'.upcase
       %td= @reportable.placenta
-    %tr
       %td= 'grade'.upcase
       %td= @reportable.grade
     %tr
-      %td= 'e_d_d'.upcase
+      %td= 'E.D.D'.upcase
       %td= @reportable.e_d_d
+      %td
+      %td
     %tr
-      %td= 'e_f_w'.upcase
+      %td= 'E.F.W'.upcase
       %td= @reportable.e_f_w
+      %td
+      %td
     %tr
       %td= 'remarks'.upcase
       %td= @reportable.remarks
+      %td
+      %td
     %tr
       %td= 'advise'.upcase
       %td= @reportable.advise
+      %td
+      %td
