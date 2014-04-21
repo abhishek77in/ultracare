@@ -1,0 +1,9 @@
+%div{style: 'text-align: center;'}
+  %h3= "Obstetrics U.S.G. Report".upcase
+%table
+  %tbody
+    - @report.report_type.report_type_fields.each do |field|
+      %tr
+        %td= field.humanize.upcase
+        - if @reportable.attributes[field].present?
+          %td= convert_to_line_break(@reportable.attributes[field]).html_safe

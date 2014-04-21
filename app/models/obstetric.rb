@@ -1,6 +1,10 @@
 class Obstetric < ActiveRecord::Base
   has_one :report_type, as: :reportable
 
+  def print_template
+    'shared/pdf/obstetric'
+  end
+
   def self.params
     {
       pregnancy: 'Confirmed',
