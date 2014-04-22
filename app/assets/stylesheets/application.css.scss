@@ -11,19 +11,9 @@
  *= require_self
  *= require chosen
  *= require foundation_and_overrides
- *= require_tree .
  */
 
 @import 'foundation-icons';
-.grey {
-  color: #4d4d4d;
-}
-.header {
-  text-align: center;
-}
-.line-height-4 {
-  line-height: 4px;
-}
 small {
   display: block;
   padding: 0.375em 0.25em;
@@ -32,7 +22,4 @@ small {
   font-weight: bold;
   background: #f04124;
   color: white;
-}
-td table {
-  margin-bottom: 0px;
 }
