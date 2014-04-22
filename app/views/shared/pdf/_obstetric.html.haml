@@ -4,8 +4,10 @@
   %tbody
     %tr
       %td= 'Pregnancy'.upcase
-      %td= @reportable.pregnancy
-      %td{colspan: 2}
+      %td{colspan: 3}= @reportable.pregnancy
+    %tr
+      %td
+      %td{colspan: 3}
         %table
           %thead
             %tr
@@ -30,42 +32,48 @@
               %td= @reportable.ac.split(',')[1]
               %td= @reportable.ac.split(',')[2]
     %tr
-      %td= 'Average G.A.'.upcase
-      %td= @reportable.average_g_a
-      %td= 'Presentation and Lie'.upcase
-      %td= @reportable.presentation_and_lie
+      %td{colspan: 2}= 'Average G.A.'.upcase
+      %td{colspan: 2}= @reportable.average_g_a
     %tr
-      %td= 'Liquor Volume'.upcase
-      %td= @reportable.liquor_volume
-      %td= 'Cervix and OS'.upcase
-      %td= @reportable.cervix_and_o_s
+      %td{colspan: 2}= 'Presentation and Lie'.upcase
+      %td{colspan: 2}= @reportable.presentation_and_lie
     %tr
-      %td= 'Fetal heart'.upcase
+      %td{colspan: 2, width: '35%'}= 'Liquor Volume'.upcase
+      %td{colspan: 2}= @reportable.liquor_volume
+    %tr
+      %td{colspan: 2}= 'Cervix and OS'.upcase
+      %td{colspan: 2}= @reportable.cervix_and_o_s
+    %tr
+      %td{colspan: 2}= 'Fetal heart'.upcase
       - if @reportable.fetal_heart.present?
-        %td= convert_to_line_break(@reportable.fetal_heart).html_safe
+        %td{colspan: 2}= convert_to_line_break(@reportable.fetal_heart).html_safe
+    %tr
       %td= 'Fetal Movements'.upcase
       %td{colspan: 3}
         %table
-          %thead
-            %tr
-              %td Head
-              %td Limbs
-              %td Breathing
           %tbody
             %tr
+              %td
+                %b Head
               %td= @reportable.fetal_head_movement
+              %td
+                %b Limbs
               %td= @reportable.fetal_limbs_movement
+              %td
+                %b Breathing
               %td= @reportable.fetal_breathing_movement
     %tr
       %td= 'Placenta'.upcase
-      %td= @reportable.placenta
+      %td{colspan: 3}= @reportable.placenta
+    %tr
       %td= 'grade'.upcase
-      %td= @reportable.grade
+      %td{colspan: 3}= @reportable.grade
     %tr
       %td= 'E.D.D.'.upcase
-      %td= @reportable.e_d_d
+      %td{colspan: 3}= @reportable.e_d_d
+    %tr
       %td= 'E.F.W.'.upcase
-      %td= @reportable.e_f_w
+      %td{colspan: 3}= @reportable.e_f_w
     %tr
       %td= 'remarks'.upcase
       %td{colspan: 3}= @reportable.remarks
