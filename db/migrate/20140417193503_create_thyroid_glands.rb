@@ -1,4 +1,4 @@
-kclass CreateThyroidGlands < ActiveRecord::Migration
+class CreateThyroidGlands < ActiveRecord::Migration
   def change
     create_table :thyroid_glands do |t|
       t.text :left_lobe
