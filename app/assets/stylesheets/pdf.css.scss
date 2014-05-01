@@ -8,11 +8,12 @@
   line-height: 4px;
 }
 td table {
-  margin-bottom: 0px;
+  margin: 0px;
+  padding: 0px;
 }
 td table {
-  thead tr td { padding: 4px 5px; }
-  tbody tr td { padding: 4px 5px; }
+  thead tr td { padding: 4px 10px; }
+  tbody tr td { padding: 3px 10px; }
 }
 table tbody tr td {
   padding: 7.5px 5px;
