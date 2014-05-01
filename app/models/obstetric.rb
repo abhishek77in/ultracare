@@ -8,9 +8,6 @@ class Obstetric < ActiveRecord::Base
   def self.params
     {
       pregnancy: 'Confirmed',
-      bpd: '73, 29, 03',
-      fl: '57,30,03',
-      ac: '251,29,00',
       average_g_a: '29 WEEKS O5 DAYS (+- 02 WEEKS)',
       presentation_and_lie: 'VERTEX',
       liquor_volume: 'Appears ADEQUATE in amount.',

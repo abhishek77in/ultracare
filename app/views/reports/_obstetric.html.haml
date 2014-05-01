@@ -4,28 +4,40 @@
   .row
     .small-6.columns
       =  report_type_fields.input :pregnancy # , priority: ['Confirmed'], collection: ['Confirmed','Single','Viable','Non-Viable','Twins']
-    .small-6.columns
-      %label{for: "report_patient_attributes_age"} BPD
-      .row.collapse
-        .small-6.columns
-          = report_type_fields.input :bpd, label: false
-        .small-6.columns
-          %span.postfix mm, weeks, days
   .row
-    .small-6.columns
-      %label{for: "report_patient_attributes_age"} FL
-      .row.collapse
-        .small-6.columns
-          = report_type_fields.input :fl, label: false
-        .small-6.columns
-          %span.postfix mm, weeks, days
-    .small-6.columns
-      %label{for: "report_patient_attributes_age"} AC
-      .row.collapse
-        .small-6.columns
-          = report_type_fields.input :ac, label: false
-        .small-6.columns
-          %span.postfix mm, weeks, days
+    .small-12.columns
+      %table
+        %thead
+          %tr
+            %th
+            %th mm
+            %th weeks
+            %th days
+        %tbody
+          %tr
+            %td
+              %b CRL
+            %td= report_type_fields.input :crl_mm, label: false
+            %td= report_type_fields.input :crl_days, label: false
+            %td= report_type_fields.input :crl_weeks, label: false
+          %tr
+            %td
+              %b BPD
+            %td= report_type_fields.input :bpd_mm, label: false
+            %td= report_type_fields.input :bpd_days, label: false
+            %td= report_type_fields.input :bpd_weeks, label: false
+          %tr
+            %td
+              %b FL
+            %td= report_type_fields.input :fl_mm, label: false
+            %td= report_type_fields.input :fl_days, label: false
+            %td= report_type_fields.input :fl_weeks, label: false
+          %tr
+            %td
+              %b AC
+            %td= report_type_fields.input :ac_mm, label: false
+            %td= report_type_fields.input :ac_days, label: false
+            %td= report_type_fields.input :ac_weeks, label: false
   .row
     .small-6.columns
       =  report_type_fields.input :average_g_a, label: 'Average G.A.'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420134339) do
+ActiveRecord::Schema.define(version: 20140501101418) do
 
   create_table "breasts", force: true do |t|
     t.text     "left_breast"
@@ -65,9 +65,6 @@ ActiveRecord::Schema.define(version: 20140420134339) do
 
   create_table "obstetrics", force: true do |t|
     t.string   "pregnancy"
-    t.string   "bpd"
-    t.string   "fl"
-    t.string   "ac"
     t.string   "average_g_a"
     t.string   "presentation_and_lie"
     t.text     "liquor_volume"
@@ -84,6 +81,18 @@ ActiveRecord::Schema.define(version: 20140420134339) do
     t.text     "advise"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "crl_mm"
+    t.integer  "crl_weeks"
+    t.integer  "crl_days"
+    t.integer  "bpd_mm"
+    t.integer  "bpd_weeks"
+    t.integer  "bpd_days"
+    t.integer  "fl_mm"
+    t.integer  "fl_weeks"
+    t.integer  "fl_days"
+    t.integer  "ac_mm"
+    t.integer  "ac_weeks"
+    t.integer  "ac_days"
   end
 
   create_table "patients", force: true do |t|
