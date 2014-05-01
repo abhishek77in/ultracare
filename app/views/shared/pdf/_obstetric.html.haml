@@ -11,26 +11,31 @@
         %table
           %thead
             %tr
-              %td CRL
+              %td
               %td mm
               %td weeks
               %td days
           %tbody
             %tr
+              %td CRL
+              %td= @reportable.crl_mm
+              %td= @reportable.crl_weeks
+              %td= @reportable.crl_days
+            %tr
               %td BPD
-              %td= @reportable.bpd.split(',')[0]
-              %td= @reportable.bpd.split(',')[1]
-              %td= @reportable.bpd.split(',')[2]
+              %td= @reportable.bpd_mm
+              %td= @reportable.bpd_weeks
+              %td= @reportable.bpd_days
             %tr
               %td FL
-              %td= @reportable.fl.split(',')[0]
-              %td= @reportable.fl.split(',')[1]
-              %td= @reportable.fl.split(',')[2]
+              %td= @reportable.fl_mm
+              %td= @reportable.fl_weeks
+              %td= @reportable.fl_days
             %tr
               %td AC
-              %td= @reportable.ac.split(',')[0]
-              %td= @reportable.ac.split(',')[1]
-              %td= @reportable.ac.split(',')[2]
+              %td= @reportable.ac_mm
+              %td= @reportable.ac_weeks
+              %td= @reportable.ac_days
     %tr
       %td{colspan: 2}= 'Average G.A.'.upcase
       %td{colspan: 2}= @reportable.average_g_a
