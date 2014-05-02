@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502154625) do
+ActiveRecord::Schema.define(version: 20140502163908) do
 
   create_table "breasts", force: true do |t|
     t.text     "left_breast"
@@ -81,21 +81,21 @@ ActiveRecord::Schema.define(version: 20140502154625) do
     t.text     "advise"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "crl_mm"
-    t.integer  "crl_weeks"
-    t.integer  "crl_days"
-    t.integer  "bpd_mm"
-    t.integer  "bpd_weeks"
-    t.integer  "bpd_days"
-    t.integer  "fl_mm"
-    t.integer  "fl_weeks"
-    t.integer  "fl_days"
-    t.integer  "ac_mm"
-    t.integer  "ac_weeks"
-    t.integer  "ac_days"
-    t.integer  "hc_mm"
-    t.integer  "hc_weeks"
-    t.integer  "hc_days"
+    t.string   "crl_mm"
+    t.string   "crl_weeks"
+    t.string   "crl_days"
+    t.string   "bpd_mm"
+    t.string   "bpd_weeks"
+    t.string   "bpd_days"
+    t.string   "fl_mm"
+    t.string   "fl_weeks"
+    t.string   "fl_days"
+    t.string   "ac_mm"
+    t.string   "ac_weeks"
+    t.string   "ac_days"
+    t.string   "hc_mm"
+    t.string   "hc_weeks"
+    t.string   "hc_days"
   end
 
   create_table "patients", force: true do |t|
