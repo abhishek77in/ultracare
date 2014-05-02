@@ -3,9 +3,9 @@ class Testis < ActiveRecord::Base
 
   def self.params
     {
-      left_testis: 'Not Scanned.',
-      right_testis: 'Appears homogenous in echotexture. Minimal Fluid Collection seen.',
-      impression: 'MINIMAL FLUID COLLECTION SEEN IN RIGHT TESTIS.'
+      left_testis: 'Appears NORMAL in size, shape & homogenous in echotexture.',
+      right_testis: 'Appears NORMAL in size, shape & homogenous in echotexture.',
+      impression: 'ORGANS ARE UNDER SCAN WITH IN NORMAL LIMITS.'
     }
   end
 end
