@@ -3,8 +3,8 @@ class Testis < ActiveRecord::Base
 
   def self.params
     {
-      left_testis: 'Appears NORMAL in size, shape & homogenous in echotexture.',
-      right_testis: 'Appears NORMAL in size, shape & homogenous in echotexture.',
+      left_testis: 'Appears NORMAL in size and shape & homogenous in echotexture.',
+      right_testis: 'Appears NORMAL in size and shape & homogenous in echotexture.',
       impression: 'ORGANS ARE UNDER SCAN WITH IN NORMAL LIMITS.'
     }
   end
