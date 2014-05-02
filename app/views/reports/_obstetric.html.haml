@@ -38,6 +38,12 @@
             %td= report_type_fields.input :ac_mm, label: false
             %td= report_type_fields.input :ac_days, label: false
             %td= report_type_fields.input :ac_weeks, label: false
+          %tr
+            %td
+              %b HC
+            %td= report_type_fields.input :hc_mm, label: false
+            %td= report_type_fields.input :hc_days, label: false
+            %td= report_type_fields.input :hc_weeks, label: false
   .row
     .small-6.columns
       =  report_type_fields.input :average_g_a, label: 'Average G.A.'

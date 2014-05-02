@@ -7,7 +7,7 @@ class Obstetric < ActiveRecord::Base
 
   def self.params
     {
-      pregnancy: 'Confirmed',
+      pregnancy: "Single\nConfirmed / Viable / Intrauterine",
       average_g_a: '29 WEEKS O5 DAYS (+- 02 WEEKS)',
       presentation_and_lie: 'VERTEX',
       liquor_volume: 'Appears ADEQUATE in amount.',

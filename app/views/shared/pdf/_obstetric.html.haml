@@ -40,6 +40,12 @@
               %td= @reportable.ac_mm
               %td= @reportable.ac_weeks
               %td= @reportable.ac_days
+            %tr
+              %td
+                %b HC
+              %td= @reportable.hc_mm
+              %td= @reportable.hc_weeks
+              %td= @reportable.hc_days
     %tr
       %td{colspan: 2}= 'Average G.A.'.upcase
       %td{colspan: 2}= @reportable.average_g_a
