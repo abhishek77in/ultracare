@@ -3,6 +3,7 @@
 %table
   %tbody
     - @report.report_type.report_type_fields.each do |field|
+      - next if @reportable.attributes[field].blank?
       %tr
         %td= field.humanize.upcase
         - if @reportable.attributes[field].present?
