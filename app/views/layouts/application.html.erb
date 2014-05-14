@@ -15,7 +15,8 @@
     <%= render 'shared/navigation' %>
     <%= render 'shared/side_bar' %>
     <div class="large-9 medium-8 columns">
-      <%= display_flash_messages %>
+      <%= render 'shared/notice' if flash[:notice] %>
+      <%= render 'shared/alert' if flash[:alert] %>
       <div class="row"><%= yield %></div>
     </div>
     <%= javascript_include_tag "application" %>
