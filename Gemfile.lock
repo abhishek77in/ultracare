@@ -64,9 +64,6 @@ GEM
     foundation-rails (5.2.2.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
-    foundation_rails_helper (0.4)
-      actionpack (>= 3.0)
-      railties (>= 3.0)
     fssm (0.2.10)
     haml (4.0.5)
       tilt
@@ -186,7 +183,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   foundation-icons-sass-rails
   foundation-rails
-  foundation_rails_helper
   haml
   jbuilder (~> 1.2)
   jquery-rails
