@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Id</th>
       <th>Name</th>
       <th>Degree</th>
     </tr>
@@ -11,6 +12,7 @@
   <tbody>
     <% @doctors.each do |doctor| %>
       <tr>
+        <td><%= doctor.id %></td>
         <td><%= doctor.name %></td>
         <td><%= doctor.degree %></td>
       </tr>
