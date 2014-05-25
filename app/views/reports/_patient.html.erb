@@ -20,7 +20,13 @@
       </div>
     </div>
     <div class="small-6 columns">
-      <%= patient_fields.input :sex, include_blank: false, collection: [['Female', 'F'],['Male', 'M']] %>
+      <% if ['Breast','Obstetric','KubFemale','WholeAbdomenFemale','LowerAbdomenFemale'].include?(@report.report_type.reportable_type) %>
+        <%= patient_fields.input :sex, include_blank: false, collection: [['Female', 'F']] %>
+      <% elsif ['Testis','WholeAbdomenMale','KubMale'].include?(@report.report_type.reportable_type) %>
+        <%= patient_fields.input :sex, include_blank: false, collection: [['Male', 'M']] %>
+      <% else %>
+        <%= patient_fields.input :sex, include_blank: false, collection: [['Female', 'F'],['Male', 'M']] %>
+      <% end %>
     </div>
   </div>
 <% end %>
