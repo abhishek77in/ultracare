@@ -4,6 +4,10 @@ class Doctor < ActiveRecord::Base
   has_many :reports
 
   def doctor_name
-    "#{name} (#{degree}), # #{id}"
+    if degree.present?
+      "#{name} (#{degree}), # #{id}"
+    else
+      "#{name}, # #{id}"
+    end
   end
 end
