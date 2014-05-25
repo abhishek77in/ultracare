@@ -5,7 +5,5 @@ class Report < ActiveRecord::Base
   has_one :report_type
   accepts_nested_attributes_for :report_type, allow_destroy: true
 
-  validates_presence_of :doctor
-  validates_presence_of :patient
-  validates_presence_of :report_type
+  validates_presence_of :doctor, :patient, :report_type
 end
