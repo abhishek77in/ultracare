@@ -1,4 +1,4 @@
-<nav class="top-bar">
+<nav class="top-bar" data-topbar>
   <ul class="title-area">
     <li class="name">
       <h1><%= link_to "Balrampur Diagnotic Center", root_path %></a></h1>
@@ -9,10 +9,13 @@
       <li class="divider"></li>
       <li><%= link_to "Reports", root_path %></li>
       <li class="divider"></li>
-      <li><%= link_to "List Doctors", doctors_path %></li>
-      <li class="divider"></li>
-      <li><%= link_to "Add Doctor", new_doctor_path %></li>
-      <li class="divider"></li>
+      <li class="has-dropdown">
+        <a>Doctor</a>
+        <ul class="dropdown">
+          <li><%= link_to "List Doctors", doctors_path %></li>
+          <li><%= link_to "Add Doctor", new_doctor_path %></li>
+        </ul>
+      </li>
     </ul>
   </section>
 </nav>
