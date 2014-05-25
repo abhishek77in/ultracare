@@ -6,6 +6,7 @@ class Report < ActiveRecord::Base
   accepts_nested_attributes_for :report_type, allow_destroy: true
 
   validates_presence_of :doctor, :patient, :report_type
+  scope :recent, -> { order('created_at DESC') }
 
   def for_male?
     ['Testis','WholeAbdomenMale','KubMale'].include?(report_type.reportable_type)

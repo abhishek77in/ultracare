@@ -23,4 +23,6 @@
         %td.fi-page-edit.small= link_to " Edit", edit_report_path(report, type: report.report_type.reportable.class.name.underscore)
         %td.fi-print.small= link_to " Print", print_report_path(report), target: '_blank'
 
+= will_paginate @reports, renderer: FoundationPagination::Rails
+
 = render 'script' if flash[:report_id].present?
