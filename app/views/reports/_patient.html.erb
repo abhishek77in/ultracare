@@ -20,13 +20,7 @@
       </div>
     </div>
     <div class="small-6 columns">
-      <% if @report.for_female? %>
-        <%= patient_fields.input :sex, include_blank: false, collection: [['Female', 'F']] %>
-      <% elsif @report.for_male? %>
-        <%= patient_fields.input :sex, include_blank: false, collection: [['Male', 'M']] %>
-      <% else %>
-        <%= patient_fields.input :sex, include_blank: false, collection: [['Female', 'F'],['Male', 'M']] %>
-      <% end %>
+      <%= patient_fields.input :sex, include_blank: false, collection: @report.possible_genders  %>
     </div>
   </div>
 <% end %>
