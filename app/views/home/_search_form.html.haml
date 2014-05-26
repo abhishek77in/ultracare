@@ -1,0 +1,8 @@
+= simple_form_for :search, url: root_path, method: :get do |f|
+  .row
+    .small-4.columns
+      = f.input :doctor_id, collection: Doctor.all, label_method: :doctor_name, label: 'Refered By Doctor', prompt: 'All Doctors', include_blank: true, input_html: { class: 'chosen-select' }
+    .small-4.columns
+      = f.input :doctor_id, collection: Doctor.all, label_method: :doctor_name, label: 'Refered By Doctor', prompt: 'All Doctors', include_blank: true, input_html: { class: 'chosen-select' }
+    .small-4.columns
+      = f.button :submit, 'Find reports', class: 'small round'

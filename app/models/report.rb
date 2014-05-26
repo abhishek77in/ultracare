@@ -7,7 +7,7 @@ class Report < ActiveRecord::Base
 
   validates_presence_of :doctor, :patient, :report_type
   scope :recent, -> { order('created_at DESC') }
-
+  scope :belongs_to_doctor, -> (doctor_id) { where(doctor_id: doctor_id) }
 
   def possible_genders
     if for_female?
