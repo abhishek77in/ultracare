@@ -5,10 +5,17 @@ class HomeController < ApplicationController
     @reports = Report.recent
     @reports = @reports.belongs_to_doctor(doctor_id_param) if params[:search] && doctor_id_param.present?
     @reports = @reports.date_range(date_range_param) if params[:search] && date_range_param.present?
-    @reports = @reports.paginate(:page => params[:page])
-  end
 
-  def business_report
+    if params[:print_business_report]
+      render pdf: "Business Report - #{Time.now.strftime("%d %b %y")}",
+             template: 'home/print_business_report.html.haml',
+             layout: 'business_report_pdf.html.haml',
+             margin: { bottom: 2, top: 2 },
+             footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
+    else
+      @reports = @reports.paginate(:page => params[:page])
+      render 'index'
+    end
   end
 
   private
