@@ -7,7 +7,7 @@ $(function()
       autoClose: true,
       shortcuts :
         {
-        'prev-days': [3,5,7],
+        'prev-days': [1,3,5,7],
         'prev': ['week','month','year'],
         'next-days':null,
         'next':null
