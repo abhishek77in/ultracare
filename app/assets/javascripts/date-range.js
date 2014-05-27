@@ -1,5 +1,13 @@
 $(function()
   {
+    $('#print_business_report').click(function(){
+      if ($('#date-range').val().length > 0) {
+      } else {
+        alert('Please set Date Range to print business report.');
+        return false;
+      }
+    });
+
     $('#date-range').dateRangePicker(
       {
       format: 'D-M-YYYY',
