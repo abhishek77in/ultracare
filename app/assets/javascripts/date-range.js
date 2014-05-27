@@ -4,6 +4,7 @@ $(function()
       {
       format: 'D-M-YYYY',
       startOfWeek: 'monday',
+      autoClose: true,
       shortcuts :
         {
         'prev-days': [3,5,7],
