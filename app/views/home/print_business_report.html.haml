@@ -1,0 +1,27 @@
+.text-center
+  %h2 Business Report
+  %p= params[:search][:date_range]
+%hr
+
+.keep-intact
+  - @reports.group_by(&:doctor).each do |doctor, reports|
+    %p
+      = doctor.name
+      = "( #{params[:search][:date_range]} )"
+    %table
+      %thead
+        %tr
+          %th Patient Name
+          %th Age
+          %th Sex
+          %th Ultrasound Type
+          %th Date
+      %tbody
+        - reports.each do |report|
+          %tr
+            %td= report.patient.name
+            %td= report.patient.age
+            %td= report.patient.sex
+            %td= report.report_type.reportable.class.name.underscore.titleize
+            %td= report.created_at.strftime("%d / %m / %Y")
+    %hr
