@@ -11,7 +11,6 @@
  *= require_self
  *= require chosen
  *= require plugins/daterangepicker
- *= require foundation_and_overrides
  */
 
 @import 'foundation-icons';
@@ -24,3 +23,5 @@ small {
   background: #f04124;
   color: white;
 }
+@import 'home';
+@import 'foundation_and_overrides';
