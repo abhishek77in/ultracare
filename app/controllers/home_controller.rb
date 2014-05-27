@@ -22,6 +22,6 @@ class HomeController < ApplicationController
   end
 
   def to_date(date_string)
-    Date.strptime(date_string, '%Y-%m-%d')
+    Date.strptime(date_string, '%d-%m-%Y')
   end
 end

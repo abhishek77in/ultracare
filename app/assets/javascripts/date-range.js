@@ -2,6 +2,8 @@ $(function()
   {
     $('#date-range').dateRangePicker(
       {
+      format: 'D-M-YYYY',
+      startOfWeek: 'monday',
       shortcuts :
         {
         'prev-days': [3,5,7],
