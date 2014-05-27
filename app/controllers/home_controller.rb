@@ -10,8 +10,7 @@ class HomeController < ApplicationController
       render pdf: "Business Report - #{Time.now.strftime("%d %b %y")}",
              template: 'home/print_business_report.html.haml',
              layout: 'business_report_pdf.html.haml',
-             margin: { bottom: 2, top: 2 },
-             footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
+             margin: { bottom: 5, top: 5 }
     else
       @reports = @reports.paginate(:page => params[:page])
       render 'index'
