@@ -3,4 +3,6 @@
     .small-4.columns
       = f.input :doctor_id, collection: Doctor.all, selected: selected_doctor_id, label_method: :doctor_name, label: 'Refered By Doctor', prompt: 'All Doctors', include_blank: true, input_html: { class: 'chosen-select' }
     .small-4.columns
+      = f.input :date_range, label: 'Date Range', input_html: { id: 'date-range' }
+    .small-4.columns
       = f.button :submit, 'Find reports', class: 'round'

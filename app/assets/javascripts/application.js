@@ -14,6 +14,8 @@
 //= require jquery_ujs
 //= require chosen-jquery
 //= require foundation
+//= require plugins/moment.min
+//= require plugins/daterangepicker
 //= require turbolinks
 //= require_tree .
 
