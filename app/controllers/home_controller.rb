@@ -8,6 +8,9 @@ class HomeController < ApplicationController
     @reports = @reports.paginate(:page => params[:page])
   end
 
+  def business_report
+  end
+
   private
   def doctor_id_param
     params.require(:search).permit(:doctor_id)[:doctor_id]
