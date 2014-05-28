@@ -12,11 +12,19 @@ class HomeController < ApplicationController
   def print_business_report
     @reports = Report.recent
     @reports = @reports.belongs_to_doctor(doctor_id_param) if params[:search] && doctor_id_param.present?
-    @reports = @reports.date_range(date_range_param) if params[:search] && date_range_param.present?
 
-    render pdf: "Business Report - #{Time.now.strftime("%d %b %y")}",
-           layout: 'business_report_pdf.html.haml',
-           margin: { bottom: 5, top: 5 }
+    if date_range_param.blank?
+      flash.now[:alert] = "Please specify Date Range to Print Business Report."
+      render 'business_report'
+    elsif (date_range_param.max - date_range_param.min).to_i > 90
+      flash.now[:alert] = "Sorry! Cannot print business report for more than 90 days period."
+      render 'business_report'
+    else
+      @reports = @reports.date_range(date_range_param)
+      render pdf: "Business Report - #{Time.now.strftime("%d %b %y")}",
+             layout: 'business_report_pdf.html.haml',
+             margin: { bottom: 5, top: 5 }
+    end
   end
 
   private
