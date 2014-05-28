@@ -4,7 +4,7 @@
 = simple_form_for :search, url: business_analytics_path, method: :get do |f|
   .row.text-center.center
     .large-6.columns
-      = f.input :date_range, label: 'Date Range', input_html: { id: 'date-range', value: selected_date_range, placeholder: 'Set date range, Last 30 days selected by default', readonly: true }
+      = f.input :date_range, label: 'Date Range', input_html: { id: 'business-analytics-date-range', value: selected_date_range, placeholder: 'Set date range, Last 30 days selected by default', readonly: true }
     .large-6.columns
       = f.submit 'Show Business Analytics', name: 'find_reports', class: 'button round'
 

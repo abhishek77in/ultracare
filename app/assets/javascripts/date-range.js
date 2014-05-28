@@ -1,5 +1,19 @@
 $(function()
   {
+    $('#business-analytics-date-range').dateRangePicker(
+      {
+      format: 'D-M-YYYY',
+      startOfWeek: 'monday',
+      autoClose: true,
+      shortcuts :
+        {
+        'prev-days': [1,3,7],
+        'prev': ['week','month'],
+        'next-days':null,
+        'next':null
+      }
+    });
+
     $('#business-report-date-range').dateRangePicker(
       {
       format: 'D-M-YYYY',
