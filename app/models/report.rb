@@ -9,6 +9,7 @@ class Report < ActiveRecord::Base
   scope :recent, -> { order('reports.created_at DESC') }
   scope :belongs_to_doctor, -> (doctor_id) { where(doctor_id: doctor_id) }
   scope :date_range, -> (date_range) { where(created_at: date_range) }
+  scope :last_month, -> { where(created_at: [1.month.ago..Time.now]) }
   scope :patient_name, -> (patient_name) { includes(:patient).where("patients.name like ?", "%#{patient_name}%").references(:patient) }
 
   def possible_genders
