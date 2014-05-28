@@ -12,6 +12,7 @@ class HomeController < ApplicationController
              layout: 'business_report_pdf.html.haml',
              margin: { bottom: 5, top: 5 }
     else
+      @reports = @reports.patient_name(params[:search][:patient_name]) if params[:search]
       @reports = @reports.paginate(:page => params[:page])
       render 'index'
     end
