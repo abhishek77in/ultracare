@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-today = Date.today
+today = DateTime.now
 
 10.times do
   Doctor.create(name: Faker::Name.name, degree: 'MBBS')
