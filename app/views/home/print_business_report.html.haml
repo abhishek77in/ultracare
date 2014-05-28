@@ -3,8 +3,8 @@
   %p= params[:search][:date_range]
 %hr
 
-.keep-intact
-  - @reports.group_by(&:doctor).each do |doctor, reports|
+- @reports.group_by(&:doctor).each do |doctor, reports|
+  .keep-intact
     %p
       = doctor.name
       = "( #{params[:search][:date_range]} )"
