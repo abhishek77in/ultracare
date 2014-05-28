@@ -1,0 +1,11 @@
+%br
+= simple_form_for :search, url: print_business_report_path, method: :get do |f|
+  .row
+    .large-4.columns
+      = f.input :doctor_id, collection: Doctor.all, selected: selected_doctor_id, label_method: :doctor_name, label: 'Refered By Doctor', prompt: 'All Doctors', include_blank: true, input_html: { class: 'chosen-select' }
+  .row
+    .large-4.columns
+      = f.input :date_range, label: 'Date Range', input_html: { id: 'date-range', value: selected_date_range, placeholder: 'Set date range', readonly: true }
+  .row
+    .large-4.columns
+      = f.submit 'Print Business Report', name: 'find_reports', class: 'button round', id: 'print_business_report'
