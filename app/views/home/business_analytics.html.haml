@@ -12,3 +12,7 @@
   = pie_chart Report.group(:doctor_id).count, {library: {title: 'Doctor wise Business Analysis'}}
 .row
   = line_chart Report.group_by_day(:created_at).count, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Reports"}, title: 'Report wise Business Analysis'}}
+.row
+  = pie_chart({"Football" => 10, "Basketball" => 5}, {library: {title: 'Doctor wise Business Analysis'}})
+.row
+  = line_chart({"2013-05-07 00:00:00 UTC" => 8, "2013-06-07 00:00:00 UTC" => 10, "2013-07-07 00:00:00 UTC" => 7}, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Reports"}, title: 'Report wise Business Analysis'}})
