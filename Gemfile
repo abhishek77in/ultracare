@@ -24,7 +24,9 @@ gem 'will_paginate-foundation'
 gem 'wicked_pdf'
 gem 'haml'
 gem 'chosen-rails'
+
 gem 'chartkick'
+gem 'groupdate'
 
 gem 'better_errors'
 gem 'binding_of_caller'

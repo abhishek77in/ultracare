@@ -68,6 +68,8 @@ GEM
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     fssm (0.2.10)
+    groupdate (2.1.1)
+      activerecord (>= 3.0.0)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -197,6 +199,7 @@ DEPENDENCIES
   faker
   foundation-icons-sass-rails
   foundation-rails
+  groupdate
   haml
   jbuilder (~> 1.2)
   jquery-rails
