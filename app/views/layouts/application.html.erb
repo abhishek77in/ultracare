@@ -13,11 +13,22 @@
 
   <body>
     <%= render 'shared/navigation' %>
-    <div class="large-12 medium-12 columns">
-      <%= render 'shared/notice' if flash[:notice] %>
-      <%= render 'shared/alert' if flash[:alert] %>
-      <div class="row"><%= yield %></div>
-    </div>
+
+    <% if current_page?(root_path)  %>
+      <%= render 'shared/side_bar' if current_page?(root_path)  %>
+      <div class="large-9 medium-8 columns">
+        <%= render 'shared/notice' if flash[:notice] %>
+        <%= render 'shared/alert' if flash[:alert] %>
+        <div class="row"><%= yield %></div>
+      </div>
+    <% else  %>
+      <div class="large-12 medium-12 columns">
+        <%= render 'shared/notice' if flash[:notice] %>
+        <%= render 'shared/alert' if flash[:alert] %>
+        <div class="row"><%= yield %></div>
+      </div>
+    <% end  %>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>
