@@ -38,6 +38,7 @@ class HomeController < ApplicationController
       @pie_chart_data.merge!({"Dr. #{doctor.name}" => reports.length})
     end
 
+    @line_chart_data = @reports.group_by_day(:created_at).count
   end
 
   private
