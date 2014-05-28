@@ -14,7 +14,7 @@ end
 
 
 90.times do
-  rand(20..60).times do
+  rand(10..60).times do
     patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
     doctor = Doctor.first(offset: rand(Doctor.count))
     reportable_model = [WholeAbdomenFemale,Obstetric,KubFemale,UpperAbdomen,ThyroidGland].sample
