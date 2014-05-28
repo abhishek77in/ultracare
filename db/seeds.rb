@@ -8,12 +8,12 @@
 
 today = Date.today
 
-50.times do
+10.times do
   Doctor.create(name: Faker::Name.name, degree: 'MBBS')
 end
 
 
-90.times do
+30.times do
   rand(10..60).times do
     patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
     doctor = Doctor.first(offset: rand(Doctor.count))
