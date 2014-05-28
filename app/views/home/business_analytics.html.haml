@@ -1,4 +1,14 @@
+%br
+%br
+%br
+= simple_form_for :search, url: business_analytics_path, method: :get do |f|
+  .row.text-center.center
+    .large-6.columns
+      = f.input :date_range, label: 'Date Range', input_html: { id: 'date-range', value: selected_date_range, placeholder: 'Set date range', readonly: true }
+    .large-6.columns
+      = f.submit 'Show Business Analysis', name: 'find_reports', class: 'button round'
+
 .row
-  = line_chart Report.group_by_day(:created_at).count, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Reports"}}}
+  = line_chart Report.group_by_day(:created_at).count, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Reports"}, title: 'Report wise Business Analysis'}}
 .row
-  = pie_chart Report.group(:doctor_id).count
+  = pie_chart Report.group(:doctor_id).count, {library: {title: 'Doctor wise Business Analysis'}}
