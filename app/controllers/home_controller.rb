@@ -27,6 +27,9 @@ class HomeController < ApplicationController
     end
   end
 
+  def business_analytics
+  end
+
   private
   def doctor_id_param
     params.require(:search).permit(:doctor_id)[:doctor_id]

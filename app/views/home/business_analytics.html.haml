@@ -1,4 +1,4 @@
 .row
-  = line_chart Report.group_by_day(:created_at).count
+  = line_chart Report.group_by_day(:created_at).count, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Reports"}}}
 .row
   = pie_chart Report.group(:doctor_id).count
