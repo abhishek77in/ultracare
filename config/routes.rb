@@ -6,6 +6,7 @@ Ultrasound::Application.routes.draw do
   resources :doctors
   get 'business_report', to: 'home#business_report'
   get 'print_business_report', to: 'home#print_business_report'
+  get 'business_analytics', to: 'home#business_analytics'
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
