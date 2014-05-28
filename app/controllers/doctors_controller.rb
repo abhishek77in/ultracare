@@ -4,7 +4,8 @@ class DoctorsController < ApplicationController
   # GET /doctors
   # GET /doctors.json
   def index
-    @doctors = Doctor.all
+    @doctors = Doctor.recent.paginate(:page => params[:page])
+    @doctor = Doctor.new
   end
 
   # GET /doctors/1
@@ -22,10 +23,11 @@ class DoctorsController < ApplicationController
   def create
     @doctor = Doctor.new(doctor_params)
     if @doctor.save
-      redirect_to @doctor, notice: 'Doctor was successfully created.'
+      redirect_to doctors_path, notice: 'Doctor was successfully created.'
     else
       flash.now[:alert] = "Sorry! Doctor could not be created, please fix the errors and try again."
-      render action: 'new'
+      @doctors = Doctor.recent.paginate(:page => params[:page])
+      render action: 'index'
     end
   end
 

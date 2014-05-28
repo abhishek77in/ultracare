@@ -1,25 +1,29 @@
-<h1>Listing doctors</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Id</th>
-      <th>Name</th>
-      <th>Degree</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @doctors.each do |doctor| %>
+<div class="large-5 medium-8 columns">
+  <h1>Listing doctors</h1>
+  <table>
+    <thead>
       <tr>
-        <td><%= doctor.id %></td>
-        <td><%= doctor.name %></td>
-        <td><%= doctor.degree %></td>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Degree</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @doctors.each do |doctor| %>
+        <tr>
+          <td><%= doctor.id %></td>
+          <td><%= doctor.name %></td>
+          <td><%= doctor.degree %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New Doctor', new_doctor_path %>
+  <%= will_paginate @reports, renderer: FoundationPagination::Rails %>
+</div>
+
+<div class="large-7 medium-8 columns">
+  <h1>Add New doctor</h1>
+  <%= render 'form' %>
+</div>
