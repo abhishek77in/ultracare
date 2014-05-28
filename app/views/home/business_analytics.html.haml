@@ -1,2 +1,4 @@
-= line_chart Report.group_by_day(:created_at).count
-
+.row
+  = line_chart Report.group_by_day(:created_at).count
+.row
+  = pie_chart Report.group(:doctor_id).count
