@@ -9,6 +9,6 @@
       = f.submit 'Show Business Analysis', name: 'find_reports', class: 'button round'
 
 .row
-  = line_chart Report.group_by_day(:created_at).count, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Reports"}, title: 'Report wise Business Analysis'}}
-.row
   = pie_chart Report.group(:doctor_id).count, {library: {title: 'Doctor wise Business Analysis'}}
+.row
+  = line_chart Report.group_by_day(:created_at).count, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Reports"}, title: 'Report wise Business Analysis'}}
