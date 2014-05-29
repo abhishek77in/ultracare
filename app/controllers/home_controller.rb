@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @reports = @reports.belongs_to_doctor(doctor_id_param) if params[:search] && doctor_id_param.present?
     @reports = @reports.date_range(date_range_param) if params[:search] && date_range_param.present?
     @reports = @reports.patient_name(params[:search][:patient_name]) if params[:search]
-    @reports = @reports.paginate(:page => params[:page])
+    @reports = @reports.includes(:doctor, :patient, :report_type).paginate(:page => params[:page])
   end
 
   def print_business_report
