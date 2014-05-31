@@ -7,6 +7,7 @@ Ultrasound::Application.routes.draw do
   resources :doctors
 
   get 'settings/edit'
+  patch 'settings/update'
 
   get 'business_report', to: 'home#business_report'
   get 'print_business_report', to: 'home#print_business_report'

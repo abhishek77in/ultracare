@@ -1,1 +1,6 @@
-Placeholder
+%h3 Print Settings
+%hr
+= simple_form_for @setting, url: settings_update_path do |f|
+  = f.fields_for :print_settings, @setting.print_settings do |print_settings_fields|
+    =  print_settings_fields.input :heading_line_1, type: :text
+  = f.submit

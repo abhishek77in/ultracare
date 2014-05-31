@@ -5,8 +5,9 @@ class SettingsController < ApplicationController
   end
 
   def update
-    if @setting.update_attributes(setting_params)
-      redirect_to settings_path, notice: 'Setting details were updated successfully.'
+    @setting.print_settings = setting_params
+    if @setting.save
+      redirect_to settings_edit_path, notice: 'Setting details were updated successfully.'
     else
       flash.now[:alert] = "Sorry! Setting details could not be updated, please fix the errors and try again."
       render action: 'edit'
@@ -19,6 +20,6 @@ class SettingsController < ApplicationController
   end
 
   def setting_params
-    params.require(:setting).permit(:print_settings)
+    params.require(:setting).require(:print_settings).permit(:heading_line_1)
   end
 end
