@@ -1,16 +1,16 @@
 %h3.padded-top Print Settings
 %hr
 = simple_form_for @setting, url: settings_update_path do |f|
-  = f.input :heading
-  = f.input :sub_heading
-  = f.input :address
-  = f.input :phone_number
-  = f.input :consultant_1
-  = f.input :consultant_2
+  = f.input :heading, input_html: {placeholder: 'BALRAMPUR DIAGNOSTIC CENTRE'}
+  = f.input :sub_heading, input_html: {placeholder: 'DIAGNOSTIC ULTRASOUND UNIT'}
+  = f.input :address, input_html: {placeholder: 'Opposite - Memorial Hospital, Balrampur'}
+  = f.input :phone_number, input_html: {placeholder: '232436'}
+  = f.input :consultant_1, input_html: {placeholder: 'Dr. G. D. Goel (MBBS, DCP)'}
+  = f.input :consultant_2, input_html: {placeholder: 'Dr. Faissal Faizi (MD)'}
   = f.button :submit, value: 'Update Print Settings', class: 'round'
 %h3.padded-top Default Organ Findings
 %hr
 = simple_form_for @setting, url: settings_update_path do |f|
-  - [:liver, :gall_bladder, :pancreas, :spleen, :right_kidney, :left_kidney, :urinary_bladder, :prostate, :ureter, :adnexa, :uterus, :thyroid_left_lobe, :thyroid_right_lobe, :i_j_v_and_c_a, :isthmus, :left_testis, :right_testis, :left_breast, :right_breast].each do |attr|
+  - @setting.default_organ_findings.keys.each do |attr|
     = f.input attr, type: :text
   = f.button :submit, value: 'Update Default Organ Findings', class: 'round'
