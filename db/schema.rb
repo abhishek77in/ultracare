@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140531065722) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "breasts", force: true do |t|
     t.text     "left_breast"
     t.text     "right_breast"
