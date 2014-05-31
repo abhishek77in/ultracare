@@ -1,8 +1,8 @@
 %h3 Findings
 %hr
 = f.fields_for :report_type, @report.report_type.reportable do |report_type_fields|
-  =  report_type_fields.input :left_lobe, type: :text
-  =  report_type_fields.input :right_lobe, type: :text
+  =  report_type_fields.input :thyroid_left_lobe, label: 'Left lobe', type: :text
+  =  report_type_fields.input :thyroid_right_lobe, label: 'Right lobe', type: :text
   =  report_type_fields.input :i_j_v_and_c_a, label: 'I.J.V & C.A.', type: :text
   =  report_type_fields.input :isthmus, type: :text
   =  report_type_fields.input :other, type: :text

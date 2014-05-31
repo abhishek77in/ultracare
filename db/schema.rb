@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140531182138) do
+ActiveRecord::Schema.define(version: 20140531193022) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -142,8 +142,8 @@ ActiveRecord::Schema.define(version: 20140531182138) do
   end
 
   create_table "thyroid_glands", force: true do |t|
-    t.text     "left_lobe"
-    t.text     "right_lobe"
+    t.text     "thyroid_left_lobe"
+    t.text     "thyroid_right_lobe"
     t.text     "i_j_v_and_c_a"
     t.text     "isthmus"
     t.text     "other"
