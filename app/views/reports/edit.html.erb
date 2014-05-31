@@ -5,7 +5,7 @@
     <%= render 'non_editable_patient', f: f %>
     <%= render params['type'], f: f %>
     <%= hidden_field_tag 'type', params['type'] %>
-    <%= f.button :submit %>
+    <%= f.button :submit, class: 'round' %>
     <%= link_to 'Cancel', root_path, class: 'cancel-link' %>
   </div>
 <% end %>
