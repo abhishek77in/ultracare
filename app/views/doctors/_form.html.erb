@@ -2,9 +2,23 @@
 
   <p class="fi-alert medium"> Please enter carefully you will not be allowed to edit doctor details again.</p>
 
-  <div class="form-inputs small-6 columns">
-    <%= f.input :name, input_html: {placeholder: 'S. K. Sharma'} %>
-    <%= f.input :degree, input_html: {placeholder: 'MBBS, MD'} %>
+  <div class="row">
+    <div class="small-12 columns">
+      <label for="report_patient_attributes_age">Name</label>
+      <div class="row collapse">
+        <div class="small-1 columns">
+          <span class="prefix">Dr.</span>
+        </div>
+        <div class="small-11 columns">
+          <%= f.input :name, label: false, input_html: {placeholder: 'S. K. Sharma'} %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-12 columns">
+      <%= f.input :degree, input_html: {placeholder: 'MBBS, MD'} %>
+    </div>
   </div>
 
   <div class="form-actions small-12 columns">
