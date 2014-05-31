@@ -6,7 +6,7 @@
 - @reports.group_by(&:doctor).each do |doctor, reports|
   .keep-intact
     %p
-      = doctor.name
+      = "Dr. #{doctor.name}"
       = "( #{params[:search][:date_range]} )"
     %table
       %thead
