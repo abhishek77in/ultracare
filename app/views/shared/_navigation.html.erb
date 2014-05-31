@@ -7,13 +7,13 @@
   <section class="top-bar-section">
     <ul class="right">
       <li class="divider"></li>
-      <li><%= link_to "Reports", root_path %></li>
+      <li><%= link_to "Reports", root_path, 'data-no-turbolink' => true %></li>
       <li class="divider"></li>
       <li><%= link_to "Business Analysis", business_analysis_path, 'data-no-turbolink' => true %></li>
       <li class="divider"></li>
-      <li><%= link_to "Business Report", business_report_path %></li>
+      <li><%= link_to "Business Report", business_report_path, 'data-no-turbolink' => true %></li>
       <li class="divider"></li>
-      <li><%= link_to "Doctors", doctors_path %></li>
+      <li><%= link_to "Doctors", doctors_path, 'data-no-turbolink' => true %></li>
       <li class="divider"></li>
       <li><%= link_to "Settings", settings_edit_path %></li>
     </ul>
