@@ -1,6 +1,10 @@
-%h3 Print Settings
+%h3.padded-top Print Settings
 %hr
 = simple_form_for @setting, url: settings_update_path do |f|
-  = f.fields_for :print_settings, @setting.print_settings do |print_settings_fields|
-    =  print_settings_fields.input :heading_line_1, type: :text
-  = f.submit
+  = f.input :heading
+  = f.input :sub_heading
+  = f.input :address
+  = f.input :phone_number
+  = f.input :consultant_1
+  = f.input :consultant_2
+  = f.button :submit, value: 'Update Print Settings', class: 'round'

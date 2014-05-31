@@ -20,6 +20,6 @@ class SettingsController < ApplicationController
   end
 
   def setting_params
-    params.require(:setting).require(:print_settings).permit(:heading_line_1)
+    params.require(:setting).permit!
   end
 end
