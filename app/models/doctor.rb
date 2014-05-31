@@ -3,6 +3,7 @@ class Doctor < ActiveRecord::Base
   validates_uniqueness_of :name, :case_sensitive => false
   has_many :reports
   scope :recent, -> { order('created_at DESC') }
+  scope :order_by_name, -> { order('name') }
 
   def doctor_name
     if degree.present?

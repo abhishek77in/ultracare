@@ -34,7 +34,7 @@ class DoctorsController < ApplicationController
 
   private
     def load_doctors
-      @doctors = Doctor.recent.paginate(:page => params[:page])
+      @doctors = Doctor.order_by_name.paginate(:page => params[:page])
     end
 
     def set_doctor
