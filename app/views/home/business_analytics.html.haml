@@ -9,6 +9,10 @@
       = f.submit 'Show Business Analytics', name: 'find_reports', class: 'button round'
 
 .row
+  %h2.text-center
+    Total cases found:
+    = @reports.count
+.row
   = pie_chart @pie_chart_data, {library: {title: 'Doctor wise Business Analysis'}}
 .row
   = line_chart(@line_chart_data, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Number of Cases"}, title: 'Case wise Business Analysis'}})
