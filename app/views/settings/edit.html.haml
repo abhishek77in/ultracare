@@ -10,7 +10,7 @@
   = f.button :submit, value: 'Update Print Settings', class: 'round'
 %h3.padded-top Default Organ Findings
 %hr
-= simple_form_for @setting, url: settings_update_path do |f|
+= form_for @setting, url: settings_update_path do |f|
   - @setting.default_organ_findings.keys.each do |attr|
-    = f.input attr, type: :text
-  = f.button :submit, value: 'Update Default Organ Findings', class: 'round'
+    = f.text_area attr
+  = f.submit 'Update Default Organ Findings', class: 'button round'
