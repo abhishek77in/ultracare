@@ -1,18 +1,15 @@
-%br
-%br
-%br
 = simple_form_for :search, url: business_analytics_path, method: :get do |f|
-  .row.text-center.center
-    .large-6.columns
+  .row.padded-top
+    .large-6.columns.text-center
       = f.input :date_range, label: 'Date Range', input_html: { id: 'business-analytics-date-range', value: selected_date_range, placeholder: 'Set date range, Last 30 days selected by default', readonly: true }
     .large-6.columns
       = f.submit 'Show Business Analytics', name: 'find_reports', class: 'button round'
 
-.row
+.row.padded-top
   %h2.text-center
     Total cases found:
     = @reports.count
-.row
+.row.padded-top
   = pie_chart @pie_chart_data, {library: {title: 'Doctor wise Business Analysis'}}
-.row
+.row.padded-top
   = line_chart(@line_chart_data, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Number of Cases"}, title: 'Case wise Business Analysis'}})
