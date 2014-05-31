@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 20140531130339) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-  enable_extension "hstore"
 
   create_table "breasts", force: true do |t|
     t.text     "left_breast"
@@ -128,7 +127,7 @@ ActiveRecord::Schema.define(version: 20140531130339) do
   end
 
   create_table "settings", force: true do |t|
-    t.hstore   "print_settings"
+    t.text     "print_settings"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
