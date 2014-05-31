@@ -19,7 +19,7 @@ class HomeController < ApplicationController
       flash.now[:alert] = "Sorry! Cannot print business report for more than 90 days period."
       render 'business_report'
     else
-      @reports = @reports.date_range(date_range_param)
+      @reports = @reports.date_range(date_range_param).includes(:doctor, :patient, :report_type)
       render pdf: "Business Report - #{Time.now.strftime("%d %b %y")}",
              layout: 'business_report_pdf.html.haml',
              margin: { bottom: 5, top: 5 }
