@@ -5,8 +5,7 @@ class SettingsController < ApplicationController
   end
 
   def update
-    @setting.print_settings = setting_params
-    if @setting.save
+    if @setting.update(setting_params)
       redirect_to settings_edit_path, notice: 'Setting details were updated successfully.'
     else
       flash.now[:alert] = "Sorry! Setting details could not be updated, please fix the errors and try again."
