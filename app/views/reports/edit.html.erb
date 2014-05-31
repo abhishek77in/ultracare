@@ -6,5 +6,6 @@
     <%= render params['type'], f: f %>
     <%= hidden_field_tag 'type', params['type'] %>
     <%= f.button :submit %>
+    <%= link_to 'Cancel', root_path, class: 'cancel-link' %>
   </div>
 <% end %>

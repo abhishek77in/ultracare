@@ -23,5 +23,9 @@ small {
   background: #f04124;
   color: white;
 }
+.cancel-link {
+  margin-left: 10px;
+  font-weight: bold;
+}
 @import 'home';
 @import 'foundation_and_overrides';
