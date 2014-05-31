@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140502163908) do
+ActiveRecord::Schema.define(version: 20140531065722) do
 
   create_table "breasts", force: true do |t|
     t.text     "left_breast"
@@ -105,6 +105,8 @@ ActiveRecord::Schema.define(version: 20140502163908) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "patients", ["name"], name: "index_patients_on_name", using: :btree
 
   create_table "report_types", force: true do |t|
     t.integer  "reportable_id"
