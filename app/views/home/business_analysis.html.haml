@@ -1,9 +1,9 @@
-= simple_form_for :search, url: business_analytics_path, method: :get do |f|
+= simple_form_for :search, url: business_analysis_path, method: :get do |f|
   .row.padded-top
     .large-6.columns.text-center
-      = f.input :date_range, label: 'Date Range', input_html: { id: 'business-analytics-date-range', value: selected_date_range, placeholder: 'Set date range, Last 30 days selected by default', readonly: true }
+      = f.input :date_range, label: 'Date Range', input_html: { id: 'business-analysis-date-range', value: selected_date_range, placeholder: 'Set date range, Last 30 days selected by default', readonly: true }
     .large-6.columns
-      = f.submit 'Show Business Analytics', name: 'find_reports', class: 'button round'
+      = f.submit 'Show Business Analysis', name: 'find_reports', class: 'button round'
 
 .row.padded-top
   %h2.text-center

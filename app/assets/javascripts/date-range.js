@@ -1,6 +1,6 @@
 $(function()
   {
-    $('#business-analytics-date-range').dateRangePicker(
+    $('#business-analysis-date-range').dateRangePicker(
       {
       format: 'D-M-YYYY',
       startOfWeek: 'monday',

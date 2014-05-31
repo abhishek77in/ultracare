@@ -26,7 +26,7 @@ class HomeController < ApplicationController
     end
   end
 
-  def business_analytics
+  def business_analysis
     if params[:search] && date_range_param.present?
       @reports = Report.date_range(date_range_param)
     else
