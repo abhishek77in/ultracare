@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title><%= content_for?(:title) ? yield(:title) : "Balrampur Diagnotic Center" %></title>
+    <title><%= content_for?(:title) ? yield(:title) : setting.print_settings['heading'] %></title>
 
     <%= stylesheet_link_tag    "application" %>
     <%= javascript_include_tag "vendor/modernizr","plugins/jsapi", "chartkick" %>
