@@ -128,10 +128,10 @@ ActiveRecord::Schema.define(version: 20140601071008) do
 
   create_table "settings", force: true do |t|
     t.text     "print_settings"
-    t.datetime "created_at"
-    t.datetime "updated_at"
     t.text     "default_organ_findings"
     t.text     "default_obstetric_findings"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "testes", force: true do |t|
