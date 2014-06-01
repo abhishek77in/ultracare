@@ -23,6 +23,7 @@ gem 'will_paginate-foundation'
 gem 'wicked_pdf'
 gem 'haml'
 gem 'chosen-rails'
+gem 'paper_trail'
 
 gem 'chartkick'
 gem 'groupdate'
