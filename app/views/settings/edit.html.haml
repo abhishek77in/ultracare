@@ -1,17 +1,22 @@
-%h3.padded-top Print Settings
-%hr
-= simple_form_for @setting, url: settings_update_path do |f|
-  = render 'print_settings', f: f
+%dl.accordion.padded-top{"data-accordion" => ""}
 
-%h3.padded-top Default Organ Findings
-%hr
-= simple_form_for @setting, url: settings_update_path do |f|
-  - @setting.default_organ_findings.keys.each do |attr|
-    = f.input attr, as: :text
-  = f.submit 'Update Default Organ Findings', class: 'button round'
+  %dd
+    %a{href: '#pane1'} Print Settings
+    .content#pane1
+      = simple_form_for @setting, url: settings_update_path do |f|
+        = render 'print_settings', f: f
 
-%h3.padded-top Default Obstetric Findings
-%hr
-= simple_form_for @setting, url: settings_update_path do |f|
-  = render 'obstetric', f: f
-  = f.button :submit, value: 'Update Default Obstetric Findings', class: 'round'
+  %dd
+    %a{href: '#pane2'} Default Organ Findings
+    .content#pane2
+      = simple_form_for @setting, url: settings_update_path do |f|
+        - @setting.default_organ_findings.keys.each do |attr|
+          = f.input attr, as: :text
+        = f.submit 'Update Default Organ Findings', class: 'button round'
+
+  %dd
+    %a{href: '#pane3'} Default Obstetric Findings
+    .content#pane3
+      = simple_form_for @setting, url: settings_update_path do |f|
+        = render 'obstetric', f: f
+        = f.button :submit, value: 'Update Default Obstetric Findings', class: 'round'
