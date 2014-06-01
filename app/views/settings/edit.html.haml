@@ -10,7 +10,7 @@
     %a{href: '#pane2'} Default Organ Findings
     .content#pane2
       = simple_form_for @setting, url: settings_update_path do |f|
-        - @setting.default_organ_findings.keys.each do |attr|
+        - [:liver, :gall_bladder, :pancreas, :spleen, :right_kidney, :left_kidney, :urinary_bladder, :prostate, :ureter, :adnexa, :uterus, :thyroid_left_lobe, :thyroid_right_lobe, :i_j_v_and_c_a, :isthmus, :left_testis, :right_testis, :left_breast, :right_breast, :impression].each do |attr|
           = f.input attr, as: :text
         = f.submit 'Update Default Organ Findings', class: 'button round'
 
