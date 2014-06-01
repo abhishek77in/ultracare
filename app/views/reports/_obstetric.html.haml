@@ -3,7 +3,7 @@
 = f.fields_for :report_type, @report.report_type.reportable do |report_type_fields|
   .row
     .small-6.columns
-      =  report_type_fields.input :pregnancy # , priority: ['Confirmed'], collection: ['Confirmed','Single','Viable','Non-Viable','Twins']
+      = report_type_fields.input :pregnancy
   .row
     .small-12.columns
       %table
