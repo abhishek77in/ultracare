@@ -11,9 +11,9 @@
 
 %h3.padded-top Default Organ Findings
 %hr
-= form_for @setting, url: settings_update_path do |f|
+= simple_form_for @setting, url: settings_update_path do |f|
   - @setting.default_organ_findings.keys.each do |attr|
-    = f.text_area attr
+    = f.input attr, as: :text
   = f.submit 'Update Default Organ Findings', class: 'button round'
 
 %h3.padded-top Default Obstetric Findings
