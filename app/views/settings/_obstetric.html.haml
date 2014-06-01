@@ -1,0 +1,73 @@
+.row
+  .small-6.columns
+    = f.input :pregnancy
+.row
+  .small-12.columns
+    %table
+      %thead
+        %tr
+          %th
+          %th mm
+          %th weeks
+          %th days
+      %tbody
+        %tr
+          %td
+            %b CRL
+          %td= f.input :crl_mm, label: false
+          %td= f.input :crl_weeks, label: false
+          %td= f.input :crl_days, label: false
+        %tr
+          %td
+            %b BPD
+          %td= f.input :bpd_mm, label: false
+          %td= f.input :bpd_weeks, label: false
+          %td= f.input :bpd_days, label: false
+        %tr
+          %td
+            %b FL
+          %td= f.input :fl_mm, label: false
+          %td= f.input :fl_weeks, label: false
+          %td= f.input :fl_days, label: false
+        %tr
+          %td
+            %b AC
+          %td= f.input :ac_mm, label: false
+          %td= f.input :ac_weeks, label: false
+          %td= f.input :ac_days, label: false
+        %tr
+          %td
+            %b HC
+          %td= f.input :hc_mm, label: false
+          %td= f.input :hc_weeks, label: false
+          %td= f.input :hc_days, label: false
+.row
+  .small-6.columns
+    =  f.input :average_g_a, label: 'Average G.A.'
+  .small-6.columns
+    =  f.input :presentation_and_lie
+.row
+  .small-6.columns
+    =  f.input :liquor_volume
+  .small-6.columns
+    =  f.input :cervix_and_o_s, label: 'Cervix and OS'
+=  f.input :fetal_heart
+.row
+  .small-4.columns
+    =  f.input :fetal_head_movement
+  .small-4.columns
+    =  f.input :fetal_limbs_movement
+  .small-4.columns
+    =  f.input :fetal_breathing_movement
+.row
+  .small-6.columns
+    =  f.input :placenta
+  .small-6.columns
+    =  f.input :grade
+.row
+  .small-6.columns
+    =  f.input :e_d_d, label: 'E.D.D'
+  .small-6.columns
+    =  f.input :e_f_w, label: 'E.F.W'
+=  f.input :remarks, type: :text
+=  f.input :advise, type: :text

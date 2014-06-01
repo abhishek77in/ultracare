@@ -8,9 +8,16 @@
   = f.input :consultant_1, input_html: {placeholder: 'Dr. G. D. Goel (MBBS, DCP)'}
   = f.input :consultant_2, input_html: {placeholder: 'Dr. Faissal Faizi (MD)'}
   = f.button :submit, value: 'Update Print Settings', class: 'round'
+
 %h3.padded-top Default Organ Findings
 %hr
 = form_for @setting, url: settings_update_path do |f|
   - @setting.default_organ_findings.keys.each do |attr|
     = f.text_area attr
   = f.submit 'Update Default Organ Findings', class: 'button round'
+
+%h3.padded-top Default Obstetric Findings
+%hr
+= simple_form_for @setting, url: settings_update_path do |f|
+  = render 'obstetric', f: f
+  = f.button :submit, value: 'Update Default Obstetric Findings', class: 'round'
