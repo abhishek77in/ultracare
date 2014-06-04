@@ -27,11 +27,7 @@ class HomeController < ApplicationController
   end
 
   def business_analysis
-    if params[:search] && date_range_param.present?
-      @reports = Report.date_range(date_range_param)
-    else
-      @reports = Report.last_month
-    end
+    @reports = Report.date_range(date_range_param)
 
     @pie_chart_data = Hash.new
     @reports.includes(:doctor).group_by(&:doctor).each do |doctor, reports|
