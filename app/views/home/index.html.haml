@@ -12,15 +12,15 @@
       %th Ultrasound Type
       %th Date
       %th Time
-      %th Edit Report
-      %th Print Report
+      %th Edit
+      %th Print
   %tbody
     - @reports.each do |report|
       %tr
         %td= report.patient.name
         %td= report.patient.age
         %td= report.patient.sex
-        %td= report.doctor.name
+        %td= "Dr. #{report.doctor.name}"
         %td= report.report_type.reportable.class.name.underscore.titleize
         %td= report.created_at.strftime("%d / %m")
         %td= report.created_at.strftime("%I:%M %p")
