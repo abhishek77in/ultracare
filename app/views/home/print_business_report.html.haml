@@ -11,14 +11,16 @@
     %table
       %thead
         %tr
+          %th S. No.
           %th Patient Name
           %th Age
           %th Sex
           %th Ultrasound Type
           %th Date
       %tbody
-        - reports.each do |report|
+        - reports.each_with_index do |report, index|
           %tr
+            %td= index + 1
             %td= report.patient.name
             %td= report.patient.age
             %td= report.patient.sex
