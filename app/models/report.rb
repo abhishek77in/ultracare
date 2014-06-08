@@ -21,6 +21,10 @@ class Report < ActiveRecord::Base
     end
   end
 
+  def reportable_type
+    report_type.reportable_type
+  end
+
   private
   def for_male?
     ['Testis','WholeAbdomenMale','KubMale'].include?(report_type.reportable_type)

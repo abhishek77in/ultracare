@@ -8,6 +8,13 @@
     %p
       = "Dr. #{doctor.name}"
       = "( #{params[:search][:date_range]} )"
+    %p
+      %b Summary :
+      %br
+      = "Total Cases - #{reports.count}"
+      - reports.group_by(&:reportable_type).each do |reportable_type, reports|
+        %br
+        = "#{reportable_type.underscore.titleize} - #{reports.count}"
     %table
       %thead
         %tr
