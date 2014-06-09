@@ -11,9 +11,11 @@
  *= require_self
  *= require chosen
  *= require plugins/daterangepicker
+ *= require foundation-icons
+ *= require foundation_and_overrides
+ *= require home
  */
 
-@import 'foundation-icons';
 small {
   display: block;
   padding: 0.375em 0.25em;
@@ -30,5 +32,3 @@ small {
 .padded-top {
   padding-top: 20px;
 }
-@import 'home';
-@import 'foundation_and_overrides';
