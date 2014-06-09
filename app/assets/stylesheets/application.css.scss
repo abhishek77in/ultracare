@@ -12,9 +12,9 @@
  *= require chosen
  *= require plugins/daterangepicker
  *= require foundation-icons
- *= require foundation_and_overrides
  *= require home
- *= require_tree .
+ *= require_directory ../stylesheets/plugins/google_chart/
+ *= require foundation_and_overrides
  */
 
 small {
