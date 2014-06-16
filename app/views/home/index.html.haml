@@ -25,7 +25,7 @@
         %td= report.created_at.strftime("%d / %m")
         %td= report.created_at.strftime("%I:%M %p")
         %td.fi-page-edit.small= link_to " Edit", edit_report_path(report, type: report.report_type.reportable.class.name.underscore)
-        %td.fi-print.small= link_to " Print", print_report_path(report), target: '_blank'
+        %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
 
 = will_paginate @reports, renderer: FoundationPagination::Rails
 
