@@ -24,7 +24,6 @@ gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'will_paginate-foundation'
 gem 'wicked_pdf'
-gem "wkhtmltopdf-heroku"
 gem 'haml'
 gem 'chosen-rails'
 gem 'paper_trail'

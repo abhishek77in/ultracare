@@ -192,7 +192,6 @@ GEM
     will_paginate (3.0.5)
     will_paginate-foundation (5.3.3)
       will_paginate (>= 3.0.3)
-    wkhtmltopdf-heroku (1.0.0)
 
 PLATFORMS
   ruby
@@ -223,4 +222,3 @@ DEPENDENCIES
   unicorn
   wicked_pdf
   will_paginate-foundation
-  wkhtmltopdf-heroku
