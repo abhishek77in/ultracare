@@ -1,1 +1,1 @@
-WickedPdf.config = { :exe_path => "#{Rails.root}/bin/wkhtmltopdf-amd64" }
+WickedPdf.config = { :exe_path => "#{Rails.root}/bin/wkhtmltopdf" }
