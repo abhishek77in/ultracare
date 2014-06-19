@@ -11,5 +11,13 @@ module HomeHelper
   def selected_date_range
     params[:search][:date_range] if params[:search]
   end
+
+  def selected_show_summary?
+    if params[:search] && (params[:search][:show_summary] == 1.to_s)
+      true
+    else
+      false
+    end
+  end
 end
 
