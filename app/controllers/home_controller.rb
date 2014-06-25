@@ -43,7 +43,7 @@ class HomeController < ApplicationController
   end
 
   def doctor_ids_param
-    params.require(:search).permit![:doctor_id].reject!(&:blank?)
+    params.require(:search).permit![:doctor_id].reject(&:blank?)
   end
 
   def date_range_param
