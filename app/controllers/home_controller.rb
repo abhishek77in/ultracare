@@ -10,7 +10,7 @@ class HomeController < ApplicationController
 
   def print_business_report
     @reports = Report.order(:created_at)
-    @reports = @reports.belongs_to_doctor(doctor_id_param) if params[:search] && doctor_id_param.present?
+    @reports = @reports.belongs_to_doctors(doctor_ids_param) if params[:search] && doctor_ids_param.present?
 
     if date_range_param.blank?
       flash.now[:alert] = "Please specify Date Range to Print Business Report."
@@ -40,6 +40,10 @@ class HomeController < ApplicationController
   private
   def doctor_id_param
     params.require(:search).permit(:doctor_id)[:doctor_id]
+  end
+
+  def doctor_ids_param
+    params.require(:search).permit![:doctor_id]
   end
 
   def date_range_param
