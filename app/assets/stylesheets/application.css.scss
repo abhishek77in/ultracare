@@ -15,21 +15,5 @@
  *= require home
  *= require_directory ../stylesheets/plugins/google_chart/
  *= require foundation_and_overrides
+ *= require custom
  */
-
-small {
-  display: block;
-  padding: 0.375em 0.25em;
-  margin-bottom: 1em;
-  font-size: 0.75em;
-  font-weight: bold;
-  background: #f04124;
-  color: white;
-}
-.cancel-link {
-  margin-left: 10px;
-  font-weight: bold;
-}
-.padded-top {
-  padding-top: 20px;
-}
