@@ -2,7 +2,7 @@
 = simple_form_for :search, url: print_business_report_path, method: :get do |f|
   .row
     .large-4.columns
-      = f.input :doctor_id, collection: Doctor.all, selected: selected_doctor_id, label_method: :doctor_name, label: 'Refered By Doctor', prompt: 'All Doctors', include_blank: true, input_html: { class: 'chosen-select' }
+      = f.input :doctor_id, collection: Doctor.all, selected: selected_doctor_id, label_method: :doctor_name, label: 'Refered By Doctors (optional)', input_html: {multiple: true, 'data-placeholder' => 'Select Doctors', class: 'chosen-select' }
   .row
     %br
   .row
