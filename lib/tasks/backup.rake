@@ -14,6 +14,6 @@ namespace :db do
 
   desc "Keep last 10 backups"
   task :rotate do
-    system("find ~/Backup/ -type f -printf '%T@ %P\n' | sort -n | cut -d' ' -f2- | head -n -10 | xargs rm")
+    system("find ~/Backup/ -type f -printf '%T@ %p\n' | sort -n | cut -d' ' -f2- | head -n -10 | xargs rm")
   end
 end
