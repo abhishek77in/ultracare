@@ -1,5 +1,6 @@
-namespace :db do  desc "Backup database to AWS-S3"
-  task :backup => :environment do
+namespace :db do
+  desc "Backup database to Backup Dir"
+  task :backup do
     datestamp = Time.now.strftime("%Y-%m-%d_%H-%M-%S")
     backup_file = "~/Backup/#{Rails.root.basename}-#{datestamp}.sql"
     db_config = Rails.configuration.database_configuration[Rails.env]
