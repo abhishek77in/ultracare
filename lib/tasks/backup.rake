@@ -11,4 +11,9 @@ namespace :db do
     # process backup
     system("pg_dump #{db_config['database']} -f #{backup_file}")
   end
+
+  desc "Keep last 10 backups"
+  task :rotate do
+    system("find ~/Backup/ -type f -printf '%T@ %P\n' | sort -n | cut -d' ' -f2- | head -n -10 | xargs rm")
+  end
 end
