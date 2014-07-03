@@ -21,7 +21,6 @@ class HomeController < ApplicationController
     else
       @reports = @reports.date_range(date_range_param).includes(:doctor, :patient, :report_type)
       render pdf: "Business Report - #{Time.now.strftime("%d %b %y")}",
-             use_xserver: true,
              layout: 'business_report_pdf.html.haml',
              margin: { bottom: 5, top: 5 }
     end
