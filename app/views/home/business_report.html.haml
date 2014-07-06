@@ -3,7 +3,7 @@
   .row
     .large-6.columns
       = f.input :doctor_id, collection: Doctor.all, selected: selected_doctor_id,
-        label_method: :doctor_name, label: 'Refered By Doctors (optional)',
+        label_method: :doctor_name, label: 'Referred By Doctors (optional)',
         input_html: {multiple: true, 'data-placeholder' => 'Select Doctors', class: 'chosen-select' }
       .hint
         "All doctors" will be set by default if you don't choose any.
