@@ -7,7 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : setting.print_settings['heading'] %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr","plugins/google_chart/jsapi", "chartkick" %>
+    <%= javascript_include_tag "vendor/modernizr" %>
     <%= csrf_meta_tags %>
   </head>
 

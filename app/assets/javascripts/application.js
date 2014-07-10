@@ -16,6 +16,6 @@
 //= require foundation
 //= require plugins/moment.min
 //= require plugins/daterangepicker
-//= require_tree .
+//= require_directory .
 
 $(function(){ $(document).foundation(); });
