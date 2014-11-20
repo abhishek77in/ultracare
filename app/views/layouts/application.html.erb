@@ -7,7 +7,7 @@
     <title><%= content_for?(:title) ? yield(:title) : setting.print_settings['heading'] %></title>
 
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", "vendor/modernizr" %>
     <%= yield :head  %>
     <%= csrf_meta_tags %>
   </head>
@@ -29,7 +29,5 @@
         <div class="row"><%= yield %></div>
       </div>
     <% end  %>
-
-    <%= javascript_include_tag "application" %>
   </body>
 </html>
