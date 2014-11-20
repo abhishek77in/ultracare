@@ -5,12 +5,15 @@
     .large-6.columns
       = f.submit 'Show Business Analysis', name: 'find_reports', class: 'button round'
 
-.row.padded-top
+.row.padded-top.padded-bottom
   %h2.text-center
     Total cases found:
     = @reports.count
 
-#piechart
-#container
+.row.padded-top.padded-bottom
+  #piechart
+
+.row.padded-top.padded-bottom
+  #container
 
 = render "chart"
