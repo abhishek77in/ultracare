@@ -1,6 +1,3 @@
-= content_for :head do
-  = javascript_include_tag "plugins/google_chart/jsapi", "chartkick", "plugins/google_chart/uds.js", "plugins/google_chart/format+en,default+en,ui+en,corechart+en.I.js"
-
 = simple_form_for :search, url: business_analysis_path, method: :get do |f|
   .row.padded-top
     .large-6.columns.text-center
@@ -12,11 +9,8 @@
   %h2.text-center
     Total cases found:
     = @reports.count
-.row.padded-top
-  = pie_chart @pie_chart_data, {library: {title: 'Doctor wise Business Analysis'}}
 
 #piechart
-
 #container
 
 = render "chart"
