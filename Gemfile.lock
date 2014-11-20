@@ -79,6 +79,8 @@ GEM
       activesupport (>= 3)
     haml (4.0.5)
       tilt
+    highcharts-rails (4.0.4.1)
+      railties (>= 3.1)
     highline (1.6.21)
     hike (1.2.3)
     i18n (0.6.9)
@@ -234,6 +236,7 @@ DEPENDENCIES
   foundation-rails
   groupdate
   haml
+  highcharts-rails
   jbuilder (~> 1.2)
   jquery-rails
   paper_trail
