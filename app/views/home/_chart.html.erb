@@ -1,0 +1,72 @@
+<script>
+$(function () {
+    $('#container').highcharts({
+        chart: {
+            type: 'line'
+        },
+        title: {
+            text: 'Case wise Business Analysis'
+        },
+        subtitle: {
+            text: ''
+        },
+        xAxis: {
+            categories: <%= raw @line_chart_data.keys.map {|datetime| datetime.strftime("%d %b")} %>
+        },
+        yAxis: {
+            title: {
+                text: 'Number of cases'
+            }
+        },
+        plotOptions: {
+            line: {
+                dataLabels: {
+                    enabled: true
+                },
+                enableMouseTracking: false
+            }
+        },
+        series: [{
+            name: 'Case Count',
+            data: <%= @line_chart_data.values %>
+        }]
+    });
+});
+
+
+$(function () {
+    $('#piechart').highcharts({
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: 1,//null,
+            plotShadow: false
+        },
+        title: {
+            text: 'Doctor wise Business Analysis'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: [{
+            type: 'pie',
+            name: 'cases',
+            data: <%= raw @pie_chart_data.to_a %>
+        }]
+    });
+});
+
+
+</script>

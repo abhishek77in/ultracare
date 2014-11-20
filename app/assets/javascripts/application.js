@@ -16,6 +16,7 @@
 //= require foundation
 //= require plugins/moment.min
 //= require plugins/daterangepicker
+//= require highcharts
 //= require_directory .
 
 $(function(){ $(document).foundation(); });

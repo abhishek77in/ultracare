@@ -31,8 +31,8 @@ gem 'chosen-rails'
 gem 'paper_trail'
 gem 'whenever', :require => false
 
-gem 'chartkick'
 gem 'groupdate'
+gem "highcharts-rails"
 
 gem 'better_errors'
 gem 'binding_of_caller'
