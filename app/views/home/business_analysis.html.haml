@@ -14,8 +14,9 @@
     = @reports.count
 .row.padded-top
   = pie_chart @pie_chart_data, {library: {title: 'Doctor wise Business Analysis'}}
-.row.padded-top
-  = line_chart(@line_chart_data, {library: {hAxis: {title: "Timeline"}, vAxis: {title: "Number of Cases"}, title: 'Case wise Business Analysis'}})
+
+#piechart
+
 #container
 
 = render "chart"
