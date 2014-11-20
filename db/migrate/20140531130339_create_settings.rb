@@ -6,6 +6,5 @@ class CreateSettings < ActiveRecord::Migration
       t.text :default_obstetric_findings
       t.timestamps
     end
-    Setting.create
   end
 end
