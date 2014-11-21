@@ -1,4 +1,4 @@
-root = "/home/ultracare/apps/ultrasound/current"
+root = "/home/ultracare/apps/ultrasound"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
