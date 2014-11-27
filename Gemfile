@@ -38,5 +38,10 @@ gem 'binding_of_caller'
 gem 'pry'
 gem 'faker'
 
+group :development, :test do
+  gem 'rspec-rails', '~> 3.0'
+end
+
 gem 'capistrano'
 gem 'rvm-capistrano'
+
