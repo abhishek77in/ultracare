@@ -20,12 +20,12 @@ group :doc do
 end
 
 gem 'rails_admin'
-gem "wkhtmltopdf-heroku"
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
 gem 'will_paginate-foundation'
 gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
 gem 'haml'
 gem 'chosen-rails'
 gem 'paper_trail'
