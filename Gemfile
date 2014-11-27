@@ -4,8 +4,6 @@ ruby "2.1.2"
 gem 'rails_12factor', group: :production
 
 gem 'rails', '4.1.8'
-gem 'therubyracer'
-gem 'unicorn'
 
 gem 'pg'
 gem 'sass-rails'
@@ -33,10 +31,13 @@ gem 'whenever', :require => false
 gem 'groupdate'
 gem "highcharts-rails"
 
-gem 'better_errors'
-gem 'binding_of_caller'
-gem 'pry'
 gem 'faker'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'pry'
+end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
@@ -46,6 +47,9 @@ group :test do
   gem 'shoulda-matchers', require: false
 end
 
-gem 'capistrano'
-gem 'rvm-capistrano'
-
+group :production do
+  gem 'therubyracer'
+  gem 'unicorn'
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+end
