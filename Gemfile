@@ -19,7 +19,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'rails_admin'
 gem 'simple_form'
 gem 'foundation-rails'
 gem 'foundation-icons-sass-rails'
