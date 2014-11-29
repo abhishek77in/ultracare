@@ -39,6 +39,7 @@ class ReportsController < ApplicationController
     @reportable = @report.report_type.reportable
     render pdf: "#{@report.patient.name} - #{@report.created_at.strftime("%d %b %y")}",
            show_as_html: params[:debug].present?,
+           page_size: 'A4',
            layout: 'pdf.html.haml',
            margin: { bottom: 20, top: 1 },
            footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
