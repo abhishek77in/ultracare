@@ -38,6 +38,8 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry'
   gem 'guard-rspec', require: false
+  gem 'zeus'
+  gem 'guard-zeus'
 end
 
 group :development, :test do
