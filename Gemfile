@@ -48,6 +48,7 @@ end
 
 group :test do
   gem 'shoulda-matchers', require: false
+  gem 'factory_girl_rails'
 end
 
 group :production do
