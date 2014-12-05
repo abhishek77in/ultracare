@@ -5,12 +5,16 @@
     = @setting.print_settings['address']
     = wicked_pdf_image_tag 'phone-icon.png'
     = @setting.print_settings['phone_number']
-%div{style: 'text-align: left; width: 50%; float: left;'}
-  %p.line-height-4
-    Consultant -
-    = @setting.print_settings['consultant_1']
-%div{style: 'text-align: right; width: 50%; float: right;'}
-  %p.line-height-4
-    Consultant -
-    = @setting.print_settings['consultant_2']
+
+- if @setting.print_settings['consultant_1'].present?
+  %div{style: 'text-align: left; width: 50%; float: left;'}
+    %p.line-height-4
+      Consultant -
+      = @setting.print_settings['consultant_1']
+
+- if @setting.print_settings['consultant_2'].present?
+  %div{style: 'text-align: right; width: 50%; float: right;'}
+    %p.line-height-4
+      Consultant -
+      = @setting.print_settings['consultant_2']
 %hr
