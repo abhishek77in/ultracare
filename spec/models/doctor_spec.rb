@@ -17,12 +17,21 @@ RSpec.describe Doctor, :type => :model do
       @last  = FactoryGirl.create(:doctor, created_at: 4.day.ago, name: 'B')
     end
 
-    it "should return doctors in the correct order" do
+    it "should order doctors, recent first" do
       expect(Doctor.recent.to_a).to eq [@first, @last]
     end
 
     it 'should order doctors by name' do
       expect(Doctor.order_by_name.to_a).to eq [@first, @last]
+    end
+  end
+
+  describe 'doctor name' do
+    it 'should return formatted doctor name' do
+      @first = FactoryGirl.create(:doctor, name: 'A', degree: nil)
+      @second  = FactoryGirl.create(:doctor, name: 'B', degree: 'MBBS')
+      expect(@first.doctor_name).to eq "A, # #{@first.id}"
+      expect(@second.doctor_name).to eq "B (MBBS), # #{@second.id}"
     end
   end
 end
