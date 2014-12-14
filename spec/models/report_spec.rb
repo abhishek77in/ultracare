@@ -34,5 +34,30 @@ RSpec.describe Report, :type => :model do
       first.touch
       expect(Report.recent).to eq [first, second]
     end
+
+    it 'should return reports from given doctor' do
+      doctor1 = FactoryGirl.create(:doctor)
+      doctor2 = FactoryGirl.create(:doctor)
+      report1 = FactoryGirl.create(:report, doctor: doctor1)
+      FactoryGirl.create(:report, doctor: doctor2)
+      expect(Report.belongs_to_doctor(doctor1.id)).to eq [report1]
+    end
+
+    it 'should return reports from given set of doctors' do
+      doctor1 = FactoryGirl.create(:doctor)
+      doctor2 = FactoryGirl.create(:doctor)
+      report1 = FactoryGirl.create(:report, doctor: doctor1)
+      report2 = FactoryGirl.create(:report, doctor: doctor2)
+      expect(Report.belongs_to_doctor([doctor1.id, doctor2.id])).to eq [report1, report2]
+    end
+
+    it 'should return reports in given date range'
+
+    it 'should return matched reports for given patient name' do
+      report = FactoryGirl.create(:report, patient: FactoryGirl.create(:patient, name: 'jon doe'))
+      expect(Report.patient_name('jon')).to contain_exactly report
+      expect(Report.patient_name('doe')).to contain_exactly report
+      expect(Report.patient_name('on do')).to contain_exactly report
+    end
   end
 end
