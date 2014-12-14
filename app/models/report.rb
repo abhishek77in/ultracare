@@ -12,6 +12,8 @@ class Report < ActiveRecord::Base
   scope :date_range, -> (date_range) { where(created_at: date_range) }
   scope :patient_name, -> (patient_name) { includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient) }
 
+  after_save :touch
+
   def possible_genders
     if for_female?
       [['Female', 'F']]
