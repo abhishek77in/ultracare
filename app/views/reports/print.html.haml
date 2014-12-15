@@ -1,6 +1,3 @@
 = render 'shared/pdf/patient'
 %hr
-- if @reportable.respond_to?(:print_template)
-  = render @reportable.print_template
-- else
-  = render 'shared/pdf/reportable'
+= render @reportable.print_template
