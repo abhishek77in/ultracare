@@ -33,3 +33,6 @@ table tbody tr td {
 .keep-intact {
   page-break-inside: avoid;
 }
+.page-break {
+  page-break-before: always;
+}
