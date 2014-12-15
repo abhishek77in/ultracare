@@ -5,6 +5,10 @@ class Obstetric < ActiveRecord::Base
     'shared/pdf/obstetric'
   end
 
+  def padding_level
+    'low-padding'
+  end
+
   def self.params
     Setting.first.default_obstetric_findings
   end

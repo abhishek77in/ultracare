@@ -1,8 +1,7 @@
 class LowerAbdomenFemale < ActiveRecord::Base
   include Reportable
 
-  def print_template
-    'shared/pdf/lower_abdomen_female'
+  def padding_level
+    'high-padding'
   end
-
 end
