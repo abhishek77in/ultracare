@@ -13,6 +13,10 @@ module Reportable
     'moderate-padding'
   end
 
+  def printable_fields
+    attributes.keys - %w(id created_at updated_at)
+  end
+
   module ClassMethods
     def params
       Setting.first.default_organ_findings.select { |key, value| column_names.include?(key) }
