@@ -5,6 +5,7 @@
 %table
   %thead
     %tr
+      %th Report No.
       %th Patient Name
       %th Age
       %th Sex
@@ -17,6 +18,7 @@
   %tbody
     - @reports.each do |report|
       %tr
+        %td= report.id
         %td= report.patient.name
         %td= report.patient.age
         %td= report.patient.sex
