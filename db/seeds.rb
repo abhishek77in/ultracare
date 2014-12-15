@@ -22,7 +22,7 @@ setting.save
   rand(10..60).times do
     patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
     doctor = Doctor.first(rand(Doctor.count) + 1).last
-    reportable_model = [WholeAbdomenFemale,Obstetric,KubFemale,UpperAbdomen,ThyroidGland].sample
+    reportable_model = [WholeAbdomenMale, Testis, WholeAbdomenFemale, Obstetric, KubFemale, UpperAbdomen, ThyroidGland, KubMale, Breast, LowerAbdomenFemale].sample
     reportable = reportable_model.new(reportable_model.params)
     report = Report.new(patient: patient, doctor: doctor, created_at: today)
     report.report_type = ReportType.new(reportable: reportable)
