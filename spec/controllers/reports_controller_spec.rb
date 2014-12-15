@@ -37,4 +37,22 @@ RSpec.describe ReportsController, type: :controller do
       expect(response).to render_template(:new)
     end
   end
+
+  describe 'Get edit' do
+    it 'loads reports to be edited' do
+      report = FactoryGirl.create(:report)
+      get :edit, {id: report.id, type: report.report_type}
+      expect(response).to be_ok
+      expect(response).to render_template(:edit)
+    end
+  end
+
+  describe 'Patch update' do
+    it 'updates the report' do
+      report = FactoryGirl.create(:report)
+      report_attributes = {"report"=>{"report_type_attributes"=>{"thyroid_left_lobe"=>"Appears NORMAL"}}, "type"=>report.report_type.reportable_type.underscore}
+      put :update, report_attributes.merge(id: report.id)
+      expect(response).to redirect_to(root_path)
+    end
+  end
 end
