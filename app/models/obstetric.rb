@@ -1,5 +1,5 @@
 class Obstetric < ActiveRecord::Base
-  has_one :report_type, as: :reportable
+  include Reportable
 
   def print_template
     'shared/pdf/obstetric'
