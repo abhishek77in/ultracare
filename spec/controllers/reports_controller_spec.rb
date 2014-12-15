@@ -55,4 +55,12 @@ RSpec.describe ReportsController, type: :controller do
       expect(response).to redirect_to(root_path)
     end
   end
+
+  describe 'Get print' do
+    it 'renders pdf report to be printed' do
+      report = FactoryGirl.create(:report)
+      get :print, {id: report.id}
+      expect(response).to render_template(:print)
+    end
+  end
 end
