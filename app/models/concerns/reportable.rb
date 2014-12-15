@@ -9,6 +9,10 @@ module Reportable
     'shared/pdf/reportable'
   end
 
+  def padding_level
+    'moderate-padding'
+  end
+
   module ClassMethods
     def params
       Setting.first.default_organ_findings.select { |key, value| column_names.include?(key) }

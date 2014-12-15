@@ -5,4 +5,8 @@ class ThyroidGland < ActiveRecord::Base
     'shared/pdf/thyroid_gland'
   end
 
+  def padding_level
+    'high-padding'
+  end
+
 end
