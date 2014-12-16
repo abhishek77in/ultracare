@@ -34,7 +34,7 @@ class Report < ActiveRecord::Base
   end
 
   def for_female?
-    ['Breast','Obstetric','KubFemale','WholeAbdomenFemale','LowerAbdomenFemale'].include?(report_type.reportable_type)
+    ['UpperAbdomenAndObstetric', 'Breast','Obstetric','KubFemale','WholeAbdomenFemale','LowerAbdomenFemale'].include?(report_type.reportable_type)
   end
 
 end
