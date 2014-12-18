@@ -34,4 +34,20 @@ RSpec.describe Doctor, :type => :model do
       expect(@second.doctor_name).to eq "B (MBBS), # #{@second.id}"
     end
   end
+
+  describe 'history' do
+    it 'enables paper trail' do
+      is_expected.to be_versioned
+    end
+
+    it 'tracks doctor name', :versioning => true do
+      doctor = FactoryGirl.create(:doctor, name: 'A')
+      doctor.update_attributes!(name: 'B')
+      doctor.update_attributes!(name: 'C')
+
+      expect(doctor.versions.count).to eq 2
+      expect(doctor.versions.first.reify.name).to eq 'A'
+      expect(doctor.versions.last.reify.name).to eq 'B'
+    end
+  end
 end
