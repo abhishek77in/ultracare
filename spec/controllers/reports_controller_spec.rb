@@ -64,6 +64,16 @@ RSpec.describe ReportsController, type: :controller do
       expect(report.doctor_id).to eq new_doctor.id
       expect(response).to redirect_to(root_path)
     end
+
+    it 'renders new for invalid update' do
+      report = FactoryGirl.create(:report)
+      report_attributes = {"report"=>{
+                             "patient_attributes"=>{"name"=>"", "age"=>"5", "sex"=>"M"},
+                             "report_type_attributes"=>{"thyroid_left_lobe"=>"Appears NORMAL"}},
+                           "type"=>report.report_type.reportable_type.underscore}
+      put :update, report_attributes.merge(id: report.id)
+      expect(response).to render_template(:new)
+    end
   end
 
   describe 'Get print' do

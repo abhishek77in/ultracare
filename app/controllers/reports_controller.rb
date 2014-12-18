@@ -31,7 +31,7 @@ class ReportsController < ApplicationController
       redirect_to root_path, notice: "Report Updated for #{@report.patient.name}."
     else
       flash.now[:alert] = "Sorry! Report could not be updated, please fix the errors and try again."
-      render 'edit'
+      render 'new'
     end
   end
 
