@@ -14,7 +14,4 @@
       = f.input :date_range, label: 'Date Range', input_html: { id: 'business-report-date-range', value: selected_date_range, placeholder: 'Set date range', readonly: true }
   .row
     .large-4.columns
-      = f.input :show_summary, as: :boolean, input_html: { checked: selected_show_summary? }
-  .row
-    .large-4.columns
       = f.submit 'Print Business Report', name: 'find_reports', class: 'button round'
