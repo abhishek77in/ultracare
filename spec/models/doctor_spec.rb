@@ -34,4 +34,6 @@ RSpec.describe Doctor, :type => :model do
       expect(@second.doctor_name).to eq "B (MBBS), # #{@second.id}"
     end
   end
+
+  it_behaves_like 'versionable', Doctor
 end

@@ -1,5 +1,5 @@
 class Doctor < ActiveRecord::Base
-  has_paper_trail on: [:update], only: [:name]
+  has_paper_trail
 
   validates_presence_of :name
   validates_uniqueness_of :name, :case_sensitive => false

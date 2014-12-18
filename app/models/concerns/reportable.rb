@@ -3,6 +3,7 @@ module Reportable
 
   included do
     has_one :report_type, as: :reportable
+    has_paper_trail
   end
 
   def print_template
