@@ -11,4 +11,18 @@ RSpec.describe Patient, type: :model do
   describe 'associations' do
     it { should have_many :reports }
   end
+
+  describe 'versioning' do
+    it 'enables paper trail' do
+      is_expected.to be_versioned
+    end
+
+    it 'tracks patient name', :versioning => true do
+      patient = FactoryGirl.create(:patient, name: 'A')
+      patient.update_attributes!(name: 'B')
+
+      expect(patient.versions.count).to eq 2
+      expect(patient.versions.last.reify.name).to eq 'A'
+    end
+  end
 end
