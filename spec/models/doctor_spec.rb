@@ -43,11 +43,9 @@ RSpec.describe Doctor, :type => :model do
     it 'tracks doctor name', :versioning => true do
       doctor = FactoryGirl.create(:doctor, name: 'A')
       doctor.update_attributes!(name: 'B')
-      doctor.update_attributes!(name: 'C')
 
       expect(doctor.versions.count).to eq 2
-      expect(doctor.versions.first.reify.name).to eq 'A'
-      expect(doctor.versions.last.reify.name).to eq 'B'
+      expect(doctor.versions.last.reify.name).to eq 'A'
     end
   end
 end
