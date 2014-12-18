@@ -23,6 +23,7 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find(params[:id])
+    @report.attributes = report_params
     @report.report_type.reportable.attributes = report_type_attributes
     if @report.save
       flash[:report_id] = @report.id.to_s

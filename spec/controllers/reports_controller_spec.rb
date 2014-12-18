@@ -49,9 +49,19 @@ RSpec.describe ReportsController, type: :controller do
 
   describe 'Patch update' do
     it 'updates the report' do
-      report = FactoryGirl.create(:report)
-      report_attributes = {"report"=>{"report_type_attributes"=>{"thyroid_left_lobe"=>"Appears NORMAL"}}, "type"=>report.report_type.reportable_type.underscore}
-      put :update, report_attributes.merge(id: report.id)
+      report = FactoryGirl.create(:report, patient: FactoryGirl.create(:patient, name: 'A', age: '4', sex: 'F'), doctor_id: @doctor.id)
+      new_doctor = FactoryGirl.create(:doctor)
+      report_attributes = {"report"=>{
+                             "patient_attributes"=>{"name"=>"B", "age"=>"5", "sex"=>"M"},
+                             "doctor_id"=> new_doctor.id,
+                             "report_type_attributes"=>{"thyroid_left_lobe"=>"Appears NORMAL"}},
+                           "type"=>report.report_type.reportable_type.underscore}
+      expect{
+        put :update, report_attributes.merge(id: report.id)
+      }.to change { Report.count }.by(0)
+      report = report.reload
+      expect(report.patient.attributes).to include('name' => 'B', 'age' => 5, 'sex' => 'M')
+      expect(report.doctor_id).to eq new_doctor.id
       expect(response).to redirect_to(root_path)
     end
   end
