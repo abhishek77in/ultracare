@@ -19,6 +19,7 @@ class ReportsController < ApplicationController
 
   def edit
     @report = Report.find(params[:id])
+    render 'new'
   end
 
   def update

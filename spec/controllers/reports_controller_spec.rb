@@ -43,7 +43,7 @@ RSpec.describe ReportsController, type: :controller do
       report = FactoryGirl.create(:report)
       get :edit, {id: report.id, type: report.report_type}
       expect(response).to be_ok
-      expect(response).to render_template(:edit)
+      expect(response).to render_template(:new)
     end
   end
 
