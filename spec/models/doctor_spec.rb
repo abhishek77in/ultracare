@@ -35,17 +35,5 @@ RSpec.describe Doctor, :type => :model do
     end
   end
 
-  describe 'history' do
-    it 'enables paper trail' do
-      is_expected.to be_versioned
-    end
-
-    it 'tracks doctor name', :versioning => true do
-      doctor = FactoryGirl.create(:doctor, name: 'A')
-      doctor.update_attributes!(name: 'B')
-
-      expect(doctor.versions.count).to eq 2
-      expect(doctor.versions.last.reify.name).to eq 'A'
-    end
-  end
+  it_behaves_like 'versionable', Doctor
 end
