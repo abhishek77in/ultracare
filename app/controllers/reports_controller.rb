@@ -20,13 +20,15 @@ class ReportsController < ApplicationController
 
   def edit
     @report = Report.find(params[:id])
+    @reportable = @report.report_type.reportable
     render 'new'
   end
 
   def update
     @report = Report.find(params[:id])
     @report.attributes = report_params
-    @report.report_type.reportable.attributes = report_type_attributes
+    @reportable = @report.report_type.reportable
+    @reportable.attributes = report_type_attributes
     if @report.save
       flash[:report_id] = @report.id.to_s
       redirect_to root_path, notice: "Report Updated for #{@report.patient.name}."
