@@ -43,6 +43,7 @@ RSpec.describe Report, :type => :model do
       report1 = FactoryGirl.create(:report, doctor: doctor1)
       FactoryGirl.create(:report, doctor: doctor2)
       expect(Report.belongs_to_doctor(doctor1.id)).to eq [report1]
+      expect(Report.belongs_to_doctor(nil)).to eq Report.all
     end
 
     it 'should return reports from given set of doctors' do
@@ -50,7 +51,8 @@ RSpec.describe Report, :type => :model do
       doctor2 = FactoryGirl.create(:doctor)
       report1 = FactoryGirl.create(:report, doctor: doctor1)
       report2 = FactoryGirl.create(:report, doctor: doctor2)
-      expect(Report.belongs_to_doctor([doctor1.id, doctor2.id])).to eq [report1, report2]
+      expect(Report.belongs_to_doctors([doctor1.id, doctor2.id])).to eq [report1, report2]
+      expect(Report.belongs_to_doctors(nil)).to eq Report.all
     end
 
     it 'should return reports in given date range'
@@ -60,6 +62,7 @@ RSpec.describe Report, :type => :model do
       expect(Report.patient_name('jon')).to contain_exactly report
       expect(Report.patient_name('doe')).to contain_exactly report
       expect(Report.patient_name('on do')).to contain_exactly report
+      expect(Report.patient_name(nil)).to eq Report.all
     end
   end
 end

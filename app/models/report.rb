@@ -9,12 +9,28 @@ class Report < ActiveRecord::Base
 
   validates_presence_of :doctor, :patient, :report_type
   scope :recent, -> { order(updated_at: :desc) }
-  scope :belongs_to_doctor, -> (doctor_id) { where(doctor_id: doctor_id) }
-  scope :belongs_to_doctors, -> (doctor_ids) { where(doctor_id: doctor_ids) }
-  scope :date_range, -> (date_range) { where(created_at: date_range) }
-  scope :patient_name, -> (patient_name) { includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient) }
 
   after_save :touch
+
+  scope :belongs_to_doctor, -> (doctor_id) do
+    return all unless doctor_id
+    where(doctor_id: doctor_id)
+  end
+
+  scope :belongs_to_doctors, -> (doctor_ids) do
+    return all unless doctor_ids
+    where(doctor_id: doctor_ids)
+  end
+
+  scope :date_range, -> (date_range) do
+    return all unless date_range
+    where(created_at: date_range)
+  end
+
+  scope :patient_name, -> (patient_name) do
+    return all unless patient_name
+    includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
+  end
 
   def possible_genders
     if for_female?
