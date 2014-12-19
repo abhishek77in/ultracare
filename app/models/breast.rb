@@ -4,4 +4,8 @@ class Breast < ActiveRecord::Base
   def padding_level
     'high-padding'
   end
+
+  def possible_genders
+    [['Female', 'F']]
+  end
 end

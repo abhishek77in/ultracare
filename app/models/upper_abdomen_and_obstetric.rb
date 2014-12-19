@@ -9,6 +9,10 @@ class UpperAbdomenAndObstetric < ActiveRecord::Base
     'shared/pdf/upper_abdomen_and_obstetric'
   end
 
+  def possible_genders
+    [['Female', 'F']]
+  end
+
   def self.params
     Setting.first.default_organ_findings.select { |key, value| column_names.include?(key) }
       .merge(Setting.first.default_obstetric_findings)
