@@ -32,27 +32,8 @@ class Report < ActiveRecord::Base
     includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
   end
 
-  def possible_genders
-    if for_female?
-      [['Female', 'F']]
-    elsif for_male?
-      [['Male', 'M']]
-    else
-      [['Female', 'F'],['Male', 'M']]
-    end
-  end
-
   def reportable_type
     report_type.reportable_type
-  end
-
-  private
-  def for_male?
-    ['Testis','WholeAbdomenMale','KubMale'].include?(report_type.reportable_type)
-  end
-
-  def for_female?
-    ['UpperAbdomenAndObstetric', 'Breast','Obstetric','KubFemale','WholeAbdomenFemale','LowerAbdomenFemale'].include?(report_type.reportable_type)
   end
 
 end
