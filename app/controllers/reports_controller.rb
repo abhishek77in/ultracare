@@ -10,7 +10,7 @@ class ReportsController < ApplicationController
     @report = Report.new(report_params)
     @reportable = reportable
     @report.report_type = ReportType.new(reportable: @reportable)
-    if @report.save && @report.report_type.save
+    if @report.save
       flash[:report_id] = @report.id.to_s
       redirect_to root_path, notice: 'Report Created'
     else
