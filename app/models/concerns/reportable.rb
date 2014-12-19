@@ -18,6 +18,10 @@ module Reportable
     attributes.keys - %w(id created_at updated_at)
   end
 
+  def possible_genders
+    [['Female', 'F'],['Male', 'M']]
+  end
+
   module ClassMethods
     def params
       Setting.first.default_organ_findings.select { |key, value| column_names.include?(key) }

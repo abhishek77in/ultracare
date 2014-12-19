@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="small-6 columns">
-      <%= patient_fields.input :sex, include_blank: false, collection: @report.possible_genders  %>
+      <%= patient_fields.input :sex, include_blank: false, collection: @reportable.possible_genders  %>
     </div>
   </div>
 <% end %>
