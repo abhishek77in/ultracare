@@ -52,6 +52,7 @@ RSpec.describe ReportsController, type: :controller do
       report = FactoryGirl.create(:report)
       report_attributes = {"report"=>{"report_type_attributes"=>{"thyroid_left_lobe"=>"Appears NORMAL"}}, "type"=>report.report_type.reportable_type.underscore}
       patch :update, report_attributes.merge(id: report.id)
+      expect(report.reload.report_type.reportable.thyroid_left_lobe).to eq "Appears NORMAL"
       expect(response).to redirect_to(root_path)
     end
   end
