@@ -26,7 +26,6 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find(params[:id])
-    @report.attributes = report_params
     @reportable = @report.report_type.reportable
     @reportable.attributes = report_type_attributes
     if @report.save
