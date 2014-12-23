@@ -1,0 +1,27 @@
+<%= f.fields_for :patient do |patient_fields| %>
+  <div class="row">
+    <div class="small-6 columns">
+      <%=  patient_fields.input :name, label: 'Patient Name', disabled: true %>
+    </div>
+    <div class="small-6 columns">
+      <%= f.association :doctor, label: 'Referred By Doctor', disabled: true, prompt: 'Select a Doctor'  %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="small-6 columns">
+      <label for="report_patient_attributes_age">Age</label>
+      <div class="row collapse">
+        <div class="small-6 columns">
+          <%=  patient_fields.input :age, label: false, disabled: true %>
+        </div>
+        <div class="small-6 columns">
+          <span class="postfix">years</span>
+        </div>
+      </div>
+    </div>
+    <div class="small-6 columns">
+      <%= patient_fields.label :sex, 'Gender' %>
+      <%= patient_fields.select :sex, [['Male', 'M'], ['Female', 'F']], {}, {disabled: true, class: "custom-dropdown"} %>
+    </div>
+  </div>
+<% end %>

@@ -22,7 +22,6 @@ class ReportsController < ApplicationController
   def edit
     @report = Report.find(params[:id])
     @reportable = @report.report_type.reportable
-    render 'new'
   end
 
   def update
