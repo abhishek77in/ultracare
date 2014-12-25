@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   def print_business_report
-    @reports = Report.order(:created_at)
+    @reports = Report.order('doctors.name, reports.created_at')
     @reports = @reports.belongs_to_doctors(doctor_ids_param) if params[:search] && doctor_ids_param.present?
 
     if date_range_param.blank?
