@@ -2,10 +2,7 @@
 %html
   %head
     %meta{:charset => "utf-8"}
+    = stylesheet_link_tag "application"
 
   %body
-    .footer
-      %div{style: 'text-align: center'}
-        NOT VALID FOR MEDICOLEGAL PURPOSE
-        %br
-        Kindly inform any typing mistake immediately for the correction.
+    = yield
