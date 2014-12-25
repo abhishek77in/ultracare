@@ -45,7 +45,8 @@ class ReportsController < ApplicationController
            show_as_html: params[:debug].present?,
            page_size: 'A4',
            layout: 'pdf.html.haml',
-           margin: { bottom: 20, top: 1 },
+           margin: { bottom: 20, top: 8 },
+           header: { html: { template: 'shared/pdf/header.pdf.haml', layout: 'layouts/header.pdf.haml' } },
            footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
   end
 
