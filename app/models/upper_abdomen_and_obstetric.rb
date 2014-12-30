@@ -9,6 +9,10 @@ class UpperAbdomenAndObstetric < ActiveRecord::Base
     'shared/pdf/upper_abdomen_and_obstetric'
   end
 
+  def padding_level
+    'low-padding'
+  end
+
   def possible_genders
     [['Female', 'F']]
   end

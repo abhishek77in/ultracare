@@ -5,6 +5,5 @@
     = wicked_pdf_stylesheet_link_tag    "application", "pdf", :media => "all"
     = csrf_meta_tags
   %body
-    = render 'shared/pdf/header'
     = yield
-    = render 'shared/pdf/footer'
+    = render 'shared/pdf/signature'
