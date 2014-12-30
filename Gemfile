@@ -49,6 +49,7 @@ end
 group :test do
   gem 'shoulda-matchers', require: false
   gem 'factory_girl_rails'
+  gem 'capybara'
 end
 
 group :production do
