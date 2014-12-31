@@ -8,24 +8,6 @@ class HomeController < ApplicationController
     @reports = @reports.includes(:doctor, :patient, :report_type).paginate(:page => params[:page])
   end
 
-  def print_business_report
-    @reports = Report.order('doctors.name, reports.created_at')
-    @reports = @reports.belongs_to_doctors(doctor_ids_param) if params[:search] && doctor_ids_param.present?
-
-    if date_range_param.blank?
-      flash.now[:alert] = "Please specify Date Range to Print Business Report."
-      render 'business_report'
-    elsif (date_range_param.max - date_range_param.min).to_i > 90
-      flash.now[:alert] = "Sorry! Cannot print business report for more than 90 days period."
-      render 'business_report'
-    else
-      @reports = @reports.date_range(date_range_param).includes(:doctor, :patient, :report_type)
-      render pdf: "Business Report - #{Time.now.strftime("%d %b %y")}",
-             layout: 'business_report_pdf.html.haml',
-             margin: { bottom: 5, top: 5 }
-    end
-  end
-
   def business_analysis
     @reports = Report.date_range(date_range_param)
 
