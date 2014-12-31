@@ -1,13 +1,13 @@
 .text-center
   %h2 Business Report
-  %p= params[:search][:date_range]
+  %p= params[:business_report][:date_range]
 %hr
 
 - @reports.group_by(&:doctor).each do |doctor, reports|
   .keep-intact
     %p
       = "Dr. #{doctor.name}"
-      = "( #{params[:search][:date_range]} )"
+      = "( #{params[:business_report][:date_range]} )"
     %p
       %b Summary :
       %br

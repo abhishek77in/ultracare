@@ -1,8 +1,8 @@
 %br
-= simple_form_for :search, url: print_business_report_path, method: :get do |f|
+= simple_form_for @business_report, url: print_business_reports_path, method: :get do |f|
   .row
     .large-6.columns
-      = f.input :doctor_id, collection: Doctor.all, selected: selected_doctor_id,
+      = f.input :doctor_ids, collection: Doctor.all, selected: selected_doctor_id,
         label_method: :doctor_name, label: 'Referred By Doctors (optional)',
         input_html: {multiple: true, 'data-placeholder' => 'Select Doctors', class: 'chosen-select' }
       .hint
