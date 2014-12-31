@@ -5,7 +5,6 @@ class BusinessReport
   attr_accessor :doctor_ids, :date_range
 
   validates :date_range, presence: true
-  validate :date_range_limit
 
   def date_range=(value)
     return if value.blank?
@@ -14,10 +13,6 @@ class BusinessReport
 
   def doctor_ids=(value)
     @doctor_ids = value.reject(&:blank?)
-  end
-
-  def date_range_limit
-    # errors.add(:business_report_date_range, "Please enter date range within 90 days period.")
   end
 
   def file_name
