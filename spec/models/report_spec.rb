@@ -52,7 +52,7 @@ RSpec.describe Report, :type => :model do
       report1 = FactoryGirl.create(:report, doctor: doctor1)
       report2 = FactoryGirl.create(:report, doctor: doctor2)
       expect(Report.belongs_to_doctors([doctor1.id, doctor2.id])).to eq [report1, report2]
-      expect(Report.belongs_to_doctors(nil)).to eq Report.all
+      expect(Report.belongs_to_doctors([])).to eq Report.all
     end
 
     it 'should return reports in given date range'
