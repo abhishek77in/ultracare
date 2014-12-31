@@ -9,8 +9,7 @@ class BusinessReport
 
   def date_range=(value)
     return if value.blank?
-    value = to_range(value)
-    @date_range = value
+    @date_range = to_range(value)
   end
 
   def doctor_ids=(value)
