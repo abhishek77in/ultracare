@@ -8,24 +8,9 @@ class HomeController < ApplicationController
     @reports = @reports.includes(:doctor, :patient, :report_type).paginate(:page => params[:page])
   end
 
-  def business_analysis
-    @reports = Report.date_range(date_range_param)
-
-    @pie_chart_data = Hash.new
-    @reports.includes(:doctor).group_by(&:doctor).each do |doctor, reports|
-      @pie_chart_data.merge!({"Dr. #{doctor.name}" => reports.length})
-    end
-
-    @line_chart_data = @reports.group_by_day(:created_at).count
-  end
-
   private
   def doctor_id_param
     params.require(:search).permit(:doctor_id)[:doctor_id]
-  end
-
-  def doctor_ids_param
-    params.require(:search).permit![:doctor_id].reject(&:blank?)
   end
 
   def date_range_param

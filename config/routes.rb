@@ -4,14 +4,14 @@ Ultrasound::Application.routes.draw do
   end
 
   resources :doctors
+  resources :business_analysis
+
   resources :business_reports do
     get 'print', on: :collection
   end
 
   get 'settings/edit'
   patch 'settings/update'
-
-  get 'business_analysis', to: 'home#business_analysis'
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

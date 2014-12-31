@@ -1,4 +1,4 @@
-= simple_form_for :search, url: business_analysis_path, method: :get do |f|
+= simple_form_for @business_analyis, url: business_analysis_index_path, method: :get do |f|
   .row.padded-top
     .large-6.columns.text-center
       = f.input :date_range, label: 'Date Range', input_html: { id: 'business-analysis-date-range', value: selected_date_range, placeholder: 'Set date range, Last 30 days selected by default', readonly: true }
