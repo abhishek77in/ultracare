@@ -18,7 +18,7 @@ class Report < ActiveRecord::Base
   end
 
   scope :belongs_to_doctors, -> (doctor_ids) do
-    return all unless doctor_ids
+    return all if doctor_ids.empty?
     where(doctor_id: doctor_ids)
   end
 

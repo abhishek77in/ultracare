@@ -4,12 +4,13 @@ Ultrasound::Application.routes.draw do
   end
 
   resources :doctors
+  resources :business_reports do
+    get 'print', on: :collection
+  end
 
   get 'settings/edit'
   patch 'settings/update'
 
-  get 'business_report', to: 'home#business_report'
-  get 'print_business_report', to: 'home#print_business_report'
   get 'business_analysis', to: 'home#business_analysis'
 
   root 'home#index'
