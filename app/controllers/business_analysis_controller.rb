@@ -5,7 +5,7 @@ class BusinessAnalysisController < ApplicationController
     @reports = Report.date_range(@business_analyis.date_range)
 
     @pie_chart_data = Hash.new
-    @reports.includes(:doctor).group_by(&:doctor).each do |doctor, reports|
+    @reports.includes(:doctor).order('doctors.name').group_by(&:doctor).each do |doctor, reports|
       @pie_chart_data.merge!({"Dr. #{doctor.name}" => reports.length})
     end
 
