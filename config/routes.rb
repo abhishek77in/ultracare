@@ -1,12 +1,12 @@
 Ultrasound::Application.routes.draw do
-  resources "reports" do
+  resources "reports", except: [:index, :show, :destroy] do
     get 'print', on: :member
   end
 
-  resources :doctors
-  resources :business_analysis
+  resources :doctors, except: [:new, :show, :destroy]
+  resources :business_analysis, only: [:index]
 
-  resources :business_reports do
+  resources :business_reports, only: [:new] do
     get 'print', on: :collection
   end
 
