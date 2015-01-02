@@ -1,12 +1,12 @@
 class SettingsController < ApplicationController
-  before_action :set_setting, only: [:edit, :update]
+  before_action :set_setting
 
   def edit
   end
 
   def update
     if @setting.update(setting_params)
-      redirect_to settings_edit_path, notice: 'Setting were updated successfully.'
+      redirect_to edit_setting_path, notice: 'Setting were updated successfully.'
     else
       flash.now[:alert] = "Sorry! Setting could not be updated, please fix the errors and try again."
       render action: 'edit'
@@ -15,7 +15,7 @@ class SettingsController < ApplicationController
 
   private
   def set_setting
-    @setting = Setting.first
+    @setting = Setting.find(params[:id])
   end
 
   def setting_params

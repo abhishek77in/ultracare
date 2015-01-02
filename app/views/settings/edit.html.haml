@@ -5,7 +5,7 @@
       Print Settings
       %span.fi-arrows-out.right
     .content#pane1
-      = simple_form_for @setting, url: settings_update_path do |f|
+      = simple_form_for @setting do |f|
         = render 'print_settings', f: f
 
   %dd
@@ -13,7 +13,7 @@
       Default Organ Findings
       %span.fi-arrows-out.right
     .content#pane2
-      = simple_form_for @setting, url: settings_update_path do |f|
+      = simple_form_for @setting do |f|
         - [:liver, :gall_bladder, :pancreas, :spleen, :right_kidney, :left_kidney, :urinary_bladder, :prostate, :ureter, :adnexa, :uterus, :thyroid_left_lobe, :thyroid_right_lobe, :i_j_v_and_c_a, :isthmus, :left_testis, :right_testis, :left_breast, :right_breast, :impression].each do |attr|
           = f.input attr, as: :text
         = f.submit 'Update Default Organ Findings', class: 'button round'
@@ -23,6 +23,6 @@
       Default Obstetric Findings
       %span.fi-arrows-out.right
     .content#pane3
-      = simple_form_for @setting, url: settings_update_path do |f|
+      = simple_form_for @setting do |f|
         = render 'obstetric', f: f
         = f.button :submit, value: 'Update Default Obstetric Findings', class: 'round'

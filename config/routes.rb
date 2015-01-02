@@ -1,17 +1,17 @@
 Ultrasound::Application.routes.draw do
+
+  resources :settings, only: [:edit, :update]
+
   resources "reports", except: [:index, :show, :destroy] do
     get 'print', on: :member
   end
 
   resources :doctors, except: [:new, :show, :destroy]
-  resources :business_analysis, only: [:index]
 
+  resources :business_analysis, only: [:index]
   resources :business_reports, only: [:new] do
     get 'print', on: :collection
   end
-
-  get 'settings/edit'
-  patch 'settings/update'
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.

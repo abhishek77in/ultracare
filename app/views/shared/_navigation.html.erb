@@ -15,7 +15,7 @@
       <li class="divider"></li>
       <li><%= link_to " Doctors", doctors_path, class: 'fi-address-book large' %></li>
       <li class="divider"></li>
-      <li><%= link_to " Settings", settings_edit_path, class: 'fi-wrench large' %></li>
+      <li><%= link_to " Settings", edit_setting_path(id: setting.id), class: 'fi-wrench large' %></li>
     </ul>
   </section>
 </nav>
