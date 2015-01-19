@@ -1,22 +1,19 @@
 %div.header
-  %h1= @setting.print_settings['heading']
-  %h2.line-height-4= @setting.print_settings['sub_heading']
-  %h3
-    = @setting.print_settings['address']
-    = wicked_pdf_image_tag 'phone-icon.png'
-    = @setting.print_settings['phone_number']
+  .logo
+    = wicked_pdf_image_tag 'default_logo.png'
+  .content
+    %h1= @setting.print_settings['heading']
+    %h2.line-height-4= @setting.print_settings['sub_heading']
+    %h3
+      = @setting.print_settings['address']
+      = wicked_pdf_image_tag 'phone-icon.png'
+      = @setting.print_settings['phone_number']
 
-- if @setting.print_settings['consultant_1'].present?
-  %div{style: 'text-align: left; width: 50%; float: left;'}
-    %p.line-height-4
-      Consultant -
-      = @setting.print_settings['consultant_1']
+    - if @setting.print_settings['consultant_1'].present? or @setting.print_settings['consultant_2'].present?
+      %p.line-height-4
+        Consultant -
+        = [@setting.print_settings['consultant_1'], @setting.print_settings['consultant_2']].reject(&:blank?).join(', ')
 
-- if @setting.print_settings['consultant_2'].present?
-  %div{style: 'text-align: right; width: 50%; float: right;'}
-    %p.line-height-4
-      Consultant -
-      = @setting.print_settings['consultant_2']
 %hr
 
 = render 'shared/pdf/patient'
