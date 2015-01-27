@@ -18,10 +18,11 @@
       %tr
         %td= 'other'.upcase
         %td= @reportable.other
-    %tr
-      %td= 'impression'.upcase
-      %td= @reportable.impression
     - if @reportable.advise.present?
       %tr
         %td= 'advise'.upcase
         %td= @reportable.advise
+
+%p
+  %b= 'impression - '.upcase
+  = @reportable.impression

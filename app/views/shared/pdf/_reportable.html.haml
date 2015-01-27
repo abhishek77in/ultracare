@@ -7,3 +7,9 @@
       %tr
         %td= field.humanize.upcase
         %td= convert_to_line_break(@reportable.attributes[field]).html_safe
+
+- if @reportable.impression.present?
+  %p
+    %b= 'impression - '.upcase
+    = @reportable.impression
+    %hr
