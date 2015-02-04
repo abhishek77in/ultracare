@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141215172743) do
+ActiveRecord::Schema.define(version: 20150204110119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,17 @@ ActiveRecord::Schema.define(version: 20141215172743) do
   create_table "doctors", force: true do |t|
     t.string   "name"
     t.string   "degree"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "follicular_studies", force: true do |t|
+    t.text     "urinary_bladder"
+    t.text     "cervix_and_upper_part_of_visualized_vagina"
+    t.text     "uterus"
+    t.text     "ovary_and_adnexa"
+    t.text     "cul_de_sac"
+    t.text     "impression"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
