@@ -1,0 +1,10 @@
+<h3>Follicular Study</h3>
+<hr/>
+<%= f.fields_for :report_type, @report.report_type.reportable do |report_type_fields| %>
+  <%=  report_type_fields.input :urinary_bladder, type: :text %>
+  <%=  report_type_fields.input :cervix_and_upper_part_of_visualized_vagina, type: :text %>
+  <%=  report_type_fields.input :uterus, type: :text %>
+  <%=  report_type_fields.input :ovary_and_adnexa, type: :text %>
+  <%=  report_type_fields.input :cul_de_sac, type: :text %>
+  <%=  report_type_fields.input :impression, type: :text %>
+<% end %>
