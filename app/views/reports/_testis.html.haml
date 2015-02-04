@@ -1,6 +1,6 @@
 %h3 Testis Findings
 %hr
 = f.fields_for :report_type, @report.report_type.reportable do |report_type_fields|
-  =  report_type_fields.input :left_testis, type: :text
   =  report_type_fields.input :right_testis, type: :text
+  =  report_type_fields.input :left_testis, type: :text
   =  report_type_fields.input :impression, type: :text

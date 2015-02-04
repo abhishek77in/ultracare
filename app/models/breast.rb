@@ -1,6 +1,10 @@
 class Breast < ActiveRecord::Base
   include Reportable
 
+  def printable_fields
+    %w(right_breast left_breast advise)
+  end
+
   def padding_level
     'high-padding'
   end
