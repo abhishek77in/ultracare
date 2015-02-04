@@ -2,7 +2,7 @@ class UpperAbdomenAndObstetric < ActiveRecord::Base
   include Reportable
 
   def printable_fields
-    %w(liver gall_bladder pancreas spleen left_kidney right_kidney ureter other advise)
+    %w(liver gall_bladder pancreas spleen right_kidney left_kidney ureter other advise)
   end
 
   def print_template
