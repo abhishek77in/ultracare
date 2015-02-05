@@ -17,10 +17,10 @@
     <%= render 'shared/navigation' %>
 
     <% if current_page?(root_path)  %>
+      <%= render 'shared/notice' if flash[:notice] %>
+      <%= render 'shared/alert' if flash[:alert] %>
       <%= render 'shared/new_reports' %>
       <div class="large-12 medium-8 columns">
-        <%= render 'shared/notice' if flash[:notice] %>
-        <%= render 'shared/alert' if flash[:alert] %>
         <div class="row"><%= yield %></div>
       </div>
     <% else  %>
