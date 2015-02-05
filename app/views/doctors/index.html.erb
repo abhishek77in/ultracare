@@ -1,6 +1,4 @@
-<%= render 'listing', doctors: @doctors, reports: @reports %>
-
-<div class="large-7 medium-8 columns">
+<div class="large-6 medium-8 columns">
   <% if @doctor.new_record? %>
     <h1>Add New doctor</h1>
   <% else %>
@@ -8,3 +6,5 @@
   <% end %>
   <%= render 'form' %>
 </div>
+
+<%= render 'listing', doctors: @doctors, reports: @reports %>
