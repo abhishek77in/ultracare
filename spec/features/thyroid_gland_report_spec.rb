@@ -7,6 +7,7 @@ feature "print a thyroid gland usg report" do
   end
 
   scenario "doctor tries to create a new report and print it" do
+    pending
     visit '/'
     click_link 'Thyroid Gland'
 
