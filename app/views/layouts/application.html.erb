@@ -17,8 +17,8 @@
     <%= render 'shared/navigation' %>
 
     <% if current_page?(root_path)  %>
-      <%= render 'shared/side_bar' if current_page?(root_path)  %>
-      <div class="large-10 medium-8 columns">
+      <%= render 'shared/side_bar' %>
+      <div class="large-12 medium-8 columns">
         <%= render 'shared/notice' if flash[:notice] %>
         <%= render 'shared/alert' if flash[:alert] %>
         <div class="row"><%= yield %></div>
