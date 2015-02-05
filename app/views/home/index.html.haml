@@ -18,7 +18,7 @@
     - @reports.each do |report|
       %tr
         %td= report.id
-        %td= report.patient.name
+        %td= truncate report.patient.name, length: 18
         %td= report.patient.age
         %td= report.patient.sex
         %td= "Dr. #{report.doctor.name}"
