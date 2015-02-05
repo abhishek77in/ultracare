@@ -1,29 +1,20 @@
-<div class="large-2 medium-4 columns">
-  <div class="sidebar">
-    <nav>
-    <ul class="side-nav">
-      <li class="subheader fi-torsos-female-male large"> New Report</li>
+<div class="large-12 medium-4 columns text-center">
 
-      <li><%= link_to "Thyroid Gland", new_report_path(type: 'thyroid_gland') %></li>
-      <li><%= link_to "Upper Abdomen", new_report_path(type: 'upper_abdomen') %></li>
+  <br/>
+  <%= link_to "Whole Abdomen Female", new_report_path(type: 'whole_abdomen_female'), class: 'button secondary'  %>
+  <%= link_to "Obstetrics", new_report_path(type: 'obstetric'), class: 'button secondary'  %>
+  <%= link_to "Upper Abdomen And Obstetrics", new_report_path(type: 'upper_abdomen_and_obstetric'), class: 'button secondary'  %>
+  <%= link_to "Whole Abdomen Male", new_report_path(type: 'whole_abdomen_male'), class: 'button secondary'  %>
+  <br/>
 
-      <li class="subheader fi-torso large"> New Report Male</li>
+  <%= link_to "Follicular Study", new_report_path(type: 'follicular_study'), class: 'button secondary'  %>
+  <%= link_to "Lower Abdomen Female", new_report_path(type: 'lower_abdomen_female'), class: 'button secondary'  %>
+  <%= link_to "KUB Male", new_report_path(type: 'kub_male'), class: 'button secondary'  %>
+  <%= link_to "KUB Female", new_report_path(type: 'kub_female'), class: 'button secondary'  %>
+  <br/>
 
-      <li><%= link_to "Whole Abdomen Male", new_report_path(type: 'whole_abdomen_male') %></li>
-      <li><%= link_to "KUB Male", new_report_path(type: 'kub_male') %></li>
-      <li><%= link_to "Testis", new_report_path(type: 'testis') %></li>
-
-      <li class="divider"></li>
-      <li class="subheader fi-torso-female large"> New Report Female</li>
-
-      <li><%= link_to "Upper Abdomen And Obstetrics", new_report_path(type: 'upper_abdomen_and_obstetric') %></li>
-      <li><%= link_to "Obstetrics", new_report_path(type: 'obstetric') %></li>
-      <li><%= link_to "Whole Abdomen Female", new_report_path(type: 'whole_abdomen_female') %></li>
-      <li><%= link_to "Follicular Study", new_report_path(type: 'follicular_study') %></li>
-      <li><%= link_to "Lower Abdomen Female", new_report_path(type: 'lower_abdomen_female') %></li>
-      <li><%= link_to "KUB Female", new_report_path(type: 'kub_female') %></li>
-      <li><%= link_to "Breast", new_report_path(type: 'breast') %></li>
-    </ul>
-    </nav>
-  </div>
+  <%= link_to "Upper Abdomen", new_report_path(type: 'upper_abdomen'), class: 'button secondary'  %>
+  <%= link_to "Thyroid Gland", new_report_path(type: 'thyroid_gland'), class: 'button secondary' %>
+  <%= link_to "Breast", new_report_path(type: 'breast'), class: 'button secondary'  %>
+  <%= link_to "Testis", new_report_path(type: 'testis'), class: 'button secondary'  %>
 </div>
