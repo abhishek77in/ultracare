@@ -8,8 +8,14 @@
         %td= field.humanize.upcase
         %td= convert_to_line_break(@reportable.attributes[field]).html_safe
 
-- if @reportable.impression.present?
-  %p
+%p
+  - if @reportable.impression.present?
     %b= 'impression - '.upcase
     = @reportable.impression
-    %hr
+
+  - if @reportable.advise.present?
+    %br
+    %b= 'advise - '.upcase
+    = @reportable.advise
+
+%hr
