@@ -13,7 +13,7 @@
     %b= 'impression - '.upcase
     = @reportable.impression
 
-  - if @reportable.advise.present?
+  - if @reportable.respond_to?(:advise) && @reportable.advise.present?
     %br
     %b= 'advise - '.upcase
     = @reportable.advise
