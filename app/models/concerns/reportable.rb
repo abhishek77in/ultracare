@@ -15,7 +15,7 @@ module Reportable
   end
 
   def printable_fields
-    attributes.keys - %w(id impression created_at updated_at)
+    attributes.keys - %w(id impression advise created_at updated_at)
   end
 
   def possible_genders

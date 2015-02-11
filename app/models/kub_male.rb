@@ -2,7 +2,7 @@ class KubMale < ActiveRecord::Base
   include Reportable
 
   def printable_fields
-    %w(right_kidney left_kidney urinary_bladder prostate other advise)
+    %w(right_kidney left_kidney urinary_bladder prostate other)
   end
 
   def padding_level
