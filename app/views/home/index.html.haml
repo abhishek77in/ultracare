@@ -1,32 +1,16 @@
-%h2 Reports
-
-= render 'search_form'
-
-%table
-  %thead
-    %tr
-      %th Report No.
-      %th Patient Name
-      %th Age
-      %th Sex
-      %th Referred By Doctor
-      %th Ultrasound Type
-      %th Date
-      %th Edit
-      %th Print
-  %tbody
-    - @reports.each do |report|
-      %tr
-        %td= report.id
-        %td= truncate report.patient.name, length: 18
-        %td= report.patient.age
-        %td= report.patient.sex
-        %td= "Dr. #{report.doctor.name}"
-        %td= report.report_type.reportable.class.name.underscore.titleize
-        %td= report.created_at.strftime("%d / %m")
-        %td.fi-page-edit.small= link_to " Edit", edit_report_path(report, type: report.report_type.reportable.class.name.underscore)
-        %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
-
-= will_paginate @reports, renderer: FoundationPagination::Rails
+%h1.text-center.padded-top Select New Report
+.large-12.medium-4.columns.text-center.report-links-section.padded-top
+  = link_to "Whole Abdomen Female", new_report_path(type: 'whole_abdomen_female'), class: 'button secondary'
+  = link_to "Obstetrics", new_report_path(type: 'obstetric'), class: 'button secondary'
+  = link_to "Upper Abdomen And Obstetrics", new_report_path(type: 'upper_abdomen_and_obstetric'), class: 'button secondary'
+  = link_to "Whole Abdomen Male", new_report_path(type: 'whole_abdomen_male'), class: 'button secondary'
+  = link_to "Follicular Study", new_report_path(type: 'follicular_study'), class: 'button secondary'
+  = link_to "Lower Abdomen Female", new_report_path(type: 'lower_abdomen_female'), class: 'button secondary'
+  = link_to "KUB Male", new_report_path(type: 'kub_male'), class: 'button secondary'
+  = link_to "KUB Female", new_report_path(type: 'kub_female'), class: 'button secondary'
+  = link_to "Upper Abdomen", new_report_path(type: 'upper_abdomen'), class: 'button secondary'
+  = link_to "Thyroid Gland", new_report_path(type: 'thyroid_gland'), class: 'button secondary'
+  = link_to "Breast", new_report_path(type: 'breast'), class: 'button secondary'
+  = link_to "Testis", new_report_path(type: 'testis'), class: 'button secondary'
 
 = render 'script' if flash[:report_id].present?
