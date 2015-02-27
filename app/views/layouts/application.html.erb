@@ -15,20 +15,11 @@
 
   <body>
     <%= render 'shared/navigation' %>
+    <%= render 'shared/notice' if flash[:notice] %>
+    <%= render 'shared/alert' if flash[:alert] %>
 
-    <% if current_page?(root_path)  %>
-      <%= render 'shared/notice' if flash[:notice] %>
-      <%= render 'shared/alert' if flash[:alert] %>
-      <%= render 'shared/new_reports' %>
-      <div class="large-12 medium-8 columns">
-        <div class="row"><%= yield %></div>
-      </div>
-    <% else  %>
-      <div class="large-12 medium-12 columns">
-        <%= render 'shared/notice' if flash[:notice] %>
-        <%= render 'shared/alert' if flash[:alert] %>
-        <div class="row"><%= yield %></div>
-      </div>
-    <% end  %>
+    <div class="large-12 medium-12 columns">
+      <div class="row"><%= yield %></div>
+    </div>
   </body>
 </html>
