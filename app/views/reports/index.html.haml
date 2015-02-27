@@ -28,5 +28,3 @@
         %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
 
 = will_paginate @reports, renderer: FoundationPagination::Rails
-
-= render 'script' if flash[:report_id].present?
