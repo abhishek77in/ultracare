@@ -13,4 +13,8 @@
   = link_to "Breast", new_report_path(type: 'breast'), class: 'button secondary'
   = link_to "Testis", new_report_path(type: 'testis'), class: 'button secondary'
 
+.text-center
+  = link_to('http://www.carepill.in', target: '_blank')do
+    = image_tag "carepill_logo.jpg"
+
 = render 'script' if flash[:report_id].present?
