@@ -6,16 +6,22 @@
   </ul>
   <section class="top-bar-section">
     <ul class="right">
-      <li class="divider"></li>
-      <li><%= link_to " Reports", reports_path, class: 'fi-list-thumbnails large' %></li>
-      <li class="divider"></li>
-      <li><%= link_to " Business Analysis", business_analysis_index_path(business_analysis: date_range_param_last_month), class: 'fi-graph-pie large' %></li>
-      <li class="divider"></li>
-      <li><%= link_to " Business Report", new_business_report_path, class: 'fi-page-export-pdf large' %></li>
-      <li class="divider"></li>
-      <li><%= link_to " Doctors", doctors_path, class: 'fi-address-book large' %></li>
-      <li class="divider"></li>
-      <li><%= link_to " Settings", edit_setting_path(id: setting.id), class: 'fi-wrench large' %></li>
+      <% if user_signed_in? %>
+        <li class="divider"></li>
+        <li><%= link_to " Reports", reports_path, class: 'fi-list-thumbnails large' %></li>
+        <li class="divider"></li>
+        <li><%= link_to " Business Analysis", business_analysis_index_path(business_analysis: date_range_param_last_month), class: 'fi-graph-pie large' %></li>
+        <li class="divider"></li>
+        <li><%= link_to " Business Report", new_business_report_path, class: 'fi-page-export-pdf large' %></li>
+        <li class="divider"></li>
+        <li><%= link_to " Doctors", doctors_path, class: 'fi-address-book large' %></li>
+        <li class="divider"></li>
+        <li><%= link_to " Settings", edit_setting_path(id: setting.id), class: 'fi-wrench large' %></li>
+        <li class="divider"></li>
+        <li><%= link_to " Logout", destroy_user_session_path, method: 'delete', class: 'fi-lock large' %></li>
+      <% else %>
+        <li><%= link_to " Login", new_user_session_path, class: 'fi-unlock large' %></li>
+      <% end %>
     </ul>
   </section>
 </nav>

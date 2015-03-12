@@ -1,5 +1,6 @@
 Ultrasound::Application.routes.draw do
 
+  devise_for :users
   resources :settings, only: [:edit, :update]
 
   resources "reports", except: [:show, :destroy] do
