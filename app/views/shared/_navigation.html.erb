@@ -16,6 +16,8 @@
       <li><%= link_to " Doctors", doctors_path, class: 'fi-address-book large' %></li>
       <li class="divider"></li>
       <li><%= link_to " Settings", edit_setting_path(id: setting.id), class: 'fi-wrench large' %></li>
+      <li class="divider"></li>
+      <li><%= link_to " Logout", destroy_user_session_path, method: 'delete', class: 'fi-lock large' %></li>
     </ul>
   </section>
 </nav>
