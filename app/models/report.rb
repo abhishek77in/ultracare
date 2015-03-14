@@ -12,6 +12,11 @@ class Report < ActiveRecord::Base
 
   after_save :touch
 
+  scope :limit_reports_to_maximum, -> (max_reports) do
+    return all unless max_reports
+    limit(max_reports)
+  end
+
   scope :belongs_to_doctor, -> (doctor_id) do
     return all unless doctor_id
     where(doctor_id: doctor_id)

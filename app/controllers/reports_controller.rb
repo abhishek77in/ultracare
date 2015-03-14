@@ -6,6 +6,7 @@ class ReportsController < ApplicationController
     @reports = @reports.date_range(date_range_param) if params[:search] && date_range_param.present?
     @reports = @reports.patient_name(params[:search][:patient_name]) if params[:search]
     @reports = @reports.includes(:doctor, :patient, :report_type).paginate(:page => params[:page])
+    @reports = @reports.limit_reports_to_maximum(setting.show_max_reports)
   end
 
   def new
