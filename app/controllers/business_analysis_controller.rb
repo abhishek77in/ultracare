@@ -1,4 +1,5 @@
 class BusinessAnalysisController < ApplicationController
+  before_action :redirect_to_root, if: -> { setting.disable_business_analysis? }
 
   def index
     @business_analyis = BusinessAnalysis.new(business_analysis_params)

@@ -1,4 +1,5 @@
 class ReportsController < ApplicationController
+  before_action :redirect_to_root, if: -> { setting.disable_reports? }
 
   def index
     @reports = Report.recent

@@ -1,4 +1,5 @@
 class BusinessReportsController < ApplicationController
+  before_action :redirect_to_root, if: -> { setting.disable_business_reports? }
 
   def new
     @business_report = BusinessReport.new
