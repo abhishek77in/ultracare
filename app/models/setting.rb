@@ -10,4 +10,5 @@ class Setting < ActiveRecord::Base
     :ac_weeks, :ac_days, :hc_mm, :hc_weeks, :hc_days], coder: JSON
 
   validates :show_max_reports, numericality: { greater_than: 0, allow_nil: true  }
+  validates :show_reports_from_last_days, numericality: { greater_than: 0, allow_nil: true  }
 end
