@@ -8,4 +8,6 @@ class Setting < ActiveRecord::Base
     :placenta, :grade, :e_d_d, :e_f_w, :remarks, :advise, :crl_mm, :crl_weeks,
     :crl_days, :bpd_mm, :bpd_weeks, :bpd_days, :fl_mm, :fl_weeks, :fl_days, :ac_mm,
     :ac_weeks, :ac_days, :hc_mm, :hc_weeks, :hc_days], coder: JSON
+
+  validates :show_max_reports, numericality: { only_integer: true }
 end
