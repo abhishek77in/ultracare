@@ -1,6 +1,6 @@
 .row.padded-top
-  = f.input :show_max_reports, input_html: {}
-  = f.input :show_reports_from_date, as: :string, input_html: {id: 'datepicker'}
+  = f.input :show_max_reports, label: 'Show max (n) reports'
+  = f.input :show_reports_from_last_days, label: 'Show reports from last (n) days'
   = f.input :disable_reports
   = f.input :disable_business_analysis
   = f.input :disable_business_reports
