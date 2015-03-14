@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150312195152) do
+ActiveRecord::Schema.define(version: 20150314091345) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -143,6 +143,11 @@ ActiveRecord::Schema.define(version: 20150312195152) do
     t.text     "default_obstetric_findings"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "disable_reports",            default: false
+    t.boolean  "disable_business_analysis",  default: false
+    t.boolean  "disable_business_reports",   default: false
+    t.integer  "show_max_reports"
+    t.date     "show_reports_till_date"
   end
 
   create_table "testes", force: true do |t|
