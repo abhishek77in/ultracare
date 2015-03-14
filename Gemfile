@@ -10,6 +10,7 @@ gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 
+gem 'jquery-ui-rails'
 gem 'jquery-rails'
 gem 'jbuilder'
 
