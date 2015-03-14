@@ -1,10 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe ReportsController, type: :controller do
-
+  let(:user) { FactoryGirl.create(:user) }
   before do
     FactoryGirl.create(:setting)
     @doctor = FactoryGirl.create(:doctor)
+    sign_in user
   end
 
   describe 'GET new' do
