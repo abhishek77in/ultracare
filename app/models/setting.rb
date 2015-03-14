@@ -9,5 +9,5 @@ class Setting < ActiveRecord::Base
     :crl_days, :bpd_mm, :bpd_weeks, :bpd_days, :fl_mm, :fl_weeks, :fl_days, :ac_mm,
     :ac_weeks, :ac_days, :hc_mm, :hc_weeks, :hc_days], coder: JSON
 
-  validates :show_max_reports, numericality: { only_integer: true }, allow_nil: true
+  validates :show_max_reports, numericality: { greater_than: 0, allow_nil: true  }
 end
