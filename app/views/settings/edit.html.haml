@@ -1,29 +1,22 @@
 %h1 Settings
-%dl.accordion.padded-top{"data-accordion" => ""}
 
-  %dd
-    %a{href: '#pane1'}
-      Print Settings
-      %span.fi-arrows-out.right
-    .content#pane1
-      = simple_form_for @setting do |f|
-        = render 'print_settings', f: f
-
-  %dd
-    %a{href: '#pane2'}
-      Default Organ Findings
-      %span.fi-arrows-out.right
-    .content#pane2
-      = simple_form_for @setting do |f|
-        - [:liver, :gall_bladder, :pancreas, :spleen, :right_kidney, :left_kidney, :urinary_bladder, :prostate, :ureter, :adnexa, :uterus, :thyroid_left_lobe, :thyroid_right_lobe, :i_j_v_and_c_a, :isthmus, :left_testis, :right_testis, :left_breast, :right_breast, :impression].each do |attr|
-          = f.input attr, as: :text
-        = f.submit 'Update Default Organ Findings', class: 'button round'
-
-  %dd
-    %a{href: '#pane3'}
-      Default Obstetric Findings
-      %span.fi-arrows-out.right
-    .content#pane3
-      = simple_form_for @setting do |f|
-        = render 'obstetric', f: f
-        = f.button :submit, value: 'Update Default Obstetric Findings', class: 'round'
+%ul.tabs{"data-tab" => ""}
+  %li.tab-title.active
+    %a{:href => "#panel1"} Print Settings
+  %li.tab-title
+    %a{:href => "#panel2"} Default Organ Findings
+  %li.tab-title
+    %a{:href => "#panel3"} Default Obstetric Findings
+.tabs-content
+  #panel1.content.active
+    = simple_form_for @setting do |f|
+      = render 'print_settings', f: f
+  #panel2.content
+    = simple_form_for @setting do |f|
+      - [:liver, :gall_bladder, :pancreas, :spleen, :right_kidney, :left_kidney, :urinary_bladder, :prostate, :ureter, :adnexa, :uterus, :thyroid_left_lobe, :thyroid_right_lobe, :i_j_v_and_c_a, :isthmus, :left_testis, :right_testis, :left_breast, :right_breast, :impression].each do |attr|
+        = f.input attr, as: :text
+      = f.submit 'Update Default Organ Findings', class: 'button round'
+  #panel3.content
+    = simple_form_for @setting do |f|
+      = render 'obstetric', f: f
+      = f.button :submit, value: 'Update Default Obstetric Findings', class: 'round'
