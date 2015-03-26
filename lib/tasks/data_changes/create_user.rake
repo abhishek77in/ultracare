@@ -7,4 +7,4 @@ namespace :data_changes do
 end
 
 # Run following command to create a user
-# bundle exec rake "data_changes:create_user[abhishek@gmail.com,abhishek]"
+# bundle exec rake "data_changes:create_user[test@example.com,abcd1234]"
