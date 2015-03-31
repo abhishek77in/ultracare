@@ -13,11 +13,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require chosen-jquery
+//= require select2
 //= require foundation
 //= require plugins/moment.min
 //= require plugins/daterangepicker
 //= require highcharts
 //= require_directory .
 
-$(function(){ $(document).foundation(); });
+$(function(){ 
+  $(document).foundation();
+  $('select').select2({
+    allowClear: true,
+    width: 'resolve'
+  });
+});

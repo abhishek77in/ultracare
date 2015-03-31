@@ -26,7 +26,7 @@ gem 'will_paginate-foundation'
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'haml'
-gem 'chosen-rails'
+gem 'select2-rails'
 gem 'paper_trail'
 gem 'whenever', :require => false
 
