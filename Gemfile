@@ -59,5 +59,5 @@ group :production do
   gem 'therubyracer'
   gem 'unicorn'
   gem 'capistrano'
-  gem 'rvm-capistrano'
+  gem 'rvm-capistrano', require: false
 end
