@@ -55,6 +55,6 @@ group :test do
   gem 'pdf-reader'
 end
 
-group :production do
-  gem 'therubyracer'
-end
+# group :production do
+#   gem 'therubyracer'
+# end
