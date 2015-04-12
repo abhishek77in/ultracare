@@ -39,8 +39,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'guard-rspec', require: false
-  gem 'zeus'
-  gem 'guard-zeus'
 end
 
 group :development, :test do
