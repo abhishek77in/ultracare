@@ -56,3 +56,6 @@ end
 # group :production do
 #   gem 'therubyracer'
 # end
+
+# For windows
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
