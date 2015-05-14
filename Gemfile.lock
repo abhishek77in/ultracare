@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/mileszs/wicked_pdf.git
-  revision: b8ae4831fa98077ea7bc12eb5b75fe909261f74c
-  specs:
-    wicked_pdf (0.11.0)
-      rails
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -286,6 +279,8 @@ GEM
       rack (>= 1.0)
     whenever (0.9.4)
       chronic (>= 0.6.3)
+    wicked_pdf (0.10.2)
+      rails
     will_paginate (3.0.7)
     will_paginate-foundation (5.3.4)
       will_paginate (>= 3.0.3)
@@ -330,6 +325,6 @@ DEPENDENCIES
   tzinfo-data
   uglifier
   whenever
-  wicked_pdf!
+  wicked_pdf
   will_paginate-foundation
   wkhtmltopdf-binary
