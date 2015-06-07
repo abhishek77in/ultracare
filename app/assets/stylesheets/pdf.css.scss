@@ -18,13 +18,17 @@ h1, h2, h3, h4, h5, div, p, td, th  {
   }
   h1 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 40px;
   }
   h2 {
-    font-size: 20px;
+    font-size: 30px;
   }
   h3 {
-    font-size: 18px;
+    font-size: 28px;
+  }
+  p {
+    padding-top: 10px;
+    font-size: 24px;
   }
 }
 .line-height-4 {
