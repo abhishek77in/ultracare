@@ -5,6 +5,7 @@ h1, h2, h3, h4, h5, div, p, td, th  {
 .grey {
   color: #4d4d4d;
 }
+
 .header {
   margin-top: 10px;
   height: 110px;
@@ -24,13 +25,20 @@ h1, h2, h3, h4, h5, div, p, td, th  {
     font-size: 30px;
   }
   h3 {
-    font-size: 28px;
+    font-size: 24px;
   }
   p {
     padding-top: 10px;
-    font-size: 24px;
+    font-size: 22px;
   }
 }
+
+.patient-section {
+  p {
+    font-size: 20px;
+  }
+}
+
 .line-height-4 {
   line-height: 4px;
 }

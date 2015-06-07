@@ -1,20 +1,21 @@
-%div{style: 'width: 70%; float: left;'}
-  %p.line-height-4
-    %span.grey Patient Name:
-    = @report.patient.name
-%div{style: 'width: 30%; float: right;'}
-  %p.line-height-4
-    %span.grey Age / Sex:
-    = "#{@report.patient.age} / #{@report.patient.sex}"
-%div{style: 'width: 70%; float: left;'}
-  %p.line-height-4
-    %span.grey Referred By Doctor:
-    Dr.
-    - if @report.doctor.degree.present?
-      = "#{@report.doctor.name} (#{@report.doctor.degree})"
-    - else
-      = @report.doctor.name
-%div{style: 'width: 30%; float: right;'}
-  %p.line-height-4
-    %span.grey Date:
-    = @report.created_at.strftime("%d / %m / %Y")
+.patient-section
+  %div{style: 'width: 70%; float: left;'}
+    %p.line-height-4
+      %span.grey Patient Name:
+      = @report.patient.name
+  %div{style: 'width: 30%; float: right;'}
+    %p.line-height-4
+      %span.grey Age / Sex:
+      = "#{@report.patient.age} / #{@report.patient.sex}"
+  %div{style: 'width: 70%; float: left;'}
+    %p.line-height-4
+      %span.grey Referred By Doctor:
+      Dr.
+      - if @report.doctor.degree.present?
+        = "#{@report.doctor.name} (#{@report.doctor.degree})"
+      - else
+        = @report.doctor.name
+  %div{style: 'width: 30%; float: right;'}
+    %p.line-height-4
+      %span.grey Date:
+      = @report.created_at.strftime("%d / %m / %Y")
