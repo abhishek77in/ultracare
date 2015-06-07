@@ -17,6 +17,8 @@
 development:
   adapter: postgresql
   encoding: unicode
+  username: ultracare
+  password: apple
   database: ultrasound_development
   pool: 5
 
