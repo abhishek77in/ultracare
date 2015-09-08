@@ -55,6 +55,7 @@ end
 
 group :production do
   gem 'mongrel', '1.2.0.pre2'
+  gem 'mongrel_service'
 end
 
 # For windows
