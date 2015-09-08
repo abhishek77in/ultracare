@@ -59,3 +59,4 @@ end
 
 # For windows
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+gem 'win32-service', platforms: [:mingw, :mswin, :x64_mingw]

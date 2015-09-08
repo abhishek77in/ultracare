@@ -333,6 +333,7 @@ DEPENDENCIES
   whenever
   wicked_pdf
   will_paginate-foundation
+  win32-service
   wkhtmltopdf-binary
 
 BUNDLED WITH
