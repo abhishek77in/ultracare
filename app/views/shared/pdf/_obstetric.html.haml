@@ -4,7 +4,7 @@
   %tbody
     %tr
       %td= 'Pregnancy'.upcase
-      %td{colspan: 3}= convert_to_line_break(@reportable.pregnancy).html_safe
+      %td{colspan: 3}= simple_format @reportable.pregnancy
     %tr
       %td
       %td{colspan: 3}
@@ -71,7 +71,7 @@
     %tr
       %td{colspan: 2}= 'Fetal heart'.upcase
       - if @reportable.fetal_heart.present?
-        %td{colspan: 2}= convert_to_line_break(@reportable.fetal_heart).html_safe
+        %td{colspan: 2}= simple_format @reportable.fetal_heart
     %tr
       %td= 'Fetal Movements'.upcase
       %td{colspan: 3}

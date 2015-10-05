@@ -12,12 +12,12 @@
 %p
   - if @reportable.impression.present?
     %b= 'impression - '.upcase
-    = @reportable.impression
+    = simple_format @reportable.impression
 
   - if @reportable.advise.present?
     %br
     %b= 'advise - '.upcase
-    = @reportable.advise
+    = simple_format @reportable.advise
 
 %hr
 
