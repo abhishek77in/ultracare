@@ -101,8 +101,8 @@
       %td{colspan: 3}= @reportable.e_f_w
     %tr
       %td= 'remarks'.upcase
-      %td{colspan: 3}= @reportable.remarks
+      %td{colspan: 3}= simple_format @reportable.remarks
     - if @reportable.advise.present?
       %tr
         %td= 'advise'.upcase
-        %td{colspan: 3}= @reportable.advise
+        %td{colspan: 3}= simple_format @reportable.advise
