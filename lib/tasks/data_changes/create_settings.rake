@@ -2,7 +2,7 @@ namespace :data_changes do
   desc 'Create settings for the app'
   task :create_settings => :environment do
     setting = Setting.first || Setting.new
-    setting.print_settings = {"heading"=>"BALRAMPUR DIAGNOSTIC CENTRE", "sub_heading"=>"DIAGNOSTIC ULTRASOUND UNIT", "address"=>"Opposite - Memorial Hospital, Balrampur", "phone_number"=>"232436", "consultant_1"=>"", "consultant_2"=>""}
+    setting.print_settings = {"heading"=>"YOUR CENTRE", "sub_heading"=>"DIAGNOSTIC ULTRASOUND UNIT", "address"=>"Opposite - Your Hospital, City Name", "phone_number"=>"23xx36"}
     setting.default_organ_findings = {
       "liver"=>"Appears NORMAL in size, shape & echotexture. No focal lesion or mass seen. Intrahepatic portal redicals are not Dilated. No Sub hepatic fluid seen.",
       "gall_bladder"=>"Appears NORMAL in size & shape. No stone or sludge seen. Walls are normal. Anterior wall of the G.B. appears not thickened. C.B.D. and portal vein is not Dilated.",
