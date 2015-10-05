@@ -6,16 +6,16 @@
       - next if @reportable.attributes[field].blank?
       %tr
         %td= field.humanize.upcase
-        %td= convert_to_line_break(@reportable.attributes[field]).html_safe
+        %td= simple_format @reportable.attributes[field]
 
 %p
   - if @reportable.impression.present?
     %b= 'impression - '.upcase
-    = @reportable.impression
+    = simple_format @reportable.impression
 
   - if @reportable.respond_to?(:advise) && @reportable.advise.present?
     %br
     %b= 'advise - '.upcase
-    = @reportable.advise
+    = simple_format @reportable.advise
 
 %hr
