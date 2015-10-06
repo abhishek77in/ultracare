@@ -38,6 +38,7 @@ class ReportsController < ApplicationController
 
   def update
     @report = Report.find(params[:id])
+    @report.cost = report_params[:cost]
     @reportable = @report.report_type.reportable
     @reportable.attributes = report_type_attributes
     if @report.save
@@ -76,7 +77,7 @@ class ReportsController < ApplicationController
   end
 
   def report_params
-    params.require(:report).permit(:doctor_id, patient_attributes: [:name, :age, :sex])
+    params.require(:report).permit(:doctor_id, :cost, patient_attributes: [:name, :age, :sex])
   end
 
   def report_type_attributes
