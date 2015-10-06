@@ -19,14 +19,6 @@
         %td= 'other'.upcase
         %td= @reportable.other
 
-%p
-  - if @reportable.impression.present?
-    %b= 'impression - '.upcase
-    = @reportable.impression
-
-  - if @reportable.advise.present?
-    %br
-    %b= 'advise - '.upcase
-    = @reportable.advise
+= render partial: 'shared/pdf/impression_advise'
 
 %hr

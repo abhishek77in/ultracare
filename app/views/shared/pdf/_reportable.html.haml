@@ -8,14 +8,6 @@
         %td= field.humanize.upcase
         %td= simple_format @reportable.attributes[field]
 
-%p
-  - if @reportable.impression.present?
-    %b= 'impression - '.upcase
-    = simple_format @reportable.impression
-
-  - if @reportable.respond_to?(:advise) && @reportable.advise.present?
-    %br
-    %b= 'advise - '.upcase
-    = simple_format @reportable.advise
+= render partial: 'shared/pdf/impression_advise'
 
 %hr
