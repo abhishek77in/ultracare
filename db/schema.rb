@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150314110938) do
+ActiveRecord::Schema.define(version: 20151006091946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "breasts", force: true do |t|
+  create_table "breasts", force: :cascade do |t|
     t.text     "left_breast"
     t.text     "right_breast"
     t.text     "impression"
@@ -25,14 +25,14 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "doctors", force: true do |t|
+  create_table "doctors", force: :cascade do |t|
     t.string   "name"
     t.string   "degree"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "follicular_studies", force: true do |t|
+  create_table "follicular_studies", force: :cascade do |t|
     t.text     "urinary_bladder"
     t.text     "cervix_and_upper_part_of_visualized_vagina"
     t.text     "uterus"
@@ -43,7 +43,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "kub_females", force: true do |t|
+  create_table "kub_females", force: :cascade do |t|
     t.text     "left_kidney"
     t.text     "right_kidney"
     t.text     "urinary_bladder"
@@ -54,7 +54,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "kub_males", force: true do |t|
+  create_table "kub_males", force: :cascade do |t|
     t.text     "left_kidney"
     t.text     "right_kidney"
     t.text     "urinary_bladder"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "lower_abdomen_females", force: true do |t|
+  create_table "lower_abdomen_females", force: :cascade do |t|
     t.text     "urinary_bladder"
     t.text     "uterus"
     t.text     "adnexa"
@@ -77,7 +77,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "obstetrics", force: true do |t|
+  create_table "obstetrics", force: :cascade do |t|
     t.text     "pregnancy"
     t.string   "average_g_a"
     t.string   "presentation_and_lie"
@@ -112,7 +112,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.string   "hc_days"
   end
 
-  create_table "patients", force: true do |t|
+  create_table "patients", force: :cascade do |t|
     t.string   "name"
     t.integer  "age"
     t.string   "sex"
@@ -122,7 +122,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
 
   add_index "patients", ["name"], name: "index_patients_on_name", using: :btree
 
-  create_table "report_types", force: true do |t|
+  create_table "report_types", force: :cascade do |t|
     t.integer  "reportable_id"
     t.string   "reportable_type"
     t.integer  "report_id"
@@ -130,14 +130,15 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "reports", force: true do |t|
+  create_table "reports", force: :cascade do |t|
     t.integer  "doctor_id"
     t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "cost"
   end
 
-  create_table "settings", force: true do |t|
+  create_table "settings", force: :cascade do |t|
     t.text     "print_settings"
     t.text     "default_organ_findings"
     t.text     "default_obstetric_findings"
@@ -151,7 +152,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.integer  "show_reports_from_last_days"
   end
 
-  create_table "testes", force: true do |t|
+  create_table "testes", force: :cascade do |t|
     t.text     "left_testis"
     t.text     "right_testis"
     t.text     "impression"
@@ -159,7 +160,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "thyroid_glands", force: true do |t|
+  create_table "thyroid_glands", force: :cascade do |t|
     t.text     "thyroid_left_lobe"
     t.text     "thyroid_right_lobe"
     t.text     "i_j_v_and_c_a"
@@ -171,7 +172,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "upper_abdomen", force: true do |t|
+  create_table "upper_abdomen", force: :cascade do |t|
     t.text     "liver"
     t.text     "gall_bladder"
     t.text     "pancreas"
@@ -186,7 +187,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "upper_abdomen_and_obstetrics", force: true do |t|
+  create_table "upper_abdomen_and_obstetrics", force: :cascade do |t|
     t.text     "liver"
     t.text     "gall_bladder"
     t.text     "pancreas"
@@ -230,7 +231,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: true do |t|
+  create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -248,7 +249,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
-  create_table "versions", force: true do |t|
+  create_table "versions", force: :cascade do |t|
     t.string   "item_type",      null: false
     t.integer  "item_id",        null: false
     t.string   "event",          null: false
@@ -260,7 +261,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
 
   add_index "versions", ["item_type", "item_id"], name: "index_versions_on_item_type_and_item_id", using: :btree
 
-  create_table "whole_abdomen_females", force: true do |t|
+  create_table "whole_abdomen_females", force: :cascade do |t|
     t.text     "liver"
     t.text     "gall_bladder"
     t.text     "pancreas"
@@ -277,7 +278,7 @@ ActiveRecord::Schema.define(version: 20150314110938) do
     t.datetime "updated_at"
   end
 
-  create_table "whole_abdomen_males", force: true do |t|
+  create_table "whole_abdomen_males", force: :cascade do |t|
     t.text     "liver"
     t.text     "gall_bladder"
     t.text     "pancreas"
