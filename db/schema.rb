@@ -135,7 +135,7 @@ ActiveRecord::Schema.define(version: 20151006091946) do
     t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "cost"
+    t.integer  "cost",       default: 0
   end
 
   create_table "settings", force: :cascade do |t|
