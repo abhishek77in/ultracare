@@ -8,7 +8,7 @@ p {
   color: #4d4d4d;
 }
 .report-title h3 {
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .header {
@@ -17,6 +17,9 @@ p {
     margin-left: 30px;
     margin-top: 20px;
     float: left;
+    img {
+      width: 60px;
+    }
   }
   .content {
     width: 82%;
@@ -24,13 +27,13 @@ p {
   }
   h1 {
     font-weight: bold;
-    font-size: 40px;
+    font-size: 25px;
   }
   h2 {
-    font-size: 30px;
+    font-size: 22px;
   }
   h3 {
-    font-size: 24px;
+    font-size: 20px;
   }
   p {
     padding-top: 10px;
@@ -40,27 +43,22 @@ p {
 
 .patient-section {
   p {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 
 .line-height-4 {
   line-height: 4px;
 }
+
 td table {
   margin: 0px;
   padding: 0px;
 }
-td table {
-  thead tr td { padding: 1px 10px; }
-  tbody tr td { padding: 1px 10px; }
-}
 
 table tbody tr td {
-  padding: 10px 5px;
-  font-size: 20px;
-  line-height: 28px;
   p {
+    font-size: 18px;
     margin: 0;
   }
 }
