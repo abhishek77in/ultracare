@@ -6,7 +6,7 @@
       - next if @reportable.attributes[field].blank?
       %tr
         %td= field.humanize.upcase
-        %td= simple_format @reportable.attributes[field]
+        %td= simple_format @reportable.attributes[field], {}, wrapper_tag: 'span'
 
 = render partial: 'shared/pdf/impression_advise'
 

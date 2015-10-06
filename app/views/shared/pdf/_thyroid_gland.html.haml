@@ -4,20 +4,20 @@
   %tbody
     %tr
       %td= 'right lobe'.upcase
-      %td= simple_format @reportable.thyroid_right_lobe
+      %td= simple_format @reportable.thyroid_right_lobe, {}, wrapper_tag: 'span'
     %tr
       %td= 'left lobe'.upcase
-      %td= simple_format @reportable.thyroid_left_lobe
+      %td= simple_format @reportable.thyroid_left_lobe, {}, wrapper_tag: 'span'
     %tr
       %td= 'I.J.V and C.A.'.upcase
-      %td= simple_format @reportable.i_j_v_and_c_a
+      %td= simple_format @reportable.i_j_v_and_c_a, {}, wrapper_tag: 'span'
     %tr
       %td= 'isthmus'.upcase
-      %td= simple_format @reportable.isthmus
+      %td= simple_format @reportable.isthmus, {}, wrapper_tag: 'span'
     - if @reportable.other.present?
       %tr
         %td= 'other'.upcase
-        %td= simple_format @reportable.other
+        %td= simple_format @reportable.other, {}, wrapper_tag: 'span'
 
 = render partial: 'shared/pdf/impression_advise'
 
