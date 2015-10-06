@@ -4,20 +4,20 @@
   %tbody
     %tr
       %td= 'right lobe'.upcase
-      %td= @reportable.thyroid_right_lobe
+      %td= simple_format @reportable.thyroid_right_lobe
     %tr
       %td= 'left lobe'.upcase
-      %td= @reportable.thyroid_left_lobe
+      %td= simple_format @reportable.thyroid_left_lobe
     %tr
       %td= 'I.J.V and C.A.'.upcase
-      %td= @reportable.i_j_v_and_c_a
+      %td= simple_format @reportable.i_j_v_and_c_a
     %tr
       %td= 'isthmus'.upcase
-      %td= @reportable.isthmus
+      %td= simple_format @reportable.isthmus
     - if @reportable.other.present?
       %tr
         %td= 'other'.upcase
-        %td= @reportable.other
+        %td= simple_format @reportable.other
 
 = render partial: 'shared/pdf/impression_advise'
 
