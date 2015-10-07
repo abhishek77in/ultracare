@@ -3,6 +3,7 @@
   %head
     %title= "Business Report"
     = wicked_pdf_stylesheet_link_tag    "application", "pdf", :media => "all"
+    %meta{'charset' => 'utf-8'}
     = csrf_meta_tags
   %body
     = yield
