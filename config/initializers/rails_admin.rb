@@ -9,9 +9,9 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
-  # config.authorize_with do
-  #   redirect_to main_app.authenticated_root_path unless current_user.admin?
-  # end
+  config.authorize_with do
+    redirect_to main_app.authenticated_root_path unless current_user.admin?
+  end
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
