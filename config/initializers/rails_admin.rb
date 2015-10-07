@@ -9,8 +9,9 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_user)
 
-  ## == Cancan ==
-  # config.authorize_with :cancan
+  # config.authorize_with do
+  #   redirect_to main_app.authenticated_root_path unless current_user.admin?
+  # end
 
   ## == PaperTrail ==
   # config.audit_with :paper_trail, 'User', 'PaperTrail::Version' # PaperTrail >= 3.0.0
@@ -21,11 +22,17 @@ RailsAdmin.config do |config|
     dashboard                     # mandatory
     index                         # mandatory
     new
-    export
-    bulk_delete
+    export do
+      only ['Doctor']
+    end
+    bulk_delete do
+      only ['Report']
+    end
     show
     edit
-    delete
+    delete do
+      only ['Report']
+    end
     # show_in_app
 
     ## With an audit adapter, you can add:
