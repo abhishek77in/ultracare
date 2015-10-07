@@ -11,10 +11,19 @@
     %p
       %b Summary :
       %br
-      = "Total Cases - #{reports.count}, Total Amount - #{number_to_currency(reports.map(&:cost).inject(:+), unit: '₹')}"
-      - reports.group_by(&:reportable_type).each do |reportable_type, reports|
-        %br
-        = "#{reportable_type.underscore.titleize} - #{reports.count}"
+      = "Total Cases - #{reports.count}, Total Amount - #{number_to_currency(reports.map(&:cost).inject(:+), unit: 'Rs.')}"
+      %table
+        %thead
+          %tr
+            %th Ultrasound Type
+            %th Total cases
+            %th Total amount
+        %tbody
+          - reports.group_by(&:reportable_type).each do |reportable_type, reports|
+            %tr
+              %td= reportable_type.underscore.titleize
+              %td= reports.count
+              %td= number_to_currency(reports.map(&:cost).inject(:+), unit: 'Rs.')
     %table
       %thead
         %tr
