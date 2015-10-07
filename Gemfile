@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby "2.1.5"
+ruby '2.1.5'
 
 gem 'rails_12factor', group: :production
 
@@ -31,7 +31,7 @@ gem 'paper_trail'
 gem 'whenever', :require => false
 
 gem 'groupdate'
-gem "highcharts-rails"
+gem 'highcharts-rails'
 
 gem 'faker'
 
@@ -55,7 +55,6 @@ end
 
 group :production do
   gem 'mongrel', '1.2.0.pre2'
-  gem 'mongrel_service'
 end
 
 # For windows
