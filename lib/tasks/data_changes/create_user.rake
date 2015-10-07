@@ -15,4 +15,4 @@ end
 
 # Run following command to create a user
 # bundle exec rake "data_changes:create_user[test@example.com,abcd1234]"
-# bundle exec rake "data_changes:create_user[test@example.com,abcd1234,admin]"
+# bundle exec rake "data_changes:create_user[admin@example.com,abcd1234,admin]"
