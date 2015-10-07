@@ -1,12 +1,13 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
+  config.included_models = ['Report', 'Patient', 'Doctor']
 
-  ## == Devise ==
-  # config.authenticate_with do
-  #   warden.authenticate! scope: :user
-  # end
-  # config.current_user_method(&:current_user)
+  # == Devise ==
+  config.authenticate_with do
+    warden.authenticate! scope: :user
+  end
+  config.current_user_method(&:current_user)
 
   ## == Cancan ==
   # config.authorize_with :cancan
@@ -25,7 +26,7 @@ RailsAdmin.config do |config|
     show
     edit
     delete
-    show_in_app
+    # show_in_app
 
     ## With an audit adapter, you can add:
     # history_index
