@@ -21,7 +21,9 @@ RailsAdmin.config do |config|
   config.actions do
     dashboard                     # mandatory
     index                         # mandatory
-    new
+    new do
+      only ['Doctor']
+    end
     export do
       only ['Doctor']
     end
@@ -29,7 +31,9 @@ RailsAdmin.config do |config|
       only ['Report']
     end
     show
-    edit
+    edit do
+      only ['Doctor']
+    end
     delete do
       only ['Report']
     end
