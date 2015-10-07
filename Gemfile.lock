@@ -65,7 +65,6 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1)
-    daemons (1.0.10)
     debug_inspector (0.0.2)
     devise (3.4.1)
       bcrypt (~> 3.0)
@@ -93,7 +92,6 @@ GEM
     foundation-rails (5.5.1.0)
       railties (>= 3.1.0)
       sass (>= 3.3.0, < 3.5)
-    gem_plugin (0.2.3)
     globalid (0.3.3)
       activesupport (>= 4.1.0)
     groupdate (2.4.0)
@@ -144,11 +142,6 @@ GEM
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
-    mongrel (1.2.0.pre2)
-      daemons (~> 1.0.10)
-      gem_plugin (~> 0.2.3)
-    mongrel (1.2.0.pre2-x86-mingw32)
-      gem_plugin (~> 0.2.3)
     multi_json (1.11.0)
     nenv (0.2.0)
     nokogiri (1.6.6.2)
@@ -317,7 +310,6 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   jquery-ui-rails
-  mongrel (= 1.2.0.pre2)
   paper_trail
   pdf-reader
   pg

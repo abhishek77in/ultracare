@@ -53,10 +53,6 @@ group :test do
   gem 'pdf-reader'
 end
 
-group :production do
-  gem 'mongrel', '1.2.0.pre2'
-end
-
 # For windows
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
