@@ -20,6 +20,9 @@
         %li= link_to " Doctors", doctors_path, class: 'fi-address-book large'
         %li.divider
         %li= link_to " Settings", edit_setting_path(id: setting.id), class: 'fi-wrench large'
+        - if current_user.admin?
+          %li.divider
+          %li= link_to " Admin", rails_admin.dashboard_path, class: 'fi-torso-business large'
         %li.divider
         %li= link_to " Logout", destroy_user_session_path, method: 'delete', class: 'fi-lock large'
       - else
