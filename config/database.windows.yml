@@ -11,6 +11,14 @@
 #       Choose the win32 build.
 #       Install PostgreSQL and put its /bin directory on your path.
 
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: ultrasound_development
+  pool: 5
+  username: postgres
+  password: postgres
+
 production:
   adapter: postgresql
   encoding: unicode
