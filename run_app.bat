@@ -1,1 +1,1 @@
-rails s -e production
+rails s
