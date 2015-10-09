@@ -137,7 +137,7 @@ ActiveRecord::Schema.define(version: 20151009185921) do
     t.datetime "updated_at"
     t.integer  "amount_collected", default: 0
     t.integer  "amount_due",       default: 0
-    t.boolean  "doctors_discount", default: false
+    t.integer  "doctors_discount", default: 0
   end
 
   create_table "settings", force: :cascade do |t|

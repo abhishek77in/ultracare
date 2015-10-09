@@ -1,12 +1,38 @@
 <div class="row">
-  <div class="small-6 columns">
-    <label for="">Total amount collected</label>
+  <div class="small-4 columns">
+    <label for="report_amount_collected">Amount collected</label>
     <div class="row collapse">
       <div class="small-1 columns">
         <span class="prefix">Rs.</span>
       </div>
       <div class="small-5 columns">
         <%=  f.input :amount_collected, label: false %>
+      </div>
+      <div class="small-1 columns">
+      </div>
+    </div>
+  </div>
+  <div class="small-4 columns">
+    <label for="report_amount_due">Amount due</label>
+    <div class="row collapse">
+      <div class="small-1 columns">
+        <span class="prefix">Rs.</span>
+      </div>
+      <div class="small-5 columns">
+        <%=  f.input :amount_due, label: false %>
+      </div>
+      <div class="small-1 columns">
+      </div>
+    </div>
+  </div>
+  <div class="small-4 columns">
+    <label for="report_doctors_discount">Discount on doctor's behalf</label>
+    <div class="row collapse">
+      <div class="small-1 columns">
+        <span class="prefix">Rs.</span>
+      </div>
+      <div class="small-5 columns">
+        <%=  f.input :doctors_discount, label: false %>
       </div>
       <div class="small-1 columns">
       </div>
