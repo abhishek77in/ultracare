@@ -1,15 +1,8 @@
 namespace :data_changes do
-  desc 'Create user'
-  task :create_user, [:email, :password, :role] => :environment do |t, args|
-    # user = User.create_with(password: args[:password]).find_or_create_by(email: args[:email], role: args[:role])
-    user = User.where(email: args[:email]).first_or_initialize
-    user.password = args[:password]
-    user.role = args[:role]
-    if user.save
-      puts "User created / updated with email: #{args[:email]}, role: #{args[:role]}"
-    else
-      puts 'Failed to created / update user.'
-    end
+  desc 'Create standard users'
+  task :create_user => :environment do
+    User.create(email: 'test@example.com', password: 'abcd1234')
+    User.create(email: 'admin@example.com', password: 'kdue2738', role: 'admin')
   end
 end
 
