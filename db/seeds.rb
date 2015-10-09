@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.create(email: 'test@example.com', password: 'abcd1234')
+User.create(email: 'admin@example.com', password: 'abcd1234', role: 'admin')
 
 today = DateTime.now
 
