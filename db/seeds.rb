@@ -11,7 +11,7 @@ User.create(email: 'admin@example.com', password: 'abcd1234', role: 'admin')
 
 today = DateTime.now
 
-def random_cost
+def random_amount_collected
   [500, 600, 700, 800, 900, 1000].sample
 end
 
@@ -31,7 +31,7 @@ setting.save
     doctor = Doctor.first(rand(Doctor.count) + 1).last
     reportable_model = [UpperAbdomenAndObstetric, WholeAbdomenMale, Testis, WholeAbdomenFemale, Obstetric, KubFemale, UpperAbdomen, ThyroidGland, KubMale, Breast, LowerAbdomenFemale].sample
     reportable = reportable_model.new(reportable_model.params)
-    report = Report.new(patient: patient, doctor: doctor, updated_at: today, created_at: today, cost: random_cost)
+    report = Report.new(patient: patient, doctor: doctor, updated_at: today, created_at: today, amount_collected: random_amount_collected)
     report.report_type = ReportType.new(reportable: reportable)
     if report.save && report.report_type.save
       puts "Report created for patient - #{report.patient.name}, doctor - #{report.doctor.name}, Date - #{today}"

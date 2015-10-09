@@ -4,7 +4,7 @@
 <%= simple_form_for(@report) do |f| %>
   <div class="form-container">
     <%= render 'patient', f: f %>
-    <%= render 'cost', f: f %>
+    <%= render 'amount_collected', f: f %>
     <%= render params[:type], f: f %>
     <%= hidden_field_tag :type, params[:type] %>
     <%= f.button :submit, class: 'round', 'data-disable-with' => 'submitting..' %>

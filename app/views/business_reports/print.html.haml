@@ -11,7 +11,7 @@
     %p
       %b Summary :
       %br
-      = "Total Cases - #{reports.count}, Total Amount - #{number_to_currency(reports.map(&:cost).inject(:+), unit: 'Rs.')}"
+      = "Total Cases - #{reports.count}, Total Amount - #{number_to_currency(reports.map(&:amount_collected).inject(:+), unit: 'Rs.')}"
       %table
         %thead
           %tr
@@ -23,7 +23,7 @@
             %tr
               %td= reportable_type.underscore.titleize
               %td= reports.count
-              %td= number_to_currency(reports.map(&:cost).inject(:+), unit: 'Rs.')
+              %td= number_to_currency(reports.map(&:amount_collected).inject(:+), unit: 'Rs.')
     %table
       %thead
         %tr
