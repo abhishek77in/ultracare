@@ -10,7 +10,6 @@
       %th Age
       %th Sex
       %th Referred By Doctor
-      %th Ultrasound Type
       %th Amount Collected
       %th Amount Due
       %th Date
@@ -24,11 +23,10 @@
         %td= report.patient.age
         %td= report.patient.sex
         %td= "Dr. #{report.doctor.name}"
-        %td= report.report_type.reportable.class.name.underscore.titleize
         %td= "Rs. #{report.amount_collected}"
         %td= "Rs. #{report.amount_due}"
         %td= report.created_at.strftime("%d / %m")
-        %td.fi-page-edit.small= link_to " Edit", edit_report_path(report, type: report.report_type.reportable.class.name.underscore)
+        %td.fi-page-edit.small= link_to " Edit", edit_report_path(report)
         %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
 
 - unless setting.show_max_reports
