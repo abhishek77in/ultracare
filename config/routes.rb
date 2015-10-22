@@ -1,5 +1,7 @@
 Ultrasound::Application.routes.draw do
 
+  resources :templates
+
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   resources :settings, only: [:edit, :update]
