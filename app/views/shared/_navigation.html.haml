@@ -7,6 +7,8 @@
       - if user_signed_in?
         %li.divider
         %li= link_to " Home", root_path, class: 'fi-home large'
+        %li.divider
+        %li= link_to " Templates", templates_path, class: 'fi-list-thumbnails large'
         - unless setting.disable_reports
           %li.divider
           %li= link_to " Reports", reports_path, class: 'fi-list-thumbnails large'
