@@ -1,13 +1,11 @@
 <br/>
-<h2 class="text-center"><%= params[:type].titleize %> Report</h2>
+<h2 class="text-center">Report</h2>
 <hr/>
 <%= simple_form_for(@report) do |f| %>
   <div class="form-container">
     <%= render 'non_editable_patient', f: f %>
     <%= render 'amount_collected', f: f %>
     <%= f.input :content, as: :ckeditor %>
-    <%= render params['type'], f: f %>
-    <%= hidden_field_tag 'type', params['type'] %>
     <%= f.button :submit, class: 'round', 'data-disable-with' => 'submitting..' %>
     <%= link_to 'Cancel', root_path, class: 'cancel-link' %>
   </div>

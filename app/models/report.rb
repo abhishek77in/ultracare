@@ -4,10 +4,8 @@ class Report < ActiveRecord::Base
   belongs_to :doctor
   belongs_to :patient
   accepts_nested_attributes_for :patient
-  has_one :report_type
-  accepts_nested_attributes_for :report_type, allow_destroy: true
 
-  validates_presence_of :doctor, :patient, :report_type
+  validates_presence_of :doctor, :patient
   scope :recent, -> { order(updated_at: :desc) }
 
   after_save :touch
@@ -37,8 +35,7 @@ class Report < ActiveRecord::Base
     includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
   end
 
-  def reportable_type
-    report_type.reportable_type
+  def possible_genders
+    [['Female', 'F'],['Male', 'M']]
   end
-
 end
