@@ -17,6 +17,7 @@
 //= require foundation
 //= require plugins/moment.min
 //= require plugins/daterangepicker
+//= require ckeditor/init
 //= require highcharts
 //= require_directory .
 
