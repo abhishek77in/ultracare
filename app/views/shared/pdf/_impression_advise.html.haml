@@ -1,9 +1,0 @@
-%p
-  - if @reportable.impression.present?
-    %b= 'impression - '.upcase
-    = simple_format @reportable.impression, {}, wrapper_tag: 'span'
-
-  - if @reportable.respond_to?(:advise) && @reportable.advise.present?
-    %br
-    %b= 'advise - '.upcase
-    = simple_format @reportable.advise, {}, wrapper_tag: 'span'
