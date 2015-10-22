@@ -41,6 +41,7 @@ class ReportsController < ApplicationController
     @report.amount_collected = report_params[:amount_collected]
     @report.amount_due = report_params[:amount_due]
     @report.doctors_discount = report_params[:doctors_discount]
+    @report.content = report_params[:content]
     @reportable = @report.report_type.reportable
     @reportable.attributes = report_type_attributes
     if @report.save
@@ -79,7 +80,7 @@ class ReportsController < ApplicationController
   end
 
   def report_params
-    params.require(:report).permit(:doctor_id, :amount_collected, :amount_due, :doctors_discount, patient_attributes: [:name, :age, :sex])
+    params.require(:report).permit(:doctor_id, :amount_collected, :amount_due, :doctors_discount, :content, patient_attributes: [:name, :age, :sex])
   end
 
   def report_type_attributes

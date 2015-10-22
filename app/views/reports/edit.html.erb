@@ -5,6 +5,7 @@
   <div class="form-container">
     <%= render 'non_editable_patient', f: f %>
     <%= render 'amount_collected', f: f %>
+    <%= f.input :content, as: :ckeditor %>
     <%= render params['type'], f: f %>
     <%= hidden_field_tag 'type', params['type'] %>
     <%= f.button :submit, class: 'round', 'data-disable-with' => 'submitting..' %>
