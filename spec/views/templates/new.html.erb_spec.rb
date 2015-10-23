@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "templates/new", type: :view do
   before(:each) do
     assign(:template, Template.new(
-      :ultrasound_type => "MyString",
+      :title => "MyString",
       :content => "MyText"
     ))
   end
@@ -13,7 +13,7 @@ RSpec.describe "templates/new", type: :view do
 
     assert_select "form[action=?][method=?]", templates_path, "post" do
 
-      assert_select "input#template_ultrasound_type[name=?]", "template[ultrasound_type]"
+      assert_select "input#template_title[name=?]", "template[title]"
 
       assert_select "textarea#template_content[name=?]", "template[content]"
     end

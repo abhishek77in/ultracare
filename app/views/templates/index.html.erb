@@ -13,7 +13,7 @@
   <tbody>
     <% @templates.each do |template| %>
       <tr>
-        <td><%= template.ultrasound_type %></td>
+        <td><%= template.title %></td>
         <td><%= link_to 'Edit', edit_template_path(template) %></td>
       </tr>
     <% end %>

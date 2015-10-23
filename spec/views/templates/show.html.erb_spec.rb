@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "templates/show", type: :view do
   before(:each) do
     @template = assign(:template, Template.create!(
-      :ultrasound_type => "Ultrasound Type",
+      :title => "Ultrasound Type",
       :content => "MyText"
     ))
   end

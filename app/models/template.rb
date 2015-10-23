@@ -1,3 +1,3 @@
 class Template < ActiveRecord::Base
-  validates_presence_of :ultrasound_type, :content
+  validates_presence_of :title, :content
 end

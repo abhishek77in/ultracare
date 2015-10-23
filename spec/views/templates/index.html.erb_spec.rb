@@ -4,11 +4,11 @@ RSpec.describe "templates/index", type: :view do
   before(:each) do
     assign(:templates, [
       Template.create!(
-        :ultrasound_type => "Ultrasound Type",
+        :title => "Ultrasound Type",
         :content => "MyText"
       ),
       Template.create!(
-        :ultrasound_type => "Ultrasound Type",
+        :title => "Ultrasound Type",
         :content => "MyText"
       )
     ])
