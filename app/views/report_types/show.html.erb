@@ -2,13 +2,13 @@
 
 <p>
   <strong>Report title:</strong>
-  <%= @template.title %>
+  <%= report_type.title %>
 </p>
 
 <p>
   <strong>Content:</strong>
-  <%= @template.content %>
+  <%= report_type.content %>
 </p>
 
-<%= link_to 'Edit', edit_template_path(@template) %> |
+<%= link_to 'Edit', edit_report_type_path(report_type) %> |
 <%= link_to 'Back', templates_path %>

@@ -1,20 +1,20 @@
 require 'rails_helper'
 
-RSpec.describe "templates/index", type: :view do
+RSpec.describe "report_types/index", type: :view do
   before(:each) do
-    assign(:templates, [
-      Template.create!(
+    assign(:report_types, [
+      ReportType.create!(
         :title => "Ultrasound Type",
         :content => "MyText"
       ),
-      Template.create!(
+      ReportType.create!(
         :title => "Ultrasound Type",
         :content => "MyText"
       )
     ])
   end
 
-  it "renders a list of templates" do
+  it "renders a list of report_types" do
     render
     assert_select "tr>td", :text => "Ultrasound Type".to_s, :count => 2
     assert_select "tr>td", :text => "MyText".to_s, :count => 2

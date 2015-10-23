@@ -1,6 +1,6 @@
 Ultrasound::Application.routes.draw do
 
-  resources :templates
+  resources :report_types
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users

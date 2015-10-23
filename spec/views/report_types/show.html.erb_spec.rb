@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe "templates/show", type: :view do
+RSpec.describe "report_types/show", type: :view do
   before(:each) do
-    @template = assign(:template, Template.create!(
+    report_type = assign(:report_type, ReportType.create!(
       :title => "Ultrasound Type",
       :content => "MyText"
     ))

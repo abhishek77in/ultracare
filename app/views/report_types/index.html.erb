@@ -11,10 +11,10 @@
   </thead>
 
   <tbody>
-    <% @templates.each do |template| %>
+    <% @report_types.each do |report_type| %>
       <tr>
-        <td><%= template.title %></td>
-        <td><%= link_to 'Edit', edit_template_path(template) %></td>
+        <td><%= report_type.title %></td>
+        <td><%= link_to 'Edit', edit_report_type_path(report_type) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -22,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Template', new_template_path %>
+<%= link_to 'New Report Type', new_report_type_path %>
