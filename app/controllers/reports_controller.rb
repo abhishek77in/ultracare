@@ -1,5 +1,6 @@
 class ReportsController < ApplicationController
   before_action :redirect_to_root, if: -> { setting.disable_reports? }, only: [:index]
+  before_action :load_template, only: [:new]
 
   def index
     @reports = Report.recent
@@ -13,6 +14,7 @@ class ReportsController < ApplicationController
 
   def new
     @report = Report.new
+    @report.content = @template.content
     @report.build_patient
   end
 
@@ -79,5 +81,9 @@ class ReportsController < ApplicationController
 
   def to_date(date_string)
     Date.strptime(date_string, '%d-%m-%Y')
+  end
+
+  def load_template
+    @template = Template.find(params[:template_id])
   end
 end
