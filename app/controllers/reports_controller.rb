@@ -15,6 +15,7 @@ class ReportsController < ApplicationController
   def new
     @report = Report.new
     @report.content = @template.content
+    @report.title = @template.ultrasound_type
     @report.build_patient
   end
 
@@ -63,7 +64,7 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:doctor_id, :amount_collected, :amount_due, :doctors_discount, :content, patient_attributes: [:name, :age, :sex])
+    params.require(:report).permit(:doctor_id, :amount_collected, :amount_due, :doctors_discount, :content, :title, patient_attributes: [:name, :age, :sex])
   end
 
   def doctor_id_param
