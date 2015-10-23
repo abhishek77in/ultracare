@@ -1,0 +1,26 @@
+%table
+  %thead
+    %tr
+      %th Report No.
+      %th Patient Name
+      %th Age
+      %th Sex
+      %th Referred By Doctor
+      %th Amount Collected
+      %th Amount Due
+      %th Date
+      %th Edit
+      %th Print
+  %tbody
+    - @reports.each do |report|
+      %tr
+        %td= report.id
+        %td= truncate report.patient.name, length: 18
+        %td= report.patient.age
+        %td= report.patient.sex
+        %td= "Dr. #{report.doctor.name}"
+        %td= "Rs. #{report.amount_collected}"
+        %td= "Rs. #{report.amount_due}"
+        %td= report.created_at.strftime("%d / %m")
+        %td.fi-page-edit.small= link_to " Edit", edit_report_path(report)
+        %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
