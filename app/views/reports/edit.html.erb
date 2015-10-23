@@ -5,7 +5,7 @@
   <div class="form-container">
     <%= render 'non_editable_patient', f: f %>
     <%= render 'amount_collected', f: f %>
-    <%= f.input :content, as: :ckeditor %>
+    <%= f.input :content, as: :ckeditor, label: false %>
     <%= f.button :submit, class: 'round', 'data-disable-with' => 'submitting..' %>
     <%= link_to 'Cancel', root_path, class: 'cancel-link' %>
   </div>
