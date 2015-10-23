@@ -4,9 +4,6 @@
 <%= simple_form_for(@report) do |f| %>
   <div class="form-container">
     <%= render 'patient', f: f %>
-    <%= render 'amount_collected', f: f %>
-    <%= f.input :content, as: :ckeditor, label: false %>
-    <%= f.button :submit, class: 'round', 'data-disable-with' => 'submitting..' %>
-    <%= link_to 'Cancel', root_path, class: 'cancel-link' %>
+    <%= render 'form', f: f %>
   </div>
 <% end %>

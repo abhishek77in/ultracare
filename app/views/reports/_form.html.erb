@@ -1,0 +1,5 @@
+<%= render 'amount_collected', f: f %>
+<%= f.input :content, as: :ckeditor, label: false %>
+<%= f.input :title, as: :hidden %>
+<%= f.button :submit, class: 'round', 'data-disable-with' => 'submitting..' %>
+<%= link_to 'Cancel', root_path, class: 'cancel-link' %>
