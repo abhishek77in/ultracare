@@ -46,30 +46,6 @@ p {
 .line-height-4 {
   line-height: 4px;
 }
-td table {
-  margin: 0px;
-  padding: 0px;
-}
-td table {
-  thead tr td { padding: 1px 10px; }
-  tbody tr td { padding: 1px 10px; }
-}
-
-table tbody tr td {
-  padding: 10px 5px;
-  font-size: 20px;
-  line-height: 28px;
-}
-
-.high-padding td {
-  padding: 15px 5px;
-}
-.moderate-padding td {
-  padding: 10px 5px;
-}
-.low-padding td {
-  padding: 5px 5px;
-}
 
 .keep-intact {
   page-break-inside: avoid;
