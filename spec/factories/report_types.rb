@@ -1,6 +1,7 @@
 FactoryGirl.define do
 
   factory :report_type do
-    association :reportable, factory: :thyroid_gland
+    title 'hello world title'
+    content 'hello world content'
   end
 end
