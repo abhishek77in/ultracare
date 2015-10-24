@@ -4,27 +4,24 @@ RSpec.describe ReportsController, type: :controller do
   let(:user) { FactoryGirl.create(:user) }
   before do
     FactoryGirl.create(:setting)
+    @report_type = FactoryGirl.create(:report_type)
     @doctor = FactoryGirl.create(:doctor)
     sign_in user
   end
 
   describe 'GET new' do
     it 'renders report form' do
-      get :new, type: 'upper_abdomen'
+      get :new, report_type_id: @report_type.id
       expect(response).to be_ok
     end
   end
 
   describe 'POST create' do
     let(:report_attributes) do
-      {"report"=>{"patient_attributes"=>{"name"=>"Mrs. Gerardo Lesch", "age"=>"45", "sex"=>"F"},
-                  "doctor_id"=> @doctor.id,
-                  "report_type_attributes"=>{"thyroid_left_lobe"=>"Appears NORMAL in size, shape & echotexture. No focal lesion seen.",
-                                             "thyroid_right_lobe"=>"Appears NORMAL in size, shape & echotexture. No focal lesion seen.",
-                                             "i_j_v_and_c_a"=>"NORMAL", "isthmus"=>"NORMAL", "other"=>"",
-                                             "impression"=>"ORGANS ARE UNDER SCAN WITHIN NORMAL LIMITS.", "advise"=>""}
-                 },
-       "type"=>"thyroid_gland"}
+      { "report"=>{"patient_attributes"=>{"name"=>"Mrs. Gerardo Lesch", "age"=>"45", "sex"=>"F"},
+                  "doctor_id"=> @doctor.id
+                 }
+      }
     end
 
     it 'creates report on valid post' do
@@ -42,7 +39,7 @@ RSpec.describe ReportsController, type: :controller do
   describe 'Get edit' do
     it 'loads reports to be edited' do
       report = FactoryGirl.create(:report)
-      get :edit, {id: report.id, type: report.report_type}
+      get :edit, {id: report.id}
       expect(response).to be_ok
       expect(response).to render_template(:edit)
     end
@@ -51,9 +48,8 @@ RSpec.describe ReportsController, type: :controller do
   describe 'Patch update' do
     it 'updates the report' do
       report = FactoryGirl.create(:report)
-      report_attributes = {"report"=>{"report_type_attributes"=>{"thyroid_left_lobe"=>"Appears NORMAL"}}, "type"=>report.report_type.reportable_type.underscore}
+      report_attributes = {report: { content: 'hello world' }}
       patch :update, report_attributes.merge(id: report.id)
-      expect(report.reload.report_type.reportable.thyroid_left_lobe).to eq "Appears NORMAL"
       expect(response).to redirect_to(root_path)
     end
   end
