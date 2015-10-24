@@ -38,17 +38,17 @@ RSpec.describe ReportTypesController, type: :controller do
 
   describe "GET #index" do
     it "assigns all report_types as @report_types" do
-      template = ReportType.create! valid_attributes
+      report_type = ReportType.create! valid_attributes
       get :index, {}, valid_session
-      expect(assigns(:report_types)).to eq([template])
+      expect(assigns(:report_types)).to eq([report_type])
     end
   end
 
   describe "GET #show" do
     it "assigns the requested report_type as @report_type" do
-      template = ReportType.create! valid_attributes
-      get :show, {:id => template.to_param}, valid_session
-      expect(assigns(:report_type)).to eq(template)
+      report_type = ReportType.create! valid_attributes
+      get :show, {:id => report_type.to_param}, valid_session
+      expect(assigns(:report_type)).to eq(report_type)
     end
   end
 
@@ -61,9 +61,9 @@ RSpec.describe ReportTypesController, type: :controller do
 
   describe "GET #edit" do
     it "assigns the requested report_type as @report_type" do
-      template = ReportType.create! valid_attributes
-      get :edit, {:id => template.to_param}, valid_session
-      expect(assigns(:report_type)).to eq(template)
+      report_type = ReportType.create! valid_attributes
+      get :edit, {:id => report_type.to_param}, valid_session
+      expect(assigns(:report_type)).to eq(report_type)
     end
   end
 
@@ -95,7 +95,7 @@ RSpec.describe ReportTypesController, type: :controller do
 
       it "re-renders the 'new' report_type" do
         post :create, {:report_type => invalid_attributes}, valid_session
-        expect(response).to render_template("new")
+        expect(response).to render_report_type("new")
       end
     end
   end
@@ -107,52 +107,52 @@ RSpec.describe ReportTypesController, type: :controller do
       }
 
       it "updates the requested report_type" do
-        template = ReportType.create! valid_attributes
-        put :update, {:id => template.to_param, :report_type => new_attributes}, valid_session
-        template.reload
+        report_type = ReportType.create! valid_attributes
+        put :update, {:id => report_type.to_param, :report_type => new_attributes}, valid_session
+        report_type.reload
         skip("Add assertions for updated state")
       end
 
       it "assigns the requested report_type as @report_type" do
-        template = ReportType.create! valid_attributes
-        put :update, {:id => template.to_param, :report_type => valid_attributes}, valid_session
-        expect(assigns(:report_type)).to eq(template)
+        report_type = ReportType.create! valid_attributes
+        put :update, {:id => report_type.to_param, :report_type => valid_attributes}, valid_session
+        expect(assigns(:report_type)).to eq(report_type)
       end
 
       it "redirects to the report_type" do
-        template = ReportType.create! valid_attributes
-        put :update, {:id => template.to_param, :report_type => valid_attributes}, valid_session
-        expect(response).to redirect_to(template)
+        report_type = ReportType.create! valid_attributes
+        put :update, {:id => report_type.to_param, :report_type => valid_attributes}, valid_session
+        expect(response).to redirect_to(report_type)
       end
     end
 
     context "with invalid params" do
       it "assigns the report_type as @report_type" do
-        template = ReportType.create! valid_attributes
-        put :update, {:id => template.to_param, :report_type => invalid_attributes}, valid_session
-        expect(assigns(:report_type)).to eq(template)
+        report_type = ReportType.create! valid_attributes
+        put :update, {:id => report_type.to_param, :report_type => invalid_attributes}, valid_session
+        expect(assigns(:report_type)).to eq(report_type)
       end
 
       it "re-renders the 'edit' report_type" do
-        template = ReportType.create! valid_attributes
-        put :update, {:id => template.to_param, :report_type => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
+        report_type = ReportType.create! valid_attributes
+        put :update, {:id => report_type.to_param, :report_type => invalid_attributes}, valid_session
+        expect(response).to render_report_type("edit")
       end
     end
   end
 
   describe "DELETE #destroy" do
     it "destroys the requested report_type" do
-      template = ReportType.create! valid_attributes
+      report_type = ReportType.create! valid_attributes
       expect {
-        delete :destroy, {:id => template.to_param}, valid_session
+        delete :destroy, {:id => report_type.to_param}, valid_session
       }.to change(ReportType, :count).by(-1)
     end
 
     it "redirects to the report_types list" do
-      template = ReportType.create! valid_attributes
-      delete :destroy, {:id => template.to_param}, valid_session
-      expect(response).to redirect_to(templates_url)
+      report_type = ReportType.create! valid_attributes
+      delete :destroy, {:id => report_type.to_param}, valid_session
+      expect(response).to redirect_to(report_types_url)
     end
   end
 
