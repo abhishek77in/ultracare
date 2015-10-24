@@ -1,18 +1,4 @@
-%div.header
-  .logo
-    = wicked_pdf_image_tag 'default_logo.png'
-  .content
-    %h1= @setting.print_settings['heading']
-    %h2.line-height-4= @setting.print_settings['sub_heading']
-    %h3
-      = @setting.print_settings['address']
-      = wicked_pdf_image_tag 'phone-icon.png'
-      = @setting.print_settings['phone_number']
-
-    - if @setting.print_settings['consultant_1'].present? or @setting.print_settings['consultant_2'].present?
-      %p.line-height-4
-        Consultant -
-        = [@setting.print_settings['consultant_1'], @setting.print_settings['consultant_2']].reject(&:blank?).join(', ')
+= @setting.header.html_safe
 
 %hr
 
