@@ -2,6 +2,4 @@
   %div.float-left
     = wicked_pdf_image_tag 'powered_by_carepill_60.png'
   %div.text-center.padded-top
-    NOT VALID FOR MEDICOLEGAL PURPOSE
-    %br
-    Kindly inform any typing mistake immediately for the correction.
+    = @setting.footer.html_safe
