@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "report_types/index", type: :view do
   before(:each) do
+    skip
     assign(:report_types, [
       ReportType.create!(
         :title => "Ultrasound Type",

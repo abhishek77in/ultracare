@@ -2,6 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "report_types/edit", type: :view do
   before(:each) do
+    skip
     report_type = assign(:report_type, ReportType.create!(
       :title => "MyString",
       :content => "MyText"
