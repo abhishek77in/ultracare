@@ -1,4 +1,19 @@
 %h1 Settings
 
 = simple_form_for @setting do |f|
-  = render 'print_settings', f: f
+  %p.text-center
+    Header
+    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_header', 'data-default-setting' => @setting.default_header
+    = f.input :header, as: :ckeditor, label: false
+
+  %p.text-center
+    Signature
+    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_signature', 'data-default-setting' => @setting.default_signature
+    = f.input :signature, as: :ckeditor, label: false
+
+  %p.text-center
+    Footer
+    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_footer', 'data-default-setting' => @setting.default_footer
+    = f.input :footer, as: :ckeditor, label: false
+
+  = f.button :submit, value: 'Update Print Settings', class: 'round'
