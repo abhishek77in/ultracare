@@ -26,8 +26,8 @@ class Setting < ActiveRecord::Base
 
   def default_footer
     %Q[
-      NOT VALID FOR MEDICOLEGAL PURPOSE <br/>
-      Kindly inform any typing mistake immediately for the correction
+      <p style="text-align: center;">NOT VALID FOR MEDICOLEGAL PURPOSE<br />
+      Kindly inform any typing mistake immediately for the correction</p>
     ]
   end
 end
