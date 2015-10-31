@@ -3,6 +3,7 @@ class Setting < ActiveRecord::Base
 
   validates :show_max_reports, numericality: { greater_than: 0, allow_nil: true  }
   validates :show_reports_from_last_days, numericality: { greater_than: 0, allow_nil: true  }
+  validates :header_margin, :footer_margin, numericality: { allow_nil: false }
 
   DEFAULT_HEADER_MARGIN = 65
   DEFAULT_FOOTER_MARGIN = 20
