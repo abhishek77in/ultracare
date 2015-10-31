@@ -18,7 +18,11 @@
 
   %p.text-center
     Footer
-    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_footer', 'data-default-setting' => Setting::DEFAULT_FOOTER
+    = link_to "(reset to default)", "#", class: 'reset-to-default',
+      'data-section' => 'setting_footer',
+      'data-default-setting' => Setting::DEFAULT_FOOTER,
+      'data-margin-area' => 'setting_footer_margin',
+      'data-default-margin' => Setting::DEFAULT_FOOTER_MARGIN
     = f.input :footer_margin, as: :float
     = f.input :footer, as: :ckeditor, label: 'Footer section'
 

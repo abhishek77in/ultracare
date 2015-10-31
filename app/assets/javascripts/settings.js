@@ -5,15 +5,15 @@ $(function(){
     CKEDITOR.instances[section].setData(defaultSetting);
   }
 
-  function setDefaultMargin() {
-
+  function setDefaultMargin(element) {
+    var marginArea = element.data('margin-area');
+    var defaultMargin = element.data('default-margin');
+    $('#' + marginArea).val(defaultMargin);
   }
 
   $('.reset-to-default').click(function(e){
     e.preventDefault();
-    //var section = $(this).data('section');
-    //var defaultSetting = $(this).data('default-setting');
     setDefaultSection($(this));
-    //setDefaultMargin();
+    setDefaultMargin($(this));
   });
 });
