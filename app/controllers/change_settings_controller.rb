@@ -15,7 +15,7 @@ class ChangeSettingsController < ApplicationController
 
   private
   def set_setting
-    @setting = Setting.find(params[:id])
+    @setting = Setting.first
   end
 
   def setting_params
