@@ -1,13 +1,19 @@
 $(function(){
-  function setDefault(section, value) {
-    CKEDITOR.instances[section].setData(value);
-    // CKEDITOR.instances['setting_footer'].setData("hello world");
+  function setDefaultSection(element) {
+    var section = element.data('section');
+    var defaultSetting = element.data('default-setting');
+    CKEDITOR.instances[section].setData(defaultSetting);
+  }
+
+  function setDefaultMargin() {
+
   }
 
   $('.reset-to-default').click(function(e){
     e.preventDefault();
-    var section = $(this).data('section');
-    var value = $(this).data('default-setting');
-    setDefault(section, value);
+    //var section = $(this).data('section');
+    //var defaultSetting = $(this).data('default-setting');
+    setDefaultSection($(this));
+    //setDefaultMargin();
   });
 });

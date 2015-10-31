@@ -3,7 +3,11 @@
 = simple_form_for @setting do |f|
   %p.text-center
     Header
-    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_header', 'data-default-setting' => Setting::DEFAULT_HEADER
+    = link_to "(reset to default)", "#", class: 'reset-to-default',
+      'data-section' => 'setting_header',
+      'data-default-setting' => Setting::DEFAULT_HEADER,
+      'data-margin-area' => 'setting_header_margin',
+      'data-default-margin' => Setting::DEFAULT_HEADER_MARGIN
     = f.input :header_margin, as: :float
     = f.input :header, as: :ckeditor, label: 'Header section'
 
