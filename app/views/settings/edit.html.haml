@@ -3,18 +3,18 @@
 = simple_form_for @setting do |f|
   %p.text-center
     Header
-    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_header', 'data-default-setting' => @setting.default_header
+    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_header', 'data-default-setting' => Setting::DEFAULT_HEADER
     = f.input :header_margin
     = f.input :header, as: :ckeditor, label: 'Header section'
 
   %p.text-center
     Signature
-    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_signature', 'data-default-setting' => @setting.default_signature
+    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_signature', 'data-default-setting' => Setting::DEFAULT_SIGNATURE
     = f.input :signature, as: :ckeditor, label: 'Sinature section'
 
   %p.text-center
     Footer
-    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_footer', 'data-default-setting' => @setting.default_footer
+    = link_to "(reset to default)", "#", class: 'reset-to-default', 'data-section' => 'setting_footer', 'data-default-setting' => Setting::DEFAULT_FOOTER
     = f.input :footer_margin
     = f.input :footer, as: :ckeditor, label: 'Footer section'
 

@@ -7,31 +7,25 @@ class Setting < ActiveRecord::Base
   DEFAULT_HEADER_MARGIN = 65
   DEFAULT_FOOTER_MARGIN = 20
 
-  def default_header
-    %Q[
-      <h1 style="text-align: center;">YOUR DIAGNOSTIC CENTRE</h1>
-      <h2 style="text-align: center;">DIAGNOSTIC ULTRASOUND UNIT</h2>
-      <h3 style="text-align: center;">Opposite - Memorial Hospital, City Name&nbsp;232436</h3>
-    ]
-  end
+  DEFAULT_HEADER = %Q[
+    <h1 style="text-align: center;">YOUR DIAGNOSTIC CENTRE</h1>
+    <h2 style="text-align: center;">DIAGNOSTIC ULTRASOUND UNIT</h2>
+    <h3 style="text-align: center;">Opposite - Memorial Hospital, City Name&nbsp;232436</h3>
+  ]
 
-  def default_signature
-    %Q[
-      <div style="width: 70%; float: left;">
-        <p>PLEASE CO-RELATE CLINICALLY</p>
-      </div>
-      <div style="width: 30%; float: right;">
-        <p>SIGNATURE<br />
-          Dr. Jai Ram Sinha</p>
-      </div>
-    ]
-  end
+  DEFAULT_SIGNATURE = %Q[
+    <div style="width: 70%; float: left;">
+      <p>PLEASE CO-RELATE CLINICALLY</p>
+    </div>
+    <div style="width: 30%; float: right;">
+      <p>SIGNATURE<br />
+        Dr. Jai Ram Sinha</p>
+    </div>
+  ]
 
-  def default_footer
-    %Q[
-      <p style="text-align: center;">NOT VALID FOR MEDICOLEGAL PURPOSE<br />
-      Kindly inform any typing mistake immediately for the correction</p>
-    ]
-  end
+  DEFAULT_FOOTER = %Q[
+    <p style="text-align: center;">NOT VALID FOR MEDICOLEGAL PURPOSE<br />
+    Kindly inform any typing mistake immediately for the correction</p>
+  ]
 
 end
