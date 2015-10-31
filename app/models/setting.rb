@@ -1,8 +1,11 @@
 class Setting < ActiveRecord::Base
-  store :print_settings, accessors: [:header, :signature, :footer], coder: JSON
+  store :print_settings, accessors: [:header, :signature, :footer, :header_margin, :footer_margin], coder: JSON
 
   validates :show_max_reports, numericality: { greater_than: 0, allow_nil: true  }
   validates :show_reports_from_last_days, numericality: { greater_than: 0, allow_nil: true  }
+
+  DEFAULT_HEADER_MARGIN = 65
+  DEFAULT_FOOTER_MARGIN = 20
 
   def default_header
     %Q[
@@ -30,4 +33,5 @@ class Setting < ActiveRecord::Base
       Kindly inform any typing mistake immediately for the correction</p>
     ]
   end
+
 end
