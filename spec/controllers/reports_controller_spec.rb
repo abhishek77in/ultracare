@@ -4,14 +4,14 @@ RSpec.describe ReportsController, type: :controller do
   let(:user) { FactoryGirl.create(:user) }
   before do
     FactoryGirl.create(:setting)
-    @report_type = FactoryGirl.create(:report_type)
+    @template = FactoryGirl.create(:template)
     @doctor = FactoryGirl.create(:doctor)
     sign_in user
   end
 
   describe 'GET new' do
     it 'renders report form' do
-      get :new, report_type_id: @report_type.id
+      get :new, template_id: @template.id
       expect(response).to be_ok
     end
   end
