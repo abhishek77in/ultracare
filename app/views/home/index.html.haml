@@ -1,8 +1,8 @@
 %h1.text-center.padded-top Select New Report
 .large-12.medium-4.columns.text-center.report-links-section.padded-top
-  - @report_types.each do |report_type|
-    = link_to report_type.title, new_report_path(report_type_id: report_type.id), class: 'button secondary'
-  = link_to "Add new report type", new_report_type_path, class: 'button secondary'
+  - @templates.each do |template|
+    = link_to template.title, new_report_path(template_id: template.id), class: 'button secondary'
+  = link_to "Add new report type", new_template_path, class: 'button secondary'
 
 %h2.text-center Recent Reports
 

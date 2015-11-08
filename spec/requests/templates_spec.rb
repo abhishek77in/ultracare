@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe "Templates", type: :request do
-  describe "GET /report_types" do
+  describe "GET /templates" do
     it "works! (now write some real specs)" do
       skip
       get templates_path
