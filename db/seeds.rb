@@ -10,8 +10,6 @@ User.create(email: 'test@example.com', password: 'abcd1234')
 User.create(email: 'user@example.com', password: 'abcd1234')
 User.create(email: 'admin@example.com', password: 'abcd1234', role: 'admin')
 
-today = DateTime.now
-
 def random_amount_collected
   [500, 600, 700, 800, 900, 1000].sample
 end
@@ -27,6 +25,8 @@ setting = Setting.first || Setting.new
                              "header_margin"=> Setting::DEFAULT_HEADER_MARGIN,
                              "footer_margin"=> Setting::DEFAULT_FOOTER_MARGIN }
 setting.save
+
+today = DateTime.now
 
 10.times do
   rand(10..60).times do
