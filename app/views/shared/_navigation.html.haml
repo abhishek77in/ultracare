@@ -10,6 +10,8 @@
         - unless setting.disable_reports
           %li.divider
           %li= link_to " Reports", reports_path, class: 'fi-list-thumbnails large'
+        %li.divider
+        %li= link_to " Templates", templates_path, class: 'fi-list-thumbnails large'
         - unless setting.disable_business_analysis
           - if current_user.admin?
             %li.divider
@@ -19,8 +21,6 @@
           %li= link_to " Business Report", new_business_report_path, class: 'fi-page-export-pdf large'
         %li.divider
         %li= link_to " Doctors", doctors_path, class: 'fi-address-book large'
-        %li.divider
-        %li= link_to " Templates", templates_path, class: 'fi-list-thumbnails large'
         %li.divider
         %li= link_to " Settings", edit_setting_path(id: setting.id), class: 'fi-wrench large'
         - if current_user.admin?
