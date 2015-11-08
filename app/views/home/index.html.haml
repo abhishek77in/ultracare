@@ -2,7 +2,7 @@
 .large-12.medium-4.columns.text-center.report-links-section.padded-top
   - @templates.each do |template|
     = link_to template.title, new_report_path(template_id: template.id), class: 'button secondary'
-  = link_to "Add new report type", new_template_path, class: 'button secondary'
+  = link_to 'Add new template', new_template_path, class: 'button secondary'
 
 %h2.text-center Recent Reports
 
