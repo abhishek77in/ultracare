@@ -1,7 +1,7 @@
-.report-links-section {
-  a {
-    width: 300px;
-  }
+.select-report-section {
+  a { width: 300px; }
+  max-height: 500px;
+  overflow: scroll;
 }
 
 #date-range, #search_patient_name {
