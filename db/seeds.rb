@@ -29,7 +29,7 @@ setting.save
 today = DateTime.now
 
 10.times do
-  rand(10..60).times do
+  rand(5..20).times do
     patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
     doctor = Doctor.first(rand(Doctor.count) + 1).last
     report = Report.new(patient: patient,
