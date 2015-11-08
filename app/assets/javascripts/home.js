@@ -15,9 +15,4 @@ $(function(){
     if(isChrome) { w.print(); }
   });
 
-  $('select.template-selector').on("select2-selecting", function(element) {
-    var templateId = element.val;
-    var url = "/reports/new?template_id=" + templateId;
-    window.location = url;
-  });
 });
