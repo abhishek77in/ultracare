@@ -3,7 +3,7 @@
 <hr/>
 <%= simple_form_for(@report) do |f| %>
   <div class="form-container">
-    <%= render 'non_editable_patient', f: f %>
+    <%= render 'patient', f: f %>
     <%= render 'form', f: f %>
   </div>
 <% end %>
