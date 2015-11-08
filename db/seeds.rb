@@ -19,11 +19,11 @@ end
 end
 
 setting = Setting.first || Setting.new
-  setting.print_settings = { "header" => Setting::DEFAULT_HEADER,
-                             "signature" => Setting::DEFAULT_SIGNATURE,
-                             "footer"=> Setting::DEFAULT_FOOTER,
-                             "header_margin"=> Setting::DEFAULT_HEADER_MARGIN,
-                             "footer_margin"=> Setting::DEFAULT_FOOTER_MARGIN }
+  setting.print_settings = { 'header' => Setting::DEFAULT_HEADER,
+                             'signature' => Setting::DEFAULT_SIGNATURE,
+                             'footer' => Setting::DEFAULT_FOOTER,
+                             'header_margin' => Setting::DEFAULT_HEADER_MARGIN,
+                             'footer_margin' => Setting::DEFAULT_FOOTER_MARGIN }
 setting.save
 
 today = DateTime.now
