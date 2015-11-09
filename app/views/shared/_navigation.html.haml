@@ -13,9 +13,8 @@
         %li.divider
         %li= link_to " Templates", templates_path, class: 'fi-list-thumbnails large'
         - unless setting.disable_business_analysis
-          - if current_user.admin?
-            %li.divider
-            %li= link_to " Business Analysis", business_analysis_index_path(business_analysis: date_range_param_last_month), class: 'fi-graph-pie large'
+          %li.divider
+          %li= link_to " Business Analysis", business_analysis_index_path(business_analysis: date_range_param_last_month), class: 'fi-graph-pie large'
         - unless setting.disable_business_reports
           %li.divider
           %li= link_to " Business Report", new_business_report_path, class: 'fi-page-export-pdf large'
