@@ -1,3 +1,3 @@
 class Template < ActiveRecord::Base
-  validates_presence_of :report_title, :content
+  validates_presence_of :name, :report_title, :content
 end
