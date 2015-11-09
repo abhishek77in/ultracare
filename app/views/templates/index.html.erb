@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>Template name</th>
       <th>Report title</th>
       <th colspan="2"></th>
     </tr>
@@ -11,6 +12,7 @@
   <tbody>
     <% @templates.each do |template| %>
       <tr>
+        <td><%= template.name %></td>
         <td><%= template.report_title %></td>
         <td><%= link_to 'Edit', edit_template_path(template) %></td>
         <td><%= link_to 'Destroy', template, method: :delete, data: { confirm: 'Are you sure?' } %></td>

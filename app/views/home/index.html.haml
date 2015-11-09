@@ -1,12 +1,12 @@
 .text-center
   %h1.padded-top Create New Report
   = select_tag :template,
-      options_from_collection_for_select(@templates, :id, :report_title),
+      options_from_collection_for_select(@templates, :id, :name),
       prompt: 'Select a template to start creating new report',
       class: 'template-selector'
   .large-12.medium-4.columns.select-report-section.padded-top
     - @templates.each do |template|
-      = link_to template.report_title, new_report_path(template_id: template.id), class: 'button secondary'
+      = link_to template.name, new_report_path(template_id: template.id), class: 'button secondary'
     = link_to 'Add new template', new_template_path, class: 'button secondary'
 
   %h1 Recent Reports
