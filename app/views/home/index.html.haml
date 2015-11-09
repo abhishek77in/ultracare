@@ -11,6 +11,9 @@
 
   %h1 Recent Reports
   = render partial: 'shared/reports_listing'
+  .left-align
+    = link_to 'See all reports', reports_path
+  %br
 
   = link_to('http://www.carepill.in', target: '_blank')do
     = image_tag "carepill_logo.jpg"
