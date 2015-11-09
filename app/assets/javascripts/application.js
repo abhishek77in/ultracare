@@ -23,8 +23,4 @@
 
 $(function(){ 
   $(document).foundation();
-  $('select').select2({
-    allowClear: true,
-    width: 'resolve'
-  });
 });
