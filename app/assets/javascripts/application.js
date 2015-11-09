@@ -19,8 +19,5 @@
 //= require plugins/daterangepicker
 //= require ckeditor/init
 //= require highcharts
+//= require global
 //= require_directory .
-
-$(function(){ 
-  $(document).foundation();
-});
