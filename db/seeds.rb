@@ -27,7 +27,7 @@ setting.print_settings = { 'header' => Setting::DEFAULT_HEADER,
 setting.save
 
 (1..50).each_with_index do |number|
-  Template.create(title: "##{number} Template name", content: "Test report content of tempalte ##{number}")
+  Template.create(report_title: "##{number} Template name", content: "Test report content of tempalte ##{number}")
 end
 
 today = DateTime.now

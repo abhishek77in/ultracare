@@ -15,7 +15,7 @@ class ReportsController < ApplicationController
   def new
     @report = Report.new
     @report.content = @template.content
-    @report.title = @template.title
+    @report.title = @template.report_title
     @report.build_patient
   end
 

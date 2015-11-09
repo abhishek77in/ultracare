@@ -4,7 +4,7 @@ RSpec.describe "templates/show", type: :view do
   before(:each) do
     skip
     @template = assign(:template, Template.create!(
-      :title => "Ultrasound Type",
+      :report_title => "Ultrasound Type",
       :content => "MyText"
     ))
   end

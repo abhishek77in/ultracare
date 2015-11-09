@@ -1,10 +1,10 @@
 FactoryGirl.define do
-  sequence :title do |n|
-    "#{n} title"
+  sequence :report_title do |n|
+    "#{n} report_title"
   end
 
   factory :template do
-    title
+    report_title
     content 'test report content'
   end
 end
