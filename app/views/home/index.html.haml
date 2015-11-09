@@ -19,8 +19,8 @@
 
 :javascript
   $(function () {
-    $('select.template-selector').on("select2-selecting", function (element) {
-      var templateId = element.val;
+    $('select.template-selector').change(function() {
+      var templateId = $(this).val();
       var url = "/reports/new?template_id=" + templateId;
       window.location = url;
     });
