@@ -28,7 +28,6 @@ gem 'wkhtmltopdf-binary'
 gem 'haml'
 gem 'select2-rails'
 gem 'paper_trail'
-gem 'whenever', :require => false
 gem 'rails_admin'
 gem 'ckeditor'
 
