@@ -30,7 +30,6 @@ gem 'select2-rails'
 gem 'paper_trail'
 gem 'rails_admin'
 gem 'ckeditor'
-gem 'acts_as_list'
 
 gem 'groupdate'
 gem 'highcharts-rails'
