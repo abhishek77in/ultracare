@@ -1,9 +1,12 @@
 Ultrasound::Application.routes.draw do
 
-  resources :templates
-
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
+
+  resources :templates do
+    patch 'sort', on: :collection
+  end
+
   resources :settings, only: [:edit, :update]
   resources :change_settings, only: [:edit, :update]
 

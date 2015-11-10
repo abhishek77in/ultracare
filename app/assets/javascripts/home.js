@@ -36,17 +36,17 @@ $(function(){
     cursor: 'crosshair',
     items: 'li',
     opacity: 0.4,
-    scroll: true //,
-    //update: function(){
-    //  $.ajax({
-    //    url: '/templates/sort',
-    //    type: 'post',
-    //    data: $('#templates').sortable('serialize'),
-    //    dataType: 'script',
-    //    complete: function(request){
-    //      $('#templates').effect('highlight');
-    //    }
-    //  });
-    //}
+    scroll: true,
+    update: function(){
+      $.ajax({
+        url: '/templates/sort',
+        type: 'patch',
+        data: $('#templates').sortable('serialize'),
+        dataType: 'script',
+        complete: function(request){
+          $('#templates').effect('highlight');
+        }
+      });
+    }
   });
 });
