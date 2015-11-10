@@ -1,3 +1,6 @@
+.padded-top
+  = link_to 'Edit report', edit_report_path(@report), class: 'button'
+  = link_to 'Print report', print_report_path(@report), class: 'button'
 %h1.padded-top.text-center Report
 %hr
 = render partial: 'shared/pdf/patient'
