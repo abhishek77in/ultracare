@@ -2,6 +2,13 @@
   a { width: 300px; }
   max-height: 500px;
   overflow-y: scroll;
+  ul {
+    list-style: none;
+    li {
+      display: inline;
+      padding: 10px;
+    }
+  }
 }
 
 #date-range, #search_patient_name {
