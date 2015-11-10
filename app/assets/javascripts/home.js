@@ -30,7 +30,6 @@ $(function(){
 
 
   $('#templates').sortable({
-    axis: 'y',
     dropOnEmpty: false,
     handle: '.handle',
     cursor: 'crosshair',

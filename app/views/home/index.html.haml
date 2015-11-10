@@ -8,8 +8,7 @@
     %ul#templates
       - @templates.each do |template|
         %li{id: "template_#{template.id}"}
-          %span.handle [drag]
-          = link_to template.name, new_report_path(template_id: template.id), class: 'button secondary'
+          = link_to template.name, new_report_path(template_id: template.id), class: 'handle button secondary'
 
     = link_to 'Add new template', new_template_path, class: 'button secondary'
 
@@ -20,7 +19,7 @@
   %br
 
   = link_to('http://www.carepill.in', target: '_blank')do
-    = image_tag "carepill_logo.jpg"
+    = image_tag 'carepill_logo.jpg'
 
 = render 'script' if flash[:report_id].present?
 
