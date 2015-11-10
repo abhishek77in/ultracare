@@ -3,9 +3,14 @@
   = select_tag :template,
       options_from_collection_for_select(@templates, :id, :name),
       class: 'template-selector'
-  .large-12.medium-4.columns.select-report-section.padded-top
-    - @templates.each do |template|
-      = link_to template.name, new_report_path(template_id: template.id), class: 'button secondary'
+
+  .select-report-section.padded-top
+    %ul#templates
+      - @templates.each do |template|
+        %li{id: "template_#{template.id}"}
+          %span.handle [drag]
+          = link_to template.name, new_report_path(template_id: template.id), class: 'button secondary'
+
     = link_to 'Add new template', new_template_path, class: 'button secondary'
 
   %h1 Recent Reports
