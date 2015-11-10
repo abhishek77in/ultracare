@@ -1,0 +1,19 @@
+= f.fields_for :patient do |patient_fields|
+  .row
+    .small-6.columns
+      = patient_fields.input :name, label: 'Patient Name'
+    .small-6.columns
+      = f.association :doctor, label_method: :doctor_name,  label: 'Referred By Doctor'
+      .right-align
+        can't find doctor
+        = link_to "add here", doctors_path
+  .row
+    .small-6.columns
+      %label{:for => "report_patient_attributes_age"} Age
+      .row.collapse
+        .small-6.columns
+          = patient_fields.input :age, label: false
+        .small-6.columns
+          %span.postfix years
+    .small-6.columns
+      = patient_fields.input :sex, include_blank: false, collection: @report.possible_genders
