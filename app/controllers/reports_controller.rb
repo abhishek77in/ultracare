@@ -60,7 +60,7 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:doctor_id, :amount_collected, :amount_due, :doctors_discount, :content, :title, patient_attributes: [:name, :age, :sex])
+    params.require(:report).permit(:doctor_id, :amount_collected, :amount_due, :doctors_discount, :content, :title, patient_attributes: [:name, :age, :sex, :patient_id])
   end
 
   def doctor_id_param

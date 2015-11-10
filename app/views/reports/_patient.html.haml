@@ -1,6 +1,9 @@
 = f.fields_for :patient do |patient_fields|
   .row
     .small-6.columns
+      = patient_fields.input :patient_id, label: 'Patient Id'
+  .row
+    .small-6.columns
       = patient_fields.input :name, label: 'Patient Name'
     .small-6.columns
       = f.association :doctor, label_method: :doctor_name,  label: 'Referred By Doctor'
