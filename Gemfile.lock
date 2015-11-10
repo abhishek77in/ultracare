@@ -37,6 +37,8 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    acts_as_list (0.7.2)
+      activerecord (>= 3.0)
     afm (0.2.2)
     arel (6.0.0)
     bcrypt (3.1.10)
@@ -323,6 +325,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  acts_as_list
   better_errors
   binding_of_caller
   capybara
