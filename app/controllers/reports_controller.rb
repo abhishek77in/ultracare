@@ -2,6 +2,10 @@ class ReportsController < ApplicationController
   before_action :redirect_to_root, if: -> { setting.disable_reports? }, only: [:index]
   before_action :load_template, only: [:new]
 
+  def show
+    @report = Report.find(params[:id])
+  end
+
   def index
     @reports = Report.recent
     @reports = @reports.belongs_to_doctor(doctor_id_param) if params[:search] && doctor_id_param.present?

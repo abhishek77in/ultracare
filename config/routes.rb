@@ -10,7 +10,7 @@ Ultrasound::Application.routes.draw do
   resources :settings, only: [:edit, :update]
   resources :change_settings, only: [:edit, :update]
 
-  resources "reports", except: [:show, :destroy] do
+  resources 'reports', except: [:destroy] do
     get 'print', on: :member
   end
 
