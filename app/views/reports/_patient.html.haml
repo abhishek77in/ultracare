@@ -6,10 +6,10 @@
       = f.association :doctor, label_method: :doctor_name,  label: 'Referred By Doctor'
       .right-align
         can't find doctor
-        = link_to "add here", doctors_path
+        = link_to 'add here', doctors_path
   .row
     .small-6.columns
-      %label{:for => "report_patient_attributes_age"} Age
+      %label{for: 'report_patient_attributes_age'} Age
       .row.collapse
         .small-6.columns
           = patient_fields.input :age, label: false
