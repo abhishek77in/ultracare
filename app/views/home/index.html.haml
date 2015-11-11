@@ -1,7 +1,9 @@
 %h1.padded-top Select a report template
-= select_tag :template,
-    options_from_collection_for_select(@templates, :id, :name),
-    class: 'template-selector'
+.row.padded-top
+  .small-6.columns
+    = select_tag :template,
+      options_from_collection_for_select(@templates, :id, :name),
+      class: 'template-selector'
 
 .select-report-section.padded-top
   %ul#templates
