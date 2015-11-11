@@ -1,4 +1,4 @@
-%h1.padded-top Create New Report
+%h1.padded-top Select a report template
 = select_tag :template,
     options_from_collection_for_select(@templates, :id, :name),
     class: 'template-selector'
@@ -9,10 +9,10 @@
       %li{id: "template_#{template.id}"}
         = link_to template.name, new_report_path(template_id: template.id), class: 'handle button secondary'
 
-  = link_to 'Add new template', new_template_path, class: 'button secondary'
+  = link_to 'Add new template', new_template_path
 
 %br
-%h1 Recent Reports
+%h1 Recent reports
 = render partial: 'shared/reports_listing'
 .left-align
   = link_to 'See all reports', reports_path
@@ -23,5 +23,3 @@
     = image_tag 'carepill_logo.jpg'
 
 = render 'script' if flash[:report_id].present?
-
-:javascript
