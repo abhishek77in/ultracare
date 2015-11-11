@@ -50,14 +50,13 @@ class ReportsController < ApplicationController
   end
 
   def print
-    @setting = Setting.first
     @report = Report.find(params[:id])
     render pdf: "#{@report.patient.name} - #{@report.created_at.strftime("%d %b %y")}",
            show_as_html: params[:debug].present?,
            page_size: 'A4',
            layout: 'pdf.html.haml',
-           margin: { bottom: @setting.footer_margin.to_i, top: @setting.header_margin.to_i },
-           header: { spacing: @setting.header_margin.to_i-2, html: { template: 'shared/pdf/header.pdf.haml', layout: 'layouts/header.pdf.haml' } },
+           margin: { bottom: setting.footer_margin.to_i, top: setting.header_margin.to_i },
+           header: { spacing: setting.header_margin.to_i-2, html: { template: 'shared/pdf/header.pdf.haml', layout: 'layouts/header.pdf.haml' } },
            footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
   end
 
