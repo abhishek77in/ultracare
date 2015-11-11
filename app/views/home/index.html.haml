@@ -1,23 +1,24 @@
+%h1.padded-top Create New Report
+= select_tag :template,
+    options_from_collection_for_select(@templates, :id, :name),
+    class: 'template-selector'
+
+.select-report-section.padded-top
+  %ul#templates
+    - @templates.each do |template|
+      %li{id: "template_#{template.id}"}
+        = link_to template.name, new_report_path(template_id: template.id), class: 'handle button secondary'
+
+  = link_to 'Add new template', new_template_path, class: 'button secondary'
+
+%br
+%h1 Recent Reports
+= render partial: 'shared/reports_listing'
+.left-align
+  = link_to 'See all reports', reports_path
+%br
+
 .text-center
-  %h1.padded-top Create New Report
-  = select_tag :template,
-      options_from_collection_for_select(@templates, :id, :name),
-      class: 'template-selector'
-
-  .select-report-section.padded-top
-    %ul#templates
-      - @templates.each do |template|
-        %li{id: "template_#{template.id}"}
-          = link_to template.name, new_report_path(template_id: template.id), class: 'handle button secondary'
-
-    = link_to 'Add new template', new_template_path, class: 'button secondary'
-
-  %h1 Recent Reports
-  = render partial: 'shared/reports_listing'
-  .left-align
-    = link_to 'See all reports', reports_path
-  %br
-
   = link_to('http://www.carepill.in', target: '_blank')do
     = image_tag 'carepill_logo.jpg'
 
