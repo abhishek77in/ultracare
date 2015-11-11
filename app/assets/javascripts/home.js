@@ -20,7 +20,7 @@ $(function(){
     placeholder: 'Select a template to start creating new report'
   });
 
-  $('select.template-selector').change(function() {
+  $('select.template-selector').on("select2:close", function (event) {;
     var templateId = $(this).val();
     if (templateId) {
       var url = "/reports/new?template_id=" + templateId;
