@@ -1,5 +1,5 @@
 %h1.padded-top Select a new report
-.row.padded-top
+.row
   .small-6.columns
     = select_tag :template,
       options_from_collection_for_select(@templates, :id, :name),
