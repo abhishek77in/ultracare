@@ -3,6 +3,7 @@
   .small-6.columns
     = select_tag :template,
       options_from_collection_for_select(@templates, :id, :name),
+      include_blank: true,
       class: 'template-selector'
 
 .select-report-section.padded-top
