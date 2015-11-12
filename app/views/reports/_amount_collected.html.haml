@@ -1,0 +1,25 @@
+.row
+  .small-4.columns
+    %label{:for => 'report_amount_collected'} Amount collected
+    .row.collapse
+      .small-1.columns
+        %span.prefix Rs.
+      .small-5.columns
+        = f.input :amount_collected, label: false
+      .small-1.columns
+  .small-4.columns
+    %label{:for => 'report_amount_due'} Amount due
+    .row.collapse
+      .small-1.columns
+        %span.prefix Rs.
+      .small-5.columns
+        = f.input :amount_due, label: false
+      .small-1.columns
+  .small-4.columns
+    %label{:for => 'report_doctors_discount'} Discount on doctor's behalf
+    .row.collapse
+      .small-1.columns
+        %span.prefix Rs.
+      .small-5.columns
+        = f.input :doctors_discount, label: false
+      .small-1.columns
