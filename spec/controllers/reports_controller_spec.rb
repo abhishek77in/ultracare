@@ -5,7 +5,7 @@ RSpec.describe ReportsController, type: :controller do
   before do
     FactoryGirl.create(:setting)
     @template = FactoryGirl.create(:template)
-    referrer = FactoryGirl.create(:referrer)
+    @referrer = FactoryGirl.create(:referrer)
     sign_in user
   end
 
@@ -19,7 +19,7 @@ RSpec.describe ReportsController, type: :controller do
   describe 'POST create' do
     let(:report_attributes) do
       { "report"=>{"patient_attributes"=>{"name"=>"Mrs. Gerardo Lesch", "age"=>"45", "sex"=>"F"},
-                  "referrer_id"=> referrer.id
+                  "referrer_id"=> @referrer.id
                  }
       }
     end
