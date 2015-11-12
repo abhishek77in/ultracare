@@ -11,7 +11,7 @@ class ReferrersController < ApplicationController
     if @referrer.save
       redirect_to referrers_path, notice: 'Referrer was successfully created.'
     else
-      flash.now[:alert] = "Sorry! Referrer could not be created, please fix the errors and try again."
+      flash.now[:alert] = 'Sorry! Referrer could not be created, please fix the errors and try again.'
       load_referrers
       render action: 'index'
     end
@@ -26,7 +26,7 @@ class ReferrersController < ApplicationController
     if @referrer.update_attributes(referrer_params)
       redirect_to referrers_path, notice: 'Referrer details were updated successfully.'
     else
-      flash.now[:alert] = "Sorry! Referrer details could not be updated, please fix the errors and try again."
+      flash.now[:alert] = 'Sorry! Referrer details could not be updated, please fix the errors and try again.'
       load_referrers
       render action: 'index'
     end
@@ -34,7 +34,7 @@ class ReferrersController < ApplicationController
 
   private
     def load_referrers
-      @referrers = Referrer.order_by_name.paginate(:page => params[:page])
+      @referrers = Referrer.all
     end
 
     def set_referrer
@@ -42,6 +42,6 @@ class ReferrersController < ApplicationController
     end
 
     def referrer_params
-      params.require(:referrer).permit(:name, :degree)
+      params.require(:referrer).permit(:name)
     end
 end

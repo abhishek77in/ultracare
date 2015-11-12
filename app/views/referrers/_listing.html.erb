@@ -3,9 +3,8 @@
   <table>
     <thead>
       <tr>
-        <th>Name</th>
-        <th>Degree</th>
         <th>Id</th>
+        <th>Name</th>
         <th>Edit</th>
       </tr>
     </thead>
@@ -13,14 +12,11 @@
     <tbody>
       <% @referrers.each do |referrer| %>
         <tr>
-          <td>Dr. <%= referrer.name %></td>
-          <td><%= referrer.degree %></td>
           <td><%= referrer.id %></td>
+          <td><%= referrer.name %></td>
           <td><%= link_to 'Edit', edit_referrer_path(referrer) %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-
-  <%= will_paginate reports, renderer: FoundationPagination::Rails %>
 </div>

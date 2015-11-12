@@ -26,14 +26,6 @@ RSpec.describe Referrer, :type => :model do
     end
   end
 
-  describe 'referrer name' do
-    it 'should return formatted referrer name' do
-      @first = FactoryGirl.create(:referrer, name: 'A', degree: nil)
-      @second  = FactoryGirl.create(:referrer, name: 'B', degree: 'MBBS')
-      expect(@first.referrer_name).to eq "A, # #{@first.id}"
-      expect(@second.referrer_name).to eq "B (MBBS), # #{@second.id}"
-    end
-  end
 
   it_behaves_like 'versionable', Referrer
 end

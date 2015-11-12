@@ -8,10 +8,6 @@ class Referrer < ActiveRecord::Base
   scope :order_by_name, -> { order('name') }
 
   def referrer_name
-    if degree.present?
-      "#{name} (#{degree}), # #{id}"
-    else
-      "#{name}, # #{id}"
-    end
+    "#{name}, # #{id}"
   end
 end

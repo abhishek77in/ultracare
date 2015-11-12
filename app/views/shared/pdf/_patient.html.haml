@@ -10,11 +10,7 @@
   %div{style: 'width: 70%; float: left;'}
     %p.line-height-4
       %span.grey Referred By Referrer:
-      Dr.
-      - if @report.referrer.degree.present?
-        = "#{@report.referrer.name} (#{@report.referrer.degree})"
-      - else
-        = @report.referrer.name
+      = @report.referrer.name
   %div{style: 'width: 30%; float: right;'}
     %p.line-height-4
       %span.grey Date:

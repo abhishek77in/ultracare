@@ -4,18 +4,8 @@
     <div class="small-12 columns">
       <label for="report_patient_attributes_age">Name</label>
       <div class="row collapse">
-        <div class="small-1 columns">
-          <span class="prefix">Dr.</span>
-        </div>
-        <div class="small-11 columns">
-          <%= f.input :name, label: false, input_html: {placeholder: 'S. K. Sharma'} %>
-        </div>
+        <%= f.input :name, label: false, input_html: { placeholder: 'Dr. S. K. Sharma (MBBS, MD)' } %>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="small-12 columns">
-      <%= f.input :degree, input_html: {placeholder: 'MBBS, MD'} %>
     </div>
   </div>
 
