@@ -1,9 +1,14 @@
-- if setting.enable_accounting?
-  %hr
-  = render 'amount_collected', f: f
-
+%h2.text-center.padded-top Report
 %hr
-= f.input :content, as: :ckeditor, label: false, :input_html => { :ckeditor => { :height => 500 } }
-= f.input :title, as: :hidden
-= f.button :submit, class: 'round', 'data-disable-with' => 'submitting..'
-= link_to 'Cancel', root_path, class: 'cancel-link'
+
+= simple_form_for(@report) do |f|
+  .form-container
+    = render 'patient', f: f
+    - if setting.enable_accounting?
+      %hr
+      = render 'amount_collected', f: f
+    %hr
+    = f.input :content, as: :ckeditor, label: false, :input_html => { :ckeditor => { :height => 500 } }
+    = f.input :title, as: :hidden
+    = f.button :submit, class: 'round', 'data-disable-with' => 'submitting..'
+    = link_to 'Cancel', root_path, class: 'cancel-link'
