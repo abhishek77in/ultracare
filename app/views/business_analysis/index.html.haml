@@ -12,8 +12,9 @@
     Total cases found:
     = @reports.count
 
-.row.padded-top.padded-bottom
-  #piechart
+- if setting.enable_accounting?
+  .row.padded-top.padded-bottom
+    #piechart
 
 .row.padded-top.padded-bottom
   #container
