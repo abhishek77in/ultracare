@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 20151112183738) do
     t.integer  "patient_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "amount_collected", default: 0
-    t.integer  "amount_due",       default: 0
-    t.integer  "doctors_discount", default: 0
+    t.integer  "amount_collected",   default: 0
+    t.integer  "amount_due",         default: 0
+    t.integer  "referrers_discount", default: 0
     t.text     "content"
     t.string   "title"
   end
