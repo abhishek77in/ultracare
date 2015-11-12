@@ -47,7 +47,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers'#, require: false
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'pdf-reader'
