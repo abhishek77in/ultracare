@@ -8,10 +8,10 @@ class ReportsController < ApplicationController
 
   def index
     @reports = Report.recent
-    @reports = @reports.belongs_to_doctor(doctor_id_param) if params[:search] && doctor_id_param.present?
+    @reports = @reports.belongs_to_referrer(referrer_id_param) if params[:search] && referrer_id_param.present?
     @reports = @reports.date_range(date_range_param) if params[:search] && date_range_param.present?
     @reports = @reports.patient_name(params[:search][:patient_name]) if params[:search]
-    @reports = @reports.includes(:doctor, :patient).paginate(:page => params[:page])
+    @reports = @reports.includes(:referrer, :patient).paginate(:page => params[:page])
     @reports = @reports.date_range(setting.show_reports_from_last_days.days.ago..Date.tomorrow) if setting.show_reports_from_last_days?
     @reports = @reports.limit_reports_to_maximum(setting.show_max_reports)
   end
@@ -63,11 +63,11 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:doctor_id, :amount_collected, :amount_due, :doctors_discount, :content, :title, patient_attributes: [:name, :age, :sex, :patient_id])
+    params.require(:report).permit(:referrer_id, :amount_collected, :amount_due, :referrers_discount, :content, :title, patient_attributes: [:name, :age, :sex, :patient_id])
   end
 
-  def doctor_id_param
-    params.require(:search).permit(:doctor_id)[:doctor_id]
+  def referrer_id_param
+    params.require(:search).permit(:referrer_id)[:referrer_id]
   end
 
   def date_range_param

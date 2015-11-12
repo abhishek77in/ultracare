@@ -1,7 +1,7 @@
 RailsAdmin.config do |config|
 
   ### Popular gems integration
-  config.included_models = ['Report', 'Patient', 'Doctor']
+  config.included_models = ['Report', 'Patient', 'Referrer']
 
   # == Devise ==
   config.authenticate_with do
@@ -22,17 +22,17 @@ RailsAdmin.config do |config|
     dashboard                     # mandatory
     index                         # mandatory
     new do
-      only ['Doctor']
+      only ['Referrer']
     end
     export do
-      only ['Doctor']
+      only ['Referrer']
     end
     bulk_delete do
       only ['Report']
     end
     show
     edit do
-      only ['Doctor']
+      only ['Referrer']
     end
     delete do
       only ['Report']

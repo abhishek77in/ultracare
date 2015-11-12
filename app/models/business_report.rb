@@ -2,7 +2,7 @@ class BusinessReport
   include ActiveModel::Model
   include DateConverter
 
-  attr_accessor :doctor_ids, :date_range
+  attr_accessor :referrer_ids, :date_range
 
   validates :date_range, presence: true
 
@@ -11,8 +11,8 @@ class BusinessReport
     @date_range = to_range(value)
   end
 
-  def doctor_ids=(value)
-    @doctor_ids = value.reject(&:blank?)
+  def referrer_ids=(value)
+    @referrer_ids = value.reject(&:blank?)
   end
 
   def file_name

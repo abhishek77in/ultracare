@@ -1,11 +1,11 @@
 class Report < ActiveRecord::Base
   has_paper_trail
 
-  belongs_to :doctor
+  belongs_to :referrer
   belongs_to :patient
   accepts_nested_attributes_for :patient
 
-  validates_presence_of :doctor, :patient
+  validates_presence_of :referrer, :patient
   scope :recent, -> { order(updated_at: :desc) }
 
   after_save :touch
@@ -15,14 +15,14 @@ class Report < ActiveRecord::Base
     limit(max_reports)
   end
 
-  scope :belongs_to_doctor, -> (doctor_id) do
-    return all unless doctor_id
-    where(doctor_id: doctor_id)
+  scope :belongs_to_referrer, -> (referrer_id) do
+    return all unless referrer_id
+    where(referrer_id: referrer_id)
   end
 
-  scope :belongs_to_doctors, -> (doctor_ids) do
-    return all if doctor_ids.empty?
-    where(doctor_id: doctor_ids)
+  scope :belongs_to_referrers, -> (referrer_ids) do
+    return all if referrer_ids.empty?
+    where(referrer_id: referrer_ids)
   end
 
   scope :date_range, -> (date_range) do

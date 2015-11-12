@@ -1,5 +1,5 @@
 $(function(){
-  $('select#business_report_doctor_ids').select2({
+  $('select#business_report_referrer_ids').select2({
     allowClear: true
   });
 });

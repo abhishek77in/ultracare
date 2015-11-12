@@ -1,4 +1,4 @@
-<%= simple_form_for(@doctor) do |f| %>
+<%= simple_form_for(@referrer) do |f| %>
 
   <div class="row">
     <div class="small-12 columns">
@@ -20,7 +20,7 @@
   </div>
 
   <div class="form-actions small-12 columns">
-    <%= f.button :submit, value: 'Add Doctor', class: 'round' %>
-    <%= link_to 'Cancel', doctors_path, class: 'cancel-link' %>
+    <%= f.button :submit, value: 'Add Referrer', class: 'round' %>
+    <%= link_to 'Cancel', referrers_path, class: 'cancel-link' %>
   </div>
 <% end %>

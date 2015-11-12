@@ -5,7 +5,7 @@ RSpec.describe ReportsController, type: :controller do
   before do
     FactoryGirl.create(:setting)
     @template = FactoryGirl.create(:template)
-    @doctor = FactoryGirl.create(:doctor)
+    referrer = FactoryGirl.create(:referrer)
     sign_in user
   end
 
@@ -19,7 +19,7 @@ RSpec.describe ReportsController, type: :controller do
   describe 'POST create' do
     let(:report_attributes) do
       { "report"=>{"patient_attributes"=>{"name"=>"Mrs. Gerardo Lesch", "age"=>"45", "sex"=>"F"},
-                  "doctor_id"=> @doctor.id
+                  "referrer_id"=> referrer.id
                  }
       }
     end
@@ -30,7 +30,7 @@ RSpec.describe ReportsController, type: :controller do
     end
 
     it 'does not create report on invalid post' do
-      report_attributes['report']['doctor_id'] = ''
+      report_attributes['report']['referrer_id'] = ''
       expect{ post :create, report_attributes }.to change { Report.count }.by(0)
       expect(response).to render_template(:new)
     end

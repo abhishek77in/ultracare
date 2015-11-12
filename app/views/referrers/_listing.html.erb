@@ -1,5 +1,5 @@
 <div class="large-12 medium-8 columns">
-  <h1>Listing doctors</h1>
+  <h1>Listing referrers</h1>
   <table>
     <thead>
       <tr>
@@ -11,12 +11,12 @@
     </thead>
 
     <tbody>
-      <% doctors.each do |doctor| %>
+      <% @referrers.each do |referrer| %>
         <tr>
-          <td>Dr. <%= doctor.name %></td>
-          <td><%= doctor.degree %></td>
-          <td><%= doctor.id %></td>
-          <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+          <td>Dr. <%= referrer.name %></td>
+          <td><%= referrer.degree %></td>
+          <td><%= referrer.id %></td>
+          <td><%= link_to 'Edit', edit_referrer_path(referrer) %></td>
         </tr>
       <% end %>
     </tbody>

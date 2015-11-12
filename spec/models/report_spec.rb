@@ -5,12 +5,12 @@ RSpec.describe Report, :type => :model do
   it_behaves_like 'versionable', Report
 
   describe 'validations' do
-    it { should validate_presence_of(:doctor) }
+    it { should validate_presence_of(:referrer) }
     it { should validate_presence_of(:patient) }
   end
 
   describe 'associations' do
-    it { should belong_to(:doctor) }
+    it { should belong_to(:referrer) }
     it { should belong_to(:patient) }
   end
 
@@ -34,22 +34,22 @@ RSpec.describe Report, :type => :model do
       expect(Report.recent).to eq [first, second]
     end
 
-    it 'should return reports from given doctor' do
-      doctor1 = FactoryGirl.create(:doctor)
-      doctor2 = FactoryGirl.create(:doctor)
-      report1 = FactoryGirl.create(:report, doctor: doctor1)
-      FactoryGirl.create(:report, doctor: doctor2)
-      expect(Report.belongs_to_doctor(doctor1.id)).to eq [report1]
-      expect(Report.belongs_to_doctor(nil)).to eq Report.all
+    it 'should return reports from given referrer' do
+      referrer1 = FactoryGirl.create(:referrer)
+      referrer2 = FactoryGirl.create(:referrer)
+      report1 = FactoryGirl.create(:report, referrer: referrer1)
+      FactoryGirl.create(:report, referrer: referrer2)
+      expect(Report.belongs_to_referrer(referrer1.id)).to eq [report1]
+      expect(Report.belongs_to_referrer(nil)).to eq Report.all
     end
 
-    it 'should return reports from given set of doctors' do
-      doctor1 = FactoryGirl.create(:doctor)
-      doctor2 = FactoryGirl.create(:doctor)
-      report1 = FactoryGirl.create(:report, doctor: doctor1)
-      report2 = FactoryGirl.create(:report, doctor: doctor2)
-      expect(Report.belongs_to_doctors([doctor1.id, doctor2.id])).to eq [report1, report2]
-      expect(Report.belongs_to_doctors([])).to eq Report.all
+    it 'should return reports from given set of referrers' do
+      referrer1 = FactoryGirl.create(:referrer)
+      referrer2 = FactoryGirl.create(:referrer)
+      report1 = FactoryGirl.create(:report, referrer: referrer1)
+      report2 = FactoryGirl.create(:report, referrer: referrer2)
+      expect(Report.belongs_to_referrers([referrer1.id, referrer2.id])).to eq [report1, report2]
+      expect(Report.belongs_to_referrers([])).to eq Report.all
     end
 
     it 'should return reports in given date range'

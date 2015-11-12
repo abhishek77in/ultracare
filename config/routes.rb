@@ -14,7 +14,7 @@ Ultrasound::Application.routes.draw do
     get 'print', on: :member
   end
 
-  resources :doctors, except: [:new, :show, :destroy]
+  resources :referrers, except: [:new, :show, :destroy]
 
   resources :business_analysis, only: [:index]
   resources :business_reports, only: [:new] do

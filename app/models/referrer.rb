@@ -1,4 +1,4 @@
-class Doctor < ActiveRecord::Base
+class Referrer < ActiveRecord::Base
   has_paper_trail
 
   validates_presence_of :name
@@ -7,7 +7,7 @@ class Doctor < ActiveRecord::Base
   scope :recent, -> { order('created_at DESC') }
   scope :order_by_name, -> { order('name') }
 
-  def doctor_name
+  def referrer_name
     if degree.present?
       "#{name} (#{degree}), # #{id}"
     else

@@ -4,8 +4,8 @@ module HomeHelper
     params[:search][:patient_name] if params[:search]
   end
 
-  def selected_doctor_id
-    params[:search][:doctor_id] if params[:search]
+  def selected_referrer_id
+    params[:search][:referrer_id] if params[:search]
   end
 
   def selected_date_range

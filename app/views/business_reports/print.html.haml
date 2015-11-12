@@ -3,10 +3,10 @@
   %p= params[:business_report][:date_range]
 %hr
 
-- @reports.group_by(&:doctor).each do |doctor, reports|
+- @reports.group_by(&:referrer).each do |referrer, reports|
   .keep-intact
     %p
-      = "Dr. #{doctor.name}"
+      = "Dr. #{referrer.name}"
       = "( #{params[:business_report][:date_range]} )"
     %p
       %b Summary :

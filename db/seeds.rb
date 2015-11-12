@@ -15,7 +15,7 @@ def random_amount_collected
 end
 
 10.times do
-  Doctor.create(name: Faker::Name.name, degree: 'MBBS')
+  Referrer.create(name: Faker::Name.name, degree: 'MBBS')
 end
 
 setting = Setting.first || Setting.new
@@ -37,16 +37,16 @@ today = DateTime.now
 10.times do
   rand(5..20).times do
     patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
-    doctor = Doctor.first(rand(Doctor.count) + 1).last
+    referrer = Referrer.first(rand(Referrer.count) + 1).last
     report = Report.new(patient: patient,
-                        doctor: doctor,
+                        referrer: referrer,
                         updated_at: today,
                         created_at: today,
                         content: 'test report details',
                         title: 'report title',
                         amount_collected: random_amount_collected)
     if report.save
-      puts "Report created for patient - #{report.patient.name}, doctor - #{report.doctor.name}, Date - #{today}"
+      puts "Report created for patient - #{report.patient.name}, referrer - #{report.referrer.name}, Date - #{today}"
     else
       puts "Failed to save report - #{report.errors.messages}"
     end

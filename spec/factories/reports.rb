@@ -1,7 +1,7 @@
 FactoryGirl.define do
 
   factory :report do
-    doctor
+    referrer
     patient
   end
 end
