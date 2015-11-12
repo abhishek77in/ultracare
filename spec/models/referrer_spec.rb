@@ -26,6 +26,4 @@ RSpec.describe Referrer, :type => :model do
     end
   end
 
-
-  it_behaves_like 'versionable', Referrer
 end

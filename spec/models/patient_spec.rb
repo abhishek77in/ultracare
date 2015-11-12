@@ -12,5 +12,4 @@ RSpec.describe Patient, type: :model do
     it { should have_many :reports }
   end
 
-  it_behaves_like 'versionable', Patient
 end

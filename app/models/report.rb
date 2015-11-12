@@ -1,6 +1,4 @@
 class Report < ActiveRecord::Base
-  has_paper_trail
-
   belongs_to :referrer
   belongs_to :patient
   accepts_nested_attributes_for :patient

@@ -27,7 +27,6 @@ gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
 gem 'haml'
 gem 'select2-rails'
-gem 'paper_trail'
 gem 'rails_admin'
 gem 'ckeditor'
 

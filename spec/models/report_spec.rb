@@ -2,8 +2,6 @@ require 'rails_helper'
 
 RSpec.describe Report, :type => :model do
 
-  it_behaves_like 'versionable', Report
-
   describe 'validations' do
     it { should validate_presence_of(:referrer) }
     it { should validate_presence_of(:patient) }
