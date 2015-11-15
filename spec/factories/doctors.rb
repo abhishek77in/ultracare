@@ -1,7 +1,7 @@
 FactoryGirl.define do
-  sequence(:name) { |n| "Jon Doe #{n}" }
+  sequence(:doctor_name) { |n| "Jon Doe #{n}" }
 
-  factory :referrer do
-    name
+  factory :doctor do
+    name { generate(:doctor_name) }
   end
 end
