@@ -4,6 +4,8 @@ class Report < ActiveRecord::Base
   belongs_to :doctor
   accepts_nested_attributes_for :patient
 
+  attr_accessor :referrer_name
+
   validates_presence_of :referrer, :patient
   scope :recent, -> { order(updated_at: :desc) }
 
