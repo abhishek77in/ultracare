@@ -6,6 +6,8 @@ class Report < ActiveRecord::Base
 
   attr_accessor :referrer_name
 
+  before_save :assign_referrer
+
   validates_presence_of :referrer, :patient
   scope :recent, -> { order(updated_at: :desc) }
 
@@ -32,6 +34,10 @@ class Report < ActiveRecord::Base
   scope :patient_name, -> (patient_name) do
     return all unless patient_name
     includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
+  end
+
+  def assign_referrer
+    self.referrer = Referrer.find_or_create_by(name: self.referrer_name)
   end
 
   def possible_genders
