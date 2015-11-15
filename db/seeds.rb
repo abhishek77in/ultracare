@@ -15,7 +15,11 @@ def random_amount_collected
 end
 
 10.times do
-  Referrer.create(name: Faker::Name.name)
+  Referrer.create(name: "Dr. #{Faker::Name.name} (MBBS)")
+end
+
+5.times do
+  Doctor.create(name: "Dr. #{Faker::Name.name} (MBBS)")
 end
 
 setting = Setting.first || Setting.new
