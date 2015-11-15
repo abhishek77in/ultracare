@@ -20,7 +20,7 @@
         %td= truncate report.patient.name, length: 18
         %td= report.patient.age
         %td= report.patient.sex
-        %td= "Dr. #{report.referrer.name}"
+        %td= report.referrer.name
         - if setting.enable_accounting?
           %td= "Rs. #{report.amount_collected}"
           %td= "Rs. #{report.amount_due}"
