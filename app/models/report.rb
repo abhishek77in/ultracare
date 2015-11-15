@@ -6,7 +6,7 @@ class Report < ActiveRecord::Base
 
   attr_accessor :referrer_name
 
-  before_save :assign_referrer
+  before_validation :assign_referrer
 
   validates_presence_of :referrer, :patient
   scope :recent, -> { order(updated_at: :desc) }

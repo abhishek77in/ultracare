@@ -6,7 +6,7 @@
     .small-6.columns
       = patient_fields.input :name, label: 'Patient Name'
     .small-6.columns
-      = f.input :referrer_name, label: 'Referred By'
+      = f.input :referrer_name, label: 'Referred By', input_html: { value: referrer_name(f.object) }
   .row
     .small-6.columns
       %label{for: 'report_patient_attributes_age'} Age
