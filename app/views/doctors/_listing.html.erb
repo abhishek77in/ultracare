@@ -1,0 +1,22 @@
+<div class="large-12 medium-8 columns">
+  <h1>Listing doctors</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Edit</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @doctors.each do |doctor| %>
+        <tr>
+          <td><%= doctor.id %></td>
+          <td><%= doctor.name %></td>
+          <td><%= link_to 'Edit', edit_doctor_path(doctor) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

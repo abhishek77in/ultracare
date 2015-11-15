@@ -15,6 +15,7 @@ Ultrasound::Application.routes.draw do
   end
 
   resources :referrers, except: [:new, :show, :destroy]
+  resources :doctors, except: [:new, :show, :destroy]
 
   resources :business_analysis, only: [:index]
   resources :business_reports, only: [:new] do

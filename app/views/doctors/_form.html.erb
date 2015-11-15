@@ -1,0 +1,16 @@
+<%= simple_form_for(@doctor) do |f| %>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <label for="report_patient_attributes_age">Name</label>
+      <div class="row collapse">
+        <%= f.input :name, label: false, input_html: { placeholder: 'Dr. S. K. Sharma (MBBS, MD)' } %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions small-12 columns">
+    <%= f.button :submit, value: 'Add Doctor', class: 'round' %>
+    <%= link_to 'Cancel', doctors_path, class: 'cancel-link' %>
+  </div>
+<% end %>

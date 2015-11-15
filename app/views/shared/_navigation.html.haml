@@ -19,6 +19,7 @@
         %li.has-dropdown
           = link_to ' More', edit_setting_path(id: setting.id)
           %ul.dropdown
+            %li= link_to ' Doctors', doctors_path, class: 'fi-address-book large'
             %li= link_to ' Referrers', referrers_path, class: 'fi-address-book large'
             - unless setting.disable_business_analysis
               %li= link_to ' Business Analysis', business_analysis_index_path(business_analysis: date_range_param_last_month), class: 'fi-graph-pie large'
