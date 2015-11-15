@@ -6,10 +6,7 @@
     .small-6.columns
       = patient_fields.input :name, label: 'Patient Name'
     .small-6.columns
-      = f.association :referrer, label_method: :referrer_name,  label: 'Referred By'
-      .right-align
-        can't find referrer
-        = link_to 'add here', referrers_path
+      = f.input :referrer_name, label: 'Referred By', input_html: { value: referrer_name(f.object) }
   .row
     .small-6.columns
       %label{for: 'report_patient_attributes_age'} Age
