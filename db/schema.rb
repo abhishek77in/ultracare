@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151115084011) do
+ActiveRecord::Schema.define(version: 20151115092811) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(version: 20151115084011) do
     t.integer  "referrers_discount", default: 0
     t.text     "content"
     t.string   "title"
+    t.integer  "doctor_id"
   end
 
   create_table "settings", force: :cascade do |t|
