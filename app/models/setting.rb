@@ -15,12 +15,10 @@ class Setting < ActiveRecord::Base
   ]
 
   DEFAULT_SIGNATURE = %Q[
-    <div style="width: 70%; float: left;">
-      <p>PLEASE CO-RELATE CLINICALLY</p>
-    </div>
-    <div style="width: 30%; float: right;">
-      <p>SIGNATURE<br />
-        Dr. Jai Ram Sinha</p>
+    <div>
+      <p style="text-align: center;">------ End of report ------</p>
+
+      <p style="text-align: right;">Signature,<br />&lt;%= doctor_name&nbsp;%&gt;</p>
     </div>
   ]
 
