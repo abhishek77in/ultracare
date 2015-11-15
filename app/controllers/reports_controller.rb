@@ -63,7 +63,7 @@ class ReportsController < ApplicationController
   private
 
   def report_params
-    params.require(:report).permit(:referrer_id, :amount_collected, :amount_due, :referrers_discount, :content, :title, patient_attributes: [:name, :age, :sex, :patient_id])
+    params.require(:report).permit(:referrer_id, :doctor_id, :amount_collected, :amount_due, :referrers_discount, :content, :title, patient_attributes: [:name, :age, :sex, :patient_id])
   end
 
   def referrer_id_param
