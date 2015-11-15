@@ -15,11 +15,11 @@ def random_amount_collected
 end
 
 10.times do
-  Referrer.create(name: "Dr. #{Faker::Name.name} (MBBS)")
+  Referrer.create(name: "Dr. #{Faker::Name.first_name} #{Faker::Name.last_name} (MBBS)")
 end
 
 5.times do
-  Doctor.create(name: "Dr. #{Faker::Name.name} (MBBS)")
+  Doctor.create(name: "Dr. #{Faker::Name.first_name} #{Faker::Name.last_name} (MBBS)")
 end
 
 setting = Setting.first || Setting.new
@@ -30,10 +30,11 @@ setting.print_settings = { 'header' => Setting::DEFAULT_HEADER,
                            'footer_margin' => Setting::DEFAULT_FOOTER_MARGIN }
 setting.save
 
-(1..50).each_with_index do |number|
-  Template.create(name: "##{number} Template name",
-                  report_title: "##{number} Report title",
-                  content: "Test report content of tempalte ##{number}")
+(1..25).each_with_index do |number|
+  title = Faker::Lorem.sentence
+  Template.create(name: title,
+                  report_title: title,
+                  content: Faker::Lorem.paragraphs(8).join('<br/>'))
 end
 
 today = DateTime.now
@@ -46,8 +47,8 @@ today = DateTime.now
                         referrer: referrer,
                         updated_at: today,
                         created_at: today,
-                        content: 'test report details',
-                        title: 'report title',
+                        content: Faker::Lorem.paragraphs(8).join('<br/>'),
+                        title: Faker::Lorem.sentence,
                         amount_collected: random_amount_collected)
     if report.save
       puts "Report created for patient - #{report.patient.name}, referrer - #{report.referrer.name}, Date - #{today}"
