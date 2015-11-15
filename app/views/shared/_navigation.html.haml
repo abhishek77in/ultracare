@@ -17,7 +17,7 @@
           %li= link_to ' Business Report', new_business_report_path, class: 'fi-page-export-pdf large'
         %li.divider
         %li.has-dropdown
-          = link_to ' More', edit_setting_path(id: setting.id), class: 'fi-wrench large'
+          = link_to ' More', edit_setting_path(id: setting.id)
           %ul.dropdown
             %li= link_to ' Referrers', referrers_path, class: 'fi-address-book large'
             - unless setting.disable_business_analysis
