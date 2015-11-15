@@ -43,8 +43,10 @@ today = DateTime.now
   rand(5..20).times do
     patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
     referrer = Referrer.first(rand(Referrer.count) + 1).last
+    doctor = Doctor.first(rand(Doctor.count) + 1).last
     report = Report.new(patient: patient,
                         referrer: referrer,
+                        doctor: doctor,
                         updated_at: today,
                         created_at: today,
                         content: Faker::Lorem.paragraphs(8).join('<br/>'),

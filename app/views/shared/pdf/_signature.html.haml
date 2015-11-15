@@ -1,1 +1,2 @@
-= raw setting.signature
+- doctor_name = @report.doctor.present? ? @report.doctor.name : ''
+= setting.signature.gsub('%{doctor_name}', doctor_name).html_safe

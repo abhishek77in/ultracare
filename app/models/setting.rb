@@ -18,7 +18,7 @@ class Setting < ActiveRecord::Base
     <div>
       <p style="text-align: center;">------ End of report ------</p>
 
-      <p style="text-align: right;">Signature,<br />&lt;%= doctor_name&nbsp;%&gt;</p>
+      <p style="text-align: right;">Signature<br />%{doctor_name}</p>
     </div>
   ]
 
