@@ -9,8 +9,6 @@ class Report < ActiveRecord::Base
   validates_presence_of :referrer, :patient
   scope :recent, -> { order(updated_at: :desc) }
 
-  after_save :touch
-
   scope :limit_reports_to_maximum, -> (max_reports) do
     return all unless max_reports
     limit(max_reports)
