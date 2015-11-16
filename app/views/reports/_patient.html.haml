@@ -17,3 +17,5 @@
           %span.postfix years
     .small-6.columns
       = patient_fields.input :sex, include_blank: false, collection: @report.possible_genders
+
+= render 'autocomplete_patient_name'
