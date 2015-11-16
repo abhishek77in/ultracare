@@ -4,8 +4,4 @@ class Doctor < ActiveRecord::Base
   has_many :reports
   scope :recent, -> { order('created_at DESC') }
   scope :order_by_name, -> { order('name') }
-
-  def doctor_name
-    "#{name}, # #{id}"
-  end
 end
