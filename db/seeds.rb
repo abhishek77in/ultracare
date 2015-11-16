@@ -37,9 +37,10 @@ setting.save
                   content: Faker::Lorem.paragraphs(8).join('<br/>'))
 end
 
-today = DateTime.now
+TOTAL_NUMBER_OF_DAYS = 10
+time_now = Time.now - TOTAL_NUMBER_OF_DAYS.days
 
-10.times do
+TOTAL_NUMBER_OF_DAYS.times do
   rand(5..20).times do
     patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
     referrer = Referrer.first(rand(Referrer.count) + 1).last
@@ -47,16 +48,18 @@ today = DateTime.now
     report = Report.new(patient: patient,
                         referrer: referrer,
                         doctor: doctor,
-                        updated_at: today,
-                        created_at: today,
+                        updated_at: time_now,
+                        created_at: time_now,
                         content: Faker::Lorem.paragraphs(8).join('<br/>'),
                         title: Faker::Lorem.sentence,
                         amount_collected: random_amount_collected)
     if report.save
-      puts "Report created for patient - #{report.patient.name}, referrer - #{report.referrer.name}, Date - #{today}"
+      puts "Report created for patient - #{report.patient.name}, referrer - #{report.referrer.name}, time - #{time_now}"
     else
       puts "Failed to save report - #{report.errors.messages}"
     end
+    time_now = time_now + 1.hour
   end
-  today = today.prev_day
+  time_now = time_now + 1.day
+  break if time_now > Time.now
 end
