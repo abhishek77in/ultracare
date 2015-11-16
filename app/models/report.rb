@@ -17,7 +17,7 @@ class Report < ActiveRecord::Base
   end
 
   scope :belongs_to_referrer, -> (referrer_id) do
-    return all unless referrer_id
+    return all unless referrer_id.present?
     where(referrer_id: referrer_id)
   end
 
@@ -27,12 +27,12 @@ class Report < ActiveRecord::Base
   end
 
   scope :date_range, -> (date_range) do
-    return all unless date_range
+    return all unless date_range.present?
     where(created_at: date_range)
   end
 
   scope :patient_name, -> (patient_name) do
-    return all unless patient_name
+    return all unless patient_name.present?
     includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
   end
 
