@@ -42,7 +42,10 @@ time_now = Time.now - TOTAL_NUMBER_OF_DAYS.days
 
 TOTAL_NUMBER_OF_DAYS.times do
   rand(5..20).times do
-    patient = Patient.new(name: Faker::Name.name, age: Faker::Number.number(2), sex: 'F' )
+    patient = Patient.new(name: Faker::Name.name,
+                          patient_id: Faker::Number.number(5),
+                          age: Faker::Number.number(2),
+                          sex: ['F', 'M'].sample)
     referrer = Referrer.first(rand(Referrer.count) + 1).last
     doctor = Doctor.first(rand(Doctor.count) + 1).last
     report = Report.new(patient: patient,
