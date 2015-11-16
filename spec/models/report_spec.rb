@@ -16,13 +16,6 @@ RSpec.describe Report, :type => :model do
     it { should accept_nested_attributes_for(:patient) }
   end
 
-  describe 'callbacks' do
-    it 'should update updated_at timestamp when called upon by save' do
-      report = FactoryGirl.create(:report)
-      expect{report.save}.to change {report.updated_at}
-    end
-  end
-
   describe 'scopes' do
 
     it 'should return recent reports as per updated_at timestamp' do

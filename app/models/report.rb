@@ -37,7 +37,8 @@ class Report < ActiveRecord::Base
   end
 
   def assign_referrer
-    self.referrer = Referrer.find_or_create_by(name: self.referrer_name)
+    return if referrer_name.blank?
+    self.referrer = Referrer.find_or_create_by(name: referrer_name)
   end
 
   def possible_genders
