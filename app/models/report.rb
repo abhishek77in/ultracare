@@ -9,7 +9,7 @@ class Report < ActiveRecord::Base
   before_validation :assign_referrer
 
   validates_presence_of :referrer, :patient
-  scope :recent, -> { order(updated_at: :desc) }
+  scope :recent, -> { order(created_at: :desc) }
 
   scope :limit_reports_to_maximum, -> (max_reports) do
     return all unless max_reports
