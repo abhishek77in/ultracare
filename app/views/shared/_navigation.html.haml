@@ -9,7 +9,7 @@
         %li= link_to ' Home', root_path, class: 'fi-home large'
         - unless setting.disable_reports
           %li.divider
-          %li= link_to ' Reports', reports_path, class: 'fi-list-thumbnails large'
+          %li= link_to ' Reports', search_reports_path, class: 'fi-list-thumbnails large'
         %li.divider
         %li= link_to ' Templates', templates_path, class: 'fi-list-thumbnails large'
         - if setting.enable_accounting?
