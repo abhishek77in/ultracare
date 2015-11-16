@@ -36,6 +36,11 @@ class Report < ActiveRecord::Base
     includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
   end
 
+  scope :patient_id, -> (patient_id) do
+    return all unless patient_id.present?
+    includes(:patient).where("patients.patient_id ilike ?", "%#{patient_id}%").references(:patient)
+  end
+
   def assign_referrer
     return if referrer_name.blank?
     self.referrer = Referrer.find_or_create_by(name: referrer_name)

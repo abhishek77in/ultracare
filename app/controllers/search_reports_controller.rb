@@ -12,6 +12,7 @@ class SearchReportsController < ApplicationController
     @reports = @reports.belongs_to_referrer(@search_report.referrer_id)
     @reports = @reports.date_range(@search_report.converted_date_range)
     @reports = @reports.patient_name(@search_report.patient_name)
+    @reports = @reports.patient_id(@search_report.patient_id)
   end
 
   private
