@@ -15,4 +15,3 @@ class BusinessAnalysis
     to_string(date_range)
   end
 end
-
