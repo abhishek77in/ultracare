@@ -16,7 +16,7 @@
 
 %br
 %h1 Recent reports
-= render partial: 'shared/reports_listing'
+= render partial: 'shared/reports_listing', locals: { reports: @reports }
 .left-align
   = link_to 'See all reports', search_reports_path
 %br

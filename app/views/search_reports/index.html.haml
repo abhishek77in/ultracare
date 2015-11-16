@@ -2,7 +2,7 @@
 
 = render 'search_form'
 
-= render partial: 'shared/reports_listing'
+= render partial: 'shared/reports_listing', locals: { reports: @reports }
 
 - unless setting.show_max_reports
   = will_paginate @reports, renderer: FoundationPagination::Rails

@@ -14,7 +14,7 @@
       %th Edit
       %th Print
   %tbody
-    - @reports.each do |report|
+    - reports.each do |report|
       %tr
         %td= report.id
         %td= truncate report.patient.name, length: 18
