@@ -9,9 +9,9 @@ class SearchReportsController < ApplicationController
 
   def index
     @search_report = SearchReport.new(search_reports_params)
-    # @reports = @reports.belongs_to_referrer(@search_report.referrer_id)
-    # @reports = @reports.date_range(@search_report.date_range)
-    # @reports = @reports.patient_name(@search_report.patient_name)
+    @reports = @reports.belongs_to_referrer(@search_report.referrer_id)
+    @reports = @reports.date_range(@search_report.converted_date_range)
+    @reports = @reports.patient_name(@search_report.patient_name)
   end
 
   private
