@@ -26,11 +26,10 @@ RSpec.describe Report, :type => :model do
 
   describe 'scopes' do
 
-    it 'should return recent reports as per updated_at timestamp' do
+    it 'should return recent reports as per created_at timestamp' do
       first = FactoryGirl.create(:report)
       second = FactoryGirl.create(:report)
-      first.touch
-      expect(Report.recent).to eq [first, second]
+      expect(Report.recent.to_a).to eq [second, first]
     end
 
     it 'should return reports from given referrer' do
