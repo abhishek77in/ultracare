@@ -13,7 +13,7 @@ class Report < ActiveRecord::Base
   validates_presence_of :referrer, :patient
   scope :recent, -> { order(created_at: :desc) }
 
-  pg_search_scope :search_report, :against => [:title, :content]
+  pg_search_scope :search, :against => [:title, :content]
 
   scope :limit_reports_to_maximum, -> (max_reports) do
     return all unless max_reports
