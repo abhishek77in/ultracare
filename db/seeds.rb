@@ -64,5 +64,5 @@ TOTAL_NUMBER_OF_DAYS.times do
     time_now = time_now + 1.hour
   end
   time_now = time_now + 1.day
-  break if time_now > Time.now
+  break if time_now > (Time.now - 1.day)
 end
