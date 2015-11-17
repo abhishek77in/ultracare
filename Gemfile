@@ -6,6 +6,8 @@ gem 'rails_12factor', group: :production
 gem 'rails', '~> 4.2.5'
 
 gem 'pg'
+gem 'pg_search'
+
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
