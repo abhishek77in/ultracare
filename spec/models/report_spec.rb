@@ -19,8 +19,7 @@ RSpec.describe Report, :type => :model do
   describe 'search' do
     it 'should search for reports containing text within title' do
       report = FactoryGirl.create(:report, title: 'alfa beta')
-      expect(Report.search_report('beta').count).to eq 1
-      # expect(Report.search_report('beta')).to eq [report]
+      expect(Report.search_report('beta')).to eq [report]
     end
   end
 
