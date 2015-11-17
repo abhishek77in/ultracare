@@ -4,9 +4,10 @@
   overflow-y: scroll;
   ul {
     list-style: none;
+    margin-left: 0;
     li {
       display: inline;
-      padding: 10px;
+      padding: 3px 10px 0 0;
     }
   }
 }
