@@ -16,6 +16,14 @@ RSpec.describe Report, :type => :model do
     it { should accept_nested_attributes_for(:patient) }
   end
 
+  describe 'search' do
+    it 'should search for reports containing text within title' do
+      report = FactoryGirl.create(:report, title: 'alfa beta')
+      expect(Report.search_report('beta').count).to eq 1
+      # expect(Report.search_report('beta')).to eq [report]
+    end
+  end
+
   describe 'scopes' do
 
     it 'should return recent reports as per updated_at timestamp' do

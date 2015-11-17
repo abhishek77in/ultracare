@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  sequence(:referrer_name) { |n| "Jon Doe #{n}" }
+  sequence(:referrer_name) { |n| "#{n} Referrer" }
 
   factory :referrer do
     name { generate(:referrer_name) }
