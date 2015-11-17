@@ -21,6 +21,12 @@ RSpec.describe Report, :type => :model do
       report = FactoryGirl.create(:report, title: 'alfa beta')
       expect(Report.search_report('beta')).to eq [report]
     end
+    
+    it 'should search for reports containing text within title and content' do
+      first = FactoryGirl.create(:report, title: 'alfa beta')
+      second = FactoryGirl.create(:report, title: 'alfa', content: 'beta')
+      expect(Report.search_report('beta')).to eq [first, second]
+    end
   end
 
   describe 'scopes' do
