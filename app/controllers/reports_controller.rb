@@ -7,9 +7,8 @@ class ReportsController < ApplicationController
   end
 
   def new
-    @report = Report.new
-    @report.content = @template.content
-    @report.title = @template.report_title
+    @report = Report.new(title: @template.report_title,
+                         content: @template.content)
     @report.build_patient
   end
 

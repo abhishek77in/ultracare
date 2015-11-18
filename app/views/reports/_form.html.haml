@@ -1,13 +1,10 @@
-%h2.text-center.padded-top= @report.title
-%hr
-
 = simple_form_for(@report) do |f|
   .form-container
+    %h2.text-center.padded-top= @report.title
+    %hr
     = render 'patient', f: f
     = render 'amount_collected', f: f
-    %hr
-    = f.input :content, as: :ckeditor, label: false, :input_html => { :ckeditor => { :height => 500 } }
-    = f.input :title, as: :hidden
+    = render 'body', f: f
     .row
       .small-6.columns
         = f.association :doctor, label_method: :name,  label: 'Reporting doctor'
