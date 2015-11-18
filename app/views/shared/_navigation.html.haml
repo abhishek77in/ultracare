@@ -24,6 +24,8 @@
             - unless setting.disable_business_analysis
               %li= link_to ' Business Analysis', business_analysis_index_path(business_analysis: date_range_param_last_month), class: 'fi-graph-pie large'
             %li= link_to ' Settings', edit_setting_path(id: setting.id), class: 'fi-wrench large'
+            %li= link_to ' Get help', get_help_path, class: ''
+            %li= link_to ' license', license_path, class: ''
         - if current_user.admin?
           %li.divider
           %li= link_to ' Admin', rails_admin.dashboard_path, class: 'fi-torso-business large'

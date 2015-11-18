@@ -23,6 +23,9 @@ Ultrasound::Application.routes.draw do
     get :print, on: :collection
   end
 
+  get :get_help, to: 'home#get_help'
+  get :license, to: 'home#license'
+
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
