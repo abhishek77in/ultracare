@@ -19,7 +19,7 @@ class ReportsController < ApplicationController
       flash[:report_id] = @report.id.to_s
       redirect_to root_path, notice: "Report created for #{@report.patient.name}."
     else
-      flash.now[:alert] = "Sorry! Report could not be created, please fix the errors and try again."
+      flash.now[:alert] = 'Sorry! Report could not be created, please fix the errors and try again.'
       render 'new'
     end
   end
@@ -34,7 +34,7 @@ class ReportsController < ApplicationController
       flash[:report_id] = @report.id.to_s
       redirect_to root_path, notice: "Report updated for #{@report.patient.name}."
     else
-      flash.now[:alert] = "Sorry! Report could not be updated, please fix the errors and try again."
+      flash.now[:alert] = 'Sorry! Report could not be updated, please fix the errors and try again.'
       render 'edit'
     end
   end
@@ -45,15 +45,24 @@ class ReportsController < ApplicationController
            show_as_html: params[:debug].present?,
            page_size: 'A4',
            layout: 'pdf.html.haml',
-           margin: { bottom: setting.footer_margin.to_i, top: setting.header_margin.to_i },
-           header: { spacing: setting.header_margin.to_i-2, html: { template: 'shared/pdf/header.pdf.haml', layout: 'layouts/header.pdf.haml' } },
+           margin: { bottom: setting.footer_margin.to_i,
+                     top: setting.header_margin.to_i },
+           header: { spacing: setting.header_margin.to_i-2,
+                     html: { template: 'shared/pdf/header.pdf.haml', layout: 'layouts/header.pdf.haml' } },
            footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
   end
 
   private
 
   def report_params
-    params.require(:report).permit(:referrer_name, :doctor_id, :amount_collected, :amount_due, :referrers_discount, :content, :title, patient_attributes: [:name, :age, :sex, :patient_id])
+    params.require(:report).permit(:referrer_name,
+                                   :doctor_id,
+                                   :amount_collected,
+                                   :amount_due,
+                                   :referrers_discount,
+                                   :content,
+                                   :title,
+                                   patient_attributes: [:name, :age, :sex, :patient_id])
   end
 
   def load_template
