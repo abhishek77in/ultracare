@@ -6,8 +6,8 @@ $(function(){
 
   $('select.switch-template').change(function() {
     var templateId = $(this).val();
-    var confimation = confirm('You will loose current work in progress. Press Ok to change the template otherwise press Cancel.');
-    if (templateId && confimation) {
+    var confirmation = confirm('You will loose current work in progress. Press Ok to change the template otherwise press Cancel.');
+    if (templateId && confirmation) {
       var url = '/templates/' + templateId + '.json';
       $.ajax({
         url: url,
