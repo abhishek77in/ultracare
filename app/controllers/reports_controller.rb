@@ -1,14 +1,14 @@
 class ReportsController < ApplicationController
   before_action :redirect_to_root, if: -> { setting.disable_reports? }, only: [:index]
-  before_action :load_template, only: [:new]
 
   def show
     @report = Report.find(params[:id])
   end
 
   def new
-    @report = Report.new(title: @template.report_title,
-                         content: @template.content)
+    template = Template.find(params[:template_id])
+    @report = Report.new(title: template.report_title,
+                         content: template.content)
     @report.build_patient
   end
 
@@ -62,9 +62,5 @@ class ReportsController < ApplicationController
                                    :content,
                                    :title,
                                    patient_attributes: [:name, :age, :sex, :patient_id])
-  end
-
-  def load_template
-    @template = Template.find(params[:template_id])
   end
 end
