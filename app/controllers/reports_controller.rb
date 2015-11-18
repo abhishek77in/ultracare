@@ -16,7 +16,6 @@ class ReportsController < ApplicationController
   def create
     @report = Report.new(report_params)
     if @report.save
-      flash[:report_id] = @report.id.to_s
       redirect_to root_path, notice: "Report created for #{@report.patient.name}."
     else
       flash.now[:alert] = 'Sorry! Report could not be created, please fix the errors and try again.'
@@ -31,7 +30,6 @@ class ReportsController < ApplicationController
   def update
     @report = Report.find(params[:id])
     if @report.update(report_params)
-      flash[:report_id] = @report.id.to_s
       redirect_to root_path, notice: "Report updated for #{@report.patient.name}."
     else
       flash.now[:alert] = 'Sorry! Report could not be updated, please fix the errors and try again.'
