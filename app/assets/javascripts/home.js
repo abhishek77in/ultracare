@@ -10,9 +10,11 @@ $(function(){
 
   $('.printLink').click(function (e) {
     e.preventDefault();
-    var id = $(this).data('report-id');
-    var w = window.open("/reports/" + id + "/print");
-    if(isChrome) { w.print(); }
+    var reportId = $(this).data('report-id');
+    if(reportId) {
+      var w = window.open("/reports/" + id + "/print");
+      if(isChrome) { w.print(); }
+    }
   });
 
   $('select.template-selector').select2({

@@ -6,9 +6,8 @@
     = render 'switch_templates'
     = render 'amount_collected', f: f
     = render 'body', f: f
-    .row
-      .small-6.columns
-        = f.association :doctor, label_method: :name,  label: 'Reporting doctor'
     .padded-top
-      = f.button :submit, class: 'round', 'data-disable-with' => 'submitting..'
+      = f.submit 'Save', name: 'save', class: 'button round'
+      = f.submit 'Save as draft', name: 'save_as_draft', class: 'button round'
+      = link_to 'Print', '#', 'data-report-id' => @report.id, class: 'printLink disabled button round'
       = link_to 'Cancel', root_path, class: 'cancel-link'
