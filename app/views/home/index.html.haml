@@ -8,11 +8,11 @@
     .right-align
       = link_to 'add new template', new_template_path
 
-.select-report-section.padded-top
+.row.padded-top
   %ul#templates
     - @templates.each do |template|
       %li{id: "template_#{template.id}"}
-        = link_to template.name, new_report_path(template_id: template.id), class: 'handle button secondary'
+        = link_to template.name, new_report_path(template_id: template.id), class: 'button secondary'
 
 %br
 %h1 Recent reports

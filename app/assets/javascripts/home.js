@@ -30,12 +30,6 @@ $(function(){
 
 
   $('#templates').sortable({
-    dropOnEmpty: false,
-    handle: '.handle',
-    cursor: 'crosshair',
-    items: 'li',
-    opacity: 0.4,
-    scroll: true,
     update: function(){
       $.ajax({
         url: '/templates/sort',
