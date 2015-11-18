@@ -1,8 +1,9 @@
 = simple_form_for(@report) do |f|
   .form-container
-    %h2.text-center.padded-top= @report.title
+    %h2.text-center.padded-top.report-title= @report.title
     %hr
     = render 'patient', f: f
+    = render 'switch_templates'
     = render 'amount_collected', f: f
     = render 'body', f: f
     .row
