@@ -10,7 +10,7 @@ class Report < ActiveRecord::Base
 
   before_validation :assign_referrer
 
-  validates_presence_of :referrer, :patient
+  validates_presence_of :referrer, :patient, :referrer_name
   scope :recent, -> { order(created_at: :desc) }
 
   pg_search_scope :search, :against => [:title, :content]
