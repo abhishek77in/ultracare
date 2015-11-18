@@ -4,14 +4,14 @@ Ultrasound::Application.routes.draw do
   devise_for :users
 
   resources :templates do
-    patch 'sort', on: :collection
+    patch :sort, on: :collection
   end
 
   resources :settings, only: [:edit, :update]
   resources :change_settings, only: [:edit, :update]
 
-  resources 'reports', except: [:index, :destroy] do
-    get 'print', on: :member
+  resources :reports, except: [:index, :destroy] do
+    get :print, on: :member
   end
   resources :search_reports, only: [:new, :index]
 
@@ -20,7 +20,7 @@ Ultrasound::Application.routes.draw do
 
   resources :business_analysis, only: [:index]
   resources :business_reports, only: [:new] do
-    get 'print', on: :collection
+    get :print, on: :collection
   end
 
   root 'home#index'
