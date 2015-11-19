@@ -12,7 +12,7 @@ $(function(){
         var url = '/templates/' + templateId + '.json';
         $.ajax({
           url: url,
-          type: 'get',
+          type: 'GET',
           dataType: 'script',
           complete: function(request){
             var template = jQuery.parseJSON(request.responseText);
@@ -53,9 +53,27 @@ $(function(){
     typingTimer = setTimeout(doneTyping, doneTypingInterval);
   }
 
-  //user is "finished typing," do something
   function doneTyping () {
-    console.log('saving the report.');
-    //do something
+    saveReport();
   }
+
+  function saveReport () {
+    $('form#auto-save-report').submit();
+  }
+
+  $('form#auto-save-report').submit(function() {
+    var valuesToSubmit = $(this).serialize();
+    $.ajax({
+      type: "POST",
+      url: $(this).prop('action'),
+      data: valuesToSubmit,
+      dataType: "JSON",
+      beforeSend: function( xhr ) {
+        console.log('saving report.');
+      }
+    }).success(function(json){
+      console.log("success", json);
+    });
+    return false; // prevents normal behaviour
+  });
 });

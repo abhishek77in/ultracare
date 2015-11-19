@@ -13,28 +13,18 @@ class ReportsController < ApplicationController
     @report.build_patient
   end
 
-  def create
-    @report = Report.new(report_params)
-    if @report.save
-      redirect_to root_path, notice: "Report created for #{@report.patient.name}."
+  def save
+    if params[:id].present?
+      report = Report.find(params[:id])
     else
-      flash.now[:alert] = 'Sorry! Report could not be created, please fix the errors and try again.'
-      render 'new'
+      report = Report.new(report_params)
     end
+    report.save
+    head :ok, content_type: 'text/html'
   end
 
   def edit
     @report = Report.find(params[:id])
-  end
-
-  def update
-    @report = Report.find(params[:id])
-    if @report.update(report_params)
-      redirect_to root_path, notice: "Report updated for #{@report.patient.name}."
-    else
-      flash.now[:alert] = 'Sorry! Report could not be updated, please fix the errors and try again.'
-      render 'edit'
-    end
   end
 
   def print
