@@ -49,7 +49,7 @@ TOTAL_NUMBER_OF_DAYS.times do
     referrer = Referrer.first(rand(Referrer.count) + 1).last
     doctor = Doctor.first(rand(Doctor.count) + 1).last
     report = Report.new(patient: patient,
-                        referrer: referrer,
+                        referrer_name: referrer.name,
                         doctor: doctor,
                         updated_at: time_now,
                         created_at: time_now,
