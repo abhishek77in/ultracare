@@ -22,7 +22,7 @@ class ReportsController < ApplicationController
       report = Report.new(report_params)
       report.save
     end
-    head :ok, content_type: 'text/html'
+    render json: report
   end
 
   def edit

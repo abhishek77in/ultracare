@@ -72,6 +72,8 @@ $(function(){
         console.log('saving report.');
       },
       complete: function(request){
+        var report = jQuery.parseJSON(request.responseText);
+        $('#report_id').val(report.id);
         console.log('saved!');
       }
     });
