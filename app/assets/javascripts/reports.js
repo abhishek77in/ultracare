@@ -27,13 +27,23 @@ $(function(){
   var typingTimer;                //timer identifier
   var doneTypingInterval = 1000;  //time in ms
 
-  //on keyup, start the countdown
+
+  var editor = CKEDITOR.instances["report_content"]
+
+  editor.on( 'key', function( event ) {
+    startCountdown();
+  });
+
   $('#report_patient_attributes_name').keyup(function(){
+    startCountdown();
+  });
+
+  function startCountdown () {
     clearTimeout(typingTimer);
     if ($('#report_patient_attributes_name').val) {
       typingTimer = setTimeout(doneTyping, doneTypingInterval);
     }
-  });
+  }
 
   //user is "finished typing," do something
   function doneTyping () {
