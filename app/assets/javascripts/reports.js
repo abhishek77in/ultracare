@@ -1,5 +1,4 @@
 $(function(){
-
   // Switch templates
   $('select.switch-template')
     .select2({
@@ -27,9 +26,7 @@ $(function(){
   var typingTimer;                //timer identifier
   var doneTypingInterval = 1000;  //time in ms
 
-
   var editor = CKEDITOR.instances["report_content"]
-
   if (editor) {
     editor.on( 'key', function( event ) {
       startCountdown();
@@ -70,11 +67,13 @@ $(function(){
       dataType: "JSON",
       beforeSend: function( xhr ) {
         console.log('saving report.');
+        $('#report-save-status').text('Saving...');
       },
       complete: function(request){
         var report = jQuery.parseJSON(request.responseText);
         $('#report_id').val(report.id);
         console.log('saved!');
+        $('#report-save-status').text('Saved!');
       }
     });
     return false; // prevents normal behaviour
