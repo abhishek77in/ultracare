@@ -70,9 +70,10 @@ $(function(){
       dataType: "JSON",
       beforeSend: function( xhr ) {
         console.log('saving report.');
+      },
+      complete: function(request){
+        console.log('saved!');
       }
-    }).success(function(json){
-      console.log("success", json);
     });
     return false; // prevents normal behaviour
   });

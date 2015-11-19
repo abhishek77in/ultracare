@@ -14,12 +14,14 @@ class ReportsController < ApplicationController
   end
 
   def save
-    if params[:id].present?
-      report = Report.find(params[:id])
+    report_id = params[:report][:id]
+    if report_id.present?
+      report = Report.find(report_id)
+      report.update(report_params)
     else
       report = Report.new(report_params)
+      report.save
     end
-    report.save
     head :ok, content_type: 'text/html'
   end
 
