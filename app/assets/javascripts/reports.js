@@ -8,8 +8,7 @@ $(function(){
     })
     .change(function() {
       var templateId = $(this).val();
-      var confirmation = confirm('Warning: You will loose current work progress. Press Ok to continue with change of template otherwise press Cancel.');
-      if (templateId && confirmation) {
+      if (templateId) {
         var url = '/templates/' + templateId + '.json';
         $.ajax({
           url: url,
