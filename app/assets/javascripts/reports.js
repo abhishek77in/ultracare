@@ -36,7 +36,7 @@ $(function(){
     });
   }
 
-  $('#auto-save-report input, #auto-save-report select')
+  $('#auto-save-report input, #auto-save-report select, .report-title')
     .keyup(function(){
       startCountdown();
     })
@@ -77,5 +77,10 @@ $(function(){
       }
     });
     return false; // prevents normal behaviour
+  });
+
+  // copy report title
+  $('.report-title').keyup(function(){
+    $('#report_title').val($(this).text());
   });
 });
