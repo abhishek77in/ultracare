@@ -1,4 +1,6 @@
 $(function(){
+
+  // Switch templates
   $('select.switch-template')
     .select2({
       allowClear: true,
@@ -21,4 +23,22 @@ $(function(){
         });
       }
     });
+
+  // Auto save reports
+  var typingTimer;                //timer identifier
+  var doneTypingInterval = 1000;  //time in ms
+
+  //on keyup, start the countdown
+  $('#report_patient_attributes_name').keyup(function(){
+    clearTimeout(typingTimer);
+    if ($('#report_patient_attributes_name').val) {
+      typingTimer = setTimeout(doneTyping, doneTypingInterval);
+    }
+  });
+
+  //user is "finished typing," do something
+  function doneTyping () {
+    console.log('saving the report.');
+    //do something
+  }
 });
