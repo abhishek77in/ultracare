@@ -40,9 +40,8 @@ $(function(){
 
   function startCountdown () {
     clearTimeout(typingTimer);
-    if ($('#report_patient_attributes_name').val) {
-      typingTimer = setTimeout(doneTyping, doneTypingInterval);
-    }
+    // if report is valid
+    typingTimer = setTimeout(doneTyping, doneTypingInterval);
   }
 
   //user is "finished typing," do something
