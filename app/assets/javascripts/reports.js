@@ -30,13 +30,22 @@ $(function(){
 
   var editor = CKEDITOR.instances["report_content"]
 
-  editor.on( 'key', function( event ) {
-    startCountdown();
-  });
+  if (editor) {
+    editor.on( 'key', function( event ) {
+      startCountdown();
+    });
+    editor.on( 'change', function( event ) {
+      startCountdown();
+    });
+  }
 
-  $('#report_patient_attributes_name').keyup(function(){
-    startCountdown();
-  });
+  $('#auto-save-report input, #auto-save-report select')
+    .keyup(function(){
+      startCountdown();
+    })
+    .change(function(){
+      startCountdown();
+    });
 
   function startCountdown () {
     clearTimeout(typingTimer);
