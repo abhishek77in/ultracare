@@ -6,8 +6,8 @@
       %th Patient Name
       %th Age
       %th Sex
-      %th Referred By Referrer
       - if setting.enable_accounting?
+        %th Referred By Referrer
         %th Amount Collected
         %th Amount Due
       %th Date
@@ -22,8 +22,8 @@
         %td= truncate report.patient.name, length: 18
         %td= report.patient.age
         %td= report.patient.sex
-        %td= report.referrer.name
         - if setting.enable_accounting?
+          %td= report.referrer.name
           %td= "Rs. #{report.amount_collected}"
           %td= "Rs. #{report.amount_due}"
         %td= report.created_at.strftime("%d / %m")
