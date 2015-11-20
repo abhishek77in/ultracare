@@ -29,9 +29,8 @@ class ReportsController < ApplicationController
 
   def print
     @report = Report.find(params[:id])
-    file_name = "#{@report.patient.name} - #{@report.created_at.strftime('%d %b %y')}.pdf"
+    file_name = "#{@report.patient.name} - #{@report.created_at.strftime('%d %b %y')}"
     pdf_options = { pdf: file_name,
-                    save_to_file: "/Users/abhishek/Downloads/reports/#{file_name}",
                     show_as_html: params[:debug].present?,
                     page_size: 'A4',
                     layout: 'pdf.html.haml',
@@ -42,7 +41,7 @@ class ReportsController < ApplicationController
                                       layout: 'layouts/header.pdf.haml' } },
                     footer: { html: { template: 'shared/pdf/footer.pdf.haml',
                                       layout: 'layouts/footer.pdf.haml' } } }
-    render pdf_options
+    render({save_to_file: "/Users/abhishek/Downloads/reports/#{file_name}.pdf"}.merge(pdf_options))
   end
 
   private
