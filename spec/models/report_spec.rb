@@ -40,18 +40,18 @@ RSpec.describe Report, :type => :model do
     it 'should return reports from given referrer' do
       referrer1 = FactoryGirl.create(:referrer)
       referrer2 = FactoryGirl.create(:referrer)
-      report1 = FactoryGirl.create(:report, referrer: referrer1)
+      report1 = FactoryGirl.create(:report, referrer_name: referrer1.name)
       FactoryGirl.create(:report, referrer: referrer2)
-      expect(Report.belongs_to_referrer(referrer1.id)).to eq [report1]
+      expect(Report.belongs_to_referrer(referrer1.id).to_a).to eq [report1]
       expect(Report.belongs_to_referrer(nil)).to eq Report.all
     end
 
     it 'should return reports from given set of referrers' do
       referrer1 = FactoryGirl.create(:referrer)
       referrer2 = FactoryGirl.create(:referrer)
-      report1 = FactoryGirl.create(:report, referrer: referrer1)
-      report2 = FactoryGirl.create(:report, referrer: referrer2)
-      expect(Report.belongs_to_referrers([referrer1.id, referrer2.id])).to eq [report1, report2]
+      report1 = FactoryGirl.create(:report, referrer_name: referrer1.name)
+      report2 = FactoryGirl.create(:report, referrer_name: referrer2.name)
+      expect(Report.belongs_to_referrers([referrer1.id, referrer2.id]).to_a).to eq [report1, report2]
       expect(Report.belongs_to_referrers([])).to eq Report.all
     end
 
