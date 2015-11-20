@@ -72,15 +72,19 @@ $(function(){
       data: valuesToSubmit,
       dataType: "JSON",
       beforeSend: function( xhr ) {
-        console.log('saving report.');
         $('#report-save-status').text('Saving...');
       },
       complete: function(request){
         var report = jQuery.parseJSON(request.responseText);
-        $('#report_id').val(report.id);
-        console.log('saved!');
+        if(report.id) {
+          $('#report_id').val(report.id);
+          $('#report-status').val(report.status);
+          $('#report-save-status').text('Saved successfully!');
+          $('#report-number').text('Report no.' + report.id);
+        } else {
+          $('#report-save-status').text('Not saved yet.');
+        }
         isSubmitting = false;
-        $('#report-save-status').text('Saved!');
       }
     });
     return false; // prevents normal behaviour

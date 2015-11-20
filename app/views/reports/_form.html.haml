@@ -3,12 +3,10 @@
     %h2.text-center.padded-top.report-title{contenteditable: true}= @report.title
     %hr
     = render 'patient', f: f
-    = render 'switch_templates'
-    .right-align#report-save-status
+    = render 'switch_templates_report_status'
     = render 'amount_collected', f: f
     = render 'body', f: f
     .padded-top
       = f.submit 'Save', name: 'save', class: 'button round'
-      = f.submit 'Save as draft', name: 'save_as_draft', class: 'button round'
       = link_to 'Print', '#', 'data-report-id' => @report.id, class: 'printLink disabled button round'
       = link_to 'Cancel', root_path, class: 'cancel-link'

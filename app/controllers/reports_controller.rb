@@ -16,9 +16,9 @@ class ReportsController < ApplicationController
 
   def save
     if report_id.present?
-      update(report_id)
+      report = update(report_id)
     else
-      create
+      report = create
     end
     render json: report
   end
@@ -43,11 +43,15 @@ class ReportsController < ApplicationController
   private
 
   def create
-    Report.create(report_params)
+    create_params = report_params.merge(status: 'draft')
+    Report.create(create_params)
   end
 
   def update(report_id)
-    Report.find(report_id).update(report_params)
+    update_params = report_params.merge(status: 'draft')
+    report = Report.find(report_id)
+    report.update(update_params)
+    report.reload
   end
 
   def report_params
@@ -58,7 +62,6 @@ class ReportsController < ApplicationController
                                    :referrers_discount,
                                    :content,
                                    :title,
-                                   :status,
                                    patient_attributes: [:name, :age, :sex, :patient_id])
   end
 
