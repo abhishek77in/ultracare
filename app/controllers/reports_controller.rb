@@ -30,16 +30,19 @@ class ReportsController < ApplicationController
   def print
     @report = Report.find(params[:id])
     file_name = "#{@report.patient.name} - #{@report.created_at.strftime('%d %b %y')}.pdf"
-    render pdf: file_name,
-           save_to_file: "/Users/abhishek/Downloads/reports/#{file_name}",
-           show_as_html: params[:debug].present?,
-           page_size: 'A4',
-           layout: 'pdf.html.haml',
-           margin: { bottom: setting.footer_margin.to_i,
-                     top: setting.header_margin.to_i },
-           header: { spacing: setting.header_margin.to_i-2,
-                     html: { template: 'shared/pdf/header.pdf.haml', layout: 'layouts/header.pdf.haml' } },
-           footer: { html: { template: 'shared/pdf/footer.pdf.haml', layout: 'layouts/footer.pdf.haml' } }
+    pdf_options = { pdf: file_name,
+                    save_to_file: "/Users/abhishek/Downloads/reports/#{file_name}",
+                    show_as_html: params[:debug].present?,
+                    page_size: 'A4',
+                    layout: 'pdf.html.haml',
+                    margin: { bottom: setting.footer_margin.to_i,
+                              top: setting.header_margin.to_i },
+                    header: { spacing: setting.header_margin.to_i-2,
+                              html: { template: 'shared/pdf/header.pdf.haml',
+                                      layout: 'layouts/header.pdf.haml' } },
+                    footer: { html: { template: 'shared/pdf/footer.pdf.haml',
+                                      layout: 'layouts/footer.pdf.haml' } } }
+    render pdf_options
   end
 
   private
