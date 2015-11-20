@@ -58,7 +58,13 @@ $(function(){
     $('form#auto-save-report').submit();
   }
 
+  var isSubmitting = false;
+
   $('form#auto-save-report').submit(function() {
+    if(isSubmitting) {
+      return;
+    }
+    isSubmitting = true;
     var valuesToSubmit = $(this).serialize();
     $.ajax({
       type: "POST",
@@ -73,6 +79,7 @@ $(function(){
         var report = jQuery.parseJSON(request.responseText);
         $('#report_id').val(report.id);
         console.log('saved!');
+        isSubmitting = false;
         $('#report-save-status').text('Saved!');
       }
     });
