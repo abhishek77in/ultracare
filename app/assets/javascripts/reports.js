@@ -78,9 +78,9 @@ $(function(){
         var report = jQuery.parseJSON(request.responseText);
         if(report.id) {
           $('#report_id').val(report.id);
-          $('#report-status').val(report.status);
+          $('#report-status').text("Report status: " + report.status);
           $('#report-save-status').text('Saved successfully!');
-          $('#report-number').text('Report no.' + report.id);
+          $('#report-number').text('Report no. ' + report.id);
         } else {
           $('#report-save-status').text('Not saved yet.');
         }
