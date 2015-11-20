@@ -9,18 +9,16 @@ class ReportsController < ApplicationController
   def new
     template = Template.find(params[:template_id])
     @report = Report.new(title: template.report_title,
+                         status: 'new',
                          content: template.content)
     @report.build_patient
   end
 
   def save
-    report_id = params[:report][:id]
     if report_id.present?
-      report = Report.find(report_id)
-      report.update(report_params)
+      update(report_id)
     else
-      report = Report.new(report_params)
-      report.save
+      create
     end
     render json: report
   end
@@ -44,6 +42,14 @@ class ReportsController < ApplicationController
 
   private
 
+  def create
+    Report.create(report_params)
+  end
+
+  def update(report_id)
+    Report.find(report_id).update(report_params)
+  end
+
   def report_params
     params.require(:report).permit(:referrer_name,
                                    :doctor_id,
@@ -52,7 +58,12 @@ class ReportsController < ApplicationController
                                    :referrers_discount,
                                    :content,
                                    :title,
+                                   :status,
                                    patient_attributes: [:name, :age, :sex, :patient_id])
+  end
+
+  def report_id
+    params[:report][:id]
   end
 
   def load_templates
