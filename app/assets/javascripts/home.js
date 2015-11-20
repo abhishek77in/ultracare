@@ -12,7 +12,7 @@ $(function(){
     e.preventDefault();
     var reportId = $(this).data('report-id');
     if(reportId) {
-      var w = window.open("/reports/" + id + "/print");
+      var w = window.open("/reports/" + reportId + "/print");
       if(isChrome) { w.print(); }
     }
   });
