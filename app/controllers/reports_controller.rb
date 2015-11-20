@@ -29,7 +29,9 @@ class ReportsController < ApplicationController
 
   def print
     @report = Report.find(params[:id])
-    render pdf: "#{@report.patient.name} - #{@report.created_at.strftime("%d %b %y")}",
+    file_name = "#{@report.patient.name} - #{@report.created_at.strftime('%d %b %y')}.pdf"
+    render pdf: file_name,
+           save_to_file: "/Users/abhishek/Downloads/reports/#{file_name}",
            show_as_html: params[:debug].present?,
            page_size: 'A4',
            layout: 'pdf.html.haml',
