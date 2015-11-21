@@ -39,4 +39,10 @@ $(function(){
   $('.report-title').keyup(function(){
     $('#report_title').val($(this).text());
   });
+
+  // sign off report
+  $('#sign-off').click(function(){
+    $('#report_status').val('signed_off');
+    saveReport();
+  });
 });
