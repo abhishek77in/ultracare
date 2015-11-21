@@ -39,7 +39,7 @@ $(function(){
         data: $('#templates').sortable('serialize'),
         dataType: 'script',
         complete: function(request){
-          $('#templates').effect('highlight');
+          //$('#templates').effect('highlight');
         }
       });
     }
