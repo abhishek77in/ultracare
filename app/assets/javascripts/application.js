@@ -20,4 +20,4 @@
 //= require ckeditor/init
 //= require highcharts
 //= require global
-//= require_directory .
+//= require_tree .
