@@ -51,6 +51,17 @@ class Report < ActiveRecord::Base
     includes(:patient).where("patients.patient_id ilike ?", "%#{patient_id}%").references(:patient)
   end
 
+  def self.save_from(report_params)
+    report_id = report_params[:id]
+    if report_id.present?
+      report = self.find(report_id)
+      report.update(report_params)
+    else
+      report = Report.create(report_params)
+    end
+    report.reload
+  end
+
   def save_file?
     Gem.win_platform?
   end

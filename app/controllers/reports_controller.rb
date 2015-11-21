@@ -15,11 +15,7 @@ class ReportsController < ApplicationController
   end
 
   def save
-    if report_id.present?
-      report = update(report_id)
-    else
-      report = create
-    end
+    report = Report.save_from(report_params)
     render json: report
   end
 
@@ -38,19 +34,10 @@ class ReportsController < ApplicationController
 
   private
 
-  def create
-    Report.create(report_params)
-  end
-
-  def update(report_id)
-    report = Report.find(report_id)
-    report.update(report_params)
-    report.reload
-  end
-
   def report_params
-    params.require(:report).permit(:referrer_name,
+    params.require(:report).permit(:id,
                                    :doctor_id,
+                                   :referrer_name,
                                    :amount_collected,
                                    :amount_due,
                                    :referrers_discount,
@@ -72,10 +59,6 @@ class ReportsController < ApplicationController
                         layout: 'layouts/header.pdf.haml' } },
       footer: { html: { template: 'shared/pdf/footer.pdf.haml',
                         layout: 'layouts/footer.pdf.haml' } } }
-  end
-
-  def report_id
-    params[:report][:id]
   end
 
   def load_templates
