@@ -20,4 +20,5 @@
 //= require ckeditor/init
 //= require highcharts
 //= require global
+//= require jquery.validate
 //= require_tree .

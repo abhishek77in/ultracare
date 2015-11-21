@@ -14,6 +14,7 @@ gem 'coffee-rails'
 
 gem 'jquery-ui-rails'
 gem 'jquery-rails'
+gem 'jquery-validation-rails'
 gem 'jbuilder'
 
 group :doc do
