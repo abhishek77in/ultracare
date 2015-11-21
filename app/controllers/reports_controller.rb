@@ -29,19 +29,14 @@ class ReportsController < ApplicationController
 
   def print
     @report = Report.find(params[:id])
-    file_name = "#{@report.patient.name} - #{@report.created_at.strftime('%d %b %y')}"
-    file_path = path_to_save_file(file_name)
-    if file_path.present?
-      render({save_to_file: file_path}.merge(pdf_options(file_name)))
+    if @report.save_file?
+      render({save_to_file: @report.file_path}.merge(pdf_options(@report.file_name)))
     else
-      render pdf_options(file_name)
+      render pdf_options(@report.file_name)
     end
   end
 
   private
-  def path_to_save_file(file_name)
-    Pathname.new(Dir.home).join('Documents').join("#{file_name}.pdf")
-  end
 
   def create
     create_params = report_params.merge(status: 'draft')

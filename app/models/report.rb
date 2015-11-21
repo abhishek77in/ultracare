@@ -45,6 +45,18 @@ class Report < ActiveRecord::Base
     includes(:patient).where("patients.patient_id ilike ?", "%#{patient_id}%").references(:patient)
   end
 
+  def save_file?
+    Gem.win_platform?
+  end
+
+  def file_name
+    "#{self.patient.name} - #{self.created_at.strftime('%d %b %y')}"
+  end
+
+  def file_path
+    Pathname.new(Dir.home).join('Documents').join("#{file_name}.pdf")
+  end
+
   def assign_referrer
     return if referrer_name.blank?
     self.referrer = Referrer.find_or_create_by(name: referrer_name)
