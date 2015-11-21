@@ -3,4 +3,10 @@ $(function(){
     allowClear: true,
     placeholder: 'Choose a reporting doctor'
   });
+
+  $('#print').click(function(){
+    var reportId = $('#report_id').val();
+    var w = window.open("/reports/" + reportId + "/print");
+    if(isChrome) { w.print(); }
+  });
 });

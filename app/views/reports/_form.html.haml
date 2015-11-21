@@ -9,5 +9,5 @@
     .padded-top
       = f.submit 'Save', class: 'button round'
       = link_to 'Sign off', '#', id: 'sign-off', class: [('hide' if @report.is_signed_off?), 'button', 'round']
-      = link_to 'Print', '#', id: 'print', class: [('hide' unless @report.is_signed_off?), 'button', 'round']
+      = link_to 'Print', root_path, id: 'print', class: [('hide' unless @report.is_signed_off?), 'button', 'round']
       = link_to 'Cancel', root_path, class: 'cancel-link'
