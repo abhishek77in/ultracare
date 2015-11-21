@@ -40,7 +40,7 @@ class ReportsController < ApplicationController
 
   private
   def path_to_save_file(file_name)
-    Rails.root.join('public', "#{file_name}.pdf")
+    Pathname.new(Dir.home).join('Documents').join("#{file_name}.pdf")
   end
 
   def create
