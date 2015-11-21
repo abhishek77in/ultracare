@@ -9,7 +9,7 @@ class ReportsController < ApplicationController
   def new
     template = Template.find(params[:template_id])
     @report = Report.new(title: template.report_title,
-                         status: 'new',
+                         status: Report::Status::NEW,
                          content: template.content)
     @report.build_patient
   end
@@ -39,14 +39,12 @@ class ReportsController < ApplicationController
   private
 
   def create
-    create_params = report_params.merge(status: 'draft')
-    Report.create(create_params)
+    Report.create(report_params)
   end
 
   def update(report_id)
-    update_params = report_params.merge(status: 'draft')
     report = Report.find(report_id)
-    report.update(update_params)
+    report.update(report_params)
     report.reload
   end
 
@@ -58,6 +56,7 @@ class ReportsController < ApplicationController
                                    :referrers_discount,
                                    :content,
                                    :title,
+                                   :status,
                                    patient_attributes: [:name, :age, :sex, :patient_id])
   end
 

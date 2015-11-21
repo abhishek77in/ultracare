@@ -8,5 +8,6 @@
     = render 'body', f: f
     .padded-top
       = f.submit 'Save', name: 'save', class: 'button round'
-      = link_to 'Print', '#', 'data-report-id' => @report.id, class: 'printLink disabled button round'
+      = f.submit 'Sign off', name: 'sign_off', class: 'button round'
+      = link_to 'Print', '#', class: 'hide button round'
       = link_to 'Cancel', root_path, class: 'cancel-link'

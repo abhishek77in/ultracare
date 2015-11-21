@@ -8,6 +8,12 @@ class Report < ActiveRecord::Base
 
   attr_accessor :referrer_name
 
+  module Status
+    NEW = :new
+    DRAFT = :draft
+    SIGNED_OFF = :signed_off
+  end
+
   before_validation :assign_referrer
 
   validates_presence_of :referrer, :patient, :referrer_name
