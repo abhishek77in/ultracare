@@ -54,7 +54,8 @@ class Report < ActiveRecord::Base
   end
 
   def file_path
-    Pathname.new(Dir.home).join('Documents').join("#{file_name}.pdf")
+    FileUtils::mkdir_p Pathname.new(Dir.home).join('Documents').join('Ultracare')
+    Pathname.new(Dir.home).join('Documents').join('Ultracare').join("#{file_name}.pdf")
   end
 
   def assign_referrer
