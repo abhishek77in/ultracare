@@ -41,8 +41,9 @@ $(function(){
   });
 
   // sign off report
-  $('#sign-off').click(function(){
-    $('#report_status').val('signed_off');
+  $('#sign-off').click(function(event){
+    event.preventDefault();
+    $('#report_status').val('<%= Report::Status::SIGNED_OFF %>');
     saveReport();
   });
 });
