@@ -8,7 +8,7 @@
       %th Sex
       %th Status
       - if setting.enable_accounting?
-        %th Referred By Referrer
+        %th Referred By
         %th Amount Collected
         %th Amount Due
       %th Date
@@ -25,7 +25,9 @@
         %td= report.patient.sex
         %td.report-status= report.status
         - if setting.enable_accounting?
-          %td= report.referrer.name
+          %td
+            - if report.referrer
+              = report.referrer.name
           %td= "Rs. #{report.amount_collected}"
           %td= "Rs. #{report.amount_due}"
         %td= report.created_at.strftime("%d / %m")
