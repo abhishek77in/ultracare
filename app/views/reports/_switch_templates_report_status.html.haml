@@ -10,6 +10,8 @@
     .right-align#report-number
       - if @report.persisted?
         = "Report no. #{@report.id}"
-    .right-align#report-status= "Report status: #{@report.status}"
+    .right-align
+      Report status:
+      #report-status= @report.status
 .row
   .text-center#report-save-status.padded-top

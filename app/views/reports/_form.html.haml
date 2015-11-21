@@ -7,7 +7,7 @@
     = render 'amount_collected', f: f
     = render 'body', f: f
     .padded-top
-      = f.submit 'Save', name: 'save', class: 'button round'
-      = link_to 'Sign off', '#',id: 'sign-off', class: 'button round'
-      = link_to 'Print', '#', class: 'hide button round'
+      = f.submit 'Save', class: 'button round'
+      = link_to 'Sign off', '#', id: 'sign-off', class: [('hide' if @report.is_signed_off?), 'button', 'round']
+      = link_to 'Print', '#', id: 'print', class: [('hide' unless @report.is_signed_off?), 'button', 'round']
       = link_to 'Cancel', root_path, class: 'cancel-link'

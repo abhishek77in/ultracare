@@ -47,5 +47,6 @@ $(function(){
     event.preventDefault();
     $('#report_status').val('<%= Report::Status::SIGNED_OFF %>');
     saveReport();
+    $('#report_status').val('<%= Report::Status::DRAFT %>');
   });
 });

@@ -18,10 +18,8 @@ $(function(){
       complete: function(request){
         var report = jQuery.parseJSON(request.responseText);
         if(report.id) {
-          $('#report_id').val(report.id);
-          $('#report-status').text("Report status: " + report.status);
-          $('#report-save-status').text('Saved successfully!');
-          $('#report-number').text('Report no. ' + report.id);
+          setValues(report);
+          allowPrintOrSignOff(report);
         } else {
           $('#report-save-status').text('Not saved yet.');
         }
@@ -30,4 +28,21 @@ $(function(){
     });
     return false; // prevents normal behaviour
   });
+
+  function setValues (report) {
+    $('#report_id').val(report.id);
+    $('#report-status').text(report.status);
+    $('#report-save-status').text('Saved successfully!');
+    $('#report-number').text('Report no. ' + report.id);
+  }
+
+  function allowPrintOrSignOff (report) {
+    if (report.status === '<%= Report::Status::SIGNED_OFF %>') {
+      $('#print').removeClass('hide');
+      $('#sign-off').addClass('hide');
+    } else if (report.status === '<%= Report::Status::DRAFT %>') {
+      $('#print').addClass('hide');
+      $('#sign-off').removeClass('hide');
+    }
+  }
 });

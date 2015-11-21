@@ -62,6 +62,10 @@ class Report < ActiveRecord::Base
     report.reload
   end
 
+  def is_signed_off?
+    status == Report::Status::SIGNED_OFF.to_s
+  end
+
   def save_file?
     Gem.win_platform?
   end
