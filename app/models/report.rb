@@ -62,6 +62,7 @@ class Report < ActiveRecord::Base
     else
       report = Report.create(report_params)
     end
+    report
   end
 
   def is_signed_off?
