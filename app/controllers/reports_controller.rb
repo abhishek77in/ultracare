@@ -30,21 +30,18 @@ class ReportsController < ApplicationController
   def print
     @report = Report.find(params[:id])
     file_name = "#{@report.patient.name} - #{@report.created_at.strftime('%d %b %y')}"
-    pdf_options = { pdf: file_name,
-                    show_as_html: params[:debug].present?,
-                    page_size: 'A4',
-                    layout: 'pdf.html.haml',
-                    margin: { bottom: setting.footer_margin.to_i,
-                              top: setting.header_margin.to_i },
-                    header: { spacing: setting.header_margin.to_i-2,
-                              html: { template: 'shared/pdf/header.pdf.haml',
-                                      layout: 'layouts/header.pdf.haml' } },
-                    footer: { html: { template: 'shared/pdf/footer.pdf.haml',
-                                      layout: 'layouts/footer.pdf.haml' } } }
-    render({save_to_file: "/Users/abhishek/Downloads/reports/#{file_name}.pdf"}.merge(pdf_options))
+    file_path = path_to_save_file(file_name)
+    if file_path.present?
+      render({save_to_file: file_path}.merge(pdf_options(file_name)))
+    else
+      render pdf_options(file_name)
+    end
   end
 
   private
+  def path_to_save_file(file_name)
+    Rails.root.join('public', "#{file_name}.pdf")
+  end
 
   def create
     create_params = report_params.merge(status: 'draft')
@@ -67,6 +64,20 @@ class ReportsController < ApplicationController
                                    :content,
                                    :title,
                                    patient_attributes: [:name, :age, :sex, :patient_id])
+  end
+
+  def pdf_options(file_name)
+    { pdf: file_name,
+      show_as_html: params[:debug].present?,
+      page_size: 'A4',
+      layout: 'pdf.html.haml',
+      margin: { bottom: setting.footer_margin.to_i,
+                top: setting.header_margin.to_i },
+      header: { spacing: setting.header_margin.to_i-2,
+                html: { template: 'shared/pdf/header.pdf.haml',
+                        layout: 'layouts/header.pdf.haml' } },
+      footer: { html: { template: 'shared/pdf/footer.pdf.haml',
+                        layout: 'layouts/footer.pdf.haml' } } }
   end
 
   def report_id
