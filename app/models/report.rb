@@ -18,6 +18,7 @@ class Report < ActiveRecord::Base
 
   validates_presence_of :referrer, :patient, :referrer_name
   scope :recent, -> { order(created_at: :desc) }
+  scope :drafts, -> { where(status: Report::Status::DRAFT) }
 
   pg_search_scope :search, :against => [:title, :content]
 

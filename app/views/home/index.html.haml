@@ -15,6 +15,9 @@
         = link_to template.name, new_report_path(template_id: template.id), class: 'button secondary'
 
 %br
+%h1 Draft reports
+= render partial: 'shared/reports_listing', locals: { reports: @draft_reports }
+
 %h1 Recent reports
 = render partial: 'shared/reports_listing', locals: { reports: @reports }
 .left-align
