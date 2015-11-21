@@ -14,10 +14,12 @@ $(function(){
   }
 
   $('#auto-save-report input, #auto-save-report select, .report-title')
-    .keyup(function(){
+    .keyup(function(event){
+      event.preventDefault();
       startCountdown();
     })
-    .change(function(){
+    .change(function(event){
+      event.preventDefault();
       startCountdown();
     });
 

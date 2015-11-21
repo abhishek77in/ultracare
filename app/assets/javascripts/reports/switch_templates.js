@@ -5,7 +5,8 @@ $(function(){
       allowClear: true,
       placeholder: 'Select a template to switch'
     })
-    .change(function() {
+    .change(function(event) {
+      event.preventDefault();
       var templateId = $(this).val();
       if (templateId) {
         var url = '/templates/' + templateId + '.json';
