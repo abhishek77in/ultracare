@@ -1,7 +1,6 @@
-- referrer_names = Referrer.uniq.pluck(:name)
 :javascript
   $(function(){
-    var referrerNames = #{referrer_names};
+    var referrerNames = #{Referrer.referrer_names};
     $( "#report_referrer_name" ).autocomplete({
       source: referrerNames
     });

@@ -4,4 +4,8 @@ class Referrer < ActiveRecord::Base
   has_many :reports
   scope :recent, -> { order('created_at DESC') }
   scope :order_by_name, -> { order('name') }
+
+  def self.referrer_names
+    self.uniq.pluck(:name)
+  end
 end
