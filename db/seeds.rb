@@ -30,7 +30,7 @@ setting.print_settings = { 'header' => Setting::DEFAULT_HEADER,
                            'footer_margin' => Setting::DEFAULT_FOOTER_MARGIN }
 setting.save
 
-(1..25).each_with_index do |number|
+(1..10).each_with_index do |number|
   title = Faker::Lorem.sentence
   Template.create(name: title,
                   report_title: title,
@@ -51,6 +51,7 @@ TOTAL_NUMBER_OF_DAYS.times do
     report = Report.new(patient: patient,
                         referrer_name: referrer.name,
                         doctor: doctor,
+                        status: Report::Status::SIGNED_OFF,
                         updated_at: time_now,
                         created_at: time_now,
                         content: Faker::Lorem.paragraphs(8).join('<br/>'),
