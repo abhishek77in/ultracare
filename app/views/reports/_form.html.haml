@@ -3,9 +3,10 @@
     %h2.text-center.padded-top.report-title{contenteditable: true}= @report.title
     %hr
     = render 'patient', f: f
-    = render 'switch_templates_report_status'
     = render 'amount_collected', f: f
+    = render 'switch_templates'
     = render 'body', f: f
+    = render 'report_status'
     .padded-top
       = f.submit 'Save', class: 'button round'
       = link_to 'Sign off', '#', id: 'sign-off', class: [('hide' if @report.is_signed_off?), 'button', 'round']

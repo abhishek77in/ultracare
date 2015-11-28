@@ -1,0 +1,12 @@
+%hr
+.row
+  .large-6.columns
+    %div#report-number
+      - if @report.persisted?
+        = "Report no. #{@report.id}"
+    %div
+      Report status:
+      %span#report-status.report-status= @report.status
+    %div
+      Save status:
+      %span#report-save-status= @report.status

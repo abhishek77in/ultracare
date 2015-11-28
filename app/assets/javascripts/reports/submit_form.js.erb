@@ -24,7 +24,7 @@ $(function(){
           setValues(report);
           allowPrintOrSignOff(report);
         } else {
-          $('#report-save-status').text('Not saved yet.');
+          $('#report-save-status').text('Not saved.');
         }
         isSubmitting = false;
       }
@@ -35,7 +35,7 @@ $(function(){
   function setValues (report) {
     $('#report_id').val(report.id);
     $('#report-status').text(report.status);
-    $('#report-save-status').text('Saved successfully!');
+    $('#report-save-status').text('Saved.');
     $('#report-number').text('Report no. ' + report.id);
   }
 
