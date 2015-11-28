@@ -17,7 +17,7 @@ $(function(){
       data: valuesToSubmit,
       dataType: "JSON",
       beforeSend: function( xhr ) {
-        $('#report-save-status').text('Saving...');
+        $('#report-save-status').text('Saving');
       },
       complete: function(request){
         var report = jQuery.parseJSON(request.responseText);
@@ -25,7 +25,7 @@ $(function(){
           setValues(report);
           allowPrintOrSignOff(report);
         } else {
-          $('#report-save-status').text('Not saved.');
+          $('#report-save-status').text('Not saved');
         }
         isSubmitting = false;
       }
@@ -35,7 +35,7 @@ $(function(){
   function setValues (report) {
     $('#report_id').val(report.id);
     $('#report-status').text(report.status);
-    $('#report-save-status').text('Saved.');
+    $('#report-save-status').text('Saved');
     $('#report-number').text('Report no. ' + report.id);
   }
 
