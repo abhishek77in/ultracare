@@ -1,21 +1,20 @@
 = f.fields_for :patient do |patient_fields|
   .row
     .small-6.columns
-      = patient_fields.input :patient_id, label: 'Patient Id'
-  .row
-    .small-6.columns
       = patient_fields.input :name, label: 'Patient Name'
     .small-6.columns
       = f.input :referrer_name, label: 'Referred By', input_html: { value: referrer_name(f.object) }
   .row
-    .small-6.columns
+    .small-4.columns
+      = patient_fields.input :patient_id, label: 'Patient Id'
+    .small-4.columns
       %label{for: 'report_patient_attributes_age'} Age
       .row.collapse
         .small-6.columns
           = patient_fields.input :age, label: false
         .small-6.columns
           %span.postfix years
-    .small-6.columns
+    .small-4.columns
       = patient_fields.input :sex,
         as: :radio_buttons,
         collection: @report.possible_genders
