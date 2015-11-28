@@ -6,8 +6,8 @@ class BusinessAnalysisController < ApplicationController
     @reports = Report.date_range(@business_analyis.date_range)
 
     @pie_chart_data = Hash.new
-    @reports.includes(:referrer).order('referrers.name').group_by(&:referrer).each do |referrer, reports|
-      @pie_chart_data.merge!({"Dr. #{referrer.name}" => reports.length})
+    @reports.joins(:referrer).order('referrers.name').group_by(&:referrer).each do |referrer, reports|
+      @pie_chart_data.merge!({referrer.name => reports.length})
     end
 
     @line_chart_data = @reports.group_by_day(:created_at).count
