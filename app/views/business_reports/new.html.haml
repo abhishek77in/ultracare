@@ -3,16 +3,25 @@
 = simple_form_for @business_report, url: print_business_reports_path, method: :get do |f|
   .row
     .large-6.columns
-      = f.input :referrer_ids, collection: Referrer.all, selected: selected_referrer_id,
-        label_method: :referrer_name, label: 'Referred By Doctors (optional)',
-        input_html: {multiple: true, 'data-placeholder' => 'Select Doctors' }
+      = f.input :referrer_ids,
+          collection: Referrer.all,
+          label_method: :name,
+          label: 'Referred By Doctors (optional)',
+          input_html: { multiple: true,
+            'data-placeholder' => 'Select Referrers' }
       .hint
         "All referrers" will be set by default if you don't choose any.
   .row
     %br
   .row
     .large-4.columns
-      = f.input :date_range, label: 'Date Range', input_html: { id: 'business-report-date-range', value: selected_date_range, placeholder: 'Set date range', readonly: true }
+      = f.input :date_range,
+        label: 'Date Range',
+        input_html: { id: 'business-report-date-range',
+          placeholder: 'Set date range' }
   .row
     .large-4.columns
-      = f.submit 'Print Business Report', name: 'find_reports', class: 'button round', 'data-disable-with' => 'Printing business report..'
+      = f.submit 'Print Business Report',
+        name: 'find_reports',
+        class: 'button round',
+        'data-disable-with' => 'Printing business report..'
