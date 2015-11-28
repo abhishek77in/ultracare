@@ -4,7 +4,8 @@ $(function(){
 
   // save report
   var isSubmitting = false;
-  $('form#auto-save-report').submit(function() {
+  $('form#auto-save-report').submit(function(event) {
+    event.preventDefault();
     if(isSubmitting) {
       return;
     }
@@ -29,7 +30,6 @@ $(function(){
         isSubmitting = false;
       }
     });
-    return false; // prevents normal behaviour
   });
 
   function setValues (report) {
