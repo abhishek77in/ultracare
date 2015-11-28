@@ -45,7 +45,7 @@ TOTAL_NUMBER_OF_DAYS.times do
     patient = Patient.new(name: Faker::Name.name,
                           patient_id: Faker::Number.number(5),
                           age: Faker::Number.number(2),
-                          sex: ['F', 'M'].sample)
+                          sex: [Patient::Sex::MALE, Patient::Sex::FEMALE].sample)
     referrer = Referrer.first(rand(Referrer.count) + 1).last
     doctor = Doctor.first(rand(Doctor.count) + 1).last
     report = Report.new(patient: patient,

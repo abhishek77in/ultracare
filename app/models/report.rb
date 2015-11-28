@@ -88,6 +88,8 @@ class Report < ActiveRecord::Base
   end
 
   def possible_genders
-    [['Female', 'F'],['Male', 'M']]
+    [['Male', Patient::Sex::MALE],
+     ['Female', Patient::Sex::FEMALE],
+     ['Other', Patient::Sex::OTHER]]
   end
 end

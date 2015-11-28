@@ -46,3 +46,16 @@ input[type="checkbox"] {
 .hide {
   display: none;
 }
+
+label input[type="radio"] {
+  margin-right: 5px;
+}
+
+.radio {
+  display: inline;
+  padding: 4px;
+  label {
+    display: inline;
+    margin-right: 20px;
+  }
+}
