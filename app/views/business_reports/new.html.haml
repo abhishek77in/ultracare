@@ -6,11 +6,9 @@
       = f.input :referrer_ids,
           collection: Referrer.all,
           label_method: :name,
-          label: 'Referred By Doctors (optional)',
+          label: 'Referred By',
           input_html: { multiple: true,
-            'data-placeholder' => 'Select Referrers' }
-      .hint
-        "All referrers" will be set by default if you don't choose any.
+            'data-placeholder' => 'All Referrers' }
   .row
     %br
   .row
