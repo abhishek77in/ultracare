@@ -32,6 +32,7 @@ gem 'haml'
 gem 'select2-rails'
 gem 'rails_admin'
 gem 'ckeditor'
+gem 'draper'
 
 gem 'groupdate'
 gem 'highcharts-rails'
