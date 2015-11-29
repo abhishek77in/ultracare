@@ -24,5 +24,14 @@
 
 <br>
 
-<%= link_to 'Add New Template', new_template_path, class: 'button' %>
+<%= link_to 'Add new template', new_template_path, class: 'button' %>
 <%= link_to 'Export all templates', templates_path(format: 'csv'), class: 'button' %>
+
+<hr/>
+
+<h2>Import Templates</h2>
+
+<%= form_tag import_templates_path, multipart: true do %>
+  <%= file_field_tag :file, required: true %>
+  <%= submit_tag 'Import', class: 'button' %>
+<% end %>

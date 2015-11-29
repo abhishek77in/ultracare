@@ -77,6 +77,11 @@ class TemplatesController < ApplicationController
     send_data template.to_csv, filename: "#{template.name}.csv"
   end
 
+  def import
+    Template.import(params[:file])
+    redirect_to templates_path, notice: 'Templates imported.'
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_template

@@ -19,4 +19,10 @@ class Template < ActiveRecord::Base
       csv << self.attributes.values_at(*COLUMNS_FOR_IMPORT_EXPORT.map(&:to_s))
     end
   end
+
+  def self.import(file)
+    CSV.foreach(file.path, :headers => true) do |row|
+      Template.create(row.to_hash)
+    end
+  end
 end
