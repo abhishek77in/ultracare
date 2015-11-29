@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Ultrasound::Application.load_tasks
+Ultracare::Application.load_tasks
