@@ -5,6 +5,10 @@ class TemplatesController < ApplicationController
   # GET /templates.json
   def index
     @templates = Template.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @templates.to_csv }
+    end
   end
 
   # GET /templates/1
