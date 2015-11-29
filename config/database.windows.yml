@@ -14,7 +14,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: ultrasound_development
+  database: ultracare_development
   pool: 5
   username: postgres
   password: postgres
@@ -22,7 +22,7 @@ development:
 production:
   adapter: postgresql
   encoding: unicode
-  database: ultrasound_production
+  database: ultracare_production
   pool: 5
   username: postgres
   password: postgres
