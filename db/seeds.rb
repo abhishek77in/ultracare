@@ -30,7 +30,7 @@ setting.print_settings = { 'header' => Setting::DEFAULT_HEADER,
                            'footer_margin' => Setting::DEFAULT_FOOTER_MARGIN }
 setting.save
 
-(1..10).each_with_index do |number|
+(1..5).each_with_index do |number|
   title = Faker::Lorem.sentence
   Template.create(name: title,
                   report_title: title,
