@@ -6,24 +6,23 @@
 - @reports.group_by(&:referrer).each do |referrer, reports|
   .keep-intact
     %p
-      = "Dr. #{referrer.name}"
+      = referrer.name
       = "( #{params[:business_report][:date_range]} )"
     %p
       %b Summary :
-      %br
-      = "Total Cases - #{reports.count}, Total Amount - #{number_to_currency(reports.map(&:amount_collected).inject(:+), unit: 'Rs.')}"
       %table
         %thead
           %tr
-            %th Ultrasound Type
             %th Total cases
-            %th Total amount
+            %th Total amount collected
+            %th Total dues
+            %th Total discount
         %tbody
-          - reports.group_by(&:reportable_type).each do |reportable_type, reports|
-            %tr
-              %td= reportable_type.underscore.titleize
-              %td= reports.count
-              %td= number_to_currency(reports.map(&:amount_collected).inject(:+), unit: 'Rs.')
+          %tr
+            %td= reports.count
+            %td= number_to_currency(reports.map(&:amount_collected).inject(:+), unit: 'Rs.')
+            %td= number_to_currency(reports.map(&:amount_due).inject(:+), unit: 'Rs.')
+            %td= number_to_currency(reports.map(&:referrers_discount).inject(:+), unit: 'Rs.')
     %table
       %thead
         %tr
@@ -31,7 +30,6 @@
           %th Patient Name
           %th Age
           %th Sex
-          %th Ultrasound Type
           %th Date
       %tbody
         - reports.each_with_index do |report, index|
@@ -40,6 +38,5 @@
             %td= report.patient.name
             %td= report.patient.age
             %td= report.patient.sex
-            %td= report.report_type.reportable.class.name.underscore.titleize
-            %td= report.created_at.strftime('%d / %m / %Y')
+            %td= report.created_at
     %hr
