@@ -1,4 +1,4 @@
-class ReportDecorator < Draper::Decorator
+class ReportDecorator < ApplicationDecorator
   delegate_all
   decorates_association :patient
 

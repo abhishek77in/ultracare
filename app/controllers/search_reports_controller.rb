@@ -4,6 +4,7 @@ class SearchReportsController < ApplicationController
 
   def new
     @search_report = SearchReport.new
+    @reports = @reports.decorate
     render 'index'
   end
 
