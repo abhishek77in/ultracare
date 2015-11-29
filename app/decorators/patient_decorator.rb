@@ -10,6 +10,6 @@ class PatientDecorator < Draper::Decorator
   #     end
   #   end
   def sex
-    object.sex.humanize
+    object.sex.try(:humanize)
   end
 end
