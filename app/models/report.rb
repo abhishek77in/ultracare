@@ -45,12 +45,12 @@ class Report < ActiveRecord::Base
 
   scope :patient_name, -> (patient_name) do
     return all unless patient_name.present?
-    includes(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
+    joins(:patient).where("patients.name ilike ?", "%#{patient_name}%").references(:patient)
   end
 
   scope :patient_id, -> (patient_id) do
     return all unless patient_id.present?
-    includes(:patient).where("patients.patient_id ilike ?", "%#{patient_id}%").references(:patient)
+    joins(:patient).where("patients.patient_id ilike ?", "%#{patient_id}%").references(:patient)
   end
 
   def self.save_from(report_params)

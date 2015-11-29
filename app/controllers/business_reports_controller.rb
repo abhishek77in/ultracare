@@ -11,7 +11,7 @@ class BusinessReportsController < ApplicationController
     if @business_report.valid?
       @reports = Report.order('referrers.name, reports.created_at')
       @reports = @reports.belongs_to_referrers(@business_report.referrer_ids)
-      @reports = @reports.date_range(@business_report.date_range).includes(:referrer, :patient, :report_type)
+      @reports = @reports.date_range(@business_report.date_range).joins(:referrer, :patient, :report_type)
 
       render pdf: @business_report.file_name,
              layout: 'business_report_pdf.html.haml',
