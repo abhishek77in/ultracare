@@ -6,12 +6,19 @@ class Report < ActiveRecord::Base
   belongs_to :doctor
   accepts_nested_attributes_for :patient
 
-  attr_accessor :referrer_name
+  attr_accessor :referrer_name, :save_status
 
   module Status
     NEW = :new
     DRAFT = :draft
     SIGNED_OFF = :signed_off
+  end
+
+  module SaveStatus
+    UNSAVED = :unsaved
+    SAVING = :saving
+    PENDING = :pending
+    SAVED = :saved
   end
 
   before_validation :assign_referrer
@@ -85,6 +92,14 @@ class Report < ActiveRecord::Base
   def assign_referrer
     return if referrer_name.blank?
     self.referrer = Referrer.find_or_create_by(name: referrer_name)
+  end
+
+  def save_status
+    if self.persisted?
+      Report::SaveStatus::SAVED
+    else
+      Report::SaveStatus::UNSAVED
+    end
   end
 
   def possible_genders

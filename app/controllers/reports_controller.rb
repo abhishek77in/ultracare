@@ -3,7 +3,7 @@ class ReportsController < ApplicationController
   before_action :load_templates, except: [:show, :print]
 
   def show
-    @report = Report.find(params[:id])
+    @report = Report.find(params[:id]).decorate
   end
 
   def new
@@ -24,7 +24,7 @@ class ReportsController < ApplicationController
   end
 
   def print
-    @report = Report.find(params[:id])
+    @report = Report.find(params[:id]).decorate
     if @report.save_file?
       render({save_to_file: @report.file_path}.merge(pdf_options(@report.file_name)))
     else
