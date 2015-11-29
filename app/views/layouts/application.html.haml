@@ -1,0 +1,17 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title Ultracare
+    = favicon_link_tag
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application", "vendor/modernizr"
+    = yield :head
+    = csrf_meta_tags
+  %body
+    = render 'shared/navigation'
+    = render 'shared/notice' if flash[:notice]
+    = render 'shared/alert' if flash[:alert]
+    .large-12.medium-12.columns
+      .row= yield
