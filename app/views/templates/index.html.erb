@@ -24,7 +24,5 @@
 
 <br>
 
-<%= link_to 'New Template', new_template_path %>
-<br/>
-<br/>
-<%= link_to 'Export all templates', templates_path(format: "csv") %>
+<%= link_to 'Add New Template', new_template_path, class: 'button' %>
+<%= link_to 'Export all templates', templates_path(format: 'csv'), class: 'button' %>
