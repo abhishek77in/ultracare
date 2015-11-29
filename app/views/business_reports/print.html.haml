@@ -16,7 +16,7 @@
             %th Total cases
             %th Total amount collected
             %th Total dues
-            %th Total discount
+            %th Total referrer discount
         %tbody
           %tr
             %td= reports.count
@@ -31,6 +31,9 @@
           %th Age
           %th Sex
           %th Date
+          %th Amount Collected
+          %th Due
+          %th Referrer Discount
       %tbody
         - reports.each_with_index do |report, index|
           %tr
@@ -39,4 +42,7 @@
             %td= report.patient.age
             %td= report.patient.sex
             %td= report.created_at
+            %td= report.amount_collected
+            %td= report.amount_due
+            %td= report.referrers_discount
     %hr
