@@ -3,7 +3,7 @@ require "rvm/capistrano"
 
 server "104.131.233.147", :web, :app, :db, primary: true
 
-set :application, "ultrasound"
+set :application, "ultracare"
 set :user, "ultracare"
 set :port, 18284
 set :deploy_to, "/home/#{user}/apps/#{application}"
@@ -11,7 +11,7 @@ set :deploy_via, :remote_cache
 set :use_sudo, false
 
 set :scm, "git"
-set :repository, "git@bitbucket.org:abhishek77in/ultrasound.git"
+set :repository, "git@bitbucket.org:abhishek77in/ultracare.git"
 set :branch, "master"
 
 

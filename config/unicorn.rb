@@ -1,10 +1,10 @@
-root = "/home/ultracare/apps/ultrasound"
+root = "/home/ultracare/apps/ultracare"
 working_directory root
 pid "#{root}/tmp/pids/unicorn.pid"
 stderr_path "#{root}/log/unicorn.log"
 stdout_path "#{root}/log/unicorn.log"
 
-listen "/tmp/unicorn.ultrasound.sock"
+listen "/tmp/unicorn.ultracare.sock"
 worker_processes 1
 timeout 120
 
