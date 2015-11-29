@@ -12,4 +12,11 @@ class Template < ActiveRecord::Base
       end
     end
   end
+
+  def to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << COLUMNS_FOR_IMPORT_EXPORT
+      csv << self.attributes.values_at(*COLUMNS_FOR_IMPORT_EXPORT.map(&:to_s))
+    end
+  end
 end

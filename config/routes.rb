@@ -5,6 +5,7 @@ Ultrasound::Application.routes.draw do
 
   resources :templates do
     patch :sort, on: :collection
+    get :export, on: :member
   end
 
   resources :settings, only: [:edit, :update]
