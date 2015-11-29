@@ -1,0 +1,12 @@
+- if setting.enable_accounting?
+  %hr
+  .row
+    .small-4.columns
+      Amount collected:
+      = number_to_currency(@report.amount_collected, unit: 'Rs.')
+    .small-4.columns
+      Amount due:
+      = number_to_currency(@report.amount_due, unit: 'Rs.')
+    .small-4.columns
+      Referrer discount:
+      = number_to_currency(@report.referrers_discount, unit: 'Rs.')
