@@ -30,6 +30,7 @@ $(function(){
         if(report.id) {
           setValues(report);
           allowPrintOrSignOff(report);
+          showSaveAndCloseBtn();
         } else {
           $('#report-save-status').text('Not saved');
         }
@@ -53,5 +54,9 @@ $(function(){
       $('#print').addClass('hide');
       $('#sign-off').removeClass('hide');
     }
+  }
+
+  function showSaveAndCloseBtn() {
+    $('#save-and-close').removeClass('hide');
   }
 });

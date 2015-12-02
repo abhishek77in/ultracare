@@ -50,4 +50,9 @@ $(function(){
     saveReport();
     $('#report_status').val('<%= Report::Status::DRAFT %>');
   });
+
+  // save and close report
+  $('#save-and-close').click(function(event){
+    saveReport();
+  });
 });
