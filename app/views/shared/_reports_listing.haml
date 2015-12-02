@@ -36,4 +36,4 @@
         - if report.is_signed_off?
           %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
         - else
-          %td.fi-print.small= link_to " Print", '#', class: 'disabled'
+          %td.fi-print.small.disabled= link_to ' Print', 'javascript:void(0)'
