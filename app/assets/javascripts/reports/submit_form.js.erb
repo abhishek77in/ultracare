@@ -1,5 +1,12 @@
 $(function(){
 
+  function loadCkeditorData () {
+    $('textarea.ckeditor').each(function () {
+      var textarea = $(this);
+      textarea.val(CKEDITOR.instances[textarea.attr('id')].getData());
+    });
+  }
+
 //  $('form#auto-save-report').validate();
 
   // save report
@@ -9,6 +16,7 @@ $(function(){
     if(isSubmitting) {
       return;
     }
+    loadCkeditorData();
     isSubmitting = true;
     var valuesToSubmit = $(this).serialize();
     $.ajax({
