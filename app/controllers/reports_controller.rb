@@ -25,10 +25,14 @@ class ReportsController < ApplicationController
 
   def print
     @report = Report.find(params[:id]).decorate
-    if @report.save_file?
-      render({save_to_file: @report.file_path}.merge(pdf_options(@report.file_name)))
+    if @report.is_signed_off?
+      if @report.save_file?
+        render({save_to_file: @report.file_path}.merge(pdf_options(@report.file_name)))
+      else
+        render pdf_options(@report.file_name)
+      end
     else
-      render pdf_options(@report.file_name)
+      redirect_to root_path, alert: 'Please sign off report before printing.'
     end
   end
 
