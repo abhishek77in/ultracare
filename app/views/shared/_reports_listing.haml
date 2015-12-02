@@ -33,4 +33,7 @@
         %td= report.created_at
         %td.fi-page.small= link_to " Show", report_path(report)
         %td.fi-page-edit.small= link_to " Edit", edit_report_path(report)
-        %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
+        - if report.is_signed_off?
+          %td.fi-print.small= link_to " Print", '#', target: '_blank', 'data-report-id' => report.id, class: 'printLink'
+        - else
+          %td.fi-print.small= link_to " Print", '#', class: 'disabled'
