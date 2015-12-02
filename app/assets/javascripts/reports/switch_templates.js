@@ -18,6 +18,7 @@ $(function(){
             var template = jQuery.parseJSON(request.responseText);
             CKEDITOR.instances["report_content"].setData(template.content);
             $('h2.report-title').text(template.report_title);
+            $('#report_title').val($('.report-title').text());
           }
         });
       }
