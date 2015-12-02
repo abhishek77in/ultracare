@@ -15,4 +15,5 @@
         class: [('hide' if @report.new_record?), 'button', 'round']
       = link_to 'Sign off', '#', id: 'sign-off', class: [('hide' if @report.is_signed_off?), 'button', 'round']
       = link_to 'Print', root_path, id: 'print', class: [('hide' unless @report.is_signed_off?), 'button', 'round']
-      = link_to 'Cancel', root_path, class: 'cancel-link'
+      - if @report.new_record?
+        = link_to 'Cancel', root_path, class: 'cancel-link'
