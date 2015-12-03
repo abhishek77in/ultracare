@@ -64,22 +64,31 @@ class Report < ActiveRecord::Base
   def self.save_from(report_params)
     report_id = report_params[:id]
     if report_id.present?
-      report = self.find(report_id)
-      if (report.update(report_params))
-        report.save_status = Report::SaveStatus::SAVED
-      else
-        report.save_status = Report::SaveStatus::SAVE_FAILED
-      end
-      report.reload
+      report = Report.update_from(report_id, report_params)
     else
-      report = Report.create(report_params)
-      if report.persisted?
-        report.save_status = Report::SaveStatus::SAVED
-      else
-        report.save_status = Report::SaveStatus::SAVE_FAILED
-      end
+      report = Report.create_from(report_params)
     end
     report
+  end
+
+  def self.create_from(report_params)
+    report = Report.create(report_params)
+    if report.persisted?
+      report.save_status = Report::SaveStatus::SAVED
+    else
+      report.save_status = Report::SaveStatus::SAVE_FAILED
+    end
+    report
+  end
+
+  def self.update_from(report_id, report_params)
+    report = self.find(report_id)
+    if report.update(report_params)
+      report.save_status = Report::SaveStatus::SAVED
+    else
+      report.save_status = Report::SaveStatus::SAVE_FAILED
+    end
+    report.reload
   end
 
   def is_signed_off?
