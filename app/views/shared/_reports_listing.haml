@@ -2,7 +2,8 @@
   %thead
     %tr
       %th Report No.
-      %th Patient Id
+      - if setting.capture_patient_id?
+        %th Patient Id
       %th Patient Name
       %th Age
       %th Sex
@@ -19,7 +20,8 @@
     - reports.each do |report|
       %tr
         %td= report.id
-        %td= report.patient.patient_id
+        - if setting.capture_patient_id?
+          %td= report.patient.patient_id
         %td= truncate report.patient.name, length: 18
         %td= report.patient.age
         %td= report.patient.sex
