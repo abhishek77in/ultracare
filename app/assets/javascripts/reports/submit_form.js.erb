@@ -29,12 +29,12 @@ $(function(){
       },
       complete: function(request){
         var report = jQuery.parseJSON(request.responseText);
-        if(report.id) {
+        if(report.save_status === '<%= Report::SaveStatus::SAVED %>') {
           setValues(report);
           allowPrintOrSignOff(report);
           showHideBtns();
         } else {
-          $('#report-save-status').text('Not saved');
+          $('#report-save-status').text('<%= Report::SaveStatus::SAVE_FAILED %>');
         }
         isSubmitting = false;
       }
@@ -45,7 +45,7 @@ $(function(){
     $('#report_id').val(report.id);
     $('#report_patient_attributes_id').val(report.patient_id);
     $('#report-status').text(report.status);
-    $('#report-save-status').text('<%= Report::SaveStatus::SAVED %>');
+    $('#report-save-status').text(report.save_status);
     $('#report-number').text('Report no. ' + report.id);
   }
 

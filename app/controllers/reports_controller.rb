@@ -16,7 +16,7 @@ class ReportsController < ApplicationController
 
   def save
     report = Report.save_from(report_params)
-    render json: report
+    render json: report.decorate
   end
 
   def edit
