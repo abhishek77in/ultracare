@@ -91,5 +91,30 @@ RSpec.describe Report, :type => :model do
       updated_report = report.reload
       expect(old_patient.id).to eq updated_report.patient.id
     end
+
+    it 'should set save status to :saved after report is created' do
+      report = Report.save_from(report_params)
+      expect(report.save_status).to eq Report::SaveStatus::SAVED
+    end
+
+    it 'should set save status to :save_failed if report creation fails' do
+      invalid_report_params = report_params.merge(patient_attributes: { name: '' })
+      report = Report.save_from(invalid_report_params)
+      expect(report.save_status).to eq Report::SaveStatus::SAVE_FAILED
+    end
+
+    it 'should set save status to :saved after report is updated' do
+      report = FactoryGirl.create(:report)
+      report_update_params = report_params.merge(id: report.id)
+      report = Report.save_from(report_update_params)
+      expect(report.save_status).to eq Report::SaveStatus::SAVED
+    end
+
+    it 'should set save status to :save_failed if report update fails' do
+      report = FactoryGirl.create(:report)
+      invalid_report_update_params = report_params.merge(id: report.id, patient_attributes: { name: '' })
+      report = Report.save_from(invalid_report_update_params)
+      expect(report.save_status).to eq Report::SaveStatus::SAVE_FAILED
+    end
   end
 end

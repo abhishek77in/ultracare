@@ -19,6 +19,7 @@ class Report < ActiveRecord::Base
     SAVING = :saving
     PENDING = :pending
     SAVED = :saved
+    SAVE_FAILED = :save_failed
   end
 
   before_validation :assign_referrer
@@ -64,9 +65,19 @@ class Report < ActiveRecord::Base
     report_id = report_params[:id]
     if report_id.present?
       report = self.find(report_id)
-      report.update(report_params)
+      if (report.update(report_params))
+        report.save_status = Report::SaveStatus::SAVED
+      else
+        report.save_status = Report::SaveStatus::SAVE_FAILED
+      end
+      report.reload
     else
       report = Report.create(report_params)
+      if report.persisted?
+        report.save_status = Report::SaveStatus::SAVED
+      else
+        report.save_status = Report::SaveStatus::SAVE_FAILED
+      end
     end
     report
   end
@@ -91,14 +102,6 @@ class Report < ActiveRecord::Base
   def assign_referrer
     return if referrer_name.blank?
     self.referrer = Referrer.find_or_create_by(name: referrer_name)
-  end
-
-  def save_status
-    if self.persisted?
-      Report::SaveStatus::SAVED
-    else
-      Report::SaveStatus::UNSAVED
-    end
   end
 
   def possible_genders
