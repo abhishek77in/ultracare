@@ -3,16 +3,18 @@
     %span.grey Patient Name:
     = @report.patient.name
   .small-3.columns
+    - if setting.capture_patient_id?
+      %span.grey Patient Id:
+      = @report.patient.patient_id
+  .small-3.columns
     %span.grey Age / Sex:
     = "#{@report.patient.age} / #{@report.patient.sex}"
-  .small-3.columns
-    %span.grey Patient Id:
-    = @report.patient.patient_id
 .row
   .small-6.columns
     %span.grey Referred By:
     - if @report.referrer
       = @report.referrer.name
-  .small-6.columns
+  .small-3.columns
+  .small-3.columns
     %span.grey Date:
     = @report.created_at
