@@ -65,7 +65,6 @@ class Report < ActiveRecord::Base
     if report_id.present?
       report = self.find(report_id)
       report.update(report_params)
-      report.reload
     else
       report = Report.create(report_params)
     end

@@ -65,4 +65,14 @@ RSpec.describe Report, :type => :model do
       expect(Report.patient_name(nil)).to eq Report.all
     end
   end
+
+  describe 'save from' do
+    let(:report_params) { FactoryGirl.attributes_for(:report)
+                            .merge(patient_attributes: FactoryGirl.attributes_for(:patient)) }
+
+    it 'should create a new report' do
+      puts report_params
+      expect{ Report.save_from(report_params) }.to change{ Report.count }.by(1)
+    end
+  end
 end
