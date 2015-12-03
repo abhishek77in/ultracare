@@ -2,6 +2,13 @@
   $(function(){
     var referrerNames = #{Referrer.referrer_names};
     $( "#report_referrer_name" ).autocomplete({
-      source: referrerNames
+      source: referrerNames,
+      change: function(event,ui) {
+        var requireReferrer = #{setting.enable_accounting};
+        if (requireReferrer && (ui.item==null)) {
+            $("#report_referrer_name").val('');
+            $("#report_referrer_name").focus();
+          }
+        }
     });
   });
