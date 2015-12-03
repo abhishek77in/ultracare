@@ -1,22 +1,18 @@
-.patient-section
-  %div{style: 'width: 70%; float: left;'}
-    %p.line-height-4
-      %span.grey Patient Name:
-      = @report.patient.name
-  %div{style: 'width: 30%; float: right;'}
-    %p.line-height-4
-      %span.grey Age / Sex:
-      = "#{@report.patient.age} / #{@report.patient.sex}"
-  %div{style: 'width: 70%; float: left;'}
-    %p.line-height-4
-      %span.grey Referred By:
-      - if @report.referrer
-        = @report.referrer.name
-  %div{style: 'width: 30%; float: right;'}
-    %p.line-height-4
-      %span.grey Date:
-      = @report.created_at
-  %div{style: 'width: 70%; float: left;'}
-    %p.line-height-4
-      %span.grey Patient Id:
-      = @report.patient.patient_id
+.row
+  .small-6.columns
+    %span.grey Patient Name:
+    = @report.patient.name
+  .small-3.columns
+    %span.grey Age / Sex:
+    = "#{@report.patient.age} / #{@report.patient.sex}"
+  .small-3.columns
+    %span.grey Patient Id:
+    = @report.patient.patient_id
+.row
+  .small-6.columns
+    %span.grey Referred By:
+    - if @report.referrer
+      = @report.referrer.name
+  .small-6.columns
+    %span.grey Date:
+    = @report.created_at
