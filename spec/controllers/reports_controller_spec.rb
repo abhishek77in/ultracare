@@ -27,7 +27,7 @@ RSpec.describe ReportsController, type: :controller do
 
   describe 'Get print' do
     it 'renders pdf report to be printed' do
-      report = FactoryGirl.create(:report)
+      report = FactoryGirl.create(:report, status: Report::Status::SIGNED_OFF)
       get :print, {id: report.id}
       expect(response).to render_template(:print)
     end
