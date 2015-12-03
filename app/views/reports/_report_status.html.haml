@@ -9,4 +9,8 @@
       %span#report-status.report-status= @report.status
     %div
       Save status:
-      %span#report-save-status= @report.save_status
+      %span#report-save-status
+        - if @report.persisted?
+          = Report::SaveStatus::SAVED
+        - else
+          = Report::SaveStatus::UNSAVED
