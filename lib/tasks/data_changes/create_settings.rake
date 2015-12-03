@@ -11,6 +11,8 @@ namespace :data_changes do
                                  'footer' => Setting::DEFAULT_FOOTER,
                                  'header_margin' => Setting::DEFAULT_HEADER_MARGIN,
                                  'footer_margin' => Setting::DEFAULT_FOOTER_MARGIN }
+      setting.capture_patient_id = false
+      setting.enable_accounting = true
       setting.save
 
       puts 'Settings created.'

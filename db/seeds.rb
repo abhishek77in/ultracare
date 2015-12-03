@@ -6,6 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+Rake::Task['data_changes:create_settings'].invoke
+
 User.create(email: 'test@example.com', password: 'abcd1234')
 User.create(email: 'user@example.com', password: 'abcd1234')
 User.create(email: 'admin@example.com', password: 'abcd1234', role: 'admin')
@@ -21,14 +23,6 @@ end
 5.times do
   Doctor.create(name: "Dr. #{Faker::Name.first_name} #{Faker::Name.last_name} (MBBS)")
 end
-
-setting = Setting.first || Setting.new
-setting.print_settings = { 'header' => Setting::DEFAULT_HEADER,
-                           'signature' => Setting::DEFAULT_SIGNATURE,
-                           'footer' => Setting::DEFAULT_FOOTER,
-                           'header_margin' => Setting::DEFAULT_HEADER_MARGIN,
-                           'footer_margin' => Setting::DEFAULT_FOOTER_MARGIN }
-setting.save
 
 (1..5).each_with_index do |number|
   title = Faker::Lorem.sentence
