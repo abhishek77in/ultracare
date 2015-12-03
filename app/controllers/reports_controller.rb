@@ -48,7 +48,7 @@ class ReportsController < ApplicationController
                                    :content,
                                    :title,
                                    :status,
-                                   patient_attributes: [:name, :age, :sex, :patient_id])
+                                   patient_attributes: [:id, :name, :age, :sex, :patient_id])
   end
 
   def pdf_options(file_name)

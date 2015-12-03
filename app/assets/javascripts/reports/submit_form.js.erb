@@ -43,6 +43,7 @@ $(function(){
 
   function setValues (report) {
     $('#report_id').val(report.id);
+    $('#report_patient_attributes_id').val(report.patient_id);
     $('#report-status').text(report.status);
     $('#report-save-status').text('<%= Report::SaveStatus::SAVED %>');
     $('#report-number').text('Report no. ' + report.id);
