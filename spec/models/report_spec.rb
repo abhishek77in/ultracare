@@ -71,8 +71,25 @@ RSpec.describe Report, :type => :model do
                             .merge(patient_attributes: FactoryGirl.attributes_for(:patient)) }
 
     it 'should create a new report' do
-      puts report_params
       expect{ Report.save_from(report_params) }.to change{ Report.count }.by(1)
+    end
+
+    it 'should update an existing report' do
+      report = FactoryGirl.create(:report, title: 'title one')
+      report_update_params = report_params.merge(id: report.id, title: 'title two')
+      expect{ Report.save_from(report_update_params)}.to_not change{ Report.count }
+      updated_report = report.reload
+      expect(updated_report.title).to eq report_update_params[:title]
+    end
+
+    it 'should update an existing report without creating new patient record' do
+      report = FactoryGirl.create(:report)
+      old_patient = report.patient
+      report_update_params = report_params.merge(id: report.id,
+                                                 patient_attributes: { id: old_patient.id })
+      Report.save_from(report_update_params)
+      updated_report = report.reload
+      expect(old_patient.id).to eq updated_report.patient.id
     end
   end
 end
