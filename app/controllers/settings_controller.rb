@@ -15,7 +15,7 @@ class SettingsController < ApplicationController
 
   private
   def set_setting
-    @setting = Setting.setting
+    @setting = Setting.settings
   end
 
   def setting_params

@@ -27,7 +27,7 @@ class Setting < ActiveRecord::Base
     Kindly inform any typing mistake immediately for the correction</p>
   ]
 
-  def setting
+  def self.settings
     last
   end
 

@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
 
   def setting
-    Setting.setting
+    Setting.settings
   end
   helper_method :setting
 
