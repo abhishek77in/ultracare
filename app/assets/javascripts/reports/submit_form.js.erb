@@ -67,7 +67,7 @@ $(function(){
   }
 
   function saveAndCloseReport() {
-    if ($('#save-and-close.active')) {
+    if ($('#save-and-close.active').length > 0) {
       window.location = '/';
     }
   }
