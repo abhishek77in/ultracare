@@ -26,7 +26,6 @@ $(function(){
   function startCountdown () {
     clearTimeout(typingTimer);
     $('#report-save-status').text('<%= Report::SaveStatus::PENDING %>');
-    // if report is valid
     typingTimer = setTimeout(doneTyping, doneTypingInterval);
   }
 
@@ -53,6 +52,8 @@ $(function(){
 
   // save and close report
   $('#save-and-close').click(function(event){
+    event.preventDefault();
+    $(this).addClass('active');
     saveReport();
   });
 });

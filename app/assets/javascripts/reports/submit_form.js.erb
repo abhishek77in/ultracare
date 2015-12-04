@@ -33,8 +33,10 @@ $(function(){
           setValues(report);
           allowPrintOrSignOff(report);
           showHideBtns();
+          saveAndCloseReport();
         } else {
           $('#report-save-status').text('<%= Report::SaveStatus::SAVE_FAILED %>');
+          $('#save-and-close.active').removeClass('active');
         }
         isSubmitting = false;
       }
@@ -62,5 +64,11 @@ $(function(){
   function showHideBtns() {
     $('#save-and-close').removeClass('hide');
     $('.cancel-link').addClass('hide');
+  }
+
+  function saveAndCloseReport() {
+    if ($('#save-and-close.active')) {
+      window.location = '/';
+    }
   }
 });
