@@ -81,6 +81,10 @@ class Report < ActiveRecord::Base
     Gem.win_platform?
   end
 
+  # def on_windows?
+  #   RbConfig::CONFIG['target_os'] =~ /mswin|mingw/
+  # end
+
   def file_name
     "#{self.patient.name} - #{self.created_at.strftime('%d %b %y')}"
   end
