@@ -8,6 +8,9 @@
         label: 'Referred By',
         required: setting.enable_accounting,
         input_html: { value: referrer_name(f.object) }
+      - if setting.enable_accounting
+        .right-align
+          = link_to ' Add new referrer', referrers_path, class: 'fi-plus large padded-top'
   .row
     - if setting.capture_patient_id?
       .small-4.columns
