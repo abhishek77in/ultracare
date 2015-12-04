@@ -8,14 +8,14 @@ class SettingsController < ApplicationController
     if @setting.update(setting_params)
       redirect_to edit_setting_path, notice: 'Setting were updated successfully.'
     else
-      flash.now[:alert] = "Sorry! Setting could not be updated, please fix the errors and try again."
+      flash.now[:alert] = 'Sorry! Setting could not be updated, please fix the errors and try again.'
       render action: 'edit'
     end
   end
 
   private
   def set_setting
-    @setting = Setting.first
+    @setting = Setting.setting
   end
 
   def setting_params
