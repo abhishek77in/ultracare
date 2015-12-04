@@ -1,10 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe Report, :type => :model do
+  before(:all) do
+    FactoryGirl.create(:setting)
+  end
 
   describe 'validations' do
-    # it { should validate_presence_of(:referrer) }
     it { should validate_presence_of(:patient) }
+
+    context 'if accounting enabled' do
+      before { allow(subject).to receive(:accounting_enabled?).and_return(true) }
+      it { should validate_presence_of(:referrer) }
+      it { should validate_presence_of(:referrer_name) }
+    end
+
+    context 'if  accounting disabled' do
+      before { allow(subject).to receive(:accounting_enabled?).and_return(false) }
+      it { should_not validate_presence_of(:referrer) }
+      it { should_not validate_presence_of(:referrer_name) }
+    end
   end
 
   describe 'associations' do

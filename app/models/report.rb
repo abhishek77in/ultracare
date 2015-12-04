@@ -25,7 +25,9 @@ class Report < ActiveRecord::Base
   before_validation :assign_referrer
 
   validates_presence_of :patient
-  # validates_presence_of :referrer, :referrer_name
+  validates_presence_of :referrer, if: :accounting_enabled?
+  validates_presence_of :referrer_name, if: :accounting_enabled?
+
   scope :recent, -> { order(created_at: :desc) }
   scope :drafts, -> { where(status: Report::Status::DRAFT) }
 
@@ -97,6 +99,10 @@ class Report < ActiveRecord::Base
     [['Male', Patient::Sex::MALE],
      ['Female', Patient::Sex::FEMALE],
      ['Other', Patient::Sex::OTHER]]
+  end
+
+  def accounting_enabled?
+    Setting.settings.enable_accounting?
   end
 
   private
