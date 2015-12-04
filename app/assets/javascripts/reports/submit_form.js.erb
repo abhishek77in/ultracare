@@ -34,9 +34,11 @@ $(function(){
           allowPrintOrSignOff(report);
           showHideBtns();
           saveAndCloseReport();
+          showNotice();
         } else {
           $('#report-save-status').text('<%= Report::SaveStatus::SAVE_FAILED %>');
           $('#save-and-close.active').removeClass('active');
+          showAlert();
         }
         isSubmitting = false;
       }
@@ -70,5 +72,19 @@ $(function(){
     if ($('#save-and-close.active').length > 0) {
       window.location = '/';
     }
+  }
+
+  function showNotice() {
+    $('.alert-box').removeClass('alert');
+    $('.alert-box').removeClass('hide');
+    $('.alert-box').addClass('success');
+    $('.alert-box').text('Report saved successfully.');
+  }
+
+  function showAlert() {
+    $('.alert-box').removeClass('success');
+    $('.alert-box').removeClass('hide');
+    $('.alert-box').addClass('alert');
+    $('.alert-box').text('Failed to save the report. Kindly input all required fields.');
   }
 });
