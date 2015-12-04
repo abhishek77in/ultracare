@@ -4,7 +4,10 @@
     .small-6.columns
       = patient_fields.input :name, label: 'Patient Name'
     .small-6.columns
-      = f.input :referrer_name, label: 'Referred By', input_html: { value: referrer_name(f.object) }
+      = f.input :referrer_name,
+        label: 'Referred By',
+        required: setting.enable_accounting,
+        input_html: { value: referrer_name(f.object) }
   .row
     - if setting.capture_patient_id?
       .small-4.columns
