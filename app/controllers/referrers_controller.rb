@@ -34,7 +34,7 @@ class ReferrersController < ApplicationController
 
   private
     def load_referrers
-      @referrers = Referrer.all
+      @referrers = Referrer.order('id').all
     end
 
     def set_referrer
