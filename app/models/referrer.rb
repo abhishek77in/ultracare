@@ -11,13 +11,18 @@ class Referrer < ActiveRecord::Base
     self.uniq.pluck(:name)
   end
 
-
   def self.to_csv(options = {})
     CSV.generate(options) do |csv|
       csv << COLUMNS_FOR_IMPORT_EXPORT
       all.each do |referrer|
         csv << referrer.attributes.values_at(*COLUMNS_FOR_IMPORT_EXPORT.map(&:to_s))
       end
+    end
+  end
+
+  def self.import(file)
+    CSV.foreach(file.path, :headers => true) do |row|
+      Referrer.create(row.to_hash)
     end
   end
 end

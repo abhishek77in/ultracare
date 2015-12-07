@@ -36,6 +36,11 @@ class ReferrersController < ApplicationController
     end
   end
 
+  def import
+    Referrer.import(params[:file])
+    redirect_to referrers_path, notice: 'Referrers imported.'
+  end
+
   private
     def load_referrers
       @referrers = Referrer.order('id').all

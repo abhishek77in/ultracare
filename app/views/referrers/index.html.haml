@@ -9,3 +9,9 @@
   = render 'listing', referrers: @referrers, reports: @reports
 .row
   = link_to 'Export all referrers', referrers_path(format: 'csv'), class: 'button'
+.row
+  %hr
+  %h2 Import Templates
+  = form_tag import_referrers_path, multipart: true do
+    = file_field_tag :file, required: true
+    = submit_tag 'Import', class: 'button'

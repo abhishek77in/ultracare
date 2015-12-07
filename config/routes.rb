@@ -18,7 +18,9 @@ Ultracare::Application.routes.draw do
   end
   resources :search_reports, only: [:new, :index]
 
-  resources :referrers, except: [:new, :show, :destroy]
+  resources :referrers, except: [:new, :show, :destroy] do
+    post :import, on: :collection
+  end
   resources :doctors, except: [:new, :show, :destroy]
 
   resources :business_analysis, only: [:index]
