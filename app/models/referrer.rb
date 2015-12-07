@@ -5,7 +5,19 @@ class Referrer < ActiveRecord::Base
   scope :recent, -> { order('created_at DESC') }
   scope :order_by_name, -> { order('name') }
 
+  COLUMNS_FOR_IMPORT_EXPORT = [:name]
+
   def self.referrer_names
     self.uniq.pluck(:name)
+  end
+
+
+  def self.to_csv(options = {})
+    CSV.generate(options) do |csv|
+      csv << COLUMNS_FOR_IMPORT_EXPORT
+      all.each do |referrer|
+        csv << referrer.attributes.values_at(*COLUMNS_FOR_IMPORT_EXPORT.map(&:to_s))
+      end
+    end
   end
 end

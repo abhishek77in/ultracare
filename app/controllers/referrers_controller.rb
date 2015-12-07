@@ -4,6 +4,10 @@ class ReferrersController < ApplicationController
   def index
     load_referrers
     @referrer = Referrer.new
+    respond_to do |format|
+      format.html
+      format.csv { send_data @referrers.to_csv }
+    end
   end
 
   def create

@@ -1,0 +1,11 @@
+.row
+  .large-6.medium-8.columns
+    - if @referrer.new_record?
+      %h1 Add New referrer
+    - else
+      %h1 Edit referrer details
+    = render 'form'
+.row
+  = render 'listing', referrers: @referrers, reports: @reports
+.row
+  = link_to 'Export all referrers', referrers_path(format: 'csv'), class: 'button'
