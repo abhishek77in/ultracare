@@ -16,7 +16,7 @@ $(function(){
           dataType: 'script',
           complete: function(request){
             var template = jQuery.parseJSON(request.responseText);
-            CKEDITOR.instances["report_content"].insertHtml('<br/>' + template.content);
+            CKEDITOR.instances["report_content"].insertHtml(template.content);
           }
         });
       }
