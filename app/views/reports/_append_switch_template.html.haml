@@ -1,6 +1,12 @@
 %hr
 .row
   .large-6.columns
+    Append template
+    = select_tag :template,
+      options_from_collection_for_select(@templates, :id, :name),
+      include_blank: true,
+      class: 'append-template'
+  .large-6.columns
     Switch template
     = select_tag :template,
       options_from_collection_for_select(@templates, :id, :name),
