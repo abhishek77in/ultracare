@@ -18,6 +18,7 @@
 //= require plugins/moment.min
 //= require plugins/daterangepicker
 //= require ckeditor/init
+//= require_tree ./ckeditor/plugins
 //= require highcharts
 //= require global
 //= require jquery.validate

@@ -119,5 +119,9 @@ CKEDITOR.editorConfig = function( config )
   config.enterMode = CKEDITOR.ENTER_BR;
   config.disableNativeSpellChecker = false;
 
-  config.extraPlugins = 'autogrow';
+  config.extraPlugins = 'autogrow,lineheight';
 };
+
+CKEDITOR.plugins.setLang('lineheight','en', {
+  title: 'Line Height'
+});
