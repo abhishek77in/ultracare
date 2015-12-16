@@ -1,0 +1,15 @@
+$(function(){
+  var editor = CKEDITOR.instances["report_content"];
+  var showAlert = true;
+
+  editor.on( 'resize', function() {
+    var height = editor.ui.space( 'contents' ).getStyle( 'height' );
+    height = parseInt(height);
+    if ( showAlert && ( height > 500) ) {
+      showAlert = false;
+      alert('you might be crossing the first page.');
+    } else if ( height < 500 ) {
+      showAlert = true;
+    }
+  } );
+});
