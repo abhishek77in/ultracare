@@ -1,16 +1,19 @@
 $(function(){
   var editor = CKEDITOR.instances["report_content"];
   var showAlert = true;
+  var reportBodyHeight = <%= Setting.settings.report_body_height %>;
 
-  editor.on( 'resize', function() {
-    var height = editor.ui.space( 'contents' ).getStyle( 'height' );
-    height = parseInt(height);
-    if ( showAlert && ( height > 500) ) {
-      showAlert = false;
-      $('.page-extend-alert').removeClass('hide');
-    } else if ( height < 500 ) {
-      $('.page-extend-alert').addClass('hide');
-      showAlert = true;
-    }
-  } );
+  if (editor) {
+    editor.on( 'resize', function() {
+      var height = editor.ui.space( 'contents' ).getStyle( 'height' );
+      height = parseInt(height);
+      if ( showAlert && ( height > reportBodyHeight) ) {
+        showAlert = false;
+        $('.page-extend-alert').removeClass('hide');
+      } else if ( height < reportBodyHeight ) {
+        $('.page-extend-alert').addClass('hide');
+        showAlert = true;
+      }
+    } );
+  }
 });
