@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151203040113) do
+ActiveRecord::Schema.define(version: 20151217051014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,7 @@ ActiveRecord::Schema.define(version: 20151203040113) do
     t.date     "show_reports_from_date"
     t.integer  "show_reports_from_last_days"
     t.boolean  "capture_patient_id",          default: true
+    t.integer  "report_body_height",          default: 500
   end
 
   create_table "templates", force: :cascade do |t|
