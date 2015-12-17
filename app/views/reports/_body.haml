@@ -1,5 +1,9 @@
 %hr
-= f.input :content, as: :ckeditor, label: false, :input_html => { :ckeditor => { :height => 500 } }
+= f.input :content,
+  as: :ckeditor,
+  label: false,
+  input_html: { ckeditor: { height: setting.report_body_height } }
+#report-body-height.hide= setting.report_body_height
 = f.input :title, as: :hidden
 = f.input :id, as: :hidden
 = f.input :status, as: :hidden, input_html: { value: Report::Status::DRAFT }

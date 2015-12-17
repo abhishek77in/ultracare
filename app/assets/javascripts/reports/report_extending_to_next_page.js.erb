@@ -1,7 +1,8 @@
 $(function(){
   var editor = CKEDITOR.instances["report_content"];
   var showAlert = true;
-  var reportBodyHeight = <%= Setting.settings.report_body_height %>;
+  var reportBodyHeight = $('#report-body-height').text();
+  reportBodyHeight = parseInt(reportBodyHeight);
 
   if (editor) {
     editor.on( 'resize', function() {
