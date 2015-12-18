@@ -4,6 +4,7 @@ ruby '2.1.5'
 gem 'rails_12factor', group: :production
 
 gem 'rails', '~> 4.2.5'
+gem 'thin'
 
 gem 'pg'
 gem 'pg_search'
