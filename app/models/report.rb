@@ -86,12 +86,12 @@ class Report < ActiveRecord::Base
   # end
 
   def file_name
-    "#{self.patient.name} - #{self.created_at.strftime('%d %b %y')}"
+    "#{patient.name}-#{patient.age}yr-#{patient.sex.upcase}-#{updated_at.strftime("Printed at %I:%M%p")}"
   end
 
   def file_path
-    date = Date.today.strftime("%d-%m-%Y")
-    save_dir_path = Pathname.new('C:/Users/Public/Documents/Ultracare').join(date)
+    date = created_at.strftime("%d-%m-%Y")
+    save_dir_path = Pathname.new('C:/Users/Public/Documents/Ultracare Reports').join(date)
     FileUtils::mkdir_p save_dir_path
     save_path = save_dir_path.join("#{file_name}.pdf")
     save_path
