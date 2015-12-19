@@ -86,7 +86,7 @@ class Report < ActiveRecord::Base
   # end
 
   def file_name
-    "#{patient.name}-#{patient.age}yr-#{patient.sex.upcase}-#{updated_at.strftime("Printed at %I:%M%p")}"
+    "#{patient.name}-#{patient.age}yr-#{patient.sex.upcase}-#{updated_at.strftime('Signed off at %I-%M%P')}"
   end
 
   def file_path
