@@ -90,8 +90,11 @@ class Report < ActiveRecord::Base
   end
 
   def file_path
-    FileUtils::mkdir_p Pathname.new(Dir.home).join('Documents').join('Ultracare')
-    Pathname.new(Dir.home).join('Documents').join('Ultracare').join("#{file_name}.pdf")
+    date = Date.today.strftime("%d-%m-%Y")
+    save_dir_path = Pathname.new('C:/Users/Public/Documents/Ultracare').join(date)
+    FileUtils::mkdir_p save_dir_path
+    save_path = save_dir_path.join("#{file_name}.pdf")
+    save_path
   end
 
   def assign_referrer
