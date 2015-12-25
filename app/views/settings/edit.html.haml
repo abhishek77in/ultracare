@@ -25,6 +25,8 @@
       'data-default-margin' => Setting::DEFAULT_FOOTER_MARGIN
     = f.input :footer_margin, as: :float
     = f.input :footer, as: :ckeditor, label: 'Footer section'
+  %p
+    = f.input :report_body_height, label: 'Report body height per page'
 
 
-  = f.button :submit, value: 'Update Print Settings', class: 'round'
+  = f.button :submit, value: 'Update Settings', class: 'round'

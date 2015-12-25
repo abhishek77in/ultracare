@@ -86,12 +86,15 @@ class Report < ActiveRecord::Base
   # end
 
   def file_name
-    "#{self.patient.name} - #{self.created_at.strftime('%d %b %y')}"
+    "#{patient.name}-#{patient.age}yr-#{patient.sex}-#{updated_at.strftime('Signed off at %I-%M%P')}"
   end
 
   def file_path
-    FileUtils::mkdir_p Pathname.new(Dir.home).join('Documents').join('Ultracare')
-    Pathname.new(Dir.home).join('Documents').join('Ultracare').join("#{file_name}.pdf")
+    date = created_at.strftime("%d-%m-%Y")
+    save_dir_path = Pathname.new('C:/Users/Public/Documents/Ultracare Reports').join(date)
+    FileUtils::mkdir_p save_dir_path
+    save_path = save_dir_path.join("#{file_name}.pdf")
+    save_path
   end
 
   def assign_referrer

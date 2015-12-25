@@ -24,6 +24,6 @@ class SearchReportsController < ApplicationController
   end
 
   def load_reports
-    @reports = Report.recent.joins(:referrer, :patient).paginate(:page => params[:page])
+    @reports = Report.recent.paginate(:page => params[:page])
   end
 end

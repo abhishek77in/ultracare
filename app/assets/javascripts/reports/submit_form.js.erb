@@ -35,6 +35,7 @@ $(function(){
           showHideBtns();
           saveAndCloseReport();
           showNotice();
+          updateUrl(report.id);
         } else {
           $('#report-save-status').text('<%= Report::SaveStatus::SAVE_FAILED %>');
           $('#save-and-close.active').removeClass('active');
@@ -86,5 +87,13 @@ $(function(){
     $('.alert-box').addClass('alert');
     $('.alert-box').text('Failed to save the report. Kindly input all required fields.');
     $('.alert-box').show().fadeOut( 2000 );
+  }
+
+  function updateUrl(reportId) {
+    var currentUrl = window.location.pathname;
+    if ( currentUrl === '/reports/new' ) {
+      var updateUrl = '/reports/' + reportId + '/edit';
+      window.history.pushState('', 'Ultracare', updateUrl);
+    }
   }
 });

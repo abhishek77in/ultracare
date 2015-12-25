@@ -1,0 +1,20 @@
+$(function(){
+  var editor = CKEDITOR.instances["report_content"];
+  var showAlert = true;
+  var reportBodyHeight = $('#report-body-height').text();
+  reportBodyHeight = parseInt(reportBodyHeight);
+
+  if (editor) {
+    editor.on( 'resize', function() {
+      var height = editor.ui.space( 'contents' ).getStyle( 'height' );
+      height = parseInt(height);
+      if ( showAlert && ( height > reportBodyHeight) ) {
+        showAlert = false;
+        $('.page-extend-alert').removeClass('hide');
+      } else if ( height < reportBodyHeight ) {
+        $('.page-extend-alert').addClass('hide');
+        showAlert = true;
+      }
+    } );
+  }
+});
