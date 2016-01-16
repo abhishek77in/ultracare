@@ -17,6 +17,8 @@
 //= require foundation
 //= require plugins/moment.min
 //= require plugins/daterangepicker
+//= require plugins/jquery.dataTables.min.js
+//= require plugins/dataTables.foundation.min.js
 //= require ckeditor/init
 //= require_tree ./ckeditor/plugins
 //= require highcharts
