@@ -10,18 +10,3 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery-ui
-//= require select2
-//= require foundation
-//= require plugins/moment.min
-//= require plugins/daterangepicker
-//= require plugins/jquery.dataTables.min.js
-//= require plugins/dataTables.foundation.min.js
-//= require ckeditor/init
-//= require_tree ./ckeditor/plugins
-//= require highcharts
-//= require global
-//= require jquery.validate
-//= require_tree .

@@ -9,13 +9,5 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require select2
- *= require plugins/daterangepicker
- *= require plugins/dataTables.foundation.min.css
- *= require jquery-ui
- *= require foundation-icons
- *= require home
  *= require foundation_and_overrides
- *= require global
- *= require reports
  */
