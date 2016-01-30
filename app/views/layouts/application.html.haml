@@ -1,14 +1,19 @@
-!!!
-%html{:lang => "en"}
+!!! 5
+%html{ :lang => "en"}
   %head
-    %meta{:charset => "utf-8"}/
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %title Ultracare
+    %meta{ :charset => "utf-8" }
+
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+
+    %title= content_for?(:title) ? yield(:title) : "Ultracare"
+
     = favicon_link_tag
-    = stylesheet_link_tag    "application"
-    = javascript_include_tag "application", "vendor/modernizr"
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "vendor/modernizr"
+    = javascript_include_tag "application", 'data-turbolinks-track' => true
     = yield :head
-    = csrf_meta_tags
+    = csrf_meta_tag
+
   %body
     = render 'shared/navigation'
     = render 'shared/notice' if flash[:notice]
