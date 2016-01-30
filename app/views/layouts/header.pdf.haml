@@ -2,7 +2,6 @@
 %html
   %head
     %meta{:charset => "utf-8"}
-    = wicked_pdf_stylesheet_link_tag    "application", "pdf", :media => "all"
-
+    = wicked_pdf_stylesheet_link_tag "print", :media => "all"
   %body
     = yield
