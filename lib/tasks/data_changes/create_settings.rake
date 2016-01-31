@@ -6,7 +6,7 @@ namespace :data_changes do
       puts 'Settings already exists.'
     else
       setting = Setting.new
-      setting.print_settings = { 'header' => Setting::DEFAULT_HEADER,
+      setting.print_settings = { 'header' => '',
                                  'signature' => Setting::DEFAULT_SIGNATURE,
                                  'footer' => Setting::DEFAULT_FOOTER,
                                  'header_margin' => Setting::DEFAULT_HEADER_MARGIN,
