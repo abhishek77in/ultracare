@@ -18,10 +18,9 @@
     .small-4.columns
       %label{for: 'report_patient_attributes_age'} Age
       .row.collapse
-        .small-6.columns
-          = patient_fields.input :age, label: false
-        .small-6.columns
-          %span.postfix years
+        .input-group
+          = patient_fields.input :age, label: false, input_html: { class: 'input-group-field' }
+          %span.input-group-label years
     .small-4.columns
       = patient_fields.input :sex,
         as: :radio_buttons,
