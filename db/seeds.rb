@@ -1,14 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+require_relative 'report_seeds'
 
 Rake::Task['data_changes:create_settings'].invoke
 
 User.create(email: 'test@example.com', password: 'abcd1234')
+User.create(email: 'demo@example.com', password: 'abcd1234')
 User.create(email: 'user@example.com', password: 'abcd1234')
 User.create(email: 'admin@example.com', password: 'abcd1234', role: 'admin')
 
@@ -16,11 +11,11 @@ def random_amount_collected
   [500, 600, 700, 800, 900, 1000].sample
 end
 
-10.times do
+50.times do
   Referrer.create(name: "Dr. #{Faker::Name.first_name} #{Faker::Name.last_name} (MBBS)")
 end
 
-5.times do
+3.times do
   Doctor.create(name: "Dr. #{Faker::Name.first_name} #{Faker::Name.last_name} (MBBS)")
 end
 
@@ -36,26 +31,7 @@ time_now = Time.now - TOTAL_NUMBER_OF_DAYS.days
 
 TOTAL_NUMBER_OF_DAYS.times do
   rand(5..20).times do
-    patient = Patient.new(name: Faker::Name.name,
-                          patient_id: Faker::Number.number(5),
-                          age: Faker::Number.number(2),
-                          sex: [Patient::Sex::MALE, Patient::Sex::FEMALE].sample)
-    referrer = Referrer.first(rand(Referrer.count) + 1).last
-    doctor = Doctor.first(rand(Doctor.count) + 1).last
-    report = Report.new(patient: patient,
-                        referrer_name: referrer.name,
-                        doctor: doctor,
-                        status: Report::Status::SIGNED_OFF,
-                        updated_at: time_now,
-                        created_at: time_now,
-                        content: Faker::Lorem.paragraphs(8).join('<br/>'),
-                        title: Faker::Lorem.sentence,
-                        amount_collected: random_amount_collected)
-    if report.save
-      puts "Report created for patient - #{report.patient.name}, referrer - #{report.referrer.name}, time - #{time_now}"
-    else
-      puts "Failed to save report - #{report.errors.messages}"
-    end
+    create_report(time_now)
     time_now = time_now + 1.hour
   end
   time_now = time_now + 1.day
