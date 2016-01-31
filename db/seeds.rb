@@ -19,12 +19,8 @@ end
   Doctor.create(name: "Dr. #{Faker::Name.first_name} #{Faker::Name.last_name} (MBBS)")
 end
 
-(1..5).each_with_index do |number|
-  title = Faker::Lorem.sentence
-  Template.create(name: title,
-                  report_title: title,
-                  content: Faker::Lorem.paragraphs(8).join('<br/>'))
-end
+file = File.open("db/fixtures/#{ENV['APP_NAME'].downcase}_templates.csv")
+Template.import(file)
 
 TOTAL_NUMBER_OF_DAYS = 10
 time_now = Time.now - TOTAL_NUMBER_OF_DAYS.days
