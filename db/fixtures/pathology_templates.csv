@@ -1,0 +1,3371 @@
+name,report_title,content
+URINE Examination,URINE Examination,"<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Urine Examination</td>
+			<td>Test Description</td>
+			<td>Value Observed /Interval</td>
+			<td>Biological Reference</td>
+		</tr>
+		<tr>
+			<td>Physical:</td>
+			<td>Colour</td>
+			<td>Pale Yellow / Yellow</td>
+			<td>Pale</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Transparency</td>
+			<td>Clear</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Specific Gravity</td>
+			<td>1.030 1.035</td>
+			<td>1.003-</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>pH</td>
+			<td>7.2</td>
+			<td>4.6-8.0</td>
+		</tr>
+		<tr>
+			<td>Biochemical:</td>
+			<td>Protein</td>
+			<td>Present(+)50mg%</td>
+			<td>Nil</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Glucose</td>
+			<td>Nil</td>
+			<td>Nil</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Bile Salt</td>
+			<td>Absent.</td>
+			<td>Nil</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Bile Pigment</td>
+			<td>Absent.</td>
+			<td>Nil</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Urobilinogen</td>
+			<td>Normal</td>
+			<td>Normal</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Chyle</td>
+			<td>Nil</td>
+			<td>Nil</td>
+		</tr>
+		<tr>
+			<td>Microscopic:</td>
+			<td>Pus Cells</td>
+			<td>Present(15-20)/Hpf/Hpf</td>
+			<td>&lt; 5</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>W.B.C / Leucocytes</td>
+			<td>Nil</td>
+			<td>Nil</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Red Blood Cells</td>
+			<td>Nil/Hpf</td>
+			<td>2-3</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Epithelial Cells</td>
+			<td>Present(2-5)/Hpf/Hpf</td>
+			<td>2-3</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Casts</td>
+			<td>Nil</td>
+			<td>Nil</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td>Crystals</td>
+			<td>Nil</td>
+			<td>Occasional</td>
+		</tr>
+	</tbody>
+</table>
+"
+HBA,HEAMTO BIOCHEMICAL EXAMINATION REPORT,"<meta charset=""utf-8"" />
+<p dir=""ltr"">GLYCOSYLETED HEAMOGLOBIN ( GHb )<br />
+   HbA1C : 5.80 %<br />
+GHbA1 : 7.8 %<br />
+   MBG : 107</p>
+
+<p dir=""ltr""><br />
+NORMAL REFERANCE VALUES ABOUT</p>
+
+<p dir=""ltr"">HbA1 HbA1C<br />
+Normal : &lt; 8:0 % &lt; 6.0 %<br />
+Good Control : 8.0 -9.0 % 6.0 - 7.0 %<br />
+Fair Control : 9.0-10.0 % 7.0-8.0 %<br />
+Poor Control : &gt; 10.0 % &gt; 8.0 %</p>
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+About Glycosyleted hemoglobin ( Ghb ) is formed by continuously adduction glucose by covalentbonding to the amino terminal valine to beta chain of hemoglobin. Stable over period of life of RBC.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+It is recommended each Laboratory establishes own normal range representing is patient population.
+
+Adv : Clinical correlation and further investigation.
+"
+P.P.D Mantox test,P.P.D Mantox test,"<meta charset=""utf-8"" />
+MANTOUX TEST
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+The mantoux test in the strength of 10 TU / P.P.D is Negative
+
+Induration and erythema is 02 mm. Incubation period is 48 hours.
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+Advise- Clinical correlation &amp; further investigation.
+"
+Stool,Stool Examination,"<h2></h2>
+
+<table border=""0"" cellpadding=""1"" cellspacing=""1"" style=""width:500px;"">
+	<tbody>
+		<tr>
+			<td>OCCULT BLOOD</td>
+			<td>Ist  Day</td>
+			<td>ABSENT</td>
+		</tr>
+		<tr>
+			<td>OCCULT BLOOD</td>
+			<td>IInd  Day</td>
+			<td>ABSENT</td>
+		</tr>
+		<tr>
+			<td>OCCULT BLOOD</td>
+			<td>IIIrd Day</td>
+			<td>ABSENT</td>
+		</tr>
+	</tbody>
+</table>
+"
+CHILD,CHILD,"<table>
+    <colgroup>
+        <col />
+        <col />
+    </colgroup>
+    <tbody>
+    <tr>
+        <td>
+            Test Description
+        </td>
+        <td>Value Observed /Interval</td>
+        <td>
+            Biological Reference
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td>(13.5-18.0 gm%)</td>
+        <td>
+            M
+        </td>
+    </tr>
+    <tr>
+        <td>
+            HAEMOGLOBIN
+        </td>
+        <td>12.0 gm% <br />
+            (11.5-16.0 gm%) </td>
+        <td>
+                                      F 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            TOTAL LEUCOCYTE COUNT
+        </td>
+        <td>12,500/cumm</td>
+        <td>
+            (0-01)(6,000-15,000 /cumm)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            
+        </td>
+        <td></td>
+        <td>
+            (0-10)(4,500-13,000 /cumm)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            D.L.C
+        </td>
+        <td></td>
+        <td>
+            
+        </td>
+    </tr>
+    <tr>
+        <td>
+            NEUTROPHILS
+        </td>
+        <td>23 %</td>
+        <td>
+            ( 20 - 40 % )
+        </td>
+    </tr>
+    <tr>
+        <td>
+            LYMPHOCYTES
+        </td>
+        <td>63 %</td>
+        <td>
+            ( 40 - 60 % )
+        </td>
+    </tr>
+    <tr>
+        <td>
+            EOSINOPHILS
+        </td>
+        <td>14 %</td>
+        <td>
+            ( 00 - 06 % )
+        </td>
+    </tr>
+    <tr>
+        <td>
+            MONOCYTES
+        </td>
+        <td>00 %</td>
+        <td>
+            ( 01 - 02 % )
+        </td>
+    </tr>
+    <tr>
+        <td>
+            BASOPHILS
+        </td>
+        <td>00 % </td>
+        <td>
+            ( 00 - 00 % )
+        </td>
+    </tr>
+    <tr>
+        <td>
+            WIDAL TEST
+        </td>
+        <td></td>
+        <td>
+            REACTOIN IS POSITIVE.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            S: TYPHI &#39; O &#39;
+        </td>
+        <td></td>
+        <td>
+            1:160 DILUTION POSITIVE.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            S: TYPHI &#39; H &#39;
+        </td>
+        <td></td>
+        <td>
+            1:160 DILUTION POSITIVE.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            S: PARA TYPHI &#39; AH &#39;
+        </td>
+        <td></td>
+        <td>
+            NEGATIVE.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            S: PARA TYPHI &#39; BH &#39;
+        </td>
+        <td></td>
+        <td>
+            NEGATIVE.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            MALARIA PARASITE (ANTIGEN) TEST
+        </td>
+        <td></td>
+        <td>
+            NEGATIVE.
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+"
+G.B.P,G.B.P,"<meta charset=""utf-8"" />
+G E N E R A L B L O O D P I C T U R E :-
+
+<p dir=""ltr""><br />
+* R. B. C.&#39; s are normocytic normochromic</p>
+
+* Platelets are within normal limits.
+
+* There are no blasts ( Precursor cells )
+
+* Total leukocyte are adequate in numbers and reveal normal distribution.      
+
+* Smear are negative for malaria &amp; microfilarial parasites .
+
+
+"
+Fluid Examination,Fluid Examination,"<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td colspan=""2"">ASCITIC FLUID EXAMINATION</td>
+		</tr>
+		<tr>
+			<td colspan=""2"">ROUTINE</td>
+		</tr>
+		<tr>
+			<td>Volume</td>
+			<td>4.0 Ml.</td>
+		</tr>
+		<tr>
+			<td>Colour</td>
+			<td>Straw.</td>
+		</tr>
+		<tr>
+			<td>Appearance</td>
+			<td>Clear.</td>
+		</tr>
+		<tr>
+			<td>Reaction</td>
+			<td>Alkaline.</td>
+		</tr>
+		<tr>
+			<td>Specific gravity</td>
+			<td>1.015</td>
+		</tr>
+		<tr>
+			<td>Ph</td>
+			<td>9.0</td>
+		</tr>
+		<tr>
+			<td colspan=""2"">BIOCHEMICAL</td>
+		</tr>
+		<tr>
+			<td>Protein</td>
+			<td>2.7 gm/dl.</td>
+		</tr>
+		<tr>
+			<td>Sugar</td>
+			<td>98.2 mg/dl.</td>
+		</tr>
+		<tr>
+			<td colspan=""2"">MICROSCOPIC</td>
+		</tr>
+		<tr>
+			<td>Total Cells</td>
+			<td>7,200 /cmm.</td>
+		</tr>
+		<tr>
+			<td>Differentail Cells</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>Polymorphs</td>
+			<td>27 %</td>
+		</tr>
+		<tr>
+			<td>Lymphocytes</td>
+			<td>71 %</td>
+		</tr>
+		<tr>
+			<td>Mesothelial Cells</td>
+			<td>02 %</td>
+		</tr>
+	</tbody>
+</table>
+<br />
+* No atypical or epithelioid cells granuloma seen.<br />
+* Fine number of R.B.C s &amp; few W.B.C s seen."
+Dengu,Dengu,"<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Test Description :-</td>
+			<td>Value Observed</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>DENGUE ELISA :-</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>N S 1 Antigen</td>
+			<td>Negative.</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>I g M Antigen</td>
+			<td>Negative.</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>I g G Antigen</td>
+			<td>Negative.</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+INTERPRETATION :-
+Result :- Clinical Interpretation .<br />
+N S 1 Reactive. Acute Infection.<br />
+I g M Reactive Only Acute Primary Infection .<br />
+I g M And I g G Reactive Acute secondary Infection.<br />
+I g M Reactive Acute Secondary Infection."
+LIPID,LIPID,"<table border=""1"" cellpadding=""1"" cellspacing=""1"" style=""width:800px;"">
+	<tbody>
+		<tr>
+			<td>Test Description</td>
+			<td>Value Observed</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>SERUM CHOLESTEROL</td>
+			<td>179.0 mg/dl  </td>
+			<td> (140-240 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM TRIGLYCERIDES</td>
+			<td>105.0 mg/dl </td>
+			<td>(65-170 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM H.D.L. CHOLESTEROL</td>
+			<td>46.4 mg/dl</td>
+			<td>(30-70 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM L.D.L. CHOLESTEROL</td>
+			<td>114.0 mg/dl</td>
+			<td>     (92-148 mg/dl)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<br />
+                   <br />
+<br />
+<br />
+SERUM V.L.D.L. CHOLESTEROL 22.8 mg/dl                     (10-30 mg/dl)<br />
+<br />
+<br />
+PLASMA GLUCOSE FASTING 87.2 mg/dl                    (60-110 mg/dl)<br />
+<br />
+<br />
+PLASMA GLUCOSE POST PRANDIAL 124.0 mg/dl                  (100-160 mg/dl)<br />
+<br />
+<br />
+SERUM UREA 20.4 mg/dl                    (10 - 50 mg/dl)<br />
+<br />
+<br />
+<br />
+SERUM CREATININE 1.25 mg/dl                  F (0.8-1.2 mg/dl)<br />
+<br />
+                          M (0.8-1.4 mg/dl)<br />
+<br />
+SERUM URIC ACID 7.09 mg/dl                  F (2.5-6.2 mg/dl)<br />
+<br />
+                          M (3.5-7.2 mg/dl)<br />
+<br />
+SERUM G. P. T. (ALT) 34.9 IU/L                     (05 - 40 IU/L)<br />
+<br />
+<br />
+<br />
+SERUM G. O. T. (AST) 45.0 IU/L                     (05 - 40 IU/L)<br />
+<br />
+Note :- <br />
+<br />
+------- <br />
+<br />
+     H.D.L Determination by direct method. <br />
+     L.D.L Determination by direct method. <br />
+     Not calculated value by friedwald formula. <br />
+"
+Urine Culture and Sensitivity,Urine Culture and Sensitivity,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Culture
+			</td>
+			<td>
+			Positive.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Bacteria Grown &amp; Isolated
+			</td>
+			<td>
+			Escherichia Coli 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Antibiotic Sensitivity Test :
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Gentamicin
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Amikacin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Amoxyclav
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Co - trimoxazole
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ciprofloxacin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Tetracyline
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cefuroxime
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Nitrofurantoin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Norfloxacin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Netilimicin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ceftazidime
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Tobramycin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Imipenem
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cefaperazone
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Azithromycin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Gatifloxacin
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cefepime
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ceftriaxone
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Piperacillin + Tazobactum
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Colistin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ofloxacin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Meropenem
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cephotaxime
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p dir=""ltr"">Note :<br />
+      Assay results should be interpreted only in the context of other laboratory findings and the total</p>
+
+clinical status of the patient.
+"
+Ortho,Ortho,"<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Test Description</td>
+			<td>Value Observed</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>PLASMA GLUCOSE RANDOM</td>
+			<td>116.0 mg/dl</td>
+			<td>(60-160 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM URIC ACID</td>
+			<td>4.48 mg/dl</td>
+			<td>(M: 3.5 - 7.2 mg/dl)(F: 2.5 - 6.2mg/dl)</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>RHEUMATOID FACTOR</td>
+			<td>NEGATIVE.</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>ANTISTREPTOLYSIN - O</td>
+			<td>NEGATIVE.</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+"
+P.P.fasting,P.P.fasting,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""348"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Test Description</td>
+			<td>Value Observed</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>PLASMA GLUCOSE FASTING</td>
+			<td>82.4 mg/dl</td>
+			<td>(60-110 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>PLASMA GLUCOSE POST PRANDIAL</td>
+			<td>130.0 mg/dl</td>
+			<td>(100-160 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>URINE SUGAR FASTING</td>
+			<td>NIL.</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>URINE SUGAR P P</td>
+			<td>NIL.</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+"
+Pathology,Pathology,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""312"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description :-
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			HAEMOGLOBIN 
+			</td>
+			<td>
+			11.4 gm% 
+			</td>
+			<td>(M) (13.5-18.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>(F) (11.5-16.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL LEUCOCYTE COUNT
+			</td>
+			<td>
+			9,300 /cumm 
+			</td>
+			<td>(4,000-11,000/cu mm)</td>
+		</tr>
+		<tr>
+			<td>
+			D. L. C. 
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			NEUTROPHILS
+			</td>
+			<td>
+			69 % 
+			</td>
+			<td>( 40 - 60 % )</td>
+		</tr>
+		<tr>
+			<td>
+			LYMPHOCYTES
+			</td>
+			<td>
+			21 % 
+			</td>
+			<td>( 20 - 40 % )</td>
+		</tr>
+		<tr>
+			<td>
+			EOSINOPHILS
+			</td>
+			<td>
+			10 % 
+			</td>
+			<td>( 01 - 06 % )</td>
+		</tr>
+		<tr>
+			<td>
+			MONOCYTES
+			</td>
+			<td>
+			00 % 
+			</td>
+			<td>( 01 - 02 % )</td>
+		</tr>
+		<tr>
+			<td>
+			BASOPHILS
+			</td>
+			<td>
+			00 % 
+			</td>
+			<td>( 00 - 00 % )</td>
+		</tr>
+		<tr>
+			<td>
+			E.S.R. ( WINTROBE METHOD )
+			</td>
+			<td>
+			
+			</td>
+			<td>( M ) ( 0-10 )</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>( F ) ( 0-20 )</td>
+		</tr>
+		<tr>
+			<td>
+			OBSERVED 
+			</td>
+			<td>
+			16 mm for 1 st hour.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			PACKED CELL VOLUME 
+			</td>
+			<td>
+			36 %
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			CORRECTED E.S.R. 
+			</td>
+			<td>
+			08 mm for 1 st hour.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			WIDAL TEST
+			</td>
+			<td>
+			REACTION IS POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: TYPHI &#39; O &#39; 
+			</td>
+			<td>
+			1:160 DILUTION POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: TYPHI &#39; H &#39;
+			</td>
+			<td>
+			1:160 DILUTION POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: PARA TYPHI &#39; AH &#39;
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: PARA TYPHI &#39; BH &#39;
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			MALARIA PARASITE (ANTIGEN) TEST 
+			</td>
+			<td>
+			NEGATIVE. 
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+<p dir=""ltr""> :-<br />
+<br />
+* R.B.C&#39;s are normocytic and normochromic.<br />
+<b id=""docs-internal-guid-ebdae852-784a-076a-a3c0-9cda982eb8f3"">* Platelets are within normal limits.<br />
+*  </b><b>There are no blasts ( precursor cells ).<br />
+* Leucocytes are adequate in numbers and reveal normal distribution.</b><b id=""docs-internal-guid-ebdae852-784a-076a-a3c0-9cda982eb8f3""><br />
+*  Smear are negative for malarial &amp; microfilarial parasites.</b></p>
+"
+Reanalfuc,Reanalfuc,"<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""348"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Test Description</td>
+			<td>Value Observed</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>SERUM BILIRUBIN (TOTAL)</td>
+			<td>0.96 mg/dl</td>
+			<td>(0.1 - 1.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM UREA</td>
+			<td>29.2 mg/dl</td>
+			<td>(10 - 50 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM CREATININE</td>
+			<td>1.01 mg/dl</td>
+			<td>(F: 0.8-1.2 mg/dl)(M: 0.8-1.4 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>B. U. N.</td>
+			<td>40.0 mg/dl</td>
+			<td>(05 - 25 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM SODIUM</td>
+			<td>147.0 mmol/L</td>
+			<td>(136 - 150 mmol/L)</td>
+		</tr>
+		<tr>
+			<td>SERUM POTASSIUM</td>
+			<td>3.4 mmol/L</td>
+			<td>(3.6 - 5.1 mmol/L)</td>
+		</tr>
+	</tbody>
+</table>
+"
+Semen,Semen,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Semen Examination :-
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			COLOUR
+			</td>
+			<td>
+			WHITISH
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			QUANTITY
+			</td>
+			<td>
+			2.0 ml.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			REACTION
+			</td>
+			<td>
+			ALKALINE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			LIQUIFICATION TIME
+			</td>
+			<td>
+			20 Mts.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			VISCOSITY
+			</td>
+			<td>
+			VISCOUS.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			SPERM COUNT
+			</td>
+			<td>
+			69.0 Million / cml. 
+			</td>
+			<td>(80-140 Million / cml.)</td>
+		</tr>
+		<tr>
+			<td>
+			MOTILITY
+			</td>
+			<td>
+			56.0 % 
+			</td>
+			<td>( 60-80 % )</td>
+		</tr>
+		<tr>
+			<td>
+			AFTER ONE HOUR MOTILITY
+			</td>
+			<td>
+			49.0 %
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			ABNORMAL FORMS
+			</td>
+			<td>
+			PRESENT ( 8-10 )/hpf.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			WBC / LEUCOCYTES
+			</td>
+			<td>
+			NIL.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			EPITHILIAL CELLS
+			</td>
+			<td>
+			NIL.
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+<p dir=""ltr"">COMMENT :<br />
+           <br />
+          Semen shows oligozoospermia &amp; necrozoospermi</p>
+"
+URINE CULTURE,URINE CULTURE,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""312"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			AEROBIC CULTURE OF URINE AFTER 
+			</td>
+			<td>
+			48 HOURS / DAYS OF INCUBATION AT 37 ^ 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			C IS POSITIVE FOR ESCHERICHIA COLI. 
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			SENSITVITY 
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* AMPICILLIN S ++ 
+			</td>
+			<td>
+			* PEFLOXACIN S ++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* AMOXYCILLIN S+
+			</td>
+			<td>
+			* COTRIMOXAZOLE R-
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* PENICILLIN S+
+			</td>
+			<td>
+			* GENTAMYCIN S++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* CLOXACILLIN S+
+			</td>
+			<td>
+			* AMIKACIN S+++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* ERYTHROMYCIN R-
+			</td>
+			<td>
+			* NETILMYCIN S+
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* CHLORAMPHENICOL R-
+			</td>
+			<td>
+			* CEPHALEXIN S++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* NITROFURATION S++
+			</td>
+			<td>
+			* CEFAZOLIN S++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* NALIDIXIC ACID S++
+			</td>
+			<td>
+			* CEFADROXIL S++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* NORFLOXACIN S++
+			</td>
+			<td>
+			* CEFUROXIME S+++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* OFLOXACIN S++
+			</td>
+			<td>
+			* CEFTAZIDIME S++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* CIPROFLOXACIN S++
+			</td>
+			<td>
+			* CEFOTAXIME S+++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* CEFTRIAXONE S+++
+			</td>
+			<td>
+			* GATEFLOXACIN S+++
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* S+ SLIGHTLY SENSITIVE.
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* S++ MODERATELY SENSITIVE.
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* S+++ HIGHLY SENSITIVE.
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* R- RESISTENT.
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+
+"
+Pathology Blank,Pathology Blank,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description :-
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			HAEMOGLOBIN
+			</td>
+			<td>
+			10.2 gm% 
+			</td>
+			<td>(11.5 -16.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			BLOOD GROUP &#39; ABO &#39;
+			</td>
+			<td>
+			B 
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			Rh (ANTI - D) 
+			</td>
+			<td>
+			POSITIVE
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			PLASMA GLUCOSE RANDOM
+			</td>
+			<td>
+			73.4 mg/dl 
+			</td>
+			<td>(60 - 160 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM BILIRUBIN ( TOTAL)
+			</td>
+			<td>
+			0.94 mg/dl 
+			</td>
+			<td>(0.1 -1.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM G.P. T. ( ALT) 
+			</td>
+			<td>
+			26.1 IU/L 
+			</td>
+			<td>(05 - 40 IU/L)</td>
+		</tr>
+		<tr>
+			<td>
+			H.I.V ( Tri - Line ) - I &amp; II
+			</td>
+			<td>
+			NEGATIVE
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			HBsAg ( AUSTRALIA ANTIGEN )
+			</td>
+			<td>
+			NEGATIVE
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+"
+WIDAL MALARIA,WIDAL MALARIA,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			HAEMOGLOBIN
+			</td>
+			<td>
+			11.8 gm % 
+			</td>
+			<td>(M)(13.5 - 18.0 gm %)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>(F)(11.5 - 16.0 gm %)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM BILIRUBIN ( TOTAL )
+			</td>
+			<td>
+			1.0 mg/dl 
+			</td>
+			<td>(0.1-1.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			PLASMA GLUCOSE RANDOM
+			</td>
+			<td>
+			143.0 mg/dl 
+			</td>
+			<td>(60-160 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			WIDAL TEST
+			</td>
+			<td>
+			REACTION IS POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: TYPHI &#39; O &#39;
+			</td>
+			<td>
+			1:320 DILUTION POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: TYPHI &#39; H &#39;
+			</td>
+			<td>
+			1:320 DILUTION POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: PARA TYPHI &#39; AH &#39;
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S: PARA TYPHI &#39; BH &#39;
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			MALARIA PARASITE (ANTIGEN) TEST
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+"
+LIPID,LIPID Profile,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""312"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description :- 
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM CHOLESTEROL 
+			</td>
+			<td>
+			179.0 mg/dl 
+			</td>
+			<td>(140-240 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM TRIGLYCERIDES 
+			</td>
+			<td>
+			105.0 mg/dl 
+			</td>
+			<td>(65-170 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM H.D.L. CHOLESTEROL
+			</td>
+			<td>
+			46.4 mg/dl 
+			</td>
+			<td>(30-70 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM L.D.L. CHOLESTEROL
+			</td>
+			<td>
+			114.0 mg/dl 
+			</td>
+			<td>(92-148 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM V.L.D.L. CHOLESTEROL 
+			</td>
+			<td>
+			22.8 mg/dl 
+			</td>
+			<td>(10-30 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			PLASMA GLUCOSE FASTING 
+			</td>
+			<td>
+			87.2 mg/dl 
+			</td>
+			<td>(60-110 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			PLASMA GLUCOSE POST PRANDIAL 
+			</td>
+			<td>
+			124.0 mg/dl 
+			</td>
+			<td>(100-160 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM UREA 
+			</td>
+			<td>
+			20.4 mg/dl 
+			</td>
+			<td>(10 - 50 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM CREATININE 
+			</td>
+			<td>
+			1.25 mg/dl 
+			</td>
+			<td>F (0.8-1.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>M (0.8-1.4 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM URIC ACID 
+			</td>
+			<td>
+			7.09 mg/dl 
+			</td>
+			<td>F (2.5-6.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>M (3.5-7.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM G. P. T. (ALT) 
+			</td>
+			<td>
+			34.9 IU/L 
+			</td>
+			<td>(05 - 40 IU/L)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM G. O. T. (AST) 
+			</td>
+			<td>
+			45.0 IU/L 
+			</td>
+			<td>(05 - 40 IU/L)</td>
+		</tr>
+	</tbody>
+</table>
+
+
+
+<p dir=""ltr"">H.D.L Determination by direct method.<br />
+    L.D.L Determination by direct method.<br />
+    Not calculated value by friedwald formula.</p>
+"
+CBC ADULT,Complete Blood Count ADULT,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""312"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description 
+			</td>
+			<td>Interval</td>
+			<td>
+			Biological Reference 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			HAEMOGLOBIN
+			</td>
+			<td>14.0 gm%</td>
+			<td>
+			(M)(13.5 - 18 .0 gm%)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td></td>
+			<td>
+			  (F)(11.5 - 16.0 gm%)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL LEUCOCYTE COUNT
+			</td>
+			<td>10,600 / cu mm </td>
+			<td>
+			(4,000-11,000/cu mm)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			D. L. C. 
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			NEUTROPHILS
+			</td>
+			<td>70 %</td>
+			<td>
+			( 40 - 60 % )
+			</td>
+		</tr>
+		<tr>
+			<td>
+			LYMPHOCYTES
+			</td>
+			<td>24 % </td>
+			<td>
+			( 20 - 40 % )
+			</td>
+		</tr>
+		<tr>
+			<td>
+			EOSINOPHILS
+			</td>
+			<td>06 % </td>
+			<td>
+			                        ( 01 - 06 % )
+			</td>
+		</tr>
+		<tr>
+			<td>
+			MONOCYTES
+			</td>
+			<td>00 % </td>
+			<td>
+			( 01 - 02 % )
+			</td>
+		</tr>
+		<tr>
+			<td>
+			BASOPHILS
+			</td>
+			<td>00 % </td>
+			<td>
+			( 00 - 00 % )
+			</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL R. B. C. COUNT
+			</td>
+			<td>3.10 million / cu.mm. </td>
+			<td>
+			(3.5-5.5 million /cu.mm.)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL PLATELET COUNT
+			</td>
+			<td></td>
+			<td>
+			2,18,000 cell/cumm (1,40,000-4,40,000/cumm)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			HEMATOCRIT VALUE
+			</td>
+			<td>32.0 %</td>
+			<td>
+			(26-50 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			MEAN CORPUSCULAR VOLUME 
+			</td>
+			<td>86.2 Fl. </td>
+			<td>
+			(86-110 Fl.)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			MEAN CELL HAEMOGLOBIN 
+			</td>
+			<td>32.0 Pg.</td>
+			<td>
+			(26-38 Pg.)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			MEAN CELL HAEMOGLOBIN CON. 
+			</td>
+			<td>38.1 % </td>
+			<td>
+			(31-37 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			R.D.W. - S D
+			</td>
+			<td>39.5 fL.. </td>
+			<td>
+			(37-54 fL.)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			R.D.W. - C V 
+			</td>
+			<td>13.2 % </td>
+			<td>
+			(11.0-16.0 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			M.P.V. (MEAN PLATELET VOLUME)
+			</td>
+			<td>12.3 fL </td>
+			<td>
+			(9.0 - 13.0fL)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			P.D.W.
+			</td>
+			<td>20.1 fL </td>
+			<td>
+			(9.0 - 17.0 fL)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			P - L C R
+			</td>
+			<td>52.4 % </td>
+			<td>
+			(13.0 - 43.0 %)
+			</td>
+		</tr>
+	</tbody>
+</table>
+"
+Sputum,Sputum,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""348"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Urine Culture and Sensitivity :
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Culture 
+			</td>
+			<td>
+			Positive.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Bacteria Grown &amp; Isolated
+			</td>
+			<td>
+			Escherichia Coli 
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Antibiotic Sensitivity Test :
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Gentamicin
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Amikacin 
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Amoxyclav 
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Co - trimoxazole 
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ciprofloxacin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Tetracyline 
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cefuroxime 
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Nitrofurantoin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Norfloxacin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Netilimicin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ceftazidime 
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Tobramycin
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Imipenem
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cefaperazone 
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Azithromycin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Gatifloxacin
+			</td>
+			<td>
+			Intermediate
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cefepime 
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ceftriaxone 
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Piperacillin + Tazobactum 
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Colistin 
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Ofloxacin
+			</td>
+			<td>
+			Resistent
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Meropenem
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			Cephotaxime 
+			</td>
+			<td>
+			Sensitive
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<p dir=""ltr""><b id=""docs-internal-guid-cd72d9fb-7853-c03c-a757-c6f7d3362b4e"">Note :<br />
+      </b>Assay results should be interpreted only in the context of other laboratory findings and the total </p>
+
+         Clinical status of the patient.
+"
+T.B.ELISA,T.B.ELISA,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			TEST DESCRIPTION :-
+			</td>
+			<td>
+			VALUES 
+			</td>
+			<td>UNITS</td>
+		</tr>
+		<tr>
+			<td>
+			ANTI - TUBERCULOSIS ( TB ) - IgM
+			</td>
+			<td>
+			0.91 
+			</td>
+			<td>O.D.RATIO</td>
+		</tr>
+		<tr>
+			<td>
+			RANGE OF NORMAL :
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			&lt; 0 . 8
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			( 0 . 8 - 1 . 0 )
+			</td>
+			<td>
+			DOUBIOUS .
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			&gt; 1 . 0
+			</td>
+			<td>
+			POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			ANTI - TUBERCULOSIS ( TB ) - IgG
+			</td>
+			<td>
+			176.0 
+			</td>
+			<td>O.D.RATIO</td>
+		</tr>
+		<tr>
+			<td>
+			RANGE OF NORMAL :
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			&lt; 1 2 5
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			( 1 2 5 - 2 2 5 )
+			</td>
+			<td>
+			DOUBIOUS.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			&gt; 2 2 5
+			</td>
+			<td>
+			POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+<p dir=""ltr"">COMMENTS :-<br />
+<br />
+Positive IgM Indicative of current infection.</p>
+
+Positive IgG Indicative of old or chronic infection.
+  Positive IgA Indicative active tuberculosis."
+CHILD PATHOLOGY REPORT,CHILD PATHOLOGY REPORT,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""312"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description :-
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			HAEMOGLOBIN 
+			</td>
+			<td>
+			6.3 gm% 
+			</td>
+			<td>(M) (13.5-18.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>(F) (11.5-16.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL LEUCOCYTE COUNT
+			</td>
+			<td>
+			14,400 /cumm 
+			</td>
+			<td>(0-1)(6,000-15,000/cu mm)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>(1-10)(4500-13,500/cu mm)</td>
+		</tr>
+		<tr>
+			<td>
+			D. L. C. 
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			NEUTROPHILS
+			</td>
+			<td>
+			73 % 
+			</td>
+			<td>( 20 - 40 % )</td>
+		</tr>
+		<tr>
+			<td>
+			LYMPHOCYTES
+			</td>
+			<td>
+			21 % 
+			</td>
+			<td>( 40 - 60 % )</td>
+		</tr>
+		<tr>
+			<td>
+			EOSINOPHILS
+			</td>
+			<td>
+			06 % 
+			</td>
+			<td>( 01 - 05 % )</td>
+		</tr>
+		<tr>
+			<td>
+			MONOCYTES
+			</td>
+			<td>
+			00 %                         
+			</td>
+			<td>( 01 - 02 % )</td>
+		</tr>
+		<tr>
+			<td>
+			BASOPHILS
+			</td>
+			<td>
+			00 % 
+			</td>
+			<td>( 00 - 00 %)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			E.S.R. ( WINTROBE METHOD )
+			</td>
+			<td>
+			
+			</td>
+			<td>( M ) ( 0-10 )</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>( F ) ( 0-20 )</td>
+		</tr>
+		<tr>
+			<td>
+			OBSERVED 
+			</td>
+			<td>
+			52 mm for 1 st hour.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			PACKED CELL VOLUME 
+			</td>
+			<td>
+			22 %
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			CORRECTED E.S.R. 
+			</td>
+			<td>
+			14 mm for 1 st hour.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			WIDAL TEST 
+			</td>
+			<td>
+			REACTION IS POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S. TYPHI &#39; O &#39; 
+			</td>
+			<td>
+			1:320 DILUTION POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S. TYPHI &#39; H &#39;
+			</td>
+			<td>
+			1:320 DILUTION POSITIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S. PARA TYPHI &#39; AH &#39; 
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			S. PARA TYPHI &#39; BH &#39; 
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			MALARIA PARASITE ( ANTIGEN) TEST 
+			</td>
+			<td>
+			NEGATIVE.
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+<p dir=""ltr""> :-<b><br />
+* R.B.C&#39;s are normocytic and normochromic.</b><br />
+* Platelets are within normal limits.<br />
+* There are no blasts ( precursor cells ).<br />
+* Leucocytes are adequate in numbers and reveal normal distribution.<br />
+* Smear are negative for malarial &amp; microfilarial parasites.</p>
+"
+L.F.T,L.F.T,"<table border=""1"" cellpadding=""1"" cellspacing=""1"" style=""width:800px;"">
+	<tbody>
+		<tr>
+			<td>Test Description             </td>
+			<td>Value Observed                      </td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>SERUM BILIRUBIN( TOTAL )</td>
+			<td>0.98 mg/dl </td>
+			<td>(0.1-1.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>SERUM G.P.T ( ALT )</td>
+			<td>52.3 IU/L </td>
+			<td>(05-40 IU/L)</td>
+		</tr>
+		<tr>
+			<td>SERUM G.O.T ( AST )</td>
+			<td>66.0 IU/L</td>
+			<td> (05-40 IU/L)</td>
+		</tr>
+		<tr>
+			<td>SERUM ALKALINE PHOSPHATASE</td>
+			<td>302.0 IU/L</td>
+			<td>(100-250 IU/L)</td>
+		</tr>
+		<tr>
+			<td>SERUM PROTEIN</td>
+			<td>7.21 gm/dl</td>
+			<td> (6.0-8.0 gm/dl)</td>
+		</tr>
+		<tr>
+			<td>WIDALTEST</td>
+			<td>REACTION IS POSITIVE</td>
+			<td> </td>
+		</tr>
+		<tr>
+			<td>S:</td>
+			<td>TYPHI &#39;O&#39; NEGATIVE.</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>S:</td>
+			<td>TYPHI &#39;H&#39; 1:320 DILUTION POSITIVE</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>S:</td>
+			<td>PARA TYPHI &#39;AH&#39; NEGATIVE</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>S:</td>
+			<td>PARA TYPHI &#39;BH&#39; NEGATIVE</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>MALARIA PARASITE (ANTIGEN) TEST</td>
+			<td>NEGATIVE</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+<br />
+"
+PRE-SURGICAL.,PRE-SURGICAL.,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col width=""312"" />
+		<col width=""312"" />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			HAEMOGLOBIN
+			</td>
+			<td>
+			11.4 gm% 
+			</td>
+			<td>(F) (11.5-16.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			                        
+			</td>
+			<td>(M) (13.5-18.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL LEUCOCYTE COUNT
+			</td>
+			<td>
+			9,300 /cumm 
+			</td>
+			<td>(4,000-11,000/cu mm)</td>
+		</tr>
+		<tr>
+			<td>
+			D. L. C. 
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			NEUTROPHILS
+			</td>
+			<td>
+			69 % 
+			</td>
+			<td>( 40 - 60 % )</td>
+		</tr>
+		<tr>
+			<td>
+			LYMPHOCYTES
+			</td>
+			<td>
+			21 % 
+			</td>
+			<td>( 20 - 40 % )</td>
+		</tr>
+		<tr>
+			<td>
+			EOSINOPHILS
+			</td>
+			<td>
+			10 % 
+			</td>
+			<td>( 01 - 06 % )</td>
+		</tr>
+		<tr>
+			<td>
+			MONOCYTES
+			</td>
+			<td>
+			00 % 
+			</td>
+			<td>( 01 - 02 % )</td>
+		</tr>
+		<tr>
+			<td>
+			BASOPHILS
+			</td>
+			<td>
+			00 % 
+			</td>
+			<td>( 00 - 00 % )</td>
+		</tr>
+		<tr>
+			<td>
+			BLEEDING TIME
+			</td>
+			<td>
+			3 Mts , 56 Sec. 
+			</td>
+			<td>(2 - 7 Mts)</td>
+		</tr>
+		<tr>
+			<td>
+			COAGULATION TIME 
+			</td>
+			<td>
+			5 Mts , 13 Sec. 
+			</td>
+			<td>(4 - 9 Mts)</td>
+		</tr>
+		<tr>
+			<td>
+			PLASMA GLUCOSE RANDOM
+			</td>
+			<td>
+			75.9 mg/dl 
+			</td>
+			<td>(60 - 160 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM UREA
+			</td>
+			<td>
+			23.9 mg/dl 
+			</td>
+			<td>(10 - 50 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			SERUM BILIRUBIN (TOTAL)
+			</td>
+			<td>
+			0.94 mg/dl 
+			</td>
+			<td>(0.1 - 1.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>
+			BLOOD GROUP &#39; ABO &#39; 
+			</td>
+			<td>
+			O
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			Rh (ANTI - D) 
+			</td>
+			<td>
+			POSITIVE
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			H . I. V. (Tri - Line) - I &amp; II 
+			</td>
+			<td>
+			NEGATIVE
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			HBsAg (AUSTRALIA ANTIGEN) 
+			</td>
+			<td>
+			NEGATIVE
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			H. C. V. (HEPATITIS) - C 
+			</td>
+			<td>
+			NEGATIVE
+			</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+
+
+"
+CBC child,Complete Blood Count Child,"<meta charset=""utf-8"" />
+<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+			Test Description
+			</td>
+			<td>
+			Value Observed 
+			</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>
+			HAEMOGLOBIN
+			</td>
+			<td>
+			11.1 gm% 
+			</td>
+			<td>(M)(13.5 - 18 .0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>(F)(11.5 - 16.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL LEUCOCYTE COUNT
+			</td>
+			<td>
+			4,700 / cu mm 
+			</td>
+			<td>(0-1)(6,000-15,000/cu mm)</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td>
+			
+			</td>
+			<td>(1-10)(4,500-11,000/cu mm)</td>
+		</tr>
+		<tr>
+			<td>
+			D. L. C.
+			</td>
+			<td>
+			
+			</td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>
+			NEUTROPHILS
+			</td>
+			<td>
+			71 % 
+			</td>
+			<td>( 20 - 40 % )</td>
+		</tr>
+		<tr>
+			<td>
+			LYMPHOCYTES
+			</td>
+			<td>
+			24 % 
+			</td>
+			<td>( 40 - 60 % )</td>
+		</tr>
+		<tr>
+			<td>
+			EOSINOPHILS
+			</td>
+			<td>
+			05 % 
+			</td>
+			<td>( 01 - 06 % )</td>
+		</tr>
+		<tr>
+			<td>
+			MONOCYTES
+			</td>
+			<td>
+			00 % 
+			</td>
+			<td>( 01 - 02 % )</td>
+		</tr>
+		<tr>
+			<td>
+			BASOPHILS
+			</td>
+			<td>
+			00 % 
+			</td>
+			<td>( 00 - 00 % )</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL R. B. C. COUNT
+			</td>
+			<td>
+			4.39 million / cu.mm. 
+			</td>
+			<td>(3.5-5.5 million /cu.mm.)</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL PLATELET COUNT
+			</td>
+			<td>
+			2,46,000 cell / cumm 
+			</td>
+			<td>(1,40,000-4,40,000/cumm)</td>
+		</tr>
+		<tr>
+			<td>
+			HEMATOCRIT VALUE
+			</td>
+			<td>
+			35.4 % 
+			</td>
+			<td>(26-50 %)</td>
+		</tr>
+		<tr>
+			<td>
+			MEAN CORPUSCULAR VOLUME
+			</td>
+			<td>
+			80.6 Fl. 
+			</td>
+			<td>(86-110 Fl.)</td>
+		</tr>
+		<tr>
+			<td>
+			MEAN CELL HAEMOGLOBIN
+			</td>
+			<td>
+			25.3 Pg. 
+			</td>
+			<td>(26-38 Pg.)</td>
+		</tr>
+		<tr>
+			<td>
+			MEAN CELL HAEMOGLOBIN CON.
+			</td>
+			<td>
+			31.4 % 
+			</td>
+			<td>(31-37 %)</td>
+		</tr>
+		<tr>
+			<td>
+			R.D.W. - S D
+			</td>
+			<td>
+			50.2 fL.. 
+			</td>
+			<td>(37-54 fL.)</td>
+		</tr>
+		<tr>
+			<td>
+			R.D.W. - C V
+			</td>
+			<td>
+			17.3 % 
+			</td>
+			<td>(11.0-16.0 %)</td>
+		</tr>
+		<tr>
+			<td>
+			M.P.V. ( MEAN PLATELET VOLUME )
+			</td>
+			<td>
+			12.2 fL. 
+			</td>
+			<td>(9.0-13.0 fl.)</td>
+		</tr>
+		<tr>
+			<td>
+			P.D.W.
+			</td>
+			<td>
+			14.4 fL. 
+			</td>
+			<td>(9.0-17.0 fL.)</td>
+		</tr>
+		<tr>
+			<td>
+			P - L C R
+			</td>
+			<td>
+			44.1 % 
+			</td>
+			<td>(13.0-43.0 %)</td>
+		</tr>
+	</tbody>
+</table>
+
+
+"
+HAEMOGLOBIN / TLC / DLC / WIDAL / MALARIA / SUGAR RANDOM,Pathology Report,"<table border=""0"" cellpadding=""0"" cellspacing=""0"">
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Test Description :-</td>
+			<td>Value Observed Interval</td>
+			<td>Biological Reference</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>HAEMOGLOBIN</td>
+			<td>8.9 gm%</td>
+			<td>(M: 13.5 - 18.0 gm%)<br />
+			(F: 11.5 - 16.0 gm%)</td>
+		</tr>
+		<tr>
+			<td>
+			TOTAL LEUKOCYTE COUNT
+			</td>
+			<td>20,200 /cumm </td>
+			<td>
+			(4,000 - 11,000/cumm)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			D.L.C.
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			NEUTROPHILS
+			</td>
+			<td>94 %</td>
+			<td>
+			(40 - 60 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			LYMPHOCYTES
+			</td>
+			<td>05 % </td>
+			<td>
+			(20 - 40 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			EOSINOPHILES
+			</td>
+			<td>01 %</td>
+			<td>
+			(01 - 06 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			MONOCYTES
+			</td>
+			<td>00 % </td>
+			<td>
+			(01 - 02 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			BASOPHILES
+			</td>
+			<td>00 %</td>
+			<td>
+			(00 - 00 %)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			WIDAL TEST
+			</td>
+			<td></td>
+			<td>
+			REACTION IS POSITIVE.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			S: TYPHI &#39; O &#39;
+			</td>
+			<td></td>
+			<td>
+			1:160 DILUTION POSITIVE.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			S: TYPHI &#39; H &#39;
+			</td>
+			<td></td>
+			<td>
+			1:160 DILUTION POSITIVE.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			S: PARA TYPHI &#39; AH &#39;
+			</td>
+			<td></td>
+			<td>
+			NEGATIVE.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			S: PARA TYPHI &#39; BH &#39;
+			</td>
+			<td></td>
+			<td>
+			NEGATIVE.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			PLASMA GLUCOSE RANDOM
+			</td>
+			<td>347.0 mg/dl </td>
+			<td>
+			(60 - 160 mg/dl)
+			</td>
+		</tr>
+		<tr>
+			<td>
+			
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			MALARIA PARASITE (ANTIGEN) TEST
+			</td>
+			<td></td>
+			<td>
+			NEGATIVE.
+			</td>
+		</tr>
+		<tr>
+			<td>
+			G.B.P :-
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* R.B.C. &#39;s are normocytic &amp; normochromic.
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+		<tr>
+			<td>
+			* Platelets are within normal limits.
+			</td>
+			<td></td>
+			<td>
+			
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+* There are no blasts (Precursor cells).
+
+* Leucocytes are adequate in numbers and reveal normal distribution.
+
+* Smear are negative for malarial &amp; microfilarial parasites.
+"
+G.T.T,G.T.T,"<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Test Description :-</td>
+			<td>Value Observed</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>PLASMA GLUCOSE FASTING</td>
+			<td>119.0 mg/dl</td>
+			<td>(60-110 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>( After 75 Gram Glucose )</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>PLASMA GLUCOSE POST PRANDIAL</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>After 30 Mts</td>
+			<td>217.0 mg/dl</td>
+			<td>(Less than 160mg/dl)</td>
+		</tr>
+		<tr>
+			<td>After 60 Mts</td>
+			<td>208.0 mg/dl</td>
+			<td>(Less than 180mg/dl)</td>
+		</tr>
+		<tr>
+			<td>After 90 Mts</td>
+			<td>189.0 mg/dl</td>
+			<td>(Less than 160mg/dl)</td>
+		</tr>
+		<tr>
+			<td>After 120 Mts</td>
+			<td>156.0 mg/dl</td>
+			<td>(Less than 140mg/dl)</td>
+		</tr>
+		<tr>
+			<td>After 150 Mts</td>
+			<td>119.0 mg/dl</td>
+			<td>(70-110 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>URINE FOR SUGAR P.P ( After 60 Mts )</td>
+			<td>PRESENT(0.5 Gm%)</td>
+			<td></td>
+		</tr>
+	</tbody>
+</table>
+"
+E.S.R.,E.S.R.,"<table>
+	<colgroup>
+		<col />
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>Test Description :-</td>
+			<td>Value Observed</td>
+			<td>Biological Reference Interval</td>
+		</tr>
+		<tr>
+			<td>HAEMOGLOBIN</td>
+			<td>13.0 gm %</td>
+			<td>(13.5 - 18.0 gm %)</td>
+		</tr>
+		<tr>
+			<td>E.S.R. ( WINTROBE METHOD )</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Observed</td>
+			<td>20 mm for 1st hour.</td>
+			<td>(M: 0-10 mm) (F: 0-20 mm)&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Packed Cell Volume</td>
+			<td>39 %.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Corrected E.S.R</td>
+			<td>08 mm for 1st hour.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>SERUM BILIRUBIN (TOTAL)</td>
+			<td>0.90 mg/dl</td>
+			<td>(0.1 - 1.2 mg/dl)</td>
+		</tr>
+		<tr>
+			<td>WIDAL TEST</td>
+			<td>REACTION IS POSITIVE.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>S: TYPHI &#39; O &#39;</td>
+			<td>1:320 DILUTION POSITIVE.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>S: TYPHI &#39; H &#39;</td>
+			<td>NEGATIVE.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>S: PARA TYPHI &#39; AH &#39;</td>
+			<td>NEGATIVE.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>S: PARA TYPHI &#39; BH &#39;</td>
+			<td>NEGATIVE.</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>MALARIA PARASITE TEST</td>
+			<td>NEGATIVE.</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+"
