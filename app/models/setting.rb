@@ -5,7 +5,7 @@ class Setting < ActiveRecord::Base
   validates :show_reports_from_last_days, numericality: { greater_than: 0, allow_nil: true  }
   validates :header_margin, :footer_margin, numericality: { allow_nil: false }
 
-  DEFAULT_HEADER_MARGIN = 65
+  DEFAULT_HEADER_MARGIN = 45
   DEFAULT_FOOTER_MARGIN = 20
 
   DEFAULT_HEADER = %Q[
