@@ -7,10 +7,6 @@ User.create(email: 'demo@example.com', password: 'abcd1234')
 User.create(email: 'user@example.com', password: 'abcd1234')
 User.create(email: 'admin@example.com', password: 'abcd1234', role: 'admin')
 
-def random_amount_collected
-  [500, 600, 700, 800, 900, 1000].sample
-end
-
 50.times do
   Referrer.create(name: "Dr. #{Faker::Name.first_name} #{Faker::Name.last_name} (MBBS)")
 end

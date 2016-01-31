@@ -1,4 +1,8 @@
 
+def random_amount_collected
+  [500, 600, 700, 800, 900, 1000].sample
+end
+
 def create_report(time_now)
   patient = Patient.new(name: Faker::Name.name,
                         patient_id: Faker::Number.number(5),
