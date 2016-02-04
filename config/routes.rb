@@ -31,6 +31,7 @@ Ultracare::Application.routes.draw do
   get :get_help, to: 'home#get_help'
   get :license, to: 'home#license'
   get :features, to: 'home#software_features'
+  get :team, to: 'home#team'
 
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
